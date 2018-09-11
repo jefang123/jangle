@@ -22,6 +22,12 @@
 /public/assets
 .byebug_history
 
+disposable
+
+test/
+tmp/
+log/
+
 node_modules/
 bundle.js
 bundle.js.map
