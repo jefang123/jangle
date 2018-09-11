@@ -23,6 +23,9 @@
 /public/assets
 .byebug_history
 
+test/
+tmp/
+
 node_modules/
 bundle.js
 bundle.js.map

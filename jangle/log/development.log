@@ -33,3 +33,1539 @@ Migrating to CreateUsers (20180911152059)
   ↳ bin/rails:9
   [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ /Users/jeff/.rbenv/versions/2.3.1/bin/annotate:23
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:20:46 +0900
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jeff/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+
+NameError - uninitialized constant StaticPagesController:
+
+Started POST "/__better_errors/b225169bd8997a45/variables" for 127.0.0.1 at 2018-09-12 02:20:47 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:22:01 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:22:11 +0900
+
+SyntaxError - compile error:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/15fa13e5b9ab7cfd/variables" for 127.0.0.1 at 2018-09-12 02:22:11 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:23:23 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/f303981455f6511a/variables" for 127.0.0.1 at 2018-09-12 02:23:23 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:23:24 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/05161b2d9d3bcfb9/variables" for 127.0.0.1 at 2018-09-12 02:23:25 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:24:06 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/67260b4a0f4b7251/variables" for 127.0.0.1 at 2018-09-12 02:24:06 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:24:08 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/20a45a55b88aee30/variables" for 127.0.0.1 at 2018-09-12 02:24:08 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:24:09 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/06447248e0d25a22/variables" for 127.0.0.1 at 2018-09-12 02:24:09 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:24:10 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/bb1a622b2d217687/variables" for 127.0.0.1 at 2018-09-12 02:24:10 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:24:10 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/1d6adca2dec7c4a5/variables" for 127.0.0.1 at 2018-09-12 02:24:10 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:24:10 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/a95e37a47f17d49d/variables" for 127.0.0.1 at 2018-09-12 02:24:10 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:24:10 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/5dffa7b62aa8138b/variables" for 127.0.0.1 at 2018-09-12 02:24:10 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:24:11 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/33d1ee4c1365deb8/variables" for 127.0.0.1 at 2018-09-12 02:24:11 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:24:11 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/d9a6e6cf304b1baf/variables" for 127.0.0.1 at 2018-09-12 02:24:11 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:24:11 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/f91911103cc9fa93/variables" for 127.0.0.1 at 2018-09-12 02:24:11 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:25:05 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/14e8d9d481c0eb3d/variables" for 127.0.0.1 at 2018-09-12 02:25:05 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:25:09 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/1282571af01b0749/variables" for 127.0.0.1 at 2018-09-12 02:25:09 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:26:04 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/0135aa83b7793185/variables" for 127.0.0.1 at 2018-09-12 02:26:05 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:26:09 +0900
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jeff/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/8e479f741c9fbe91/variables" for 127.0.0.1 at 2018-09-12 02:26:09 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:26:11 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/c27062dc2a5d5b21/variables" for 127.0.0.1 at 2018-09-12 02:26:11 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:27:53 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/12f52cd64a18e5c8/variables" for 127.0.0.1 at 2018-09-12 02:27:53 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:27:55 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/1643a88d48c5947a/variables" for 127.0.0.1 at 2018-09-12 02:27:55 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:28:15 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/fa4b7be86396d3c8/variables" for 127.0.0.1 at 2018-09-12 02:28:15 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:28:15 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/8c75f53724774dc5/variables" for 127.0.0.1 at 2018-09-12 02:28:16 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:28:16 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/5039ce6a19678ed5/variables" for 127.0.0.1 at 2018-09-12 02:28:16 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:28:16 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/4393ea2238752bf1/variables" for 127.0.0.1 at 2018-09-12 02:28:16 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:28:16 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/8220bb30a13631fa/variables" for 127.0.0.1 at 2018-09-12 02:28:16 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:28:24 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/98daabd711ec28d0/variables" for 127.0.0.1 at 2018-09-12 02:28:24 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:28:24 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/4a9bf5136049b82f/variables" for 127.0.0.1 at 2018-09-12 02:28:24 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:28:24 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/0fb2402e064fc4ea/variables" for 127.0.0.1 at 2018-09-12 02:28:25 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:28:25 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/ad03d3896872617a/variables" for 127.0.0.1 at 2018-09-12 02:28:25 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:28:25 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/84bdb2d757a5841d/variables" for 127.0.0.1 at 2018-09-12 02:28:25 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:28:25 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/0c374daafcab54ce/variables" for 127.0.0.1 at 2018-09-12 02:28:25 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:28:25 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/5352334614cffa3d/variables" for 127.0.0.1 at 2018-09-12 02:28:25 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:28:25 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/df444dc1189d7d31/variables" for 127.0.0.1 at 2018-09-12 02:28:25 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:28:25 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/37cce8ee39bf86a6/variables" for 127.0.0.1 at 2018-09-12 02:28:25 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:28:26 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/28e41e7b18115798/variables" for 127.0.0.1 at 2018-09-12 02:28:26 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:28:26 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/679be46f1ddf64fc/variables" for 127.0.0.1 at 2018-09-12 02:28:26 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:28:26 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/1e828947f68a5d24/variables" for 127.0.0.1 at 2018-09-12 02:28:26 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:28:26 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/15ce3737b5a6623e/variables" for 127.0.0.1 at 2018-09-12 02:28:26 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:28:26 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/33915ebbbab55e6e/variables" for 127.0.0.1 at 2018-09-12 02:28:26 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:28:27 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/ee3eeb235b96be57/variables" for 127.0.0.1 at 2018-09-12 02:28:27 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:28:27 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/4cf6fb87cbd01fd5/variables" for 127.0.0.1 at 2018-09-12 02:28:27 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:28:27 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/389316c16a89be61/variables" for 127.0.0.1 at 2018-09-12 02:28:27 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:28:27 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/c4fa921c452f2c1a/variables" for 127.0.0.1 at 2018-09-12 02:28:27 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:28:27 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/34377dd870a34dec/variables" for 127.0.0.1 at 2018-09-12 02:28:27 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:28:27 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/fbaffbf2ec1160a6/variables" for 127.0.0.1 at 2018-09-12 02:28:28 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:28:28 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/189af6278e9570ef/variables" for 127.0.0.1 at 2018-09-12 02:28:28 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:28:51 +0900
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jeff/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/ce3690a8dc09ae2e/variables" for 127.0.0.1 at 2018-09-12 02:28:52 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:28:53 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/a3d696830963a089/variables" for 127.0.0.1 at 2018-09-12 02:28:53 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:33:11 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/18c864c5574c3124/variables" for 127.0.0.1 at 2018-09-12 02:33:11 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:34:46 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/d33e643e2260b283/variables" for 127.0.0.1 at 2018-09-12 02:34:46 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:34:47 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/6c06e46d9a6660a7/variables" for 127.0.0.1 at 2018-09-12 02:34:47 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:34:49 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/aabf98e0d0de75ce/variables" for 127.0.0.1 at 2018-09-12 02:34:49 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:34:49 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/f8e02cc3629011bb/variables" for 127.0.0.1 at 2018-09-12 02:34:49 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:34:50 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/0dd69ebaff818252/variables" for 127.0.0.1 at 2018-09-12 02:34:50 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:34:50 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/f0e7020d0ff1a33d/variables" for 127.0.0.1 at 2018-09-12 02:34:50 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:34:50 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/c4fabf49a65f03ff/variables" for 127.0.0.1 at 2018-09-12 02:34:50 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:34:55 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/7a4b8a08da55199c/variables" for 127.0.0.1 at 2018-09-12 02:34:55 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:34:55 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/576ae3026af8c4d2/variables" for 127.0.0.1 at 2018-09-12 02:34:55 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:34:56 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/e4907d66976195d6/variables" for 127.0.0.1 at 2018-09-12 02:34:56 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:34:56 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/21d377c3551ecd97/variables" for 127.0.0.1 at 2018-09-12 02:34:56 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:35:06 +0900
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jeff/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/08a592435cb1c343/variables" for 127.0.0.1 at 2018-09-12 02:35:07 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:35:09 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/a1baead83b0001c3/variables" for 127.0.0.1 at 2018-09-12 02:35:09 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:35:40 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/84ada200602ae0fd/variables" for 127.0.0.1 at 2018-09-12 02:35:40 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:35:41 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/76ad1707c6aba867/variables" for 127.0.0.1 at 2018-09-12 02:35:41 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:37:49 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/763d98e07fa95ef5/variables" for 127.0.0.1 at 2018-09-12 02:37:49 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:37:50 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/708ebe3a5b1dff12/variables" for 127.0.0.1 at 2018-09-12 02:37:50 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:37:50 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/00e9c219d4618ae9/variables" for 127.0.0.1 at 2018-09-12 02:37:50 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:37:50 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/41157dfb4a4391c1/variables" for 127.0.0.1 at 2018-09-12 02:37:51 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:37:51 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/a14079337de51a0d/variables" for 127.0.0.1 at 2018-09-12 02:37:51 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:37:51 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/41e286cb9acedb64/variables" for 127.0.0.1 at 2018-09-12 02:37:51 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:37:51 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/da03402f434ba2c7/variables" for 127.0.0.1 at 2018-09-12 02:37:51 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:37:51 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/e732668780258929/variables" for 127.0.0.1 at 2018-09-12 02:37:51 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:37:51 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/954e683d3adc57e2/variables" for 127.0.0.1 at 2018-09-12 02:37:52 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:37:52 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/326ad1acb20e5278/variables" for 127.0.0.1 at 2018-09-12 02:37:52 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:37:52 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/6b56d54d871ea2f9/variables" for 127.0.0.1 at 2018-09-12 02:37:52 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:37:52 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/fd007e814e4757da/variables" for 127.0.0.1 at 2018-09-12 02:37:52 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:37:52 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/8cb555482ca797d9/variables" for 127.0.0.1 at 2018-09-12 02:37:52 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:37:52 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/4d7f828e20476324/variables" for 127.0.0.1 at 2018-09-12 02:37:53 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:37:53 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/a86a103145d3256e/variables" for 127.0.0.1 at 2018-09-12 02:37:53 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:39:08 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/abe153bb74a70701/variables" for 127.0.0.1 at 2018-09-12 02:39:09 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:39:09 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/b5d453f6a0b44181/variables" for 127.0.0.1 at 2018-09-12 02:39:09 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:39:09 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/6375c3710b34ab0e/variables" for 127.0.0.1 at 2018-09-12 02:39:10 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:39:10 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/b973da34ddc696bc/variables" for 127.0.0.1 at 2018-09-12 02:39:10 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:39:10 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/3da85a839d892aee/variables" for 127.0.0.1 at 2018-09-12 02:39:10 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:39:10 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/ffb80f5f082b3310/variables" for 127.0.0.1 at 2018-09-12 02:39:10 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:39:10 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/380b11d2caa5a8cb/variables" for 127.0.0.1 at 2018-09-12 02:39:10 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:39:10 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/4011b5d54d7f3204/variables" for 127.0.0.1 at 2018-09-12 02:39:10 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:39:10 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/ea44f712489caae2/variables" for 127.0.0.1 at 2018-09-12 02:39:10 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:39:10 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/47ca64a018e208eb/variables" for 127.0.0.1 at 2018-09-12 02:39:10 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:39:11 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/a33411cec67244d6/variables" for 127.0.0.1 at 2018-09-12 02:39:11 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:39:11 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/34afcdbbca26486e/variables" for 127.0.0.1 at 2018-09-12 02:39:11 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:39:11 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/f3fccfd12b9d1317/variables" for 127.0.0.1 at 2018-09-12 02:39:11 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:39:11 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/de64cc3ea88942c4/variables" for 127.0.0.1 at 2018-09-12 02:39:11 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:40:13 +0900
+
+LoadError - Unable to autoload constant StaticPagesController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/static_pages_controller.rb to define it:
+
+Started POST "/__better_errors/ed93f019b4156df6/variables" for 127.0.0.1 at 2018-09-12 02:40:13 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:40:45 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/a203caf21ed23c95/variables" for 127.0.0.1 at 2018-09-12 02:40:45 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:40:59 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/7d487e5748ffd4f4/variables" for 127.0.0.1 at 2018-09-12 02:40:59 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:41:18 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/9b1510bab96b39bb/variables" for 127.0.0.1 at 2018-09-12 02:41:19 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:42:07 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/220b96d3829d639b/variables" for 127.0.0.1 at 2018-09-12 02:42:07 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:42:15 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/4087f31a3edea7f4/variables" for 127.0.0.1 at 2018-09-12 02:42:15 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:42:32 +0900
+
+NoMethodError - undefined method `make_response!' for StaticPagesController:Class:
+
+Started POST "/__better_errors/b76a8a63bd02f5c9/variables" for 127.0.0.1 at 2018-09-12 02:42:32 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:42:50 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/5b099c46b7a2bcfa/variables" for 127.0.0.1 at 2018-09-12 02:42:50 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:43:45 +0900
+
+NameError - uninitialized constant StaticPagesController:
+
+Started POST "/__better_errors/c20f14562415757d/variables" for 127.0.0.1 at 2018-09-12 02:43:45 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:46:22 +0900
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb
+  Rendered static_pages/root.html.erb (3.0ms)
+Completed 200 OK in 20ms (Views: 17.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:46:28 +0900
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb
+  Rendered static_pages/root.html.erb (0.5ms)
+Completed 200 OK in 8ms (Views: 6.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:47:06 +0900
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:47:08 +0900
+Completed 200 OK in 3315ms (Views: 3313.1ms | ActiveRecord: 0.0ms)
+
+
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 17ms (Views: 15.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:48:22 +0900
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 18ms (Views: 16.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:48:23 +0900
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 25ms (Views: 20.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:48:38 +0900
+
+SyntaxError - compile error:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/23c8b4ce992fc777/variables" for 127.0.0.1 at 2018-09-12 02:48:38 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:48:40 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/2807df6788756997/variables" for 127.0.0.1 at 2018-09-12 02:48:40 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:49:03 +0900
+
+SyntaxError - compile error:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/7e538d1e74a20d03/variables" for 127.0.0.1 at 2018-09-12 02:49:03 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:49:04 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/9c65551e1f1e636c/variables" for 127.0.0.1 at 2018-09-12 02:49:04 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:49:05 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/f7d277a6451cf5ea/variables" for 127.0.0.1 at 2018-09-12 02:49:05 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:49:18 +0900
+
+SyntaxError - compile error:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/367bcb472b402e38/variables" for 127.0.0.1 at 2018-09-12 02:49:18 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:49:19 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/653a4c47aadbe077/variables" for 127.0.0.1 at 2018-09-12 02:49:19 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:49:20 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/7dc7740be37643d7/variables" for 127.0.0.1 at 2018-09-12 02:49:20 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:49:32 +0900
+
+SyntaxError - compile error:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/bcdea78cf19a8425/variables" for 127.0.0.1 at 2018-09-12 02:49:32 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:49:33 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/6584120971c9d515/variables" for 127.0.0.1 at 2018-09-12 02:49:33 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:49:34 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/94b6048955027aff/variables" for 127.0.0.1 at 2018-09-12 02:49:34 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:49:34 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/f9bee3d69d67c55b/variables" for 127.0.0.1 at 2018-09-12 02:49:34 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:49:34 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/6608c07074e349d1/variables" for 127.0.0.1 at 2018-09-12 02:49:34 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:49:53 +0900
+
+SyntaxError - compile error:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/36dd7b3cc29423bb/variables" for 127.0.0.1 at 2018-09-12 02:49:53 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:49:54 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/09f15a6e4c17ccaf/variables" for 127.0.0.1 at 2018-09-12 02:49:54 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:49:55 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/37bedb8ebf3ddd8d/variables" for 127.0.0.1 at 2018-09-12 02:49:55 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:50:01 +0900
+
+SyntaxError - compile error:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/9e39ced25a82cfb8/variables" for 127.0.0.1 at 2018-09-12 02:50:01 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:50:02 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/267721c30ce25b24/variables" for 127.0.0.1 at 2018-09-12 02:50:02 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:50:02 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/ddb165661e3511d5/variables" for 127.0.0.1 at 2018-09-12 02:50:02 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:50:03 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/bf5cf2bb91ad502d/variables" for 127.0.0.1 at 2018-09-12 02:50:03 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:50:03 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/4ae47c6d54018549/variables" for 127.0.0.1 at 2018-09-12 02:50:03 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:50:09 +0900
+
+SyntaxError - compile error:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/36b88c8d9e0bb542/variables" for 127.0.0.1 at 2018-09-12 02:50:09 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:50:10 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/284e6b670b41a087/variables" for 127.0.0.1 at 2018-09-12 02:50:10 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:50:11 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/782604aff49cbb47/variables" for 127.0.0.1 at 2018-09-12 02:50:11 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:50:11 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/4383e11a51ba3066/variables" for 127.0.0.1 at 2018-09-12 02:50:11 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:50:11 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/267715561a719dd6/variables" for 127.0.0.1 at 2018-09-12 02:50:11 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:50:11 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/91bfcc177dde49a8/variables" for 127.0.0.1 at 2018-09-12 02:50:11 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:50:12 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/370cf96754fb51ed/variables" for 127.0.0.1 at 2018-09-12 02:50:12 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:50:12 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/42d4d77c0a524b89/variables" for 127.0.0.1 at 2018-09-12 02:50:12 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:50:12 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/825e0fee88051114/variables" for 127.0.0.1 at 2018-09-12 02:50:12 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:50:12 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/7e967eec88445d5e/variables" for 127.0.0.1 at 2018-09-12 02:50:12 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:50:12 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/4f9db70c188ec70d/variables" for 127.0.0.1 at 2018-09-12 02:50:12 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:50:31 +0900
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 38ms (Views: 35.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:50:39 +0900
+
+SyntaxError - compile error:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/5f2a136e73d684a5/variables" for 127.0.0.1 at 2018-09-12 02:50:39 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:51:03 +0900
+
+SyntaxError - compile error:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/0e24ad9b6815b451/variables" for 127.0.0.1 at 2018-09-12 02:51:04 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:51:04 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/1b10cb1ff75acf34/variables" for 127.0.0.1 at 2018-09-12 02:51:04 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:51:04 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/00f37af7ebc157c1/variables" for 127.0.0.1 at 2018-09-12 02:51:05 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:51:05 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/1509d45cbb78b140/variables" for 127.0.0.1 at 2018-09-12 02:51:05 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:51:05 +0900
+
+LoadError - Unable to autoload constant ApplicationController, expected /Users/jeff/Desktop/jangle/jangle/app/controllers/application_controller.rb to define it:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/78f2466c1371cf8f/variables" for 127.0.0.1 at 2018-09-12 02:51:05 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:51:11 +0900
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 42ms (Views: 39.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:51:55 +0900
+
+SyntaxError - compile error:
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/002cc5bae2c76307/variables" for 127.0.0.1 at 2018-09-12 02:51:55 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:52:25 +0900
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 24ms (Views: 21.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:52:33 +0900
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 25ms (Views: 22.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:52:34 +0900
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 21ms (Views: 19.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:52:35 +0900
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 22ms (Views: 20.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:52:35 +0900
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 21ms (Views: 18.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:52:35 +0900
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 22ms (Views: 19.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:52:35 +0900
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 24ms (Views: 21.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:52:42 +0900
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 29ms (Views: 26.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:52:42 +0900
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 20ms (Views: 17.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:52:42 +0900
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 19ms (Views: 17.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:52:42 +0900
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 22ms (Views: 19.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:53:12 +0900
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 24ms (Views: 22.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:53:13 +0900
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 20ms (Views: 16.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:53:13 +0900
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 20ms (Views: 17.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:53:13 +0900
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 20ms (Views: 17.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:53:14 +0900
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 18ms (Views: 16.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:53:14 +0900
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 18ms (Views: 16.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:53:14 +0900
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 25ms (Views: 22.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:53:14 +0900
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 18ms (Views: 15.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:53:14 +0900
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 18ms (Views: 15.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:53:14 +0900
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 20ms (Views: 17.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-12 02:53:14 +0900
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 19ms (Views: 16.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-12 03:29:02 +0900
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 514ms (Views: 511.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-12 03:29:03 +0900
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 21ms (Views: 17.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-12 03:36:41 +0900
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 0.0ms)
+
+
+
+Sprockets::FileNotFound - couldn't find file 'jquery' with type 'application/javascript'
+Checked in these paths: 
+  /Users/jeff/Desktop/jangle/jangle/app/assets/config
+  /Users/jeff/Desktop/jangle/jangle/app/assets/images
+  /Users/jeff/Desktop/jangle/jangle/app/assets/javascripts
+  /Users/jeff/Desktop/jangle/jangle/app/assets/stylesheets
+  /Users/jeff/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/jeff/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actioncable-5.2.1/lib/assets/compiled
+  /Users/jeff/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/activestorage-5.2.1/app/assets/javascripts
+  /Users/jeff/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionview-5.2.1/lib/assets/compiled
+  /Users/jeff/Desktop/jangle/jangle/node_modules:
+  app/views/layouts/application.html.erb:9:in `_app_views_layouts_application_html_erb___1093541531972816675_70266477187120'
+
+Started POST "/__better_errors/5d2af93d43d2e9b2/variables" for 127.0.0.1 at 2018-09-12 03:36:42 +0900
+Started GET "/" for 127.0.0.1 at 2018-09-12 03:37:30 +0900
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 262ms (Views: 259.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-12 03:41:28 +0900
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jeff/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 3637ms (Views: 3634.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-12 04:01:18 +0900
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 843ms (Views: 834.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-12 04:01:40 +0900
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 600ms (Views: 597.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-12 04:01:43 +0900
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 24ms (Views: 21.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-12 04:02:31 +0900
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 536ms (Views: 533.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-12 04:02:33 +0900
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 25ms (Views: 21.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-12 04:02:55 +0900
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 749ms (Views: 747.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-12 04:03:20 +0900
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 635ms (Views: 631.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-12 04:05:46 +0900
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 573ms (Views: 570.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-12 04:06:30 +0900
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 536ms (Views: 533.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-12 04:07:37 +0900
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 589ms (Views: 585.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-12 04:08:32 +0900
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 552ms (Views: 549.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-12 04:11:54 +0900
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 580ms (Views: 577.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-12 04:12:30 +0900
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 604ms (Views: 601.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-12 04:15:14 +0900
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 636ms (Views: 633.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-12 04:15:42 +0900
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 513ms (Views: 510.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-12 04:16:31 +0900
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 587ms (Views: 583.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-12 04:19:59 +0900
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 537ms (Views: 534.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-12 04:23:18 +0900
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 647ms (Views: 644.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-12 04:23:35 +0900
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 539ms (Views: 535.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-12 04:26:44 +0900
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 47ms (Views: 45.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-12 04:26:46 +0900
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 23ms (Views: 21.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-12 04:26:48 +0900
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 25ms (Views: 22.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-12 04:27:52 +0900
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 541ms (Views: 538.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-12 04:27:55 +0900
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 35ms (Views: 32.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-12 04:28:54 +0900
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 655ms (Views: 652.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/users" for 127.0.0.1 at 2018-09-12 04:29:04 +0900
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"email"=>"asdf", "password"=>"[FILTERED]", "username"=>"asdf"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[36mUser Exists (2.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "asdf"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[36mUser Create (2.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "asdf"], ["email", "asdf"], ["password_digest", "$2a$10$45FQTRC5.J8O85fHvUmNG.EczoCGgYVx/o8IsQ7KcRlvyjcQEeiu6"], ["session_token", "Lxn73mAG8ETqKllO7-hwmw"], ["created_at", "2018-09-11 19:29:04.745848"], ["updated_at", "2018-09-11 19:29:04.745848"]]
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:41
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "asdf"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:41
+  [1m[36mUser Update (5.5ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "OMK7rmkMFCQUrFq4bCFZbw"], ["updated_at", "2018-09-11 19:29:04.757829"], ["id", 1]]
+  ↳ app/models/user.rb:41
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:41
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (9.6ms)
+Completed 200 OK in 248ms (Views: 19.8ms | ActiveRecord: 41.9ms)
+
+
+Started DELETE "/api/session" for 127.0.0.1 at 2018-09-12 04:29:08 +0900
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "OMK7rmkMFCQUrFq4bCFZbw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "OMK7rmkMFCQUrFq4bCFZbw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:41
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "asdf"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:41
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "E4qlaRdjrN7o7nM1EjdRUQ"], ["updated_at", "2018-09-11 19:29:08.138674"], ["id", 1]]
+  ↳ app/models/user.rb:41
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:41
+Completed 200 OK in 15ms (Views: 0.3ms | ActiveRecord: 4.9ms)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2018-09-12 04:29:27 +0900
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"asdf", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "asdf"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:46
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.5ms)
+
+
+
+NameError - uninitialized constant User::BCrpyt:
+  app/models/user.rb:28:in `is_password?'
+  app/models/user.rb:48:in `find_by_credentials'
+  app/controllers/api/sessions_controller.rb:4:in `create'
+
+Started GET "/" for 127.0.0.1 at 2018-09-12 04:31:31 +0900
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 53ms (Views: 50.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2018-09-12 04:31:35 +0900
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"asdf", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "asdf"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:46
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 10.9ms)
+
+
+
+NameError - uninitialized constant User::BCrpyt:
+  app/models/user.rb:28:in `is_password?'
+  app/models/user.rb:48:in `find_by_credentials'
+  app/controllers/api/sessions_controller.rb:4:in `create'
+
+Started GET "/" for 127.0.0.1 at 2018-09-12 04:31:45 +0900
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 27ms (Views: 24.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2018-09-12 04:31:50 +0900
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"asdf", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "asdf"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:46
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.5ms)
+
+
+
+NameError - uninitialized constant User::BCrpyt:
+  app/models/user.rb:28:in `is_password?'
+  app/models/user.rb:48:in `find_by_credentials'
+  app/controllers/api/sessions_controller.rb:4:in `create'
+
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "asdf"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "asdf"], ["LIMIT", 1]]
+Started GET "/" for 127.0.0.1 at 2018-09-12 04:34:11 +0900
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 54ms (Views: 51.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2018-09-12 04:34:16 +0900
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"asdf", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "asdf"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:46
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:41
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "asdf"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:41
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "dCuQkECwPIvb4A2taYR-DQ"], ["updated_at", "2018-09-11 19:34:16.540007"], ["id", 1]]
+  ↳ app/models/user.rb:41
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:41
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (9.3ms)
+Completed 500 Internal Server Error in 146ms (ActiveRecord: 13.8ms)
+
+
+
+NoMethodError - undefined method `id' for nil:NilClass:
+  app/views/api/users/show.json.jbuilder:1:in `_app_views_api_users_show_json_jbuilder__4509683491503442059_70299587745840'
+  app/controllers/api/sessions_controller.rb:10:in `create'
+
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/" for 127.0.0.1 at 2018-09-12 04:38:05 +0900
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 50ms (Views: 48.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2018-09-12 04:38:11 +0900
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"asdf", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "asdf"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:46
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:41
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "asdf"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:41
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "p41SlUvoFwliIyqqpGV0dA"], ["updated_at", "2018-09-11 19:38:11.392772"], ["id", 1]]
+  ↳ app/models/user.rb:41
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:41
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (5.0ms)
+Completed 500 Internal Server Error in 122ms (ActiveRecord: 13.0ms)
+
+
+
+NoMethodError - undefined method `id' for nil:NilClass:
+  app/views/api/users/show.json.jbuilder:1:in `_app_views_api_users_show_json_jbuilder__4509683491503442059_70299586725540'
+  app/controllers/api/sessions_controller.rb:10:in `create'
+
+Started GET "/" for 127.0.0.1 at 2018-09-12 04:39:40 +0900
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 25ms (Views: 22.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2018-09-12 04:39:45 +0900
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"asdf", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "asdf"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:46
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:41
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "asdf"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:41
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "HJ02Q01lFzjgyyHIIIId8w"], ["updated_at", "2018-09-11 19:39:45.189569"], ["id", 1]]
+  ↳ app/models/user.rb:41
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:41
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.6ms)
+Completed 200 OK in 131ms (Views: 16.3ms | ActiveRecord: 12.7ms)
+
+
+Started DELETE "/api/session" for 127.0.0.1 at 2018-09-12 04:39:47 +0900
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "HJ02Q01lFzjgyyHIIIId8w"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "HJ02Q01lFzjgyyHIIIId8w"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:41
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "asdf"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:41
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "7jCwx4yWZSq5MlnmWrOLNQ"], ["updated_at", "2018-09-11 19:39:47.637540"], ["id", 1]]
+  ↳ app/models/user.rb:41
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:41
+Completed 200 OK in 9ms (Views: 0.2ms | ActiveRecord: 3.0ms)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2018-09-12 04:39:54 +0900
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"asdf", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "asdf"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:46
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:41
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "asdf"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:41
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "AGfQcRAOmZbYSkCTdpYDzA"], ["updated_at", "2018-09-11 19:39:54.133385"], ["id", 1]]
+  ↳ app/models/user.rb:41
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:41
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.5ms)
+Completed 200 OK in 99ms (Views: 7.6ms | ActiveRecord: 3.5ms)
+
+
+Started DELETE "/api/session" for 127.0.0.1 at 2018-09-12 04:39:55 +0900
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "AGfQcRAOmZbYSkCTdpYDzA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "AGfQcRAOmZbYSkCTdpYDzA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:41
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "asdf"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:41
+  [1m[36mUser Update (0.8ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "rL1EyQbnrrVKS1qmQLyvRQ"], ["updated_at", "2018-09-11 19:39:55.511840"], ["id", 1]]
+  ↳ app/models/user.rb:41
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:41
+Completed 200 OK in 9ms (Views: 0.6ms | ActiveRecord: 3.2ms)
+
+
