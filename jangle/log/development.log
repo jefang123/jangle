@@ -1569,3 +1569,24 @@ Processing by Api::SessionsController#destroy as JSON
 Completed 200 OK in 9ms (Views: 0.6ms | ActiveRecord: 3.2ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-09-12 04:42:31 +0900
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 46ms (Views: 42.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-12 04:48:43 +0900
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 83ms (Views: 78.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-12 04:56:26 +0900
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 85ms (Views: 82.9ms | ActiveRecord: 0.0ms)
+
+
