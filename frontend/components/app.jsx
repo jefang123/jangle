@@ -7,12 +7,15 @@ import SignupFormContainer from './signup_form_container';
 const App = () => {
   return (
     <div>
-      <HomeContainer />
+      <Route exact path='/' component={HomeContainer} />
       <Route path='/login' component={LoginFormContainer} />
       <Route path='/signup' component={SignupFormContainer} />
     </div>
   );
 };
+
+
+
 
 export default App;
 
@@ -20,9 +23,10 @@ export default App;
 //   return (
 //     <div>
 //       <h1>Discord</h1>
-//       <HomeContainer />
-//       <Route path='/login' component={LoginFormContainer} />
-//       <Route path='/signup' component={SignupFormContainer} />
+//       <AuthRoute exact path='/' component={HomeContainer} />
+//       <ProtectedRoute exact path='/' component={LoggedInContainer} />
+//       <AuthRoute path='/login' component={LoginFormContainer} />
+//       <AuthRoute path='/signup' component={SignupFormContainer} />
 //     </div>
 //   );
 // };

@@ -29,6 +29,9 @@ body {
   font-family: Helvetica;
 }
 
+p {
+  color: #acacae;
+}
 .login-nav {
   color: #acacae;
   display: flex;
@@ -57,6 +60,33 @@ body {
 .login-link {
   color: #fff;
   text-decoration: none;
-  padding: 5px;
+  margin:auto;
+  padding: 15px;
   background-color: #7289da;
+}
+
+.login-link:hover{
+  position: relative;
+  top: 1px;
+}
+
+.login-section {
+  text-align: center;
+}
+
+.login-section > p {
+  box-sizing: border-box;
+  padding: 20px 20%;
+}
+
+.login-footer > div {
+  margin:auto;
+  text-align: center;
+}
+
+.login-footer {
+  margin: auto;
+  width:50%;
+  display:flex;
+  justify-content: space-between;
 }
