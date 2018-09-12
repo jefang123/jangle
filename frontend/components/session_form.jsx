@@ -37,20 +37,20 @@ class SessionForm extends React.Component {
   const header = this.props.formType === 'login' ? 'Log In' : 'Register';
 
     return (
-      <div>
-        <form onSubmit={this.handleSubmit}>
+      <div className='session-container'>
+        <form className="session-form" onSubmit={this.handleSubmit}>
           <h2>{header}</h2>
           <label> Email
           </label>
-          <br />
-            <input type='text' value={this.state.email} onChange={this.update('email')}/>
-          <br />
           
+            <input type='text' value={this.state.email} onChange={this.update('email')}/>
+          
+
           <label>Password
           </label>
-          <br />
+          
             <input type='password' value={this.state.password} onChange={this.update('password')}/>
-          <br />
+        
           <button>{header}</button>
 
           {link}
