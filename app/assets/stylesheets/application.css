@@ -90,3 +90,10 @@ p {
   display:flex;
   justify-content: space-between;
 }
+
+form {
+  text-align: center;
+  width: 50%;
+  height: 50%;
+  margin: auto;
+}
