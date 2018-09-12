@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Splash from './splash';
 
 class Home extends React.Component {
   render () {
@@ -11,11 +12,7 @@ class Home extends React.Component {
         </div>
       );} else {
         return (
-          <div>
-            <Link to='/signup'>Sign Up</Link>
-            <br/>
-            <Link to='/login'>Log In</Link>
-          </div>
+          <Splash />
         )
       };
     }
