@@ -65,6 +65,13 @@ p {
   background-color: #7289da;
 }
 
+.form-link {
+  font-size: 12px;
+  text-decoration: none;
+  margin-left: 10px;
+  color: #7289da;
+}
+
 .login-link:hover{
   position: relative;
   top: 1px;
