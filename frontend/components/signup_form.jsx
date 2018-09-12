@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, Redirect } from 'react-router-dom';
 
-class SessionForm extends React.Component {
+class SignUpForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -45,7 +45,16 @@ class SessionForm extends React.Component {
           <br />
             <input type='text' value={this.state.email} onChange={this.update('email')}/>
           <br />
-          
+
+          <label> Username
+            </label>
+            <br/>
+            <input
+              type='text'
+              value={this.state.username}
+              onChange={this.update('username')}/>
+          <br />
+
           <label>Password
           </label>
           <br />
@@ -61,4 +70,4 @@ class SessionForm extends React.Component {
   }
 }
 
-export default SessionForm;
+export default SignUpForm;
