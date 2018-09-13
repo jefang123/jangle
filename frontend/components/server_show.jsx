@@ -6,11 +6,6 @@ class ServerShow extends React.Component {
     this.props.fetchServer(this.props.match.params.serverId);
   }
 
-  // componentWillReceiveProps(nextProps) {
-  //   if (this.props.server.id != nextProps.match.params.serverId) {
-  //     this.props.fetchServer(nextProps.match.params.serverId)
-  //   }
-  // }
   componentWillUpdate(newProps) {
     if (this.props.match.params.serverId != newProps.match.params.serverId) {
       this.props.fetchServer(newProps.match.params.serverId)
