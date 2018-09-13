@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, Redirect } from 'react-router-dom';
+import { merge } from 'lodash';
 
 class SessionForm extends React.Component {
   constructor(props) {
@@ -8,7 +9,15 @@ class SessionForm extends React.Component {
       email: "",
       password: ""
     };
+    this.demo = false;
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick(e) {
+    e.preventDefault();
+    this.props.processForm(merge({},{email:'demo', password:'123456'}));
+   
   }
 
   handleSubmit(e) {
@@ -38,23 +47,27 @@ class SessionForm extends React.Component {
 
     return (
       <div className='session-container'>
-        <form className="session-form" onSubmit={this.handleSubmit}>
-          <h2>{header}</h2>
-          <label> Email
-          </label>
-          
-            <input type='text' value={this.state.email} onChange={this.update('email')}/>
-          
+        <div className="session-form">
+          <button className="demo" onClick= {this.handleClick}>Demo User!</button>
+          <div className="divider"></div>
+          <form onSubmit={this.handleSubmit}>
+            <h2>{header}</h2>
+            <label> Email
+            </label>
+            
+              <input type='text' value={this.state.email} onChange={this.update('email')}/>
+            
 
-          <label>Password
-          </label>
+            <label>Password
+            </label>
+            
+              <input type='password' value={this.state.password} onChange={this.update('password')}/>
           
-            <input type='password' value={this.state.password} onChange={this.update('password')}/>
-        
-          <button>{header}</button>
+            <button>{header}</button>
 
-          {link}
-        </form>
+            {link}
+          </form>
+        </div>
       </div>
     );
 

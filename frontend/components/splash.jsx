@@ -3,13 +3,15 @@ import { NavLink } from 'react-router-dom';
      
 const Splash = () => {
   return (
-    <div>
+    <div className="splash-div">
       <header className="login-header">
         <nav className="login-nav">
           <h2>Home</h2>
           <h2>Jangle</h2>
           <h2>Test</h2>
-          <h2>Test2</h2>
+          <NavLink 
+          to='/login'
+          className="login-nav nav-button demo-button">Demo User</NavLink>
           <NavLink 
           to='/login'
           className="login-nav nav-button">Log In</NavLink>

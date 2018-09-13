@@ -8,7 +8,6 @@ class ServerIndex extends React.Component {
   }
 
   componentWillUpdate(newProps) {
-    debugger
     if (this.props.match.params.currentUserId != newProps.match.params.currentUserId) {
       this.props.fetchServers()
     }
