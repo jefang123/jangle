@@ -11,9 +11,10 @@ export const receiveServers = servers => {
   };
 };
 
-export const removeServer = () => {
+export const removeServer = (id) => {
   return {
-    type: REMOVE_SERVER
+    type: REMOVE_SERVER,
+    serverId:id
   };
 };
 
@@ -74,7 +75,7 @@ export const deleteServer = id => {
   return dispatch => {
     return APIServer.deleteServer(id).then(
       server => {
-        return dispatch(removeServer());
+        return dispatch(removeServer(id));
       }
     );
   };

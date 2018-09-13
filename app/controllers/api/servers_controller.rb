@@ -23,6 +23,15 @@ class Api::ServersController < ApplicationController
     render json: {}
   end 
   
+
+  # delete relation from userjoin table and resulting in deleting from user.servers?
+  # def destroy 
+  #   join = UserJoin.find_by(user_id: current_user.id, server_id:server_id)
+  #   join.destroy 
+  #   render json: {}
+  # end 
+
+
   def create
     @server = Server.new(server_params)
     if @server.save
