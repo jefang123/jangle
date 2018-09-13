@@ -107,13 +107,17 @@ p {
   color: #72767d;
   padding: 40px;
   width: 400px;
-  height: 400px;
+  height: 330px;
   margin: auto;
   box-shadow: 10px 5px 5px #acacae;
   border-radius: 3px;
   position: relative;
   top: 25%;
   background-color: #36393f;
+}
+
+#signup-form {
+  height: 430px;
 }
 
 .session-form > input {

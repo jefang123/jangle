@@ -38,7 +38,7 @@ class SignUpForm extends React.Component {
 
     return (
       <div className="session-container" >
-        <form class="session-form" onSubmit={this.handleSubmit}>
+        <form className="session-form" id="signup-form" onSubmit={this.handleSubmit}>
           <h2>{header}</h2>
           <label> Email
           </label>
