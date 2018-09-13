@@ -1,5 +1,5 @@
 import React from 'react';
-import ServerIndexItem from './Server_index_item';
+import ServerIndexItem from './server_index_item';
 
 class ServerIndex extends React.Component {
 
