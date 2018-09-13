@@ -7,7 +7,10 @@ class ServerIndexItem extends React.Component {
       <li
         key={this.props.server.id}
       >
-      {this.props.server.server_name}
+        <Link to={`/server/${this.props.server.id}`}>
+        <h3>{this.props.server.server_name}</h3><br></br>
+        <img src={this.props.server.image_url}></img>
+        </Link> 
       </li>
   );}
 }
@@ -15,7 +18,3 @@ class ServerIndexItem extends React.Component {
 
 
 export default ServerIndexItem;
-{/* <Link to={`/server/${this.props.Server.id}`}>
-  <h3>{this.props.Server.name}</h3><br></br>
-  <img src={this.props.Server.image_url}></img>
-  </Link> */}

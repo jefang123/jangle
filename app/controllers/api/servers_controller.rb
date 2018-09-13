@@ -6,6 +6,7 @@ class Api::ServersController < ApplicationController
 
   def show 
     @server = Server.find_by(id: params[:id])
+    @users = @server.users
   end 
 
   def update
