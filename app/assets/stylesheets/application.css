@@ -120,6 +120,11 @@ p {
   height: 430px;
 }
 
+.session-form > h2 {
+  color: #fff;
+  font-weight: 400;
+}
+
 .session-form > input {
   margin: 20px 0;
   width: 388px;

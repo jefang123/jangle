@@ -23,18 +23,7 @@ const App = () => {
 };
 
 
-{/* <Route path='/server/:serverId/channel/:channelId' /> */}
+{/* <ProtectedRoute path='/server/:serverId/channel/:channelId' component={ChannelShowContainer} /> */}
 
 export default App;
 
-// const App = () => {
-//   return (
-//     <div>
-//       <h1>Discord</h1>
-//       <AuthRoute exact path='/' component={HomeContainer} />
-//       <ProtectedRoute exact path='/' component={LoggedInContainer} />
-//       <AuthRoute path='/login' component={LoginFormContainer} />
-//       <AuthRoute path='/signup' component={SignupFormContainer} />
-//     </div>
-//   );
-// };

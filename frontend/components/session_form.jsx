@@ -33,7 +33,7 @@ class SessionForm extends React.Component {
         <Redirect to='/' />
       );
     }
-    const link = this.props.formType === 'signup' ? <Link className='form-link' to='/login'>Log In</Link> : <Link className='form-link' to='signup'>Register</Link>;
+    const link = this.props.formType === 'signup' ? <Link className='form-link' to='/login'>Log In</Link> : <Link className='form-link' to='signup'>Register a new account</Link>;
   const header = this.props.formType === 'login' ? 'Log In' : 'Register';
 
     return (
