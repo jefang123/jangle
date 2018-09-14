@@ -5,11 +5,10 @@ class ServerIndexItem extends React.Component {
   
   render () {
     let image;
-    // let image = this.props.server.image_url;
     if (!this.props.server.image_url) {
-      const image = window.logo_url ;
+      image = window.logo_url ;
     } else {
-      const image = this.props.server.image_url;
+      image = this.props.server.image_url;
     }
     
     return (
