@@ -47,6 +47,9 @@ class SessionForm extends React.Component {
 
     return (
       <div className='session-container'>
+         <Link to='/'>  
+          <img className='logo' src={window.logo_url}/>
+          </Link>
         <div className="session-form">
           <button className="demo" onClick= {this.handleClick}>Demo User!</button>
           <div className="divider"></div>

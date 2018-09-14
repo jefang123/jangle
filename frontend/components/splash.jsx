@@ -6,6 +6,7 @@ const Splash = () => {
     <div className="splash-div">
       <header className="login-header">
         <nav className="login-nav">
+          <img src={window.logo_url}/>
           <h2>Home</h2>
           <h2>Jangle</h2>
           <h2>Test</h2>

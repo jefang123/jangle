@@ -7,9 +7,9 @@ class Home extends React.Component {
     if (this.props.currentUser) {
       return (
         <div>
-          <h2>Welcome Back, {this.props.currentUser.username}</h2>
-          <button onClick={this.props.logout}>Log Out</button>
-          <ServerIndexContainer />
+          <ServerIndexContainer 
+          currentUser ={ this.props.currentUser }
+          logout = { this.props.logout }/>
         </div>
       );} else {
         return (
@@ -21,3 +21,11 @@ class Home extends React.Component {
 
 
 export default Home;
+
+// return (
+//   <div>
+//     <h2>Welcome Back, {this.props.currentUser.username}</h2>
+//     <button onClick={this.props.logout}>Log Out</button>
+//     <ServerIndexContainer />
+//   </div>
+// );

@@ -38,6 +38,9 @@ class SignUpForm extends React.Component {
 
     return (
       <div className="session-container" >
+        <Link to='/'>  
+          <img className='logo' src={window.logo_url}/>
+          </Link>
         <form className="session-form" id="signup-form" onSubmit={this.handleSubmit}>
           <h2>{header}</h2>
           <label> Email

@@ -11,6 +11,7 @@
 
 class UserJoin < ApplicationRecord
   validates :user, :server, presence:true
+  validates :user, uniqueness: { scope: :server, message: "already joined server"}
 
   belongs_to :server, touch: true
   belongs_to :user, touch: true 
