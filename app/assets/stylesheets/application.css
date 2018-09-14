@@ -217,24 +217,26 @@ li:hover .hidden {
 }
 
 li  img {
-  border-radius: 100%;
+  border-radius: 50%;
 }
 
 li img:hover {
   border-radius: 0;
+  transition: all .3s ease-in-out
 }
 
 .create-server {
   position: absolute;
+  top: 5px;
   box-sizing: border-box;
   height: 50px;
   width: 50px;
   border-radius: 50%;
   border: 1px dashed #acacae;
+  background-color: #000;
   color: #acacae;
-  font-size: 25px;
+  font-size: 22px;
   text-decoration: none;
-  padding: 8px 16px;
 }
 
 .create-server:hover {

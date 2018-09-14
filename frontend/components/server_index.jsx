@@ -21,7 +21,7 @@ class ServerIndex extends React.Component {
           <ul>
             { servers }
             <li>
-              <Link className="create-server" to='/'>+</Link>
+              <button className="create-server" >+</button>
             </li>
           </ul>
         </section>
