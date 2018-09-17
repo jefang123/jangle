@@ -4,6 +4,7 @@ import { Route, Switch } from 'react-router-dom';
 import LoginFormContainer from './login_form_container';
 import SignupFormContainer from './signup_form_container';
 import ServerShowContainer from './server_show_container';
+import ChannelShowContainer from './channel_show_container';
 import { ProtectedRoute } from '../util/route_util';
 
 
@@ -16,6 +17,7 @@ const App = () => {
         <div>
           <Route path='/' component={HomeContainer} />
           <ProtectedRoute path='/server/:serverId' component={ServerShowContainer} />
+          <ProtectedRoute path='/server/:serverId/channel/:channelId' component={ChannelShowContainer} />
         </div>
       </Switch>
     </div>
@@ -23,7 +25,6 @@ const App = () => {
 };
 
 
-{/* <ProtectedRoute path='/server/:serverId/channel/:channelId' component={ChannelShowContainer} /> */}
 
 export default App;
 

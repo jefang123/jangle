@@ -11,7 +11,8 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    fetchServer: id => dispatch(fetchServer(id))
+    fetchServer: id => dispatch(fetchServer(id)),
+    deleteServer: id => dispatch(deleteServer(id))
   }
 }
 

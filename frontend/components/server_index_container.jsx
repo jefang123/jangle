@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { fetchServers, createServer } from '../actions/server_actions';
+import { fetchServers, createServer} from '../actions/server_actions';
 import ServerIndex from './server_index';
 import { withRouter } from 'react-router-dom'
 

@@ -14,27 +14,23 @@
  *= require_self
  */
 
-* {
-  margin: 0;
-  padding: 0;
-	border: 0;
-	/* font-size: 100%;
-	font: inherit;
-	vertical-align: baseline; */
- }
-
 body {
   background-color: #18191c;
   color: #fff;
   font-family: Helvetica;
+  width: 100%
+}
+
+button:hover {
+  cursor: pointer;
 }
 
 p {
   color: #acacae;
 }
 
-.splash-div {
-  width: 80%;
+.login-header {
+  width: 90%;
   margin:auto;
 }
 .login-nav {
@@ -146,6 +142,12 @@ p {
   margin: 20px;
 }
 
+.server-divider {
+  width: 5px;
+  background-color: grey;
+  margin-right: 5px;
+}
+
 #signup-form {
   height: 430px;
 }
@@ -193,15 +195,16 @@ p {
 
 .server-index {
   width: 70px;
+  opacity: 1;
 }
 
 .hidden {
   display: none;
   position: absolute;
-  left: 55px;
+  left: 50px;
   background-color: #000;
   color: white;
-  top: 30px;
+  top: -5px;
   min-width: 50px;
 }
 
@@ -218,10 +221,12 @@ li:hover .hidden {
 
 li  img {
   border-radius: 50%;
+  opacity: .4;
 }
 
 li img:hover {
   border-radius: 0;
+  opacity: 1.4;
   transition: all .3s ease-in-out
 }
 
@@ -242,4 +247,19 @@ li img:hover {
 .create-server:hover {
   color: #fff;
   border-color: #fff;
+}
+
+.channel-index {
+  background-color: 36393f;
+  width: 15%;
+}
+
+.channel-show {
+  background-color: 36393f;
+  width: 70%;
+}
+
+.user-index {
+  width: 15%;
+  background-color: 36393f;
 }

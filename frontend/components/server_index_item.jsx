@@ -2,7 +2,18 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 class ServerIndexItem extends React.Component {
-  
+  constructor (props) {
+    super(props)
+  }
+  contextMenu (e) {
+    e.preventDefault();
+  }
+
+  handleClick (e) {
+    e.preventDefault();
+    this.props.deleteServer(this.props.server.id)
+  }
+
   render () {
     let image;
     if (!this.props.server.image_url) {
@@ -15,14 +26,14 @@ class ServerIndexItem extends React.Component {
       <li
         key={this.props.server.id}
       >
-        <h3 className="hidden">{this.props.server.server_name}</h3><br></br>
+        <div className="hidden">
+          <h3>{this.props.server.server_name}</h3><br></br>
+        </div>
         <Link to={`/server/${this.props.server.id}`}>
-        <img src={image}></img>
+        <img onContextMenu={this.contextMenu.bind(this)} src={image}></img>
         </Link> 
       </li>
   );}
 }
-
-
 
 export default ServerIndexItem;
