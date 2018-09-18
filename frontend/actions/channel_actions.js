@@ -39,7 +39,7 @@ export const fetchChannels = () => {
   };
 };
 
-export const fetchchannel = (id) => {
+export const fetchChannel = (id) => {
   return dispatch => {
     return APIChannel.fetchChannel(id).then(
       channel => {
@@ -49,9 +49,20 @@ export const fetchchannel = (id) => {
   };
 };
 
-export const updatechannel = channel => {
+export const updateChannel = channel => {
   return dispatch => {
-    return APIChannel.updatechannel(channel).then(
+    return APIChannel.updateChannel(channel).then(
+      channel => {
+        return dispatch(receiveChannel(channel));
+      }
+    );
+  };
+};
+
+
+export const createChannel = channel => {
+  return dispatch => {
+    return APIChannel.createChannel(channel).then(
       channel => {
         return dispatch(receivechannel(channel));
       }
@@ -60,22 +71,11 @@ export const updatechannel = channel => {
 };
 
 
-export const createchannel = channel => {
+export const deleteChannel = id => {
   return dispatch => {
-    return APIChannel.createchannel(channel).then(
+    return APIChannel.deleteChannel(id).then(
       channel => {
-        return dispatch(receivechannel(channel));
-      }
-    );
-  };
-};
-
-
-export const deletechannel = id => {
-  return dispatch => {
-    return APIChannel.deletechannel(id).then(
-      channel => {
-        return dispatch(removechannel(id));
+        return dispatch(removeChannel(id));
       }
     );
   };

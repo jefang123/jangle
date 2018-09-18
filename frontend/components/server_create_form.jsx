@@ -13,6 +13,7 @@ class ServerCreateForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     this.props.processForm(this.state);
+    this.props.handleClose();
     this.setState({
       server_name: ""
     });
@@ -32,6 +33,7 @@ class ServerCreateForm extends React.Component {
         type='text' 
         value={this.state.server_name} 
         onChange={this.update('server_name')}/>
+        <button>Create Server</button>
       </form>
     )
   }

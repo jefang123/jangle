@@ -1,4 +1,4 @@
-import ServerCreateForm from "./session_form";
+import ServerCreateForm from "./server_create_form";
 import { connect } from 'react-redux';
 import { createServer } from '../actions/server_actions';
 

@@ -14,11 +14,7 @@ const App = () => {
       <Switch>
         <Route path='/login' component={LoginFormContainer} />
         <Route path='/signup' component={SignupFormContainer} />
-        <div>
-          <Route path='/' component={HomeContainer} />
-          <ProtectedRoute path='/server/:serverId' component={ServerShowContainer} />
-          <ProtectedRoute path='/server/:serverId/channel/:channelId' component={ChannelShowContainer} />
-        </div>
+        <Route path='/' component={HomeContainer} />
       </Switch>
     </div>
   );

@@ -250,16 +250,16 @@ li img:hover {
 }
 
 .channel-index {
-  background-color: 36393f;
+  background-color: #36393f;
   width: 15%;
 }
 
 .channel-show {
-  background-color: 36393f;
-  width: 70%;
+  background-color: #36393f;
+  width: 100%;
 }
 
 .user-index {
   width: 15%;
-  background-color: 36393f;
+  background-color: #36393f;
 }

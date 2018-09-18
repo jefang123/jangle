@@ -20,10 +20,11 @@ class ChannelShow extends React.Component {
     });
     const { channel } = this.props;
     return (
-      <div>
+      <section className='channel-show'>
         <h3>{channel.channel_name}</h3>
-        {users}
-      </div>
+        <div className="divider"></div>
+        MessageApp
+      </section>
     )
   }
 

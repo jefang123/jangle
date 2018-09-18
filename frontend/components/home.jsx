@@ -22,10 +22,3 @@ class Home extends React.Component {
 
 export default Home;
 
-// return (
-//   <div>
-//     <h2>Welcome Back, {this.props.currentUser.username}</h2>
-//     <button onClick={this.props.logout}>Log Out</button>
-//     <ServerIndexContainer />
-//   </div>
-// );

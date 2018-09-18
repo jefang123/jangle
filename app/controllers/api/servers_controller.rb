@@ -7,6 +7,7 @@ class Api::ServersController < ApplicationController
   def show 
     @server = Server.find_by(id: params[:id])
     @users = @server.users
+    @channels = @server.channels
   end 
 
   def update
@@ -26,9 +27,11 @@ class Api::ServersController < ApplicationController
 
   def create
     @server = Server.new(server_params)
+    @server.creator_id = current_user.id
     if @server.save
       UserJoin.create(server_id: @server.id, user_id: @server.creator_id)
-      render :show
+      @servers = current_user.servers
+      render :index
     else
       render json: @server.errors.full_messages, status: 422
     end
