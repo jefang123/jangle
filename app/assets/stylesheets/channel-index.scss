@@ -1,0 +1,55 @@
+.channel-index{
+  display:flex;
+  flex-direction: column;
+
+  .server-heading {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .user-tab {
+    text-align: center;
+  }
+
+  ul {
+    height: 78vh;
+    li {
+      display: flex;
+      justify-content: space-between;
+      color: #acacae;
+      padding: 10px;
+    }
+    li:hover{
+      a{
+        color: #cdcdd0;
+      }
+      background-color: #5e5e5f;
+    }
+
+    .delete-server{
+      position: relative;
+    }
+
+    .delete-hidden{
+      display: none;
+      position: absolute;
+      background-color: #000;
+      color: white;
+      min-width: 50px;
+      z-index: 3;
+      top: 0;
+      left: 20px;
+    }
+
+    .delete-server:hover{
+      color: red;
+      .delete-hidden{
+        display: block;
+      }
+    }
+
+    a {
+      color:#acacae;
+    }
+  }
+}

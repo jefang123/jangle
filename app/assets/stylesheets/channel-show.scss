@@ -7,8 +7,15 @@
   .message-index {
     margin:20px;
     height: 84vh;
+    display: flex;
+    flex-direction: column-reverse;
     div {
       margin:20px 0;
+      display:flex;
+      justify-content: space-between;
+    }
+    .delete-message:hover {
+      color: red;
     }
     overflow:auto;
   }

@@ -42,9 +42,14 @@ class ServerShow extends React.Component {
       return (
         <li>
           <Link to={`/server/${this.props.server.id}/channel/${channel.id}`}>
-            {channel.channel_name}
-            <button onClick={()=>{this.props.deleteChannel(channel.id)}}>Delete Channel</button>
+            # {channel.channel_name} </Link>
+          <Link to={`/server/${this.props.server.id}/channel/${channel.id}`}>
+            <p className="delete-server" onClick={()=>{this.props.deleteChannel(channel.id)}}>
+            X
+            <p className="delete-hidden">Delete Server </p>
+            </p>
           </Link>
+          
         </li>
       )
     });
@@ -57,20 +62,22 @@ class ServerShow extends React.Component {
     return (
       <div className="server-show">
         <section className='channel-index'>
-          <h3>{server.server_name}</h3>
-          <button onClick={this.handleClick.bind(this)}>Delete Server</button>
-          <Modal show={this.state.show} handleClose={this.hideModal}>
-            <ChannelCreateContainer handleClose={this.hideModal}/>
-          </Modal>
-          <br />
-          <button onClick={this.showModal} >+</button>
+          <section className='server-heading'>
+            <h3>{server.server_name}</h3>
+            <button onClick={this.handleClick.bind(this)}>Delete Server</button>
+            <Modal show={this.state.show} handleClose={this.hideModal}>
+              <ChannelCreateContainer handleClose={this.hideModal}/>
+            </Modal>
+            <br />
+            <button onClick={this.showModal} >+</button>
+          </section>
           <div className="divider" />
           <ul>
             {channels}
           </ul>
           <div className="divider" />
-          <div>
-              <h2>Welcome Back, {this.props.currentUser.username}</h2>
+          <div className="user-tab">
+              <h2>{this.props.currentUser.username}</h2>
               <button onClick={this.props.logout}>Log Out</button>
           </div>
     
@@ -83,7 +90,10 @@ class ServerShow extends React.Component {
         <section className='user-index'>
           <p> Users </p>
           <div className="divider" />
+          <ul>
+
           {users}
+          </ul>
         </section>
       </div>
     )

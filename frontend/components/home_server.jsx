@@ -43,8 +43,8 @@ class ServerShow extends React.Component {
             {channels}
           </ul>
           <div className="divider" />
-          <div>
-              <h2>Welcome Back, {this.props.currentUser.username}</h2>
+          <div className="user-tab">
+              <h2>{this.props.currentUser.username}</h2>
               <button onClick={this.props.logout}>Log Out</button>
           </div>
     

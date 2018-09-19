@@ -51,7 +51,7 @@ class ChannelShow extends React.Component {
           <div>
 
             <p key={message.id}>{message.body}</p>
-            <button onClick={()=>this.handleClick(message.id)}>x</button>
+            <p className="delete-message" onClick={()=>this.handleClick(message.id)}>x</p>
           </div>
         );
       }
@@ -61,10 +61,9 @@ class ChannelShow extends React.Component {
       <section className='channel-show'>
         <section className='channel-show-heading'> 
 
-          <h3>{channel.channel_name}</h3>
-
-          <div className="divider"></div>
+          <h3># {channel.channel_name}</h3>
         </section>
+          <div className="divider"></div>
         <section className='message-index' id="chat">
 
         {messages}
