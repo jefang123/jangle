@@ -53,8 +53,8 @@ export const fetchChannel = (id) => {
 export const updateChannel = channel => {
   return dispatch => {
     return APIChannel.updateChannel(channel).then(
-      channel => {
-        return dispatch(receiveChannel(channel));
+      payload => {
+        return dispatch(receiveChannel(payload));
       }
     );
   };
@@ -64,8 +64,8 @@ export const updateChannel = channel => {
 export const createChannel = channel => {
   return dispatch => {
     return APIChannel.createChannel(channel).then(
-      channel => {
-        return dispatch(receivechannel(channel));
+      payload => {
+        return dispatch(receiveChannel(payload));
       }
     );
   };

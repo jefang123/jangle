@@ -28,17 +28,12 @@ class ServerIndex extends React.Component {
     this.props.fetchServers();
   }
 
-  // componentDidUpdate(prevProps) {
-    
-  //   if (this.props.match.params !== prevProps.match.params) {
-  //     this.props.fetchServers()
-  //   }
-  // }
-  // componentWillUpdate(newProps) {
-  //   if (this.props.match.params.currentUserId !== newProps.match.params.currentUserId) {
-  //     this.props.fetchServers()
-  //   }
-  // }
+  componentDidUpdate(prevProps) {
+    if (this.props.match.params !== prevProps.match.params) {
+      this.props.fetchServers()
+    }
+  }
+  
   render(){ 
     let homeId;
     const home = this.props.servers.map(server => {
@@ -79,22 +74,3 @@ class ServerIndex extends React.Component {
 }
 
 export default ServerIndex;
-{/* <div className="server-divider" />
-<div className="server-divider" />
-<section className='channel-show'>
- <p> Hello from ChannelShow </p>
- <div className="divider" />
-</section>
-<div className="server-divider" />
-<section className='user-index'>
-  <p> Hello from UserIndex </p>
-  <div className="divider" />
-</section> */}
-{/* <section className='channel-index'>
-<p>Hello from ChannelIndex</p>
-<div className="divider" />
-<div>
-<h2>Welcome Back, {this.props.currentUser.username}</h2>
-<button onClick={this.props.logout}>Log Out</button>
-</div>
-</section> */}

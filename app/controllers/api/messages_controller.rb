@@ -1,7 +1,6 @@
-class Api::MessageController < ApplicationController 
+class Api::MessagesController < ApplicationController 
   def index 
-    @channel = Channel.find_by(params[:channel_id])
-    @messages = @channel.messages
+    @messages = Message.all
   end
   
   def show 
@@ -25,9 +24,8 @@ class Api::MessageController < ApplicationController
   
 
   def create
- 
     @message = Message.new(message_params)
-    @message.channel_id = params[:channel_id]
+    @message.user_id = current_user.id
     if @message.save
       render :show
     else
@@ -36,6 +34,6 @@ class Api::MessageController < ApplicationController
   end
   
   def message_params 
-    params.require(:message).permit(:message_body)
+    params.require(:message).permit(:body, :channel_id)
   end 
 end 

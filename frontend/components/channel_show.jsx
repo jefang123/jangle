@@ -1,29 +1,80 @@
 import React from 'react';
 
+
 class ChannelShow extends React.Component {
+  constructor (props) {
+    super(props)
+    this.state = {
+      body: "",
+      channel_id: this.props.match.params.channelId
+    }
+  }
   componentDidMount () {
-    this.props.fetchChannel(this.props.match.params.channelId);
+    this.props.fetchMessages();
   }
 
-  componentWillUpdate(newProps) {
-    if (this.props.match.params.channelId != newProps.match.params.channelId) {
-      this.props.fetchChannel(newProps.match.params.channelId)
+
+  componentDidUpdate(prevProps) {
+    if (this.props.match.params !== prevProps.match.params) {
+      this.props.fetchMessages();
+      this.setState({
+        channel_id: this.props.match.params.channelId
+      })
     }
+  }
+
+  handleClick (id) {
+    this.props.deleteMessage(id);
+  }
+
+  handleSubmit (e) {
+    e.preventDefault();
+    this.props.createMessage(this.state)
+    this.setState({
+      body: ""
+    })
+  }
+
+  update(field) {
+    return (e) => {
+      this.setState({
+        [field]: e.target.value
+      });
+    };
   }
 
   render() {
     if (!this.props.channel) return null;
-    const users = this.props.users.map(user => {
-      return (
-        <p key={user.id}>{user.username}</p>
-      );
+    const messages = this.props.messages.map(message => {
+      if (message.channel_id === this.props.channel.id) {
+        return (
+          <div>
+
+            <p key={message.id}>{message.body}</p>
+            <button onClick={()=>this.handleClick(message.id)}>x</button>
+          </div>
+        );
+      }
     });
     const { channel } = this.props;
     return (
       <section className='channel-show'>
-        <h3>{channel.channel_name}</h3>
+        <section className='channel-show-heading'> 
+
+          <h3>{channel.channel_name}</h3>
+
+          <div className="divider"></div>
+        </section>
+        <section className='message-index'>
+
+        {messages}
+        </section>
         <div className="divider"></div>
-        MessageApp
+        <form onSubmit={this.handleSubmit.bind(this)}>
+          <input type='text' 
+           value={this.state.body} 
+           onChange={this.update('body')}/>
+        </form>
       </section>
     )
   }

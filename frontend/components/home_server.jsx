@@ -2,25 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom'
 import { ProtectedRoute } from '../util/route_util';
 import ChannelShowContainer from './channel_show_container';
-import ChannelCreateContainer from './channel_create_container';
-import Modal from './modal';
 
 class ServerShow extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = { show: false }
-    this.showModal = this.showModal.bind(this)
-    this.hideModal = this.hideModal.bind(this)
-  }
-
-  showModal () {
-    this.setState({ show: true });
-  }
-  
-  hideModal () {
-    this.setState({ show: false });
-  }
-
   componentDidMount () {
     this.props.fetchServer(this.props.match.params.serverId);
   }
@@ -31,11 +14,7 @@ class ServerShow extends React.Component {
     }
   }
 
-  handleClick (e) {
-    e.preventDefault();
-    this.props.deleteServer(this.props.server.id);   
-  }
-
+  
   render() {
     if (!this.props.server) return null;
     const channels= this.props.channels.map( channel => {
@@ -58,12 +37,7 @@ class ServerShow extends React.Component {
       <div className="server-show">
         <section className='channel-index'>
           <h3>{server.server_name}</h3>
-          <button onClick={this.handleClick.bind(this)}>Delete Server</button>
-          <Modal show={this.state.show} handleClose={this.hideModal}>
-            <ChannelCreateContainer handleClose={this.hideModal}/>
-          </Modal>
-          <br />
-          <button onClick={this.showModal} >+</button>
+          <button onClick={this.handleClick.bind(this)}>Delete</button>
           <div className="divider" />
           <ul>
             {channels}
@@ -92,4 +66,3 @@ class ServerShow extends React.Component {
 }
 
 export default ServerShow;
-
