@@ -30,8 +30,10 @@ class Api::ServersController < ApplicationController
     @server.creator_id = current_user.id
     if @server.save
       UserJoin.create(server_id: @server.id, user_id: @server.creator_id)
-      @servers = current_user.servers
-      render :index
+      Channel.create(server_id:@server.id, channel_name:"general", channel_topic:"Anything is welcome here")
+      @users = @server.users
+      @channels = @server.channels
+      render :show
     else
       render json: @server.errors.full_messages, status: 422
     end

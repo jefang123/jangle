@@ -230,7 +230,7 @@ li  img {
 li img:hover {
   border-radius: 0;
   opacity: 1.4;
-  transition: all .3s ease-in-out
+  transition: all .5s ease-in-out
 }
 
 .create-server {

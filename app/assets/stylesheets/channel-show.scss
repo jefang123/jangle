@@ -2,11 +2,19 @@
   
   .channel-show-heading{
     margin: 20px;
+    span {
+      border-left: 1px solid grey;
+      margin-left: 10px;
+      padding-left: 10px;
+      font-size: 15px;
+      color: #acacae;
+      font-weight: 400;
+    }
   }
 
   .message-index {
     margin:20px;
-    height: 84vh;
+    height: 80vh;
     display: flex;
     flex-direction: column-reverse;
     div {

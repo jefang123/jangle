@@ -5,6 +5,7 @@ import ChannelShowContainer from './channel_show_container';
 import { ProtectedRoute } from '../util/route_util';
 import ServerShowContainer from './server_show_container';
 import Modal from './modal';
+import JoinServerForm from './join_server_form';
 
 
 class ServerIndex extends React.Component {
@@ -60,7 +61,10 @@ class ServerIndex extends React.Component {
             { servers }
             <li>
               <Modal show={this.state.show} handleClose={this.hideModal}>
+                <div className="create-server-modal">
                   <ServerCreateForm handleClose={this.hideModal}/>
+                  <JoinServerForm handleClose={this.hideModal}/>
+                </div>
               </Modal>
               <button onClick={this.showModal} className="create-server" >+</button>
             </li>

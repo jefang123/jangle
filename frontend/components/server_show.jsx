@@ -40,13 +40,13 @@ class ServerShow extends React.Component {
     if (!this.props.server) return null;
     const channels= this.props.channels.map( channel => {
       return (
-        <li>
+        <li key={channel.id}>
           <Link to={`/server/${this.props.server.id}/channel/${channel.id}`}>
             # {channel.channel_name} </Link>
           <Link to={`/server/${this.props.server.id}/channel/${channel.id}`}>
             <p className="delete-server" onClick={()=>{this.props.deleteChannel(channel.id)}}>
             X
-            <p className="delete-hidden">Delete Server </p>
+            <span className="delete-hidden">Delete Server </span>
             </p>
           </Link>
           
@@ -88,7 +88,7 @@ class ServerShow extends React.Component {
         </section>
         <div className="server-divider" />
         <section className='user-index'>
-          <p> Users </p>
+          <h3> Users </h3>
           <div className="divider" />
           <ul>
 

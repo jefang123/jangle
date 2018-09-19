@@ -1,5 +1,5 @@
 import React from 'react';
-
+import MessageForm from './message_create_container';
 
 class ChannelShow extends React.Component {
   constructor (props) {
@@ -48,9 +48,9 @@ class ChannelShow extends React.Component {
     const messages = this.props.messages.reverse().map(message => {
       if (message.channel_id === this.props.channel.id) {
         return (
-          <div>
+          <div key={message.id}>
 
-            <p key={message.id}>{message.body}</p>
+            <p >{message.body}</p>
             <p className="delete-message" onClick={()=>this.handleClick(message.id)}>x</p>
           </div>
         );
@@ -61,7 +61,7 @@ class ChannelShow extends React.Component {
       <section className='channel-show'>
         <section className='channel-show-heading'> 
 
-          <h3># {channel.channel_name}</h3>
+          <h3># {channel.channel_name}<span>{channel.channel_topic}</span></h3>
         </section>
           <div className="divider"></div>
         <section className='message-index' id="chat">
@@ -69,11 +69,7 @@ class ChannelShow extends React.Component {
         {messages}
         </section>
         <div className="divider"></div>
-        <form onSubmit={this.handleSubmit.bind(this)}>
-          <input type='text' 
-           value={this.state.body} 
-           onChange={this.update('body')}/>
-        </form>
+        <MessageForm />
       </section>
     )
   }

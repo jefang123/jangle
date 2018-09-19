@@ -23,7 +23,7 @@ export const createMessage = (message) => {
 export const updateMessage = message => {
   return $.ajax({
     method: 'GET',
-    url: `api/session/${message.id}`,
+    url: `api/messages/${message.id}`,
     data: {message}
   });
 };

@@ -1,10 +1,10 @@
 import React from 'react';
 
-class ServerCreateForm extends React.Component {
+class JoinServerForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      server_name: ""
+      server_id: ""
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -15,7 +15,7 @@ class ServerCreateForm extends React.Component {
     this.props.processForm(this.state);
     this.props.handleClose();
     this.setState({
-      server_name: ""
+      server_id: ""
     });
   }
 
@@ -29,16 +29,16 @@ class ServerCreateForm extends React.Component {
   render () {
     return (
       <form onSubmit={this.handleSubmit}>
-        <label>Server Name</label>
+        <label>Server ID</label>
         <input 
-        type='text' 
-        value={this.state.server_name} 
-        onChange={this.update('server_name')}/>
-        <button>Create Server</button>
+        type='number' 
+        value={this.state.server_id} 
+        onChange={this.update('server_id')}/>
+        <button>Join Server</button>
       </form>
     )
   }
 }
 
 
-export default ServerCreateForm;
+export default JoinServerForm;
