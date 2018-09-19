@@ -45,7 +45,7 @@ class ChannelShow extends React.Component {
 
   render() {
     if (!this.props.channel) return null;
-    const messages = this.props.messages.map(message => {
+    const messages = this.props.messages.reverse().map(message => {
       if (message.channel_id === this.props.channel.id) {
         return (
           <div>
@@ -65,7 +65,7 @@ class ChannelShow extends React.Component {
 
           <div className="divider"></div>
         </section>
-        <section className='message-index'>
+        <section className='message-index' id="chat">
 
         {messages}
         </section>
@@ -80,5 +80,6 @@ class ChannelShow extends React.Component {
   }
 
 }
+
 
 export default ChannelShow;
