@@ -6,7 +6,8 @@ import { createMessage, fetchMessages, deleteMessage } from '../actions/message_
 const mapStateToProps = (state, ownProps) => {
   return {
     channel: state.entities.channels[ownProps.match.params.channelId],
-    messages: Object.values(state.entities.messages)
+    messages: Object.values(state.entities.messages),
+    users: state.entities.users
   };
 }
 

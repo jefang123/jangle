@@ -44,13 +44,16 @@ class ChannelShow extends React.Component {
   }
 
   render() {
+
     if (!this.props.channel) return null;
+    const users = this.props.users;
     const messages = this.props.messages.reverse().map(message => {
       if (message.channel_id === this.props.channel.id) {
+        const user = users[message.user_id];
         return (
+           
           <div key={message.id}>
-
-            <p >{message.body}</p>
+            <p >{user.username} : {message.body}</p>
             <p className="delete-message" onClick={()=>this.handleClick(message.id)}>x</p>
           </div>
         );
