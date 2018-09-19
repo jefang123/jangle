@@ -28,11 +28,17 @@ class ServerIndex extends React.Component {
     this.props.fetchServers();
   }
 
-  componentWillUpdate(newProps) {
-    if (this.props.match.params.currentUserId != newProps.match.params.currentUserId) {
-      this.props.fetchServers()
-    }
-  }
+  // componentDidUpdate(prevProps) {
+    
+  //   if (this.props.match.params !== prevProps.match.params) {
+  //     this.props.fetchServers()
+  //   }
+  // }
+  // componentWillUpdate(newProps) {
+  //   if (this.props.match.params.currentUserId !== newProps.match.params.currentUserId) {
+  //     this.props.fetchServers()
+  //   }
+  // }
   render(){ 
     let homeId;
     const home = this.props.servers.map(server => {
@@ -59,7 +65,7 @@ class ServerIndex extends React.Component {
             { servers }
             <li>
               <Modal show={this.state.show} handleClose={this.hideModal}>
-                  <ServerCreateForm hideModal={this.hideModal}/>
+                  <ServerCreateForm handleClose={this.hideModal}/>
               </Modal>
               <button onClick={this.showModal} className="create-server" >+</button>
             </li>

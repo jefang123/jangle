@@ -1,4 +1,6 @@
-json.extract! @server, :id, :server_name, :creator_id
+json.server do
+  json.extract! @server, :id, :server_name, :creator_id
+end
 json.users do
   @users.each do |user|
     json.set! user.id do

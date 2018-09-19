@@ -9,7 +9,7 @@ class Api::ChannelsController < ApplicationController
   end 
   
   def update
-    @channel = channel.find_by(id: params[:id])  
+    @channel = Channel.find_by(id: params[:id])  
     if @channel.update(channel_params)
       render :show 
     else
@@ -18,7 +18,7 @@ class Api::ChannelsController < ApplicationController
   end 
   
   def destroy 
-    channel = channel.find_by(id: params[:id])
+    channel = Channel.find_by(id: params[:id])
     channel.destroy
     render json: {}
   end 
@@ -26,7 +26,7 @@ class Api::ChannelsController < ApplicationController
 
   def create
  
-    @channel = channel.new(channel_params)
+    @channel = Channel.new(channel_params)
     @channel.server_id = params[:server_id]
     if @channel.save
       render :show

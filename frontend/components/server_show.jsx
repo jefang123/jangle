@@ -8,10 +8,25 @@ class ServerShow extends React.Component {
     this.props.fetchServer(this.props.match.params.serverId);
   }
 
-  componentWillUpdate(newProps) {
-    if (this.props.match.params.serverId != newProps.match.params.serverId) {
-      this.props.fetchServer(newProps.match.params.serverId)
+  componentDidUpdate(prevProps) {
+    if (this.props.match.params !== prevProps.match.params) {
+      this.props.fetchServer(this.props.match.params.serverId)
     }
+  }
+
+  // componentWillUpdate(newProps) {
+  //   if (this.props.match.params.serverId != newProps.match.params.serverId) {
+  //     this.props.fetchServer(newProps.match.params.serverId)
+  //   }
+  // }
+
+  handleClick (e) {
+    e.preventDefault();
+    this.props.deleteServer(this.props.server.id);   
+  }
+
+  handleClick(e) {
+    
   }
 
   render() {
@@ -21,6 +36,7 @@ class ServerShow extends React.Component {
         <li>
           <Link to={`/server/${this.props.server.id}/channel/${channel.id}`}>
             {channel.channel_name}
+            <button onClick={()=>{this.props.deleteChannel(channel.id)}}>Delete Channel</button>
           </Link>
         </li>
       )
@@ -35,6 +51,7 @@ class ServerShow extends React.Component {
       <div className="server-show">
         <section className='channel-index'>
           <h3>{server.server_name}</h3>
+          <button onClick={this.handleClick.bind(this)}>Delete</button>
           <div className="divider" />
           <ul>
             {channels}

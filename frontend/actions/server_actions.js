@@ -18,10 +18,12 @@ export const removeServer = (id) => {
   };
 };
 
-export const receiveServer = server => {
+export const receiveServer = payload => {
   return {
     type: RECEIVE_SERVER,
-    server
+    server: payload.server,
+    channels: payload.channels,
+    users: payload.users
   };
 };
 
@@ -42,8 +44,8 @@ export const fetchServers = () => {
 export const fetchServer = (id) => {
   return dispatch => {
     return APIServer.fetchServer(id).then(
-      server => {
-        return dispatch(receiveServer(server));
+      payload => {
+        return dispatch(receiveServer(payload));
       }
     );
   };

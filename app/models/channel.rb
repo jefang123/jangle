@@ -13,4 +13,5 @@
 class Channel < ApplicationRecord
   belongs_to :server
   validates :server, :channel_name, presence: true
+  has_many :messages, dependent: :destroy
 end

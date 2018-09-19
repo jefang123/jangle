@@ -6,9 +6,9 @@ export default (state={}, action) => {
   Object.freeze(state);
   switch (action.type) {
     case RECEIVE_CURRENT_USER:
-      return {[action.currentUser.id]:action.currentUser}
+      return merge({}, state, {[action.currentUser.id]:action.currentUser})
     case RECEIVE_SERVER: 
-      return action.server.users
+      return merge({}, state, action.users)
     default:
       return state;
   }

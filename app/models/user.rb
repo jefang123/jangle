@@ -22,6 +22,7 @@ class User < ApplicationRecord
   has_many :created_servers, class_name: "Server", foreign_key: :creator_id
   has_many :userjoins, class_name: "UserJoin", foreign_key: :user_id, inverse_of: :user, dependent: :destroy
   has_many :servers, through: :userjoins
+  has_many :messages
 
   def password=(password)
     @password = password

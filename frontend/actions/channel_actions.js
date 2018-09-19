@@ -18,10 +18,11 @@ export const removeChannel = (id) => {
   };
 };
 
-export const receiveChannel = channel => {
+export const receiveChannel = payload => {
   return {
     type: RECEIVE_CHANNEL,
-    channel
+    channel: payload.channel,
+    messages: payload.messages
   };
 };
 
@@ -42,8 +43,8 @@ export const fetchChannels = () => {
 export const fetchChannel = (id) => {
   return dispatch => {
     return APIChannel.fetchChannel(id).then(
-      channel => {
-        return dispatch(receiveChannel(channel));
+      payload => {
+        return dispatch(receiveChannel(payload));
       }
     );
   };

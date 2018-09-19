@@ -8,6 +8,9 @@ Rails.application.routes.draw do
     resources :servers do 
       resources :channels, only: [:create]
     end 
-    resources :channels
+    resources :channels do 
+      resources :messages, only: [:create]
+    end 
+    resources :messages
   end
 end

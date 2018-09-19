@@ -11,7 +11,6 @@ class ServerIndexItem extends React.Component {
 
   handleClick (e) {
     e.preventDefault();
-    this.props.deleteServer(this.props.server.id)
   }
 
   render () {
