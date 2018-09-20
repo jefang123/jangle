@@ -1,10 +1,12 @@
 .channel-index{
+  
   display:flex;
   flex-direction: column;
 
   .server-heading {
     text-align: center;
     margin-top: 20px;
+    border-bottom: 1px solid #232428;
   }
 
   .user-tab {
@@ -12,7 +14,8 @@
   }
 
   ul {
-    height: 74vh;
+    background-color: #2f3136;
+    height: 78vh;
     li {
       display: flex;
       justify-content: space-between;

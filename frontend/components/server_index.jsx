@@ -3,15 +3,24 @@ import ServerIndexItem from './server_index_item';
 import ServerCreateForm from './server_create_container';
 import ChannelShowContainer from './channel_show_container';
 import { ProtectedRoute } from '../util/route_util';
+import {Route} from 'react-router-dom';
 import ServerShowContainer from './server_show_container';
 import Modal from './modal';
 import JoinServerForm from './join_server_form';
+
+import actionCable from 'actioncable';
+
+
+const CableApp = {};
+CableApp.cable = 
+actionCable.createConsumer(`ws://${window.location.hostname}:3000/cable`)
 
 
 class ServerIndex extends React.Component {
   constructor(props) {
     super(props)
     this.state = { show: false }
+   
     this.showModal = this.showModal.bind(this)
     this.hideModal = this.hideModal.bind(this)
   }
@@ -34,7 +43,7 @@ class ServerIndex extends React.Component {
       this.props.fetchServers()
     }
   }
-  
+
   render(){ 
     let homeId;
     const home = this.props.servers.map(server => {
@@ -51,7 +60,6 @@ class ServerIndex extends React.Component {
         />
       }
     });
-
     return(
       <div className="home-page">
         <section className="server-index">
@@ -70,11 +78,38 @@ class ServerIndex extends React.Component {
             </li>
           </ul>
         </section>
-        <div className="server-divider" />
-      <ProtectedRoute path='/server/:serverId' component={ServerShowContainer} />
+        <Route path='/server/:serverId' render={(props)=>(
+          <ServerShowContainer
+          {...props}
+          cableApp = {CableApp}
+          />
+        )} />
       </div>
     );
   }
 }
 
 export default ServerIndex;
+{/* <Route path='/server/:serverId/channel/:channelId' render={(props)=>(
+              < ChannelShowContainer 
+                {...props}
+                data-cableApp={this.props.cableApp}
+                data-updateApp={this.updateAppStateChannel}
+                data-ChannelData={this.state.channel}
+                data-getChannelData={this.props.fetchChannel}
+                ChannelData={this.state.channel}
+              /> */}
+// <ProtectedRoute path='/server/:serverId' render={(props)=>(
+//   < ServerShowContainer 
+//     {...props}
+//     data-cableApp={this.props.cableApp}
+//     data-updateApp={this.updateAppStateLine}
+//     data-serverData={this.state.serverData}
+//     data-getLServerData={this.getServerData}
+//     serverData={this.state.server}
+//     authData={this.state.auth}
+//   />
+// )} /> 
+
+
+{/* <ProtectedRoute path='/server/:serverId' component={ServerShowContainer} /> */}

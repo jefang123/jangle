@@ -17,7 +17,35 @@ const App = () => {
   );
 };
 
-
+// class App extends React.Component {
+//   constructor(props){
+//     super(props)
+  //   this.state = {
+  //     auth: {
+  //       isLoggedIn: false, 
+  //       user: ''
+  //     },
+  //     joinServer: {
+  //       code: "",
+  //       error: false,
+  //       serverId: null, 
+  //       redirect: false 
+  //     },
+  //     server: {
+  //       server: {},
+  //       users: []
+  //     }
+  //   }
+  // }
+  // updateAppStateServer = (newServer) => {
+  //   this.setState({
+  //     server: {
+  //       server: newServer.server,
+  //       users: newServer.users
+  //     }
+  //   })
+  // }
+// }
 
 export default App;
 

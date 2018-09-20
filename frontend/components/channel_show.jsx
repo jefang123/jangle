@@ -1,5 +1,6 @@
 import React from 'react';
 import MessageForm from './message_create_container';
+import ChannelWebSocket from './channel_web_socket';
 
 class ChannelShow extends React.Component {
   constructor (props) {
@@ -15,7 +16,7 @@ class ChannelShow extends React.Component {
 
 
   componentDidUpdate(prevProps) {
-    if (this.props.match.params !== prevProps.match.params) {
+    if (this.props.match.params.channelId !== prevProps.match.params.channelId) {
       this.props.fetchMessages();
       this.setState({
         channel_id: this.props.match.params.channelId
@@ -52,7 +53,7 @@ class ChannelShow extends React.Component {
         const user = users[message.user_id];
         return (
            
-          <div key={message.id}>
+          <div key={message.id} className="message">
             <p >{user.username} : {message.body}</p>
             <p className="delete-message" onClick={()=>this.handleClick(message.id)}>x</p>
           </div>
@@ -66,13 +67,20 @@ class ChannelShow extends React.Component {
 
           <h3># {channel.channel_name}<span>{channel.channel_topic}</span></h3>
         </section>
-          <div className="divider"></div>
+        <div className="divider" />
         <section className='message-index' id="chat">
 
         {messages}
         </section>
         <div className="divider"></div>
         <MessageForm />
+        <ChannelWebSocket
+            data-cableApp={this.props['data-cableApp']}
+            data-updateApp={this.props['data-updateApp']}
+            data-ChannelData={this.props.channel}
+            data-getChannelData={this.props['data-getChannelData']}
+            fetchMessages={this.props.fetchMessages}
+          />
       </section>
     )
   }
@@ -81,3 +89,14 @@ class ChannelShow extends React.Component {
 
 
 export default ChannelShow;
+
+// return (
+           
+//   <div key={message.id} className="message">
+//     <p >{user.username}</p>
+//     <div>
+//       <p>{message.body}</p>
+//       <p className="delete-message" onClick={()=>this.handleClick(message.id)}>x</p>
+//     </div>
+//   </div>
+// );

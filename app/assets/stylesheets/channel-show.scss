@@ -1,20 +1,26 @@
 .channel-show {
   
-  .channel-show-heading{
+  .channel-show-heading {
+    
     margin: 20px;
     span {
       border-left: 1px solid grey;
       margin-left: 10px;
       padding-left: 10px;
       font-size: 15px;
-      color: #acacae;
+      color: #a6a7a1;
       font-weight: 400;
     }
   }
 
+  // .message {
+  //   display: flex;
+  //   flex-direction: column;
+  //   justify-content: space-around;
+  // }
   .message-index {
     margin:20px;
-    height: 80vh;
+    height: 75vh;
     display: flex;
     flex-direction: column-reverse;
     div {

@@ -195,7 +195,7 @@ p {
 
 .server-index {
   width: 70px;
-  opacity: 1;
+  background-color: #202225;
 }
 
 .hidden {
@@ -253,7 +253,7 @@ li img:hover {
 }
 
 .channel-index {
-  background-color: #36393f;
+  background-color:#2a2c31;
   width: 240px;
 }
 
@@ -264,5 +264,5 @@ li img:hover {
 
 .user-index {
   width: 240px;
-  background-color: #36393f;
+  background-color: #2f3136;
 }

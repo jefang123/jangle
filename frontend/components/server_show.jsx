@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
-import { ProtectedRoute } from '../util/route_util';
+import { Route } from 'react-router-dom';
 import ChannelShowContainer from './channel_show_container';
 import ChannelCreateContainer from './channel_create_container';
 import Modal from './modal';
@@ -8,7 +8,13 @@ import Modal from './modal';
 class ServerShow extends React.Component {
   constructor(props) {
     super(props)
-    this.state = { show: false }
+    this.state = { 
+      show: false,
+      channel: {
+        channel: {},
+        messages: []
+      }
+     }
     this.showModal = this.showModal.bind(this)
     this.hideModal = this.hideModal.bind(this)
   }
@@ -26,7 +32,7 @@ class ServerShow extends React.Component {
   }
 
   componentDidUpdate(prevProps) {
-    if (this.props.match.params !== prevProps.match.params) {
+    if (this.props.match.params.serverId !== prevProps.match.params.serverId) {
       this.props.fetchServer(this.props.match.params.serverId)
     }
   }
@@ -35,6 +41,16 @@ class ServerShow extends React.Component {
     e.preventDefault();
     this.props.deleteServer(this.props.server.id);   
   }
+
+  // updateAppStateChannel (newChannel) {
+  //   this.setState({
+  //     channel: {
+  //       channel: newChannel.channel,
+  //       messages: newChannel.messages
+  //     }
+  //   })
+  // }
+  
 
   render() {
     if (!this.props.server) return null;
@@ -59,47 +75,73 @@ class ServerShow extends React.Component {
       );
     });
     const { server } = this.props;
-    return (
-      <div className="server-show">
-        <section className='channel-index'>
-          <section className='server-heading'>
-            <h3>{server.server_name}</h3>
-            <button onClick={this.handleClick.bind(this)}>Delete Server</button>
-            <Modal show={this.state.show} handleClose={this.hideModal}>
-              <ChannelCreateContainer handleClose={this.hideModal}/>
-            </Modal>
-            <br />
-            <button onClick={this.showModal} >+</button>
+      return (
+        <div className="server-show">
+          <section className='channel-index'>
+            <section className='server-heading'>
+              <h3>{server.server_name}</h3>
+              <button onClick={this.handleClick.bind(this)}>Delete Server</button>
+              <Modal show={this.state.show} handleClose={this.hideModal}>
+                <ChannelCreateContainer handleClose={this.hideModal}/>
+              </Modal>
+              <br />
+              <button onClick={this.showModal} >+</button>
+            </section>
+            <ul>
+              {channels}
+            </ul>
+            <div className="user-tab">
+                <h2>{this.props.currentUser.username}</h2>
+                <button onClick={this.props.logout}>Log Out</button>
+            </div>
+      
           </section>
-          <div className="divider" />
-          <ul>
-            {channels}
-          </ul>
-          <div className="divider" />
-          <div className="user-tab">
-              <h2>{this.props.currentUser.username}</h2>
-              <button onClick={this.props.logout}>Log Out</button>
-          </div>
-    
-        </section>
-        <div className="server-divider" />
-        <section className='channel-show'>
-          <ProtectedRoute path='/server/:serverId/channel/:channelId' component={ChannelShowContainer} />
-        </section>
-        <div className="server-divider" />
-        <section className='user-index'>
-          <h3> Users </h3>
-          <div className="divider" />
-          <ul>
+          <section className='channel-show'>
+            <Route path='/server/:serverId/channel/:channelId' render={(props)=>(
+              < ChannelShowContainer 
+                {...props}
+                data-cableApp={this.props.cableApp}
+                data-updateApp={this.updateAppStateChannel}
+                data-ChannelData={this.state.channel}
+                data-getChannelData={this.props.fetchChannel}
+                ChannelData={this.state.channel}
+              />
+            )} /> 
+          </section>
+          <section className='user-index'>
+            <h3> Users </h3>
+            <div className="divider" />
+            <ul>
 
-          {users}
-          </ul>
-        </section>
-      </div>
-    )
+            {users}
+            </ul>
+          </section>
+          {/* <ServerWebSocket
+            data-cableApp={this.props['data-cableApp']}
+            data-updateApp={this.props['data-updateApp']}
+            data-ServerData={this.props.server}
+            data-getServerData={this.props['data-getServerData']}
+          /> */}
+        </div>
+      )
+  
   }
 
 }
 
 export default ServerShow;
 
+
+// <ProtectedRoute path='/server/:serverId' render={(props)=>(
+  //   < ServerShowContainer 
+  //     {...props}
+  //     data-cableApp={this.props.cableApp}
+  //     data-updateApp={this.updateAppStateLine}
+  //     data-serverData={this.state.serverData}
+  //     data-getLServerData={this.getServerData}
+  //     serverData={this.state.server}
+  //     authData={this.state.auth}
+  //   />
+  // )} /> 
+
+  // <ProtectedRoute path='/server/:serverId/channel/:channelId' component={ChannelShowContainer} />

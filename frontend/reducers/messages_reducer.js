@@ -5,8 +5,7 @@ import { merge } from 'lodash';
 export default (state={}, action) => {
   Object.freeze(state);
   switch (action.type) {
-    case RECEIVE_CHANNEL: 
-      return action.messages || {}
+  
     case RECEIVE_MESSAGES:
       return action.messages
     case RECEIVE_MESSAGE: 
