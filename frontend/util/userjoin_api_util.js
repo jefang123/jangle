@@ -6,9 +6,9 @@ export const createUserJoin = join => {
   });
 };
 
-export const deleteUserJoin = () => {
+export const deleteUserJoin = (id) => {
   return $.ajax({
     method: 'DELETE',
-    url: 'api/userjoins'
+    url: `api/userjoins/${id}`
   });
 };

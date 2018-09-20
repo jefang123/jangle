@@ -236,12 +236,13 @@ li img:hover {
 .create-server {
   position: absolute;
   top: 5px;
+  right: -4px;
   box-sizing: border-box;
   height: 50px;
   width: 50px;
   border-radius: 50%;
   border: 1px dashed #acacae;
-  background-color: #000;
+  background-color: #202225;
   color: #acacae;
   font-size: 22px;
   text-decoration: none;

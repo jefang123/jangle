@@ -29,6 +29,7 @@ class JoinServerForm extends React.Component {
   render () {
     return (
       <form onSubmit={this.handleSubmit}>
+        <h3> Join a Server!</h3>
         <label>Server ID</label>
         <input 
         type='number' 

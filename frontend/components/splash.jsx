@@ -13,7 +13,7 @@ class Splash extends React.Component {
             <h2>Home</h2>
             <h2>Jangle</h2>
             <h2>Test</h2>
-            <button onClick={()=>{this.props.login({email:'demo', password:'123456'})}}>Demo User</button>
+            <button className="splash-demo" onClick={()=>{this.props.login({email:'demo', password:'123456'})}}>Demo User</button>
             <NavLink 
             to='/login'
             className="login-nav nav-button">Log In</NavLink>
@@ -23,6 +23,22 @@ class Splash extends React.Component {
         <section className="login-section">
           <h1>It's time to ditch Skype and TeamSpeak.</h1>
           <p>All-in-one voice and text chat for gamers that's free, secure, and works on both your desktop and phone. Stop paying for TeamSpeak servers and hassling with Skype. Simplify your life.</p>
+        </section>
+
+        <section className="img-container">
+          <img className="bomb" src={window.bomb_url}/>
+          <img className="box" src={window.box_url}/>
+          <img className="catridge" src={window.catridge_url}/>
+          <img className="coin" src={window.coin_url}/>
+          <img className="coin2" src={window.coin_url}/>
+          <img className="computer" src={window.computer_url}/>
+          <img className="headphones" src={window.headphones_url}/>
+          <img className="pc" src={window.pc_url}/>
+          <img className="smartphoneb" src={window.smartphone_box_url}/>
+          <img className="smartphoner" src={window.smartphone_round_url}/>
+          <img className="controller" src={window.controller_url}/>
+          <img className="potion" src={window.potion_url}/>
+          <img className="disc" src={window.disc_url}/>
         </section>
       
         <footer className="login-footer">
@@ -46,7 +62,3 @@ const mapDispatchToProps = dispatch => {
 };
 
 export default connect(null, mapDispatchToProps)(Splash);
-
-{/* <NavLink 
-            to='/login'
-            className="login-nav nav-button demo-button">Demo User</NavLink> */}

@@ -1,0 +1,118 @@
+.splash-demo {
+  background-color: #7289da;
+  color: #fff;
+  font-size: 17px;
+  padding: 0 10px;
+}
+
+.img-container {
+  height: 640px;
+  position: relative;
+  overflow: hidden;
+}
+
+.bomb, .box, .catridge, .computer, .pc, .smartphoner, .smartphoneb, .coin, .headphones, .coin2, .controller, .potion, .disc {
+  position: absolute;
+}
+
+.bomb, .coin, .coin2, .catridge {
+  animation-direction: alternate;
+  animation-duration: 1.3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+}
+
+@keyframes catridgemove {
+  from {top: 21%;}
+  to {top: 19%;}
+}
+
+.catridge {
+  left: 66%;
+  top: 21%;
+  z-index: -2;
+  animation-name: catridgemove;
+}
+
+@keyframes coinmove {
+  from {top: 31%;}
+  to {top: 33%;}
+}
+
+.coin {
+  left: 18%;
+  top: 31%;
+  animation-name: coinmove;
+}
+
+@keyframes coin2move {
+  from {top: 6%;}
+  to {top: 4%;}
+}
+.coin2 {
+  left: 49%;
+  top: 6%;
+  animation-name: coin2move;
+}
+
+@keyframes bombmove {
+  from {top: 26%;}
+  to {top: 28%;}
+}
+
+.bomb {
+  left: 11%;
+  top: 26%;
+  animation-name: bombmove;
+}
+
+
+
+.box {
+  left: 30%;
+  top: 14%;
+  z-index: -2;
+}
+
+.pc {
+  left: 28%;
+  top: 24%;
+  z-index: -1;
+}
+
+.computer {
+  left: 49%;
+  top: 43%;
+}
+
+.headphones {
+  left: 75%;
+  top: 39%;
+}
+
+.smartphoner {
+  left: 20%;
+  bottom: 2%;
+}
+
+.smartphoneb {
+  left: 8%;
+  bottom: 2%;
+}
+
+.controller {
+  left: 31%;
+  bottom: 2%;
+}
+
+.potion {
+  left: 4%;
+  bottom: 2%;
+  z-index: -1;
+}
+
+.disc {
+  right: 2%;
+  bottom: 2%;
+  z-index: -1;
+}

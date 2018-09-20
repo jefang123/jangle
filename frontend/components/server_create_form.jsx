@@ -29,6 +29,7 @@ class ServerCreateForm extends React.Component {
   render () {
     return (
       <form onSubmit={this.handleSubmit}>
+        <h3>Create a Server!</h3>
         <label>Server Name</label>
         <input 
         type='text' 
