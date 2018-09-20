@@ -42,6 +42,11 @@ class ServerShow extends React.Component {
     this.props.deleteServer(this.props.server.id);   
   }
 
+  handleRemoveClick (e) {
+    e.preventDefault();
+    this.props.removeServer(this.props.server.id);   
+  }
+
   // updateAppStateChannel (newChannel) {
   //   this.setState({
   //     channel: {
@@ -74,13 +79,21 @@ class ServerShow extends React.Component {
         <p key={user.id}>{user.username}</p>
       );
     });
+
+    let button;
+    if (this.props.currentUser.id === this.props.server.creator_id) {
+      button = <button onClick={this.handleClick.bind(this)}>Delete Server</button>
+    } else {
+      button = <button onClick={this.handleRemoveClick.bind(this)}>Remove Server</button>
+    }
+
     const { server } = this.props;
       return (
         <div className="server-show">
           <section className='channel-index'>
             <section className='server-heading'>
               <h3>{server.server_name}</h3>
-              <button onClick={this.handleClick.bind(this)}>Delete Server</button>
+              {button}
               <Modal show={this.state.show} handleClose={this.hideModal}>
                 <ChannelCreateContainer handleClose={this.hideModal}/>
               </Modal>

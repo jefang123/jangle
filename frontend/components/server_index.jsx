@@ -38,11 +38,11 @@ class ServerIndex extends React.Component {
     this.props.fetchServers();
   }
 
-  componentDidUpdate(prevProps) {
-    if (this.props.match.params !== prevProps.match.params) {
-      this.props.fetchServers()
-    }
-  }
+  // componentDidUpdate(prevProps) {
+  //   if (this.props.match.params !== prevProps.match.params) {
+  //     this.props.fetchServers()
+  //   }
+  // }
 
   render(){ 
     let homeId;

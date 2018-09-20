@@ -1,4 +1,7 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { createJoin } from '../actions/userjoin_actions';
+import * as APIJoins from '../util/userjoin_api_util';
 
 class JoinServerForm extends React.Component {
   constructor(props) {
@@ -41,5 +44,10 @@ class JoinServerForm extends React.Component {
   }
 }
 
+const mapDispatchToProps = dispatch => {
+  return {
+    processForm: join => dispatch(APIJoins.createUserJoin(join))
+  }
+}
 
-export default JoinServerForm;
+export default connect(null, mapDispatchToProps)(JoinServerForm);
