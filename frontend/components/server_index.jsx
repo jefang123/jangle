@@ -13,7 +13,7 @@ import actionCable from 'actioncable';
 
 const CableApp = {};
 CableApp.cable = 
-actionCable.createConsumer(`wss://${window.location.hostname}:3000/cable`)
+actionCable.createConsumer()
 
 
 class ServerIndex extends React.Component {
