@@ -13,11 +13,14 @@
     }
   }
 
-  // .message {
-  //   display: flex;
-  //   flex-direction: column;
-  //   justify-content: space-around;
-  // }
+  .message {
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: space-around;
+    p {
+      margin-right: 40px;
+    }
+  }
   .message-index {
     margin:20px;
     height: 75vh;

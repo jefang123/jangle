@@ -62,7 +62,7 @@ class ServerShow extends React.Component {
           <Link to={`/server/${this.props.server.id}/channel/${channel.id}`}>
             <p className="delete-server" onClick={()=>{this.props.deleteChannel(channel.id)}}>
             X
-            <span className="delete-hidden">Delete Server </span>
+            <span className="delete-hidden">Delete Channel </span>
             </p>
           </Link>
           
