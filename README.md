@@ -54,6 +54,9 @@ Currently this project can:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> Update README.md
 =======
 >>>>>>> Update README.md
 =======
@@ -107,6 +110,8 @@ WIP:
 =======
 >>>>>>> Update README.md
 =======
+=======
+>>>>>>> Update README.md
 WIP:
 * Fix Remove/Join Server functions
 =======
@@ -190,6 +195,7 @@ WIP:
 * Edit/Updating 
 =======
 WIP:
+<<<<<<< HEAD
 * Add image_urls
 * Add error messages
 =======
@@ -262,6 +268,9 @@ WIP:
 * Fix Remove/Join Server functions
 >>>>>>> fix readme
 >>>>>>> fix readme
+=======
+* Fix Remove/Join Server functions
+>>>>>>> Update README.md
 * Edit/Updating functions
 * Add timestamps to Messages
 >>>>>>> Update README.md
