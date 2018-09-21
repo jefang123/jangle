@@ -30,6 +30,7 @@ Currently this project can:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> Update README.md
 =======
@@ -146,6 +147,12 @@ Currently this project can:
 =======
 WIP: 
 * Edit/Updating 
+=======
+WIP:
+* Fix Remove/Join Server functions
+* Edit/Updating functions
+* Add timestamps to Messages
+>>>>>>> Update README.md
 * Private Messaging
 
 >>>>>>> Update README.md
