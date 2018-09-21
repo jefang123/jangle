@@ -1,24 +1,24 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This project is an attempt to clone basic Discord features
 
-Things you may want to cover:
+Live Link: https://disjangle.herokuapp.com
 
-* Ruby version
+Currently this project can:
 
-* System dependencies
+* Handle User Authentication
+  * User Login/SignUp
+  * Demo User
+  
+* Handle Server Creation/Deletion 
+* Handle Channel Creation/Deletion 
+* Handle Real Time Messaging with Action Cable
 
-* Configuration
 
-* Database creation
+WIP:
+* Add error messages
+* Fix Remove/Join Server functions
+* Edit/Updating functions
+* Add timestamps to Messages
+* Private Messaging
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
