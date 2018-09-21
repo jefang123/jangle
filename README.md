@@ -9,3 +9,7 @@ Currently this project can:
 * Handle Real Time Messaging with Action Cable
 
 
+WIP: 
+* Edit/Updating 
+* Private Messaging
+
