@@ -39,9 +39,9 @@ youtube = Channel.create(server_id: music.id, channel_name:"youtube", channel_to
 
 stuff = Server.create(creator_id: jeff.id, server_name:"Stuff")
 UserJoin.create(user_id: jeff.id, server_id: stuff.id)
-stuffgeneral = Channel.create(server_id, stuff.id, channel_name:"general", channel_topic:"Anything is fine here")
+stuffgeneral = Channel.create(server_id: stuff.id, channel_name:"general", channel_topic:"Anything is fine here")
 Message.create(body:stuff.id, user_id:jeff.id, channel_id:stuffgeneral.id)
-bughunt = Channel.create(server_id, stuff.id, channel_name:"bugs", channel_topic:"Post your bugs")
+bughunt = Channel.create(server_id: stuff.id, channel_name:"bugs", channel_topic:"Post your bugs")
 
 
 bear = User.create(username:"Bear", email:"makemoney1", password:"111111111")
