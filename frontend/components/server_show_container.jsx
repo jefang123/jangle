@@ -3,8 +3,7 @@ import ServerShow from './server_show';
 import { fetchServer } from '../actions/server_actions';
 import { logout } from '../actions/session_actions';
 import { deleteChannel, fetchChannel } from '../actions/channel_actions';
-import { deleteServer } from '../actions/server_actions';
-import * as APIJoins from '../util/userjoin_api_util';
+import { deleteServer, deleteJoin } from '../actions/server_actions';
 
 const mapStateToProps = (state, ownProps) => {
   return {
@@ -21,7 +20,7 @@ const mapDispatchToProps = dispatch => {
     deleteServer: id => dispatch(deleteServer(id)),
     logout: () => dispatch(logout()),
     deleteChannel: id => dispatch(deleteChannel(id)),
-    removeServer: (server_id) => dispatch(APIJoins.deleteUserJoin(server_id)),
+    removeServer: (id) => dispatch(deleteJoin(id)),
     fetchChannel: id=> dispatch(fetchChannel(id))
   }
 }
