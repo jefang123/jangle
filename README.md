@@ -25,8 +25,13 @@ Currently this project can:
 <<<<<<< HEAD
 <<<<<<< HEAD
 WIP:
+<<<<<<< HEAD
 * Add image_urls
 * Add error messages
+=======
+* Add error messages
+* Fix Remove/Join Server functions
+>>>>>>> fix readme
 * Edit/Updating functions
 * Add timestamps to Messages
 =======
