@@ -113,11 +113,21 @@ WIP:
 =======
 >>>>>>> Update README.md
 WIP:
+<<<<<<< HEAD
 * Fix Remove/Join Server functions
 =======
 * Add image_urls
 * Add error messages
 >>>>>>> fix remove/join server function
+=======
+<<<<<<< HEAD
+* Add image_urls
+* Add error messages
+=======
+* Add error messages
+* Fix Remove/Join Server functions
+>>>>>>> fix readme
+>>>>>>> fix readme
 * Edit/Updating functions
 * Add timestamps to Messages
 <<<<<<< HEAD
