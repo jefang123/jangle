@@ -3,7 +3,7 @@ class Api::UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       login!(@user)
-      @server = Server.create(creator_id: @user.id, server_name: "Home")
+      @server = Server.create(creator_id: @user.id, server_name: "Home", private:true)
       UserJoin.create(user_id: @user.id, server_id: @server.id)
       render :show
     else

@@ -51,7 +51,7 @@ class ServerShow extends React.Component {
         </section>
         <div className="server-divider" />
         <section className='channel-show'>
-          <ProtectedRoute path='/server/:serverId/channel/:channelId' component={ChannelShowContainer} />
+          <ProtectedRoute path='/server/:serverId/user/:userId' component={ChannelShowContainer} />
         </section>
         <div className="server-divider" />
         <section className='user-index'>

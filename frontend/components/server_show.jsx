@@ -10,10 +10,7 @@ class ServerShow extends React.Component {
     super(props)
     this.state = { 
       show: false,
-      channel: {
-        channel: {},
-        messages: []
-      }
+    
      }
     this.showModal = this.showModal.bind(this)
     this.hideModal = this.hideModal.bind(this)
@@ -44,18 +41,8 @@ class ServerShow extends React.Component {
 
   handleRemoveClick (e) {
     e.preventDefault();
-    this.props.removeServer(this.props.server.id);   
+    this.props.removeServer({server_id: this.props.server.id});   
   }
-
-  // updateAppStateChannel (newChannel) {
-  //   this.setState({
-  //     channel: {
-  //       channel: newChannel.channel,
-  //       messages: newChannel.messages
-  //     }
-  //   })
-  // }
-  
 
   render() {
     if (!this.props.server) return null;
@@ -98,7 +85,7 @@ class ServerShow extends React.Component {
                 <ChannelCreateContainer handleClose={this.hideModal}/>
               </Modal>
               <br />
-              <button onClick={this.showModal} >+</button>
+              <button onClick={this.showModal} >Create Channel</button>
             </section>
             <ul>
               {channels}

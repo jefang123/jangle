@@ -129,6 +129,7 @@ p {
   background-color: #36393f;
 }
 
+
 .session-container .logo {
   height: 50px;
   width: 50px;
@@ -196,6 +197,8 @@ p {
 .server-index {
   width: 70px;
   background-color: #202225;
+  height: 100vh;
+  
 }
 
 .hidden {
