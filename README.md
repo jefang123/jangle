@@ -16,6 +16,7 @@ Currently this project can:
 
 
 WIP: 
+* Fix Remove/Join Server functions
 * Edit/Updating 
 * Private Messaging
 
