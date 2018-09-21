@@ -6,6 +6,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> fix readme
+>>>>>>> fix readme
 This project is an attempt to clone basic Discord features
 
 <<<<<<< HEAD
@@ -33,6 +38,7 @@ Currently this project can:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> Update README.md
 =======
@@ -41,6 +47,8 @@ Currently this project can:
 >>>>>>> Update README.md
 =======
 >>>>>>> Update README.md
+=======
+>>>>>>> fix readme
 WIP:
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -200,3 +208,12 @@ WIP:
 * Private Messaging
 
 >>>>>>> Update README.md
+=======
+WIP:
+* Add error messages
+* Fix Remove/Join Server functions
+* Edit/Updating functions
+* Add timestamps to Messages
+* Private Messaging
+
+>>>>>>> fix readme
