@@ -64,6 +64,9 @@ WIP:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> fix remove/join server function
 =======
 >>>>>>> fix remove/join server function
 * Add image_urls
@@ -93,6 +96,10 @@ WIP:
 =======
 WIP:
 * Fix Remove/Join Server functions
+=======
+* Add image_urls
+* Add error messages
+>>>>>>> fix remove/join server function
 * Edit/Updating functions
 * Add timestamps to Messages
 <<<<<<< HEAD
