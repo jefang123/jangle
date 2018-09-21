@@ -16,6 +16,7 @@ Currently this project can:
 
 
 WIP:
+* Add error messages
 * Fix Remove/Join Server functions
 * Edit/Updating functions
 * Add timestamps to Messages
