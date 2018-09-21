@@ -233,10 +233,14 @@ Currently this project can:
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> Update README.md
+=======
 >>>>>>> Update README.md
 =======
 WIP: 
 * Edit/Updating 
+<<<<<<< HEAD
 =======
 WIP:
 * Fix Remove/Join Server functions
@@ -260,6 +264,10 @@ WIP:
 =======
 >>>>>>> Update README.md
 =======
+>>>>>>> Update README.md
+=======
+* Private Messaging
+
 >>>>>>> Update README.md
 >>>>>>> Update README.md
 =======
