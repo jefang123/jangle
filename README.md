@@ -23,6 +23,7 @@ Currently this project can:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 WIP:
 * Add image_urls
 * Add error messages
@@ -78,6 +79,12 @@ Currently this project can:
 =======
 WIP: 
 * Edit/Updating 
+=======
+WIP:
+* Fix Remove/Join Server functions
+* Edit/Updating functions
+* Add timestamps to Messages
+>>>>>>> Update README.md
 * Private Messaging
 
 >>>>>>> Update README.md
