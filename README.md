@@ -7,10 +7,17 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> fix readme
 >>>>>>> fix readme
+=======
+=======
+>>>>>>> fix readme
+=======
+>>>>>>> Update README.md
+>>>>>>> Update README.md
 This project is an attempt to clone basic Discord features
 
 <<<<<<< HEAD
@@ -133,6 +140,68 @@ This project is an attempt to clone basic Discord features
 =======
 This project is an attemp to clone basic Discord features
 >>>>>>> Update README.md
+<<<<<<< HEAD
+=======
+This project is an attempt to clone basic Discord features
+>>>>>>> Update README.md
+=======
+Link: https://disjangle.herokuapp.com
+>>>>>>> Update README.md
+=======
+Live Link: https://disjangle.herokuapp.com
+>>>>>>> Update README.md
+=======
+>>>>>>> Update README.md
+
+Currently this project can:
+
+* Handle User Authentication
+  * User Login/SignUp
+  * Demo User
+  
+* Handle Server Creation/Deletion 
+* Handle Channel Creation/Deletion 
+* Handle Real Time Messaging with Action Cable
+
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> Update README.md
+=======
+>>>>>>> Update README.md
+=======
+WIP: 
+* Edit/Updating 
+=======
+WIP:
+* Add image_urls
+* Add error messages
+=======
+>>>>>>> fix remove/join server function
+* Edit/Updating functions
+* Add timestamps to Messages
+<<<<<<< HEAD
+=======
+=======
+WIP: 
+* Fix Remove/Join Server functions
+* Edit/Updating 
+>>>>>>> Update README.md
+<<<<<<< HEAD
+=======
+=======
+WIP:
+* Fix Remove/Join Server functions
+* Edit/Updating functions
+* Add timestamps to Messages
+>>>>>>> Update README.md
+>>>>>>> Update README.md
+* Private Messaging
+
+>>>>>>> Update README.md
+=======
+This project is an attemp to clone basic Discord features
 =======
 This project is an attempt to clone basic Discord features
 >>>>>>> Update README.md
@@ -155,64 +224,6 @@ Currently this project can:
 
 
 <<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> Update README.md
-=======
->>>>>>> Update README.md
-=======
-WIP: 
-* Edit/Updating 
-=======
-WIP:
-* Add image_urls
-* Add error messages
-=======
->>>>>>> fix remove/join server function
-* Edit/Updating functions
-* Add timestamps to Messages
-<<<<<<< HEAD
-=======
-=======
-WIP: 
-* Fix Remove/Join Server functions
-* Edit/Updating 
->>>>>>> Update README.md
-<<<<<<< HEAD
-=======
-=======
-WIP:
-* Fix Remove/Join Server functions
-* Edit/Updating functions
-* Add timestamps to Messages
->>>>>>> Update README.md
->>>>>>> Update README.md
-* Private Messaging
-
->>>>>>> Update README.md
-=======
-This project is an attemp to clone basic Discord features
-=======
-This project is an attempt to clone basic Discord features
->>>>>>> Update README.md
-=======
-Link: https://disjangle.herokuapp.com
->>>>>>> Update README.md
-=======
-Live Link: https://disjangle.herokuapp.com
->>>>>>> Update README.md
-
-Currently this project can:
-
-* Handle User Authentication
-  * User Login/SignUp
-  * Demo User
-  
-* Handle Server Creation/Deletion 
-* Handle Channel Creation/Deletion 
-* Handle Real Time Messaging with Action Cable
-
-
-<<<<<<< HEAD
 >>>>>>> Update README.md
 =======
 WIP: 
@@ -237,6 +248,10 @@ WIP:
 >>>>>>> Update README.md
 * Private Messaging
 
+=======
+>>>>>>> Update README.md
+=======
+>>>>>>> Update README.md
 >>>>>>> Update README.md
 =======
 WIP:
