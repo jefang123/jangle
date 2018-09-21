@@ -1,5 +1,6 @@
 # README
 
+<<<<<<< HEAD
 This project is an attempt to clone basic Discord features
 
 Live Link: https://disjangle.herokuapp.com
@@ -22,3 +23,14 @@ WIP:
 * Add timestamps to Messages
 * Private Messaging
 
+=======
+This project is an attemp to clone basic Discord features
+
+Currently this project can:
+* Handle User Authentication
+* Handle Server Creation/Deletion 
+* Handle Channel Creation/Deletion 
+* Handle Real Time Messaging with Action Cable
+
+
+>>>>>>> Update README.md
