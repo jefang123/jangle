@@ -68,12 +68,15 @@ WIP:
 >>>>>>> Update README.md
 WIP:
 <<<<<<< HEAD
+<<<<<<< HEAD
 * Fix Remove/Join Server functions
 =======
 * Add image_urls
 * Add error messages
 >>>>>>> fix remove/join server function
 =======
+=======
+>>>>>>> fix remove/join server function
 <<<<<<< HEAD
 * Add image_urls
 * Add error messages
@@ -81,7 +84,14 @@ WIP:
 * Add error messages
 * Fix Remove/Join Server functions
 >>>>>>> fix readme
+<<<<<<< HEAD
 >>>>>>> fix readme
+=======
+=======
+* Add image_urls
+* Add error messages
+>>>>>>> fix remove/join server function
+>>>>>>> fix remove/join server function
 * Edit/Updating functions
 * Add timestamps to Messages
 <<<<<<< HEAD
