@@ -38,9 +38,12 @@ Currently this project can:
 WIP:
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 * Add image_urls
 * Add error messages
 =======
+=======
+>>>>>>> Update README.md
 * Add error messages
 * Fix Remove/Join Server functions
 >>>>>>> fix readme
