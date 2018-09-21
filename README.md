@@ -47,6 +47,9 @@ WIP:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> fix remove/join server function
 * Add image_urls
 * Add error messages
 =======
@@ -59,6 +62,7 @@ WIP:
 * Add image_urls
 * Add error messages
 >>>>>>> fix remove/join server function
+<<<<<<< HEAD
 * Edit/Updating functions
 * Add timestamps to Messages
 =======
@@ -124,6 +128,8 @@ WIP:
 WIP:
 * Add image_urls
 * Add error messages
+=======
+>>>>>>> fix remove/join server function
 * Edit/Updating functions
 * Add timestamps to Messages
 <<<<<<< HEAD
