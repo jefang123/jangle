@@ -1,24 +1,11 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This project is an attemp to clone basic Discord features
 
-Things you may want to cover:
+Currently this project can:
+* Handle User Authentication
+* Handle Server Creation/Deletion 
+* Handle Channel Creation/Deletion 
+* Handle Real Time Messaging with Action Cable
 
-* Ruby version
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
