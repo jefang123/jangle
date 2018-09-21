@@ -12,7 +12,7 @@ UserJoin.destroy_all
 
 demo = User.create(username:"Demo-User", email:"demo", password:"123456")
 Server.create(creator_id: demo.id, server_name:"Home", private: true)
-jeff = User.create(username:"jeff", emails:"jeff", password:"123456")
+jeff = User.create(username:"jeff", email:"jeff", password:"123456")
 Server.create(creator_id: jeff.id, server_name:"Home", private: true)
 
 
@@ -47,7 +47,7 @@ bughunt = Channel.create(server_id, stuff.id, channe_name:"bugs", channel_topic:
 bear = User.create(username:"Bear", email:"makemoney1", password:"111111111")
 bull = User.create(username:"Bull", email:"makemone2y", password:"111111111")
 
-rowdyguy = User.create(username:"Rawl", emails:"rawll", password:"123456")
+rowdyguy = User.create(username:"Rawl", email:"rawll", password:"123456")
 
 UserJoin.create(user_id: demo.id, server_id: stocks.id)
 UserJoin.create(user_id: ranchguy.id, server_id: stocks.id)
