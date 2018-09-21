@@ -47,16 +47,20 @@ class ServerShow extends React.Component {
   render() {
     if (!this.props.server) return null;
     const channels= this.props.channels.map( channel => {
+      let channelb;
+      if(this.props.server.creator_id === this.props.currentUser.id) {
+        channelb = <Link to={`/server/${this.props.server.id}/channel/${channel.id}`}>
+        <p className="delete-server" onClick={()=>{this.props.deleteChannel(channel.id)}}>
+        X
+        <span className="delete-hidden">Delete Channel </span>
+        </p>
+      </Link>
+      } 
       return (
         <li key={channel.id}>
           <Link to={`/server/${this.props.server.id}/channel/${channel.id}`}>
             # {channel.channel_name} </Link>
-          <Link to={`/server/${this.props.server.id}/channel/${channel.id}`}>
-            <p className="delete-server" onClick={()=>{this.props.deleteChannel(channel.id)}}>
-            X
-            <span className="delete-hidden">Delete Channel </span>
-            </p>
-          </Link>
+          {channelb}
           
         </li>
       )
@@ -73,6 +77,10 @@ class ServerShow extends React.Component {
     } else {
       button = <button onClick={this.handleRemoveClick.bind(this)}>Remove Server</button>
     }
+    let modalbutton;
+    if (this.props.currentUser.id === this.props.server.creator_id) {
+      modalbutton = <button onClick={this.showModal} >Create Channel</button>
+    }
 
     const { server } = this.props;
       return (
@@ -85,7 +93,7 @@ class ServerShow extends React.Component {
                 <ChannelCreateContainer handleClose={this.hideModal}/>
               </Modal>
               <br />
-              <button onClick={this.showModal} >Create Channel</button>
+              {modalbutton}
             </section>
             <ul>
               {channels}
