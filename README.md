@@ -59,6 +59,13 @@ Currently this project can:
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> Update README.md
 =======
+>>>>>>> Update README.md
+=======
+WIP: 
+* Edit/Updating 
+* Private Messaging
+
 >>>>>>> Update README.md
