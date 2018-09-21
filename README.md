@@ -6,6 +6,7 @@
 <<<<<<< HEAD
 This project is an attempt to clone basic Discord features
 
+<<<<<<< HEAD
 Live Link: https://disjangle.herokuapp.com
 
 Currently this project can:
@@ -49,6 +50,9 @@ This project is an attemp to clone basic Discord features
 >>>>>>> Update README.md
 =======
 This project is an attempt to clone basic Discord features
+>>>>>>> Update README.md
+=======
+Link: https://disjangle.herokuapp.com
 >>>>>>> Update README.md
 
 Currently this project can:
