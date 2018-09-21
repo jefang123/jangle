@@ -40,6 +40,7 @@ WIP:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 * Add image_urls
 * Add error messages
 =======
@@ -158,6 +159,14 @@ WIP:
 * Add image_urls
 * Add error messages
 >>>>>>> fix remove/join server function
+=======
+* Add image_urls
+* Add error messages
+=======
+* Add error messages
+* Fix Remove/Join Server functions
+>>>>>>> fix readme
+>>>>>>> fix readme
 * Edit/Updating functions
 * Add timestamps to Messages
 >>>>>>> Update README.md
