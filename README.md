@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 This project is an attempt to clone basic Discord features
 
 <<<<<<< HEAD
@@ -112,5 +113,16 @@ WIP:
 * Add timestamps to Messages
 >>>>>>> Update README.md
 * Private Messaging
+
+>>>>>>> Update README.md
+=======
+This project is an attemp to clone basic Discord features
+
+Currently this project can:
+* Handle User Authentication
+* Handle Server Creation/Deletion 
+* Handle Channel Creation/Deletion 
+* Handle Real Time Messaging with Action Cable
+
 
 >>>>>>> Update README.md
