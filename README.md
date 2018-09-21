@@ -17,11 +17,17 @@ Currently this project can:
 * Handle Real Time Messaging with Action Cable
 
 
+<<<<<<< HEAD
 WIP:
 * Add error messages
 * Fix Remove/Join Server functions
 * Edit/Updating functions
 * Add timestamps to Messages
+=======
+WIP: 
+* Fix Remove/Join Server functions
+* Edit/Updating 
+>>>>>>> Update README.md
 * Private Messaging
 
 =======
