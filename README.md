@@ -32,6 +32,7 @@ Currently this project can:
 WIP:
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 * Add image_urls
 * Add error messages
 =======
@@ -52,6 +53,10 @@ WIP:
 =======
 WIP:
 * Fix Remove/Join Server functions
+=======
+* Add image_urls
+* Add error messages
+>>>>>>> fix remove/join server function
 * Edit/Updating functions
 * Add timestamps to Messages
 <<<<<<< HEAD
