@@ -129,4 +129,11 @@ Currently this project can:
 * Handle Real Time Messaging with Action Cable
 
 
+<<<<<<< HEAD
+>>>>>>> Update README.md
+=======
+WIP: 
+* Edit/Updating 
+* Private Messaging
+
 >>>>>>> Update README.md
