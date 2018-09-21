@@ -1,6 +1,6 @@
 # README
 
-This project is an attemp to clone basic Discord features
+This project is an attempt to clone basic Discord features
 
 Currently this project can:
 * Handle User Authentication
