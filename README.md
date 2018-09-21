@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fix readme
 =======
@@ -87,6 +88,9 @@ This project is an attempt to clone basic Discord features
 >>>>>>> Update README.md
 =======
 This project is an attemp to clone basic Discord features
+>>>>>>> Update README.md
+=======
+This project is an attempt to clone basic Discord features
 >>>>>>> Update README.md
 
 Currently this project can:
