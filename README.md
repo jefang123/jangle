@@ -18,6 +18,7 @@ Currently this project can:
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 WIP:
 * Add error messages
 * Fix Remove/Join Server functions
@@ -27,6 +28,12 @@ WIP:
 WIP: 
 * Fix Remove/Join Server functions
 * Edit/Updating 
+>>>>>>> Update README.md
+=======
+WIP:
+* Fix Remove/Join Server functions
+* Edit/Updating functions
+* Add timestamps to Messages
 >>>>>>> Update README.md
 * Private Messaging
 
