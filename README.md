@@ -125,6 +125,7 @@ WIP:
 * Edit/Updating 
 =======
 WIP:
+* Add error messages
 * Fix Remove/Join Server functions
 * Edit/Updating functions
 * Add timestamps to Messages
