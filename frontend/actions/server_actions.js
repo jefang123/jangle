@@ -1,4 +1,5 @@
 import * as APIServer from '../util/server_api_util';
+import * as APIJoins from '../util/userjoin_api_util';
 
 export const RECEIVE_SERVERS = 'RECEIVE_SERVERS';
 export const RECEIVE_SERVER = 'RECEIVE_SERVER';
@@ -72,10 +73,31 @@ export const createServer = server => {
   };
 };
 
+export const createJoin = join => {
+  return dispatch => {
+    return APIJoins.createUserJoin(join).then(
+      server => {
+        return dispatch(fetchServer(join.server_id));
+      }
+    );
+  };
+};
+
+
 
 export const deleteServer = id => {
   return dispatch => {
     return APIServer.deleteServer(id).then(
+      server => {
+        return dispatch(removeServer(id));
+      }
+    );
+  };
+};
+
+export const deleteJoin = id => {
+  return dispatch => {
+    return APIJoins.deleteUserJoin(id).then(
       server => {
         return dispatch(removeServer(id));
       }

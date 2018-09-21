@@ -16,8 +16,8 @@ Currently this project can:
 
 
 WIP:
+* Add image_urls
 * Add error messages
-* Fix Remove/Join Server functions
 * Edit/Updating functions
 * Add timestamps to Messages
 * Private Messaging

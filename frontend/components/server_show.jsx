@@ -41,7 +41,7 @@ class ServerShow extends React.Component {
 
   handleRemoveClick (e) {
     e.preventDefault();
-    this.props.removeServer({server_id: this.props.server.id});   
+    this.props.removeServer(this.props.server.id);   
   }
 
   render() {
