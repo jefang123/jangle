@@ -111,6 +111,6 @@ Message.create(body:"are u made of money", user_id:rowdyguy.id, channel_id:advic
 Message.create(body:"prob", user_id:money.id, channel_id:advice.id)
 
 
-Message.create(body:"Youtube sucks", user_id:musciguy.id, channel_id:youtube.id)
+Message.create(body:"Youtube sucks", user_id:musicguy.id, channel_id:youtube.id)
 
 Message.create(body:"nature calls", user_id:rowdyguy.id, channel_id:diygeneral.id)
