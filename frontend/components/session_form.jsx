@@ -49,9 +49,7 @@ class SessionForm extends React.Component {
          <Link to='/'>  
           <img className='logo' src={window.logo_url}/>
           </Link>
-          <div className="background">
-            <img src={window.background_url}/>
-          </div>
+          
         <div className="session-form">
           <button className="demo" onClick= {this.handleClick}>Demo User!</button>
           <div className="divider"></div>
