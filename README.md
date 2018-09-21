@@ -32,6 +32,7 @@ Currently this project can:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> Update README.md
 =======
@@ -60,6 +61,8 @@ WIP:
 =======
 =======
 >>>>>>> Update README.md
+=======
+>>>>>>> Update README.md
 WIP:
 <<<<<<< HEAD
 * Fix Remove/Join Server functions
@@ -86,12 +89,19 @@ WIP:
 * Edit/Updating 
 >>>>>>> Update README.md
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> Update README.md
 =======
 WIP:
 * Fix Remove/Join Server functions
 * Edit/Updating functions
 * Add timestamps to Messages
+>>>>>>> Update README.md
+<<<<<<< HEAD
+=======
+=======
 >>>>>>> Update README.md
 >>>>>>> Update README.md
 * Private Messaging
