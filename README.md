@@ -2,6 +2,9 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> fix readme
 This project is an attempt to clone basic Discord features
 
 Live Link: https://disjangle.herokuapp.com
@@ -17,6 +20,7 @@ Currently this project can:
 * Handle Real Time Messaging with Action Cable
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 WIP:
@@ -61,3 +65,12 @@ Currently this project can:
 
 
 >>>>>>> Update README.md
+=======
+WIP:
+* Add error messages
+* Fix Remove/Join Server functions
+* Edit/Updating functions
+* Add timestamps to Messages
+* Private Messaging
+
+>>>>>>> fix readme
