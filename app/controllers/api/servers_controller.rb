@@ -21,7 +21,6 @@ class Api::ServersController < ApplicationController
 
   def destroy 
     server = Server.find_by(id: params[:id])
-    debugger
     if server.server_name == "Home"
       return render json: @server.errors.full_messages, status: 422
     end 

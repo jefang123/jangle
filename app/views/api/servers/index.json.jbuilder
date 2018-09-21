@@ -3,5 +3,6 @@
     json.id server.id
     json.creator_id server.creator_id
     json.server_name server.server_name
+    json.private server.private
   end
 end

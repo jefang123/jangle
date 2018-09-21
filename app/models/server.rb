@@ -8,6 +8,7 @@
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
 #  image_url   :string
+#  private     :boolean
 #
 
 class Server < ApplicationRecord
