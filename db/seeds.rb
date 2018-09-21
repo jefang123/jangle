@@ -28,7 +28,7 @@ diy = Server.create(creator_id:ranchguy.id, server_name:"DIY")
 UserJoin.create(user_id: ranchguy.id, server_id: diy.id)
 diygeneral = Channel.create(server_id: diy.id, channel_name:"general", channel_topic:"Anything is fine here")
 Message.create(body:diy.id, user_id:ranchguy.id, channel_id:diygeneral.id)
-projects = Channel.create(server_id: diy.id, channe_name:"currentprojects", channel_topic:"What are you working on?")
+projects = Channel.create(server_id: diy.id, channel_name:"currentprojects", channel_topic:"What are you working on?")
 
 musicguy = User.create(username:"Musicguy", email:"makemusic", password:"111111111")
 music = Server.create(creator_id: money.id, server_name:"Music")
@@ -41,7 +41,7 @@ stuff = Server.create(creator_id: jeff.id, server_name:"Stuff")
 UserJoin.create(user_id: jeff.id, server_id: stuff.id)
 stuffgeneral = Channel.create(server_id, stuff.id, channel_name:"general", channel_topic:"Anything is fine here")
 Message.create(body:stuff.id, user_id:jeff.id, channel_id:stuffgeneral.id)
-bughunt = Channel.create(server_id, stuff.id, channe_name:"bugs", channel_topic:"Post your bugs")
+bughunt = Channel.create(server_id, stuff.id, channel_name:"bugs", channel_topic:"Post your bugs")
 
 
 bear = User.create(username:"Bear", email:"makemoney1", password:"111111111")
