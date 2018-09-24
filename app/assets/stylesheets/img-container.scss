@@ -21,7 +21,7 @@
   animation-direction: alternate;
   animation-duration: 1.3s;
   animation-iteration-count: infinite;
-  animation-timing-function: ease;
+  animation-timing-function: ease-in-out;
 }
 
 @keyframes catridgemove {
@@ -59,7 +59,7 @@
 
 @keyframes bombmove {
   from {top: 26%;}
-  to {top: 28%;}
+  to {top: 24%;}
 }
 
 .bomb {
