@@ -30,8 +30,8 @@ export const login = user => {
       user => {
         return dispatch(receiveCurrentUser(user));
       },
-      errors => {
-        return dispatch(receiveErrors(errors));
+      err => {
+        return dispatch(receiveErrors(err.responseJSON));
       }
     );
   };
@@ -43,8 +43,8 @@ export const signup = user => {
       user => {
         return dispatch(receiveCurrentUser(user));
       },
-      errors => {
-        return dispatch(receiveErrors(errors));
+      err => {
+        return dispatch(receiveErrors(err.responseJSON));
       }
     );
   };

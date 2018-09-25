@@ -20,11 +20,12 @@ class Api::ServersController < ApplicationController
   end 
 
   def destroy 
-    server = Server.find_by(id: params[:id])
-    if server.server_name == "Home"
-      return render json: @server.errors.full_messages, status: 422
+    @server = Server.find_by(id: params[:id])
+    if @server.server_name == "Home"
+      # return render json: @server.errors.full_messages, status: 422
+      return render json: "Cannot Delete Home Server", status: 422
     end 
-    server.destroy
+    @server.destroy
     render json: {}
   end 
 

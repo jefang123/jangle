@@ -33,14 +33,24 @@ class SignUpForm extends React.Component {
         <Redirect to='/' />
       );
     }
+    const errors = this.props.errors.map((error, idx) => {
+      return (
+        <p key={idx}>
+          {error}
+        </p>
+      );
+    })
     const link = this.props.formType === 'signup' ? <Link className='form-link' to='/login'>Already have an account?</Link> : <Link className='form-link' to='signup'>Register</Link>;
   const header = this.props.formType === 'login' ? 'Log In' : 'Register';
-
+  
     return (
       <div className="session-container" >
         <Link to='/'>  
           <img className='logo' src={window.logo_url}/>
           </Link>
+          <div className="errors">
+            {errors}
+          </div>
         <form className="session-form" id="signup-form" onSubmit={this.handleSubmit}>
           <h2>{header}</h2>
           <label> Email
