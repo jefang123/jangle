@@ -35,21 +35,31 @@ class SessionForm extends React.Component {
       });
     };
   }
+
   render () {
     if (this.props.currentUser) {
       return (
         <Redirect to='/' />
       );
     }
+    const errors = this.props.errors.map((error, idx) => {
+      return (
+        <p key={idx}>
+          {error}
+        </p>
+      );
+    })
     const link = this.props.formType === 'signup' ? <Link className='form-link' to='/login'>Log In</Link> : <Link className='form-link' to='signup'>Register a new account</Link>;
   const header = this.props.formType === 'login' ? 'Log In' : 'Register';
-
+    debugger
     return (
       <div className='session-container'>
          <Link to='/'>  
           <img className='logo' src={window.logo_url}/>
           </Link>
-          
+          <div className="errors">
+            {errors}
+          </div>
         <div className="session-form">
           <button className="demo" onClick= {this.handleClick}>Demo User!</button>
           <div className="divider"></div>

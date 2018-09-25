@@ -197,8 +197,6 @@ p {
 .server-index {
   width: 70px;
   background-color: #202225;
-  height: 100vh;
-  
 }
 
 .hidden {
@@ -215,6 +213,9 @@ p {
 
 ul {
   padding: 10px;
+  /* overflow:auto; */
+  height: 100vh;
+
 }
 li {
   position: relative;
@@ -269,4 +270,9 @@ li img:hover {
 .user-index {
   width: 240px;
   background-color: #2f3136;
+}
+
+.errors > p {
+  color: red;
+  text-align: center;
 }
