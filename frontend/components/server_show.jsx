@@ -83,6 +83,7 @@ class ServerShow extends React.Component {
     }
 
     const { server } = this.props;
+
       return (
         <div className="server-show">
           <section className='channel-index'>

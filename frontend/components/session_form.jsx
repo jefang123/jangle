@@ -51,7 +51,7 @@ class SessionForm extends React.Component {
     })
     const link = this.props.formType === 'signup' ? <Link className='form-link' to='/login'>Log In</Link> : <Link className='form-link' to='signup'>Register a new account</Link>;
   const header = this.props.formType === 'login' ? 'Log In' : 'Register';
-    debugger
+    
     return (
       <div className='session-container'>
          <Link to='/'>  

@@ -3,6 +3,7 @@ import * as APIChannel from '../util/channel_api_util';
 export const RECEIVE_CHANNELS = 'RECEIVE_CHANNELS';
 export const RECEIVE_CHANNEL = 'RECEIVE_CHANNEL';
 export const REMOVE_CHANNEL = 'REMOVE_CHANNEL';
+export const RECEIVE_CHANNEL_ERRORS = 'RECEIVE_CHANNEL_ERRORS';
 
 export const receiveChannels = channels => {
   return {
@@ -25,6 +26,12 @@ export const receiveChannel = channel => {
   };
 };
 
+export const receiveErrors = errors => {
+  return {
+    type: RECEIVE_CHANNEL_ERRORS,
+    errors
+  };
+};
 
 export const fetchChannels = () => {
   return dispatch => {
@@ -65,6 +72,9 @@ export const createChannel = channel => {
     return APIChannel.createChannel(channel).then(
       channel => {
         return dispatch(receiveChannel(channel));
+      },
+      errors => {
+        return dispatch(receiveErrors(errors.responseJSON));
       }
     );
   };

@@ -18,11 +18,21 @@ class ChannelCreateForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     this.props.processForm(this.state);
-    this.props.handleClose();
+    // if (this.props.errors.length < 1) {
+    //   this.props.handleClose();
+    // }
     this.setState({
       channel_name: "",
       channel_topic: ""
     });
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (this.props.errors !== nextProps.errors) {
+      if (nextProps.errors.length < 1) {
+        this.props.handleClose();
+      }
+    }
   }
 
   update(field) {
@@ -33,9 +43,19 @@ class ChannelCreateForm extends React.Component {
     };
   }
   render () {
+    const errors = this.props.errors.map((errors, idx) => {
+      return (
+        <p key={idx} >
+          {errors}
+        </p>
+      )
+    })
     return (
       <form onSubmit={this.handleSubmit}>
         <label>Channel Name</label>
+        <div className="errors" >
+          {errors}
+        </div>
         <input 
         type='text' 
         value={this.state.channel_name} 
