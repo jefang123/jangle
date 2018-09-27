@@ -95,7 +95,7 @@ class ChannelShow extends React.Component {
 
 export default ChannelShow;
 
-// return (
+
            
 //   <div key={message.id} className="message">
 //     <p >{user.username}</p>

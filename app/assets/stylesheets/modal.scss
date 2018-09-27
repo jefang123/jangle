@@ -39,4 +39,38 @@
 .create-server-modal {
   display:flex;
   justify-content: space-around;
+  form {
+    display: flex;
+    flex-direction: column;
+
+    margin: auto;
+    input {
+      margin-top: 10px;
+    }
+    button {
+      margin-top: 10px;
+      background-color: #2a2c31;
+      color: #acacae;
+    }
+
+    button:hover{
+      color: #fff;
+    }
+  }
 }
+
+.channel-create-modal {
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+    margin: auto;
+
+    input {
+      margin-top: 10px;
+    }
+    button {
+      margin-top: 10px;
+    }
+  }
+} 

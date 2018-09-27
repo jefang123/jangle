@@ -29,11 +29,11 @@ class ServerCreateForm extends React.Component {
   render () {
     return (
       <form onSubmit={this.handleSubmit}>
-        <h3>Create a Server!</h3>
-        <label>Server Name</label>
+        <h3>Create a Server!</h3>  
         <input 
         type='text' 
         value={this.state.server_name} 
+        placeholder= "Server Name"
         onChange={this.update('server_name')}/>
         <button>Create Server</button>
       </form>

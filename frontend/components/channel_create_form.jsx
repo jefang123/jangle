@@ -11,16 +11,9 @@ class ChannelCreateForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  // componentDidMount () {
-  //   this.props.fetchServer(this.props.match.params.serverId);
-  // }
-
   handleSubmit(e) {
     e.preventDefault();
     this.props.processForm(this.state);
-    // if (this.props.errors.length < 1) {
-    //   this.props.handleClose();
-    // }
     this.setState({
       channel_name: "",
       channel_topic: ""
@@ -52,20 +45,21 @@ class ChannelCreateForm extends React.Component {
     })
     return (
       <form onSubmit={this.handleSubmit}>
-        <label>Channel Name</label>
         <div className="errors" >
           {errors}
         </div>
-        <input 
-        type='text' 
-        value={this.state.channel_name} 
-        onChange={this.update('channel_name')}/>
-        <label>Topic</label>
-        <input 
-        type='text' 
-        value={this.state.channel_topic} 
-        onChange={this.update('channel_topic')}/>
-        <button>Create Channel</button>
+        <h3>Create Channel</h3>
+          <input 
+          type='text' 
+          value={this.state.channel_name} 
+          placeholder="Channel Name"
+          onChange={this.update('channel_name')}/>
+          <input 
+          type='text' 
+          value={this.state.channel_topic} 
+          placeholder="Channel Topic"
+          onChange={this.update('channel_topic')}/>
+        <button>Create Channel!</button>
       </form>
     )
   }

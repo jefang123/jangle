@@ -91,7 +91,9 @@ class ServerShow extends React.Component {
               <h3>{server.server_name}</h3>
               {button}
               <Modal show={this.state.show} handleClose={this.hideModal}>
-                <ChannelCreateContainer handleClose={this.hideModal}/>
+                <div className="channel-create-modal">
+                  <ChannelCreateContainer handleClose={this.hideModal}/>
+                </div>
               </Modal>
               <br />
               {modalbutton}

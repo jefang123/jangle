@@ -33,10 +33,10 @@ class JoinServerForm extends React.Component {
     return (
       <form onSubmit={this.handleSubmit}>
         <h3> Join a Server!</h3>
-        <label>Server ID</label>
         <input 
         type='number' 
         value={this.state.server_id} 
+        placeholder="Server ID number"
         onChange={this.update('server_id')}/>
         <button>Join Server</button>
       </form>
