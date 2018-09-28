@@ -3,6 +3,9 @@ import HomeContainer from './home_container';
 import { Route, Switch } from 'react-router-dom';
 import LoginFormContainer from './login_form_container';
 import SignupFormContainer from './signup_form_container';
+import { ProtectedRoute } from '../util/route_util';
+import ServerShowContainer from './server_show_container';
+import ChannelShowContainer from './channel_show_container';
 
 
 const App = () => {
@@ -13,39 +16,12 @@ const App = () => {
         <Route path='/signup' component={SignupFormContainer} />
         <Route path='/' component={HomeContainer} />
       </Switch>
+      <ProtectedRoute path='/server/:serverId' component={ServerShowContainer} />
+      <ProtectedRoute path='/server/:serverId' component={ChannelShowContainer} />
     </div>
   );
 };
 
-// class App extends React.Component {
-//   constructor(props){
-//     super(props)
-  //   this.state = {
-  //     auth: {
-  //       isLoggedIn: false, 
-  //       user: ''
-  //     },
-  //     joinServer: {
-  //       code: "",
-  //       error: false,
-  //       serverId: null, 
-  //       redirect: false 
-  //     },
-  //     server: {
-  //       server: {},
-  //       users: []
-  //     }
-  //   }
-  // }
-  // updateAppStateServer = (newServer) => {
-  //   this.setState({
-  //     server: {
-  //       server: newServer.server,
-  //       users: newServer.users
-  //     }
-  //   })
-  // }
-// }
 
 export default App;
 

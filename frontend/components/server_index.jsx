@@ -8,14 +8,6 @@ import ServerShowContainer from './server_show_container';
 import Modal from './modal';
 import JoinServerForm from './join_server_form';
 
-import actionCable from 'actioncable';
-
-
-const CableApp = {};
-CableApp.cable = 
-actionCable.createConsumer()
-
-
 class ServerIndex extends React.Component {
   constructor(props) {
     super(props)
@@ -94,38 +86,10 @@ class ServerIndex extends React.Component {
             </li>
           </ul>
         </section>
-        <Route path='/server/:serverId' render={(props)=>(
-          <ServerShowContainer
-          {...props}
-          cableApp = {CableApp}
-          />
-        )} />
+        <ProtectedRoute path='/server/:serverId' component={ServerShowContainer} />
       </div>
     );
   }
 }
 
 export default ServerIndex;
-{/* <Route path='/server/:serverId/channel/:channelId' render={(props)=>(
-              < ChannelShowContainer 
-                {...props}
-                data-cableApp={this.props.cableApp}
-                data-updateApp={this.updateAppStateChannel}
-                data-ChannelData={this.state.channel}
-                data-getChannelData={this.props.fetchChannel}
-                ChannelData={this.state.channel}
-              /> */}
-// <ProtectedRoute path='/server/:serverId' render={(props)=>(
-//   < ServerShowContainer 
-//     {...props}
-//     data-cableApp={this.props.cableApp}
-//     data-updateApp={this.updateAppStateLine}
-//     data-serverData={this.state.serverData}
-//     data-getLServerData={this.getServerData}
-//     serverData={this.state.server}
-//     authData={this.state.auth}
-//   />
-// )} /> 
-
-
-{/* <ProtectedRoute path='/server/:serverId' component={ServerShowContainer} /> */}

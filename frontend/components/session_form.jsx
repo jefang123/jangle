@@ -12,6 +12,10 @@ class SessionForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleClick = this.handleClick.bind(this);
   }
+  
+  componentDidMount () {
+    this.props.clearError();
+  }
 
   handleClick(e) {
     e.preventDefault();

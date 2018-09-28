@@ -1,6 +1,12 @@
 import React from 'react';
 import MessageForm from './message_create_container';
 import ChannelWebSocket from './channel_web_socket';
+import actionCable from 'actioncable';
+
+
+const CableApp = {};
+CableApp.cable = 
+actionCable.createConsumer()
 
 class ChannelShow extends React.Component {
   constructor (props) {
@@ -80,10 +86,9 @@ class ChannelShow extends React.Component {
         <div className="divider"></div>
         <MessageForm />
         <ChannelWebSocket
-            data-cableApp={this.props['data-cableApp']}
-            data-updateApp={this.props['data-updateApp']}
+            data-cableApp={CableApp}
             data-ChannelData={this.props.channel}
-            data-getChannelData={this.props['data-getChannelData']}
+            data-getChannelData={this.props.fetchChannel}
             fetchMessages={this.props.fetchMessages}
           />
       </section>

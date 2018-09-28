@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
-import { Route } from 'react-router-dom';
 import ChannelShowContainer from './channel_show_container';
 import ChannelCreateContainer from './channel_create_container';
 import Modal from './modal';
+import { ProtectedRoute } from '../util/route_util';
 
 class ServerShow extends React.Component {
   constructor(props) {
@@ -72,13 +72,20 @@ class ServerShow extends React.Component {
     });
 
     let button;
-    if (this.props.currentUser.id === this.props.server.creator_id) {
+    if (this.props.server.private) {
+      button;
+    }
+    else if (this.props.currentUser.id === this.props.server.creator_id) {
       button = <button onClick={this.handleClick.bind(this)}>Delete Server</button>
     } else {
       button = <button onClick={this.handleRemoveClick.bind(this)}>Remove Server</button>
     }
+    
     let modalbutton;
-    if (this.props.currentUser.id === this.props.server.creator_id) {
+    if (this.props.server.private) {
+      modalbutton;
+    }
+    else if (this.props.currentUser.id === this.props.server.creator_id) {
       modalbutton = <button onClick={this.showModal} >Create Channel</button>
     }
 
@@ -108,16 +115,7 @@ class ServerShow extends React.Component {
       
           </section>
           <section className='channel-show'>
-            <Route path='/server/:serverId/channel/:channelId' render={(props)=>(
-              < ChannelShowContainer 
-                {...props}
-                data-cableApp={this.props.cableApp}
-                data-updateApp={this.updateAppStateChannel}
-                data-ChannelData={this.state.channel}
-                data-getChannelData={this.props.fetchChannel}
-                ChannelData={this.state.channel}
-              />
-            )} /> 
+          <ProtectedRoute path='/server/:serverId/channel/:channelId' component={ChannelShowContainer} />
           </section>
           <section className='user-index'>
             <h3> Users </h3>
@@ -141,18 +139,3 @@ class ServerShow extends React.Component {
 }
 
 export default ServerShow;
-
-
-// <ProtectedRoute path='/server/:serverId' render={(props)=>(
-  //   < ServerShowContainer 
-  //     {...props}
-  //     data-cableApp={this.props.cableApp}
-  //     data-updateApp={this.updateAppStateLine}
-  //     data-serverData={this.state.serverData}
-  //     data-getLServerData={this.getServerData}
-  //     serverData={this.state.server}
-  //     authData={this.state.auth}
-  //   />
-  // )} /> 
-
-  // <ProtectedRoute path='/server/:serverId/channel/:channelId' component={ChannelShowContainer} />
