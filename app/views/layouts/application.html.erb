@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Jangle</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<head>
+<title>Jangle</title>
+<%= csrf_meta_tags %>
+<%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all' %>
-    <%= javascript_include_tag 'application' %>
+<%= stylesheet_link_tag    'application', media: 'all' %>
+<%= javascript_include_tag 'application' %>
+<%= favicon_link_tag asset_path('logo.png'), :rel => 'icon', :type =>'image/png' %>
     <script type= "text/javascript">
       window.logo_url = "<%= image_url('game.svg') %>"
     </script>
@@ -25,8 +26,7 @@
       window.smartphone_box_url = "<%= image_url('smartphone-box.svg') %>"
       window.smartphone_round_url = "<%= image_url('smartphone-round.svg') %>"
       window.background_url = "<%= image_url('session-background.jpg') %>"
-    </script>
-    <%= favicon_link_tag asset_path('logo.svg') %>
+      </script>
   </head>
 
   <body>
