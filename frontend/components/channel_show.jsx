@@ -17,8 +17,10 @@ class ChannelShow extends React.Component {
       channel_id: this.props.match.params.channelId
     }
   }
+
   componentDidMount () {
     this.props.fetchMessages();
+    this.scrollBottom();
   }
 
 
@@ -28,6 +30,13 @@ class ChannelShow extends React.Component {
       this.setState({
         channel_id: this.props.match.params.channelId
       })
+    }
+    this.scrollBottom();
+  }
+
+  scrollBottom(){
+    if(this.bottom) {
+    this.bottom.scrollIntoView();
     }
   }
 
@@ -60,7 +69,7 @@ class ChannelShow extends React.Component {
 
     if (!this.props.channel) return null;
     const users = this.props.users;
-    const messages = this.props.messages.reverse().map(message => {
+    const messages = this.props.messages.map(message => {
       let messageb;
       if (message.user_id === this.props.currentUser.id) {
         messageb = <p className="delete-message" onClick={()=>this.handleClick(message.id)}>x</p>
@@ -85,9 +94,10 @@ class ChannelShow extends React.Component {
           <h3># {channel.channel_name}<span>{channel.channel_topic}</span></h3>
         </section>
         <div className="divider" />
-        <section className='message-index' id="chat">
+        <section className='message-index'>
 
         {messages}
+        <div ref={(el) => { this.bottom = el; }}></div>
         </section>
         <div className="divider"></div>
         <MessageForm />
