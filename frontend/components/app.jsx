@@ -16,8 +16,10 @@ const App = () => {
         <Route path='/signup' component={SignupFormContainer} />
         <Route path='/' component={HomeContainer} />
       </Switch>
-      <ProtectedRoute path='/server/:serverId' component={ServerShowContainer} />
-      <ProtectedRoute path='/server/:serverId' component={ChannelShowContainer} />
+      <div className="hide-div">
+        <ProtectedRoute path='/server/:serverId' component={ServerShowContainer} />
+        <ProtectedRoute path='/server/:serverId/channel/:channelId' component={ChannelShowContainer} />
+      </div>
     </div>
   );
 };

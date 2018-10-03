@@ -8,3 +8,7 @@
 	list-style: none;
 	text-decoration: none;
  }
+
+ .hide-div {
+	 display:none;
+ }

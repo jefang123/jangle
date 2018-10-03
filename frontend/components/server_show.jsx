@@ -45,6 +45,7 @@ class ServerShow extends React.Component {
   }
 
   render() {
+  
     if (!this.props.server) return null;
     const channels= this.props.channels.map( channel => {
       let channelb;

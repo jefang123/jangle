@@ -2,6 +2,7 @@ import React from 'react';
 import MessageForm from './message_create_container';
 import ChannelWebSocket from './channel_web_socket';
 import actionCable from 'actioncable';
+import { Redirect } from 'react-router-dom';
 
 
 const CableApp = {};
@@ -51,6 +52,11 @@ class ChannelShow extends React.Component {
   }
 
   render() {
+    if (!this.props.currentUser) {
+      return (
+        <Redirect to='/' />
+      );
+    }
 
     if (!this.props.channel) return null;
     const users = this.props.users;
