@@ -11,7 +11,7 @@ class Api::MessagesController < ApplicationController
     @message = Message.find_by(id: params[:id])  
     if @message.update(message_params)
       @channel = @message.channel
-      MessageChannel.broadcast_to(@channel, {channel: @channel, messages:@channel.messages})
+      MessageChannel.broadcast_to('message_channel', {channel: @channel, messages:@channel.messages})
       render :show 
     else
       render json: @message.errors.full_messages, status: 422
@@ -22,17 +22,19 @@ class Api::MessagesController < ApplicationController
     message = Message.find_by(id: params[:id])
     @channel = message.channel
     message.destroy
-    MessageChannel.broadcast_to(@channel, {channel: @channel, messages:@channel.messages})
+    MessageChannel.broadcast_to('message_channel', {channel: @channel, messages:@channel.messages})
     render json: {}
   end 
   
+  # 88 charas
 
   def create
     @message = Message.new(message_params)
     @message.user_id = current_user.id
     if @message.save
       @channel = @message.channel
-      MessageChannel.broadcast_to(@channel, {channel: @channel, messages:@channel.messages})
+      # MessageChannel.broadcast_to('message_channel', {channel: @channel, messages:@channel.messages})
+      MessageChannel.broadcast_to('message_channel', {channel: @channel, messages:@message})
       render :show
     else
       render json: @message.errors.full_messages, status: 422

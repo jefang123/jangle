@@ -5,14 +5,16 @@ class MessageCreateForm extends React.Component {
     super(props);
     this.state = {
       body: "",
-      channel_id: this.props.match.params.channelId
+      channel_id: this.props.match.params.channelId,
+      user_id: this.props.currentUser.id
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.processForm(this.state);
+    // this.props.processForm(this.state);
+    App.cable.subscriptions.subscriptions[0].speak(this.state);
     this.setState({
       body: "",
     });

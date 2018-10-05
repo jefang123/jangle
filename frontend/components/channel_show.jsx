@@ -3,11 +3,12 @@ import MessageForm from './message_create_container';
 import ChannelWebSocket from './channel_web_socket';
 import actionCable from 'actioncable';
 import { Redirect } from 'react-router-dom';
+import { receiveMessage } from '../actions/message_actions'
 
 
-const CableApp = {};
-CableApp.cable = 
-actionCable.createConsumer()
+// const CableApp = {};
+// CableApp.cable = 
+// actionCable.createConsumer()
 
 class ChannelShow extends React.Component {
   constructor (props) {
@@ -21,6 +22,23 @@ class ChannelShow extends React.Component {
   componentDidMount () {
     this.props.fetchMessages();
     this.scrollBottom();
+    App.cable.subscriptions.create({
+      channel: "MessageChannel",
+      // room: this.props['data-ChannelData'].id
+      room: 'MessageRoom'
+    }, {
+
+      received: (data) => {
+        // debugger
+        // this.props.fetchMessages();
+        dispatch(receiveMessage(data));
+      },
+
+      speak: function(data) {
+        return this.perform("speak", data)
+      }
+    })
+  
   }
 
 
@@ -88,7 +106,7 @@ class ChannelShow extends React.Component {
     });
     const { channel } = this.props;
     return (
-      <section className='channel-show'>
+      <section>
         <section className='channel-show-heading'> 
 
           <h3># {channel.channel_name}<span>{channel.channel_topic}</span></h3>
@@ -100,13 +118,14 @@ class ChannelShow extends React.Component {
         <div ref={(el) => { this.bottom = el; }}></div>
         </section>
         <div className="divider"></div>
-        <MessageForm />
-        <ChannelWebSocket
+        
+        {/* <ChannelWebSocket
             data-cableApp={CableApp}
             data-ChannelData={this.props.channel}
             data-getChannelData={this.props.fetchChannel}
-            fetchMessages={this.props.fetchMessages}
-          />
+            // fetchMessages={this.props.fetchMessages}
+          /> */}
+        <MessageForm />
       </section>
     )
   }

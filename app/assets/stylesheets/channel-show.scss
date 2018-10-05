@@ -19,6 +19,7 @@
     // justify-content: space-around;
     p {
       margin-right: 40px;
+      overflow-wrap: break-word;
     }
   }
   .message-index {
@@ -34,7 +35,7 @@
     .delete-message:hover {
       color: red;
     }
-    overflow:auto;
+    overflow-y:auto;
   }
   form {
     

@@ -14,11 +14,15 @@
  *= require_self
  */
 
+html {
+  width: 100%;
+}
+
 body {
   background-color: #18191c;
   color: #fff;
   font-family: Helvetica;
-  width: 100%
+  width: 100%;
 }
 
 button:hover {
@@ -264,7 +268,7 @@ li img:hover {
 
 .channel-show {
   background-color: #36393f;
-  width: 100%;
+  width: 63%;
 }
 
 .user-index {
