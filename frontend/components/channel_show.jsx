@@ -135,7 +135,7 @@ class ChannelShow extends React.Component {
             data-getChannelData={this.props.fetchChannel}
             // fetchMessages={this.props.fetchMessages}
           /> */}
-        <MessageForm />
+        <MessageForm channel={channel}/>
       </section>
     )
   }

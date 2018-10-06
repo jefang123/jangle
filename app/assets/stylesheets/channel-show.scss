@@ -72,9 +72,13 @@
     height: 50px;
     width: 100%;
 
-    input {
+    .message-field {
+      
       width: 95%;
       height: 80%;
+      resize: none;
+      overflow-wrap: break-word;
+      word-break: break-all;
     }
   }
 

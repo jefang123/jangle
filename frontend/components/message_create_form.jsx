@@ -39,8 +39,11 @@ class MessageCreateForm extends React.Component {
   render () {
     return (
       <form onSubmit={this.handleSubmit.bind(this)}>
-        <input type='text' 
+        <textarea
+        rows= "1"
+        className= "message-field"
         value={this.state.body} 
+        placeholder={`Message #${this.props.channel.channel_name}`}
         onChange={this.update('body')}/>
       </form>
     )
