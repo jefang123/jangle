@@ -17,7 +17,7 @@ class Modal extends React.Component {
             className="modal-button"
             onClick={this.handleClose}
           >
-            X
+            Cancel
           </button>
         </section>
       </div>

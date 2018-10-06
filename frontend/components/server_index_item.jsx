@@ -29,7 +29,7 @@ class ServerIndexItem extends React.Component {
           <h3>{this.props.server.server_name}</h3><br></br>
         </div>
         <Link to={`/server/${this.props.server.id}`}>
-        <img></img>
+        <img src={image}></img>
         </Link> 
       </li>
   );}

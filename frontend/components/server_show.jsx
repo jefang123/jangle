@@ -67,9 +67,15 @@ class ServerShow extends React.Component {
       )
     });
     const users = this.props.users.map(user => {
-      return (
-        <p key={user.id}>{user.username}</p>
-      );
+      if (this.props.server.creator_id === user.id ) {
+        return (
+          <p key={user.id}>{user.username} <i className="fas fa-crown"></i></p>
+        );
+      } else {
+        return (
+          <p key={user.id}>{user.username}</p>
+        );
+      }
     });
 
     let button;
@@ -89,7 +95,7 @@ class ServerShow extends React.Component {
     else if (this.props.currentUser.id === this.props.server.creator_id) {
       modalbutton = <button onClick={this.showModal} >Create Channel</button>
     }
-
+    // <i className="fas fa-bars"></i>
     const { server } = this.props;
 
       return (
@@ -110,7 +116,12 @@ class ServerShow extends React.Component {
               {channels}
             </ul>
             <div className="user-tab">
-                <h2>{this.props.currentUser.username}</h2>
+
+                <img src={window.logo_url}></img>
+                <section>
+                  <p>{this.props.currentUser.username}</p>
+                  <p># {this.props.currentUser.id}</p>
+                </section>
                 <button onClick={this.props.logout}>Log Out</button>
             </div>
       

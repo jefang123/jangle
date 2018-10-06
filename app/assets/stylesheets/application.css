@@ -23,6 +23,7 @@ body {
   color: #fff;
   font-family: Helvetica;
   width: 100%;
+  overflow: hidden;
 }
 
 button:hover {
@@ -194,7 +195,7 @@ p {
 
 .home-page {
   width: 100%; 
-  height: 100vh;
+  /* height: 100vh; */
   display: flex; 
 }
 
@@ -271,7 +272,8 @@ li img:hover {
 
 .channel-show {
   background-color: #36393f;
-  width: 63%;
+  min-width: 65%; 
+  max-width: 100%;
 }
 
 .user-index {

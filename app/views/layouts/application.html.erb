@@ -5,13 +5,16 @@
 <%= csrf_meta_tags %>
 <%= csp_meta_tag %>
 
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 <%= stylesheet_link_tag    'application', media: 'all' %>
+
 <%= javascript_include_tag 'application' %>
 <%= favicon_link_tag asset_path('logo.png'), :rel => 'icon', :type =>'image/png' %>
     <script type= "text/javascript">
-      window.logo_url = "<%= image_url('game.png') %>"
+      window.logo_url = "<%= image_url('game1.png') %>"
     </script>
     <script type= "text/javascript">
+      window.user_url = "<%= image_url('game.png') %>"
       window.profile_url = "<%= image_url('jangle-profile.png') %>"
       window.bomb_url = "<%= image_url('bomb.svg') %>"
       window.box_url = "<%= image_url('box.svg') %>"

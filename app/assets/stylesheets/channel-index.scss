@@ -18,7 +18,21 @@
   }
 
   .user-tab {
-    text-align: center;
+    margin-top: 20px;
+    // text-align: center;
+    display: flex;
+    section {
+      margin-top: 5px;
+      display: flex; 
+      flex-direction: column;
+      margin-right: 10px;
+    }
+    img {
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+      margin: 0 5px;
+    }
     button {
       background-color: #7289da;
       color: #fff;
@@ -40,10 +54,14 @@
         color: #cdcdd0;
       }
       background-color: #5e5e5f;
+      .delete-server{
+        display: block;
+      }
     }
 
     .delete-server{
       position: relative;
+      display: none;
     }
 
     .delete-hidden{

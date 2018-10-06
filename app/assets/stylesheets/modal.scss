@@ -22,7 +22,11 @@
 .modal-button {
   background-color: #36393f;
   color: #acacae;
-  font-size: 25px;
+  font-size: 19px;
+  position: absolute;
+  bottom: 10px;
+  left: 30%;
+  padding: 10px;
 }
 
 .modal-button:hover {
@@ -60,17 +64,29 @@
 }
 
 .channel-create-modal {
+  text-align: left;
+
   form {
     display: flex;
     flex-direction: column;
-    width: 100px;
-    margin: auto;
-
-    input {
+    h3 {
+      margin-left: 10px;
       margin-top: 10px;
     }
-    button {
+    input {
+      padding: 5px;
+      margin: 0 10px;
       margin-top: 10px;
+    }
+    .create-channel {
+      background-color: #7289da;
+      color: #fff;
+      padding: 10px;
+      margin-top: 10px;
+      width: 50%;
+      margin-left: 45%;
+      font-size: 19px;
+      margin-bottom: 10px;
     }
   }
 } 

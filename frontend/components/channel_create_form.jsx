@@ -59,7 +59,7 @@ class ChannelCreateForm extends React.Component {
           value={this.state.channel_topic} 
           placeholder="Channel Topic"
           onChange={this.update('channel_topic')}/>
-        <button>Create Channel!</button>
+        <button className="create-channel">Create Channel!</button>
       </form>
     )
   }

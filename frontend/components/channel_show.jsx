@@ -98,8 +98,18 @@ class ChannelShow extends React.Component {
         return (
            
           <div key={message.id} className="message">
-            <p >{user.username} : {message.body}</p>
-            {messageb}
+            <div>
+              <img className="message-image" src={window.user_url}></img>
+            <div className="message-box">
+            <p >{user.username} <span>{message.created_at}</span></p> 
+              
+
+                <p className="message-body"> {message.body}</p>
+              
+                {messageb}
+            </div>
+            </div>
+            
           </div>
         );
       }
