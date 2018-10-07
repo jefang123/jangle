@@ -11,10 +11,11 @@ Channel.destroy_all
 UserJoin.destroy_all
 
 demo = User.create(username:"Demo-User", email:"demo", password:"123456")
-Server.create(creator_id: demo.id, server_name:"Home", private: true)
+demo_home = Server.create(creator_id: demo.id, server_name:"Home", private: true)
+UserJoin.create(user_id: demo.id, server_id: demo_home.id)
 jeff = User.create(username:"jeff", email:"jeff", password:"123456")
-Server.create(creator_id: jeff.id, server_name:"Home", private: true)
-
+jeff_home = Server.create(creator_id: jeff.id, server_name:"Home", private: true)
+UserJoin.create(user_id: jeff.id, server_id: jeff_home.id)
 
 money = User.create(username:"MakeMoney", email:"makemoney", password:"111111111")
 stocks = Server.create(creator_id: money.id, server_name:"Stocks")

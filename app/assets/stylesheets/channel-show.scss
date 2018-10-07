@@ -14,13 +14,11 @@
   }
 
   .message {
-    position: relative;
     border-top: 1px solid #3d4045;
     padding: 20px 0px;
-    // div {
-    //   display: flex;
-    //   flex-direction: column;
-    // }
+    overflow-wrap:break-word;
+    word-break: break-all;
+   
     .message-image {
       height: 50px;
       width: 50px;
@@ -31,7 +29,7 @@
     .message-box {
       display: flex;
       flex-direction: column;
-      
+      position: relative;
       span{
         font-size: 14px;
         opacity: 0.5;
@@ -40,15 +38,18 @@
       .delete-message{
         display: none;
         position: absolute;
-        left: 95%;
+        top: 25px; 
+        right: 20px;
       }
 
     }
 
     .message-body {
+      margin: 10px 0;
+      margin-right: 50px;
       // overflow-wrap: break-word;
-      word-break: break-all;
-      max-width: 70%;
+      // word-break: break-all;
+      // max-width: 70%;
     }
   }
   .message:hover .delete-message{
@@ -56,12 +57,11 @@
   }
   .message-index {
     margin:20px;
-    height: 75vh;
+    height: 79vh;
 
     div {
       margin:5px 0;
       display:flex;
-      // justify-content: space-between;
     }
     .delete-message:hover {
       color: red;

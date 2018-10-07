@@ -116,8 +116,10 @@ class ServerShow extends React.Component {
               {channels}
             </ul>
             <div className="user-tab">
+                <div>
 
                 <img src={window.logo_url}></img>
+                </div>
                 <section>
                   <p>{this.props.currentUser.username}</p>
                   <p># {this.props.currentUser.id}</p>

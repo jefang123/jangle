@@ -28,8 +28,8 @@ class HomeIndexItem extends React.Component {
         <div className="hidden">
           <h3>{this.props.server.server_name}</h3><br></br>
         </div>
-        <Link to={`/server/Home`}>
-        <img onContextMenu={this.contextMenu.bind(this)} src={image}></img>
+        <Link to={`/server/${this.props.server.id}`}>
+        <img src={image}></img>
         </Link> 
       </li>
   );}
