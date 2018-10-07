@@ -16,10 +16,6 @@ const App = () => {
         <Route path='/signup' component={SignupFormContainer} />
         <Route path='/' component={HomeContainer} />
       </Switch>
-      <div className="hide-div">
-        <ProtectedRoute path='/server/:serverId' component={ServerShowContainer} />
-        <ProtectedRoute path='/server/:serverId/channel/:channelId' component={ChannelShowContainer} />
-      </div>
     </div>
   );
 };

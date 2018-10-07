@@ -272,8 +272,7 @@ li img:hover {
 
 .channel-show {
   background-color: #36393f;
-  min-width: 65%; 
-  max-width: 100%;
+  width: calc(100% - 480px)
 }
 
 .user-index {

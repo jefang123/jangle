@@ -11,7 +11,6 @@ class ChannelWebSocket extends React.Component {
     }, {
 
       received: (data) => {
-        // debugger
         // this.props.fetchMessages();
         dispatch(receiveMessage(data.messages));
       },

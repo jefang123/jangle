@@ -1,5 +1,6 @@
 class Api::UsersController < ApplicationController
   def create
+    User.includes(:servers)
     @user = User.new(user_params)
     if @user.save
       login!(@user)
