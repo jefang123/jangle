@@ -7,6 +7,7 @@ import {Route} from 'react-router-dom';
 import ServerShowContainer from './server_show_container';
 import Modal from './modal';
 import JoinServerForm from './join_server_form';
+import { HashRouter } from 'react-router-dom';
 
 class ServerIndex extends React.Component {
   constructor(props) {
@@ -70,7 +71,6 @@ class ServerIndex extends React.Component {
       }
     });
     return(
-      <div className="home-page">
         <section className="server-index">
           <ul>
             { home }
@@ -87,8 +87,6 @@ class ServerIndex extends React.Component {
             </li>
           </ul>
         </section>
-        <ProtectedRoute path='/server/:serverId' component={ServerShowContainer} />
-      </div>
     );
   }
 }

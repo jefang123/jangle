@@ -48,6 +48,7 @@ class SignUpForm extends React.Component {
   const header = this.props.formType === 'login' ? 'Log In' : 'Register';
   
     return (
+      <div className="bg" >
       <div className="session-container" >
         <Link to='/'>  
           <img className='logo' src={window.logo_url}/>
@@ -81,6 +82,7 @@ class SignUpForm extends React.Component {
 
           {link}
         </form>
+      </div>
       </div>
     );
 

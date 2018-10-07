@@ -57,6 +57,9 @@ class SessionForm extends React.Component {
   const header = this.props.formType === 'login' ? 'Log In' : 'Register';
     
     return (
+      <div className='bg'>
+
+     
       <div className='session-container'>
          <Link to='/'>  
           <img className='logo' src={window.logo_url}/>
@@ -86,6 +89,8 @@ class SessionForm extends React.Component {
           </form>
         </div>
       </div>
+
+       </div>
     );
 
   }

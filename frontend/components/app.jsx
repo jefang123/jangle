@@ -10,12 +10,13 @@ import ChannelShowContainer from './channel_show_container';
 
 const App = () => {
   return (
-    <div>
+    <div className="home-page">
       <Switch>
         <Route path='/login' component={LoginFormContainer} />
         <Route path='/signup' component={SignupFormContainer} />
         <Route path='/' component={HomeContainer} />
       </Switch>
+        <ProtectedRoute path='/server/:serverId' component={ServerShowContainer} />
     </div>
   );
 };
