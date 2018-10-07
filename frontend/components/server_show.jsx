@@ -69,7 +69,7 @@ class ServerShow extends React.Component {
     const users = this.props.users.map(user => {
       if (this.props.server.creator_id === user.id ) {
         return (
-          <p key={user.id}>{user.username} <i className="fas fa-crown"></i></p>
+          <p key={user.id}><i className="fas fa-crown"></i> {user.username}</p>
         );
       } else {
         return (

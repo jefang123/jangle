@@ -40,7 +40,7 @@ class MessageCreateForm extends React.Component {
     return (
       <form onSubmit={this.handleSubmit.bind(this)}>
         <textarea
-        rows= "1"
+        rows= "2"
         className= "message-field"
         value={this.state.body} 
         placeholder={`Message #${this.props.channel.channel_name}`}

@@ -15,6 +15,8 @@
 
   .message {
     position: relative;
+    border-top: 1px solid #3d4045;
+    padding: 20px 0px;
     // div {
     //   display: flex;
     //   flex-direction: column;
@@ -73,9 +75,17 @@
     width: 100%;
 
     .message-field {
+      ::placeholder {
+        color: #444c55;
+      }
       
+      border-radius: 5px;
+      font-size: 20px;
+      padding : 10px;
+      box-sizing: border-box;
       width: 95%;
-      height: 80%;
+      background-color: #3f4248;
+      color: #acacae;
       resize: none;
       overflow-wrap: break-word;
       word-break: break-all;
