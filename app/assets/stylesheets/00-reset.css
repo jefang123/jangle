@@ -12,6 +12,7 @@
 input:focus, textarea:focus {
 	outline: none;
 }
- .hide-div {
+
+.hide-div {
 	 display:none;
  }
