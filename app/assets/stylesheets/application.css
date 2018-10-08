@@ -225,7 +225,7 @@ p {
 ul {
   padding: 10px;
   /* overflow:auto; */
-  /* height: 100vh; */
+  height: calc(100vh - 20px);
 
 }
 li {
@@ -279,6 +279,11 @@ li img:hover {
 .channel-show {
   background-color: #36393f;
   width: calc(100% - 480px)
+}
+
+.home-show {
+  background-color: #36393f;
+  width: calc(100% - 240px)
 }
 
 .user-index {

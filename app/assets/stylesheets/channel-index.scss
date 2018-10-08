@@ -43,7 +43,8 @@
 
   ul {
     background-color: #2f3136;
-    height: 79vh;
+    // height: calc(100vh - 153px);
+    height: calc(100vh - 172px);
     li {
       display: flex;
       justify-content: space-between;

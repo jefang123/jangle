@@ -21,6 +21,7 @@ const mapDispatchToProps = dispatch => {
     logout: () => dispatch(logout()),
     deleteChannel: id => dispatch(deleteChannel(id)),
     removeServer: (id) => dispatch(deleteJoin(id)),
+    createChannel: channel => dispatch(createChannel(channel)),
     fetchChannel: id=> dispatch(fetchChannel(id))
   }
 }

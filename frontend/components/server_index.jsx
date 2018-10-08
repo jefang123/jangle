@@ -58,6 +58,7 @@ class ServerIndex extends React.Component {
   render(){ 
     const home = this.props.servers.map(server => {
       if (server.private) {
+        window.homeId = server.id;
         return <ServerIndexItem key={server.id} server={server} />
       }
     })

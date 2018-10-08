@@ -47,9 +47,6 @@
     .message-body {
       margin: 10px 0;
       margin-right: 50px;
-      // overflow-wrap: break-word;
-      // word-break: break-all;
-      // max-width: 70%;
     }
   }
   .message:hover .delete-message{
@@ -57,7 +54,7 @@
   }
   .message-index {
     margin:20px;
-    height: 79vh;
+    height: calc(100vh - 175px);
 
     div {
       margin:5px 0;
@@ -92,4 +89,18 @@
     }
   }
 
+}
+
+.home-h3 {
+  margin-bottom: 18px;
+}
+
+.server-heading {
+  button {
+    visibility: hidden;
+  }
+}
+
+.server-heading:hover button {
+  visibility: visible;
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
+import { Link, Redirect } from 'react-router-dom'
 import ChannelShowContainer from './channel_show_container';
 import ChannelCreateContainer from './channel_create_container';
 import Modal from './modal';
@@ -14,6 +14,7 @@ class ServerShow extends React.Component {
      }
     this.showModal = this.showModal.bind(this)
     this.hideModal = this.hideModal.bind(this)
+    this.handlePMClick = this.handlePMClick.bind(this)
   }
 
   showModal () {
@@ -39,9 +40,17 @@ class ServerShow extends React.Component {
     this.props.deleteServer(this.props.server.id);   
   }
 
+  handlePMClick (e) {
+    const mesagee = this.props.users[e.target.getAttribute("value")];
+    // this.props.createChannel({server_id: window.homeId, channel_name: mesagee.username});
+    // debugger
+    // <Redirect to={`/server/${window.homeId}`}/>
+
+  }
+
   handleRemoveClick (e) {
     e.preventDefault();
-    this.props.removeServer(this.props.server.id);   
+    this.props.removeServer(this.props.server.id);  
   }
 
   render() {
@@ -69,11 +78,11 @@ class ServerShow extends React.Component {
     const users = this.props.users.map(user => {
       if (this.props.server.creator_id === user.id ) {
         return (
-          <p key={user.id}><i className="fas fa-crown"></i> {user.username}</p>
+          <p onClick={this.handlePMClick} value={user.id} key={user.id}><i className="fas fa-crown"></i> {user.username}</p>
         );
       } else {
         return (
-          <p key={user.id}>{user.username}</p>
+          <p onClick={this.handlePMClick} value={user.id} key={user.id}>{user.username}</p>
         );
       }
     });
@@ -98,6 +107,36 @@ class ServerShow extends React.Component {
     // <i className="fas fa-bars"></i>
     const { server } = this.props;
 
+    if (this.props.server.private) {
+      return (
+        <div className="server-show">
+          <section className='channel-index'>
+            <section className='server-heading'>
+              <h3 className='home-h3'>{server.server_name}</h3>
+             
+            </section>
+            <ul>
+              {channels}
+            </ul>
+            <div className="user-tab">
+                <div>
+  
+                <img src={window.logo_url}></img>
+                </div>
+                <section>
+                  <p>{this.props.currentUser.username}</p>
+                  <p># {this.props.currentUser.id}</p>
+                </section>
+                <button onClick={this.props.logout}>Log Out</button>
+            </div>
+      
+          </section>
+          <section className='home-show'>
+          <ProtectedRoute path='/server/:serverId/channel/:channelId' component={ChannelShowContainer} />
+          </section>
+        </div>
+      )
+    } else {
       return (
         <div className="server-show">
           <section className='channel-index'>
@@ -117,7 +156,7 @@ class ServerShow extends React.Component {
             </ul>
             <div className="user-tab">
                 <div>
-
+  
                 <img src={window.logo_url}></img>
                 </div>
                 <section>
@@ -135,18 +174,14 @@ class ServerShow extends React.Component {
             <h3> Users </h3>
             <div className="divider" />
             <ul>
-
+  
             {users}
             </ul>
           </section>
-          {/* <ServerWebSocket
-            data-cableApp={this.props['data-cableApp']}
-            data-updateApp={this.props['data-updateApp']}
-            data-ServerData={this.props.server}
-            data-getServerData={this.props['data-getServerData']}
-          /> */}
         </div>
       )
+    }
+
   
   }
 
