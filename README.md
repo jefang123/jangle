@@ -4,7 +4,7 @@ Chat Application utilizing React.js for Frontend and Ruby on Rails for Backend. 
 
 Live Link: https://disjangle.herokuapp.com
 
-Features:
+## Features:
 * Handles User Authentication
   * User Login/SignUp
   * Demo User 
@@ -12,7 +12,7 @@ Features:
 * Handles Channel Creation/Deletion 
 * Handles Real Time Messaging with Action Cable
 * 1 on 1 Private Messaging in default HOME server
-Future ideas:
+### Future ideas:
 * Multi-User Private Messaging
 * Add image_urls
 * Update error messages
