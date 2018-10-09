@@ -11,7 +11,7 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
   fetchServers: () => dispatch(fetchServers()),
   createServer: server=>dispatch(createServer(server)),
-  fetchServer: (id) => dispatch(fetchServer(id))
+  fetchServer: (id) => dispatch(fetchServer(id)),
 });
 
 export default withRouter(connect(

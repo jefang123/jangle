@@ -8,6 +8,7 @@ const mapStateToProps = (state, ownProps) => {
     channel: state.entities.channels[ownProps.match.params.channelId],
     messages: Object.values(state.entities.messages),
     users: state.entities.users,
+    users2: state.entities.users2,
     currentUser: state.entities.users[state.session.currentUserId]
   };
 }

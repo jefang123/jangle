@@ -30,31 +30,34 @@ class ChannelShow extends React.Component {
 
       received: (data) => {
         // this.props.fetchMessages();
-        let date = new Date();
-        let ampm = " AM"
-        let hours = date.getHours();
-        if (hours === 0) {
-          hours = 12;
-        } else if ( hours > 12 ) {
-          hours -= 12;
-          ampm = " PM" 
-        }
-        let minutes = date.getMinutes();
-        if (hours < 10 ) {
-          hours = `0${hours}:`
-        } else {
-          hours = `${hours}:`
-        }
 
-        if (minutes < 10 ) {
-          minutes = `0${minutes}`;
-        } else {
-          minutes = `${minutes}`
-        }
-        let time = hours + minutes + ampm
-        data.created_at = time 
-        dispatch(receiveMessage(data));
-      },
+        if(data.id){
+            let date = new Date();
+            let ampm = " AM"
+            let hours = date.getHours();
+            if (hours === 0) {
+              hours = 12;
+            } else if ( hours > 12 ) {
+              hours -= 12;
+              ampm = " PM" 
+            }
+            let minutes = date.getMinutes();
+            if (hours < 10 ) {
+              hours = `0${hours}:`
+            } else {
+              hours = `${hours}:`
+            }
+    
+            if (minutes < 10 ) {
+              minutes = `0${minutes}`;
+            } else {
+              minutes = `${minutes}`
+            }
+            let time = hours + minutes + ampm
+            data.created_at = time 
+            dispatch(receiveMessage(data));
+          }
+        },
 
       speak: function(data) {
         return this.perform("speak", data)
@@ -108,7 +111,7 @@ class ChannelShow extends React.Component {
     }
 
     if (!this.props.channel) return null;
-    const users = this.props.users;
+    const users = this.props.users2;
     const messages = this.props.messages.map(message => {
       let messageb;
       if (message.user_id === this.props.currentUser.id) {
@@ -136,7 +139,10 @@ class ChannelShow extends React.Component {
         );
       }
     });
+
     const { channel } = this.props;
+    // let messageLimit = 25
+    // let shownMessages = messages.slice()
     return (
       <section>
         <section className='channel-show-heading'> 

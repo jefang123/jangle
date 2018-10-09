@@ -9,7 +9,11 @@ class Api::ServersController < ApplicationController
     Server.includes(:users, :channels)
     @server = Server.find_by(id: params[:id])
     @users = @server.users
-    @channels = @server.channels
+    if @server.private
+      @channels = Channel.where(channel_name: current_user.username).or(Channel.where(server_id: @server.id))
+    elsif 
+      @channels = @server.channels
+    end
   end 
 
   def update
