@@ -12,6 +12,8 @@ json.channels do
   @channels.each do |channel|
     json.set! channel.id do
       json.extract! channel, :id, :channel_name, :channel_topic
+      json.creator channel.server.creator.username
+      json.private channel.server.private 
     end
   end
 end

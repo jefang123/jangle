@@ -44,7 +44,16 @@ class MessageCreateForm extends React.Component {
   }
 
   render () {
-    
+    let text;
+    if (this.props.channel.channel_name === this.props.currentUser.username) {
+      text = `@${this.props.channel.creator}`
+    }
+    else if (this.props.channel.private) {
+      text = `@${this.props.channel.channel_name}`
+    } 
+    else {
+      text = `#${this.props.channel.channel_name}`
+    }
     return (
       <form>
         <textarea
@@ -53,7 +62,8 @@ class MessageCreateForm extends React.Component {
         rows= "1"
         className= "message-field"
         value={this.state.body} 
-        placeholder={`Message #${this.props.channel.channel_name}`}
+        // placeholder={`Message #${this.props.channel.channel_name}`}
+        placeholder = {`Message ${text}`}
         onChange={this.update('body')}/>
         
       </form>

@@ -1,14 +1,7 @@
 import React from 'react';
 import MessageForm from './message_create_container';
-import ChannelWebSocket from './channel_web_socket';
-import actionCable from 'actioncable';
 import { Redirect } from 'react-router-dom';
 import { receiveMessage } from '../actions/message_actions'
-
-
-// const CableApp = {};
-// CableApp.cable = 
-// actionCable.createConsumer()
 
 class ChannelShow extends React.Component {
   constructor (props) {
@@ -24,7 +17,6 @@ class ChannelShow extends React.Component {
     this.scrollBottom();
     App.cable.subscriptions.create({
       channel: "MessageChannel",
-      // room: this.props['data-ChannelData'].id
       room: 'MessageRoom'
     }, {
 
@@ -143,11 +135,21 @@ class ChannelShow extends React.Component {
     const { channel } = this.props;
     // let messageLimit = 25
     // let shownMessages = messages.slice()
+    let header;
+    if (channel.channel_name === this.props.currentUser.username) {
+      header = <h3>@ {channel.creator}</h3>
+    }
+    else if (channel.private) {
+      header = <h3>@ {channel.channel_name}</h3>
+    } 
+    else {
+      header = <h3># {channel.channel_name}<span>{channel.channel_topic}</span></h3>
+    }
     return (
       <section>
         <section className='channel-show-heading'> 
 
-          <h3># {channel.channel_name}<span>{channel.channel_topic}</span></h3>
+          {header}
         </section>
         <div className="divider" />
         <section className='message-index'>
@@ -157,12 +159,6 @@ class ChannelShow extends React.Component {
         </section>
         <div className="divider"></div>
         
-        {/* <ChannelWebSocket
-            data-cableApp={CableApp}
-            data-ChannelData={this.props.channel}
-            data-getChannelData={this.props.fetchChannel}
-            // fetchMessages={this.props.fetchMessages}
-          /> */}
         <MessageForm channel={channel}/>
       </section>
     )
@@ -172,14 +168,3 @@ class ChannelShow extends React.Component {
 
 
 export default ChannelShow;
-
-
-           
-//   <div key={message.id} className="message">
-//     <p >{user.username}</p>
-//     <div>
-//       <p>{message.body}</p>
-//       <p className="delete-message" onClick={()=>this.handleClick(message.id)}>x</p>
-//     </div>
-//   </div>
-// );

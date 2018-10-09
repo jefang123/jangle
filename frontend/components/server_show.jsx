@@ -66,6 +66,13 @@ class ServerShow extends React.Component {
         hash = "#"
       }
 
+      let channelName;
+      if (channel.channel_name === this.props.currentUser.username) {
+        channelName = channel.creator
+      } else {
+        channelName = channel.channel_name
+      }
+
       let channelb;
       if(this.props.server.creator_id === this.props.currentUser.id) {
         channelb = <Link to={`/server/${this.props.server.id}/channel/${channel.id}`}>
@@ -78,7 +85,7 @@ class ServerShow extends React.Component {
       return (
         <li key={channel.id}>
           <Link to={`/server/${this.props.server.id}/channel/${channel.id}`}>
-            {hash} {channel.channel_name} </Link>
+            {hash} {channelName} </Link>
           {channelb}
           
         </li>
