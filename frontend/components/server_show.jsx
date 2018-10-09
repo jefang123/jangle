@@ -5,6 +5,7 @@ import ChannelCreateContainer from './channel_create_container';
 import PrivateCreate from './channel_create_private_form';
 import Modal from './modal';
 import { ProtectedRoute } from '../util/route_util';
+import { receiveChannel, receiveChannels } from '../actions/channel_actions';
 
 class ServerShow extends React.Component {
   constructor(props) {
@@ -28,6 +29,26 @@ class ServerShow extends React.Component {
 
   componentDidMount () {
     this.props.fetchServer(this.props.match.params.serverId);
+    App.cable.subscriptions.create({
+      channel: "MessageChannel",
+      room: 'MessageRoom'
+    },    {
+
+      received: (data) => {
+        debugger
+        // this.props.fetchMessages();
+        // this.props.fetchServer
+        if(data.channels) {
+          dispatch(receiveChannels(data.channels))
+        } else {
+          dispatch(receiveChannel(data));
+        }
+      },
+
+      speak: function(data) {
+        return this.perform("speak2", data)
+      }
+    })
   }
 
   componentDidUpdate(prevProps) {
@@ -68,7 +89,7 @@ class ServerShow extends React.Component {
 
       let channelName;
       if (channel.channel_name === this.props.currentUser.username) {
-        channelName = channel.creator
+        channelName = channel.channel_topic
       } else {
         channelName = channel.channel_name
       }

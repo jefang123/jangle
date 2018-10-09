@@ -9,6 +9,7 @@ class PrivateCreateForm extends React.Component {
     super(props);
     this.state = {
       channel_name: "",
+      channel_topic: this.props.currentUser.username,
       server_id: this.props.match.params.serverId
     };
     this.names = [];
@@ -18,7 +19,8 @@ class PrivateCreateForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.processForm(this.state);
+    // this.props.processForm(this.state);
+    App.cable.subscriptions.subscriptions[0].speak(this.state);
     this.setState({
       channel_name: "",
       channel_topic: ""

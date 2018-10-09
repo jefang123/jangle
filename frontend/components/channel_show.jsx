@@ -101,9 +101,14 @@ class ChannelShow extends React.Component {
         <Redirect to='/' />
       );
     }
-
+    
     if (!this.props.channel) return null;
-    const users = this.props.users2;
+    let users;
+    if (this.props.channel.private) {
+      users = this.props.users2;
+    } else {
+      users = this.props.users;
+    }
     const messages = this.props.messages.map(message => {
       let messageb;
       if (message.user_id === this.props.currentUser.id) {

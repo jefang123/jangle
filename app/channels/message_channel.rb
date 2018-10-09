@@ -14,6 +14,11 @@ class MessageChannel < ApplicationCable::Channel
     new_message = Message.create(body: data['body'], user_id: data['user_id'], channel_id: data['channel_id'] )
     MessageChannel.broadcast_to('message_channel', new_message)
   end 
+
+  def speak2(data)
+    new_channel = Channel.create(channel_name: data['channel_name'], channel_topic: data['channel_topic'], server_id: data['server_id'])
+    MessageChannel.broadcast_to('message_channel', new_channel)
+  end
   
   def unsubscribed
   end 

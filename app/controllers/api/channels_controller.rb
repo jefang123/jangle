@@ -20,7 +20,14 @@ class Api::ChannelsController < ApplicationController
   
   def destroy 
     channel = Channel.find_by(id: params[:id])
+    server = channel.server 
     channel.destroy
+    if server.private
+      channels = Channel.where(channel_name: current_user.username).or(Channel.where(server_id: server.id))
+    elsif 
+      channels = server.channels
+    end
+    MessageChannel.broadcast_to('message_channel', {channels: channels})
     render json: {}
   end 
   
