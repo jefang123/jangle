@@ -13,6 +13,7 @@ Features:
 * Handles Server Creation/Deletion 
 * Handles Channel Creation/Deletion 
 * Handles Real Time Messaging with Action Cable
+* 1 on 1 Private Messaging in default HOME server
 
 
 Future ideas:
