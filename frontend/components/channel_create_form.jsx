@@ -19,7 +19,7 @@ class ChannelCreateForm extends React.Component {
       channel_topic: ""
     });
   }
-
+  
   componentWillReceiveProps(nextProps) {
     if (this.props.errors !== nextProps.errors) {
       if (nextProps.errors.length < 1) {
@@ -45,10 +45,10 @@ class ChannelCreateForm extends React.Component {
     })
     return (
       <form onSubmit={this.handleSubmit}>
+        <h3>Create Channel</h3>
         <div className="errors" >
           {errors}
         </div>
-        <h3>Create Channel</h3>
           <input 
           type='text' 
           value={this.state.channel_name} 

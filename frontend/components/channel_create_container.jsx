@@ -4,7 +4,6 @@ import { createChannel } from '../actions/channel_actions';
 import { fetchServer } from '../actions/server_actions';
 import { withRouter } from 'react-router-dom'
 
-
 const mapStateToProps = state => {
   return {
     errors: state.errors.channel,

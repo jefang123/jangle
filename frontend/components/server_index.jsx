@@ -20,6 +20,7 @@ class ServerIndex extends React.Component {
 
   showModal () {
     this.setState({ show: true });
+    ()=> this.props.clearError();
   }
   
   hideModal () {

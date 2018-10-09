@@ -4,6 +4,7 @@ import * as APIJoins from '../util/userjoin_api_util';
 export const RECEIVE_SERVERS = 'RECEIVE_SERVERS';
 export const RECEIVE_SERVER = 'RECEIVE_SERVER';
 export const REMOVE_SERVER = 'REMOVE_SERVER';
+export const RECEIVE_SERVER_ERRORS = 'RECEIVE_SERVER_ERRORS'
 
 export const receiveServers = servers => {
   return {
@@ -25,6 +26,13 @@ export const receiveServer = payload => {
     server: payload.server,
     channels: payload.channels,
     users: payload.users
+  };
+};
+
+export const receiveErrors = errors => {
+  return {
+    type: RECEIVE_SERVER_ERRORS,
+    errors
   };
 };
 
@@ -68,6 +76,9 @@ export const createServer = server => {
     return APIServer.createServer(server).then(
       server => {
         return dispatch(receiveServer(server));
+      },
+      errors => {
+        return dispatch(receiveErrors(errors.responseJSON));
       }
     );
   };

@@ -13,10 +13,18 @@ class ServerCreateForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     this.props.processForm(this.state);
-    this.props.handleClose();
     this.setState({
       server_name: ""
     });
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (this.props.errors !== nextProps.errors) {
+      if (nextProps.errors.length < 1) {
+        this.props.handleClose();
+        
+      }
+    }
   }
 
   update(field) {
@@ -27,9 +35,19 @@ class ServerCreateForm extends React.Component {
     };
   }
   render () {
+    const errors = this.props.errors.map((errors, idx) => {
+      return (
+        <p key={idx} >
+          {errors}
+        </p>
+      )
+    })
     return (
       <form onSubmit={this.handleSubmit}>
         <h3>Create a Server!</h3>  
+        <div className="errors" >
+          {errors}
+        </div>
         <input 
         type='text' 
         value={this.state.server_name} 

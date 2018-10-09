@@ -1,12 +1,12 @@
-import { RECEIVE_CHANNEL_ERRORS, RECEIVE_CHANNEL } from '../actions/channel_actions';
+import { RECEIVE_SERVER_ERRORS, RECEIVE_SERVER } from '../actions/server_actions';
 import { CLEAR_ERRORS } from '../actions/session_actions';
 
 export default (state=[], action) => {
   Object.freeze(state);
   switch (action.type) {
-    case RECEIVE_CHANNEL:
+    case RECEIVE_SERVER:
       return [];
-    case RECEIVE_CHANNEL_ERRORS:
+    case RECEIVE_SERVER_ERRORS:
       return action.errors;
     case CLEAR_ERRORS:
       return [];
