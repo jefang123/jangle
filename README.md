@@ -19,5 +19,5 @@ Features:
 Future ideas:
 * Multi-User Private Messaging
 * Add image_urls
-* Add error messages
+* Update error messages
 * Edit/Updating functions
