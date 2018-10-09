@@ -14,4 +14,5 @@ class Message < ApplicationRecord
   belongs_to :user
   belongs_to :channel 
   validates :user, :channel, :body, presence:true 
+  
 end

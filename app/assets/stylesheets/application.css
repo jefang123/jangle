@@ -254,7 +254,7 @@ li img:hover {
 .create-server {
   position: absolute;
   top: 5px;
-  right: -4px;
+  right: 0px;
   box-sizing: border-box;
   height: 50px;
   width: 50px;

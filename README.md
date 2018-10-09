@@ -1,24 +1,22 @@
 # README
 
-This project is an attempt to clone basic Discord features
+Chat Application utilizing React.js for Frontend and Ruby on Rails for Backend. Inspired by Discord
 
 Live Link: https://disjangle.herokuapp.com
 
-Currently this project can:
+Features:
 
-* Handle User Authentication
+* Handles User Authentication
   * User Login/SignUp
   * Demo User
   
-* Handle Server Creation/Deletion 
-* Handle Channel Creation/Deletion 
-* Handle Real Time Messaging with Action Cable
+* Handles Server Creation/Deletion 
+* Handles Channel Creation/Deletion 
+* Handles Real Time Messaging with Action Cable
 
 
-WIP:
-
+Future ideas:
+* Private Messaging
 * Add image_urls
 * Add error messages
-* Fix Remove/Join Server functions
 * Edit/Updating functions
-* Add timestamps to Messages

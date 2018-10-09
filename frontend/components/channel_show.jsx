@@ -30,6 +30,29 @@ class ChannelShow extends React.Component {
 
       received: (data) => {
         // this.props.fetchMessages();
+        let date = new Date();
+        let ampm = " AM"
+        let hours = date.getHours();
+        if (hours === 0) {
+          hours = 12;
+        } else if ( hours > 12 ) {
+          hours -= 12;
+          ampm = " PM" 
+        }
+        let minutes = date.getMinutes();
+        if (hours < 10 ) {
+          hours = `0${hours}:`
+        } else {
+          hours = `${hours}:`
+        }
+
+        if (minutes < 10 ) {
+          minutes = `0${minutes}`;
+        } else {
+          minutes = `${minutes}`
+        }
+        let time = hours + minutes + ampm
+        data.created_at = time 
         dispatch(receiveMessage(data));
       },
 

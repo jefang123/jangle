@@ -16,6 +16,10 @@ class Api::UsersController < ApplicationController
     @user = User.find_by(params[:id])
   end
 
+  def index 
+    @users = User.all 
+  end 
+  
   def user_params
     params.require(:user).permit(:username, :email, :password, :image_url)
   end

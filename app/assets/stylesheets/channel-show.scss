@@ -21,6 +21,7 @@
    
     .message-image {
       height: 50px;
+      min-width: 50px;
       width: 50px;
       border-radius: 50%;
       margin-right: 20px;
@@ -95,12 +96,11 @@
   margin-bottom: 18px;
 }
 
-.server-heading {
-  button {
+.server-heading > button {
     visibility: hidden;
-  }
+  
 }
 
-.server-heading:hover button {
+.server-heading:hover > button {
   visibility: visible;
 }
