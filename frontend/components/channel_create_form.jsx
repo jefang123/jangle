@@ -13,8 +13,9 @@ class ChannelCreateForm extends React.Component {
   }
 
   handleSubmit(e) {
+    debugger
     e.preventDefault();
-    App.cable.subscriptions.subscriptions[0].speak(this.state);
+    App.cable.subscriptions.subscriptions[0].speak2(this.state);
     this.setState({
       channel_name: "",
       channel_topic: ""
