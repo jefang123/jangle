@@ -88,6 +88,12 @@
       font-size: 19px;
       margin-bottom: 10px;
     }
+    .create-channel:disabled {
+      background-color: #cccccc;
+      color: #666666;
+      cursor: default;
+    }
+
   }
 } 
 
@@ -141,6 +147,11 @@
       margin-top: 10px;
       font-size: 19px;
       margin-bottom: 10px;
+    }
+    button:disabled {
+      background-color: #cccccc;
+      color: #666666;
+      cursor: default;
     }
   }
 }

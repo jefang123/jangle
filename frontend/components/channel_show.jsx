@@ -1,7 +1,7 @@
 import React from 'react';
 import MessageForm from './message_create_container';
 import { Redirect } from 'react-router-dom';
-import { receiveMessage } from '../actions/message_actions'
+import LinkPreview from 'react-native-link-preview';
 
 class ChannelShow extends React.Component {
   constructor (props) {
@@ -15,47 +15,6 @@ class ChannelShow extends React.Component {
   componentDidMount () {
     this.props.fetchMessages();
     this.scrollBottom();
-    App.cable.subscriptions.create({
-      channel: "MessageChannel",
-      room: 'MessageRoom'
-    }, {
-
-      received: (data) => {
-        // this.props.fetchMessages();
-
-        if(data.id){
-            let date = new Date();
-            let ampm = " AM"
-            let hours = date.getHours();
-            if (hours === 0) {
-              hours = 12;
-            } else if ( hours > 12 ) {
-              hours -= 12;
-              ampm = " PM" 
-            }
-            let minutes = date.getMinutes();
-            if (hours < 10 ) {
-              hours = `0${hours}:`
-            } else {
-              hours = `${hours}:`
-            }
-    
-            if (minutes < 10 ) {
-              minutes = `0${minutes}`;
-            } else {
-              minutes = `${minutes}`
-            }
-            let time = hours + minutes + ampm
-            data.created_at = time 
-            dispatch(receiveMessage(data));
-          }
-        },
-
-      speak: function(data) {
-        return this.perform("speak", data)
-      }
-    })
-  
   }
 
 
@@ -110,6 +69,11 @@ class ChannelShow extends React.Component {
       users = this.props.users;
     }
     const messages = this.props.messages.map(message => {
+
+      // let body;
+      // LinkPreview.getPreview(message.body).then(data =>{
+      // })
+
       let messageb;
       if (message.user_id === this.props.currentUser.id) {
         messageb = <p className="delete-message" onClick={()=>this.handleClick(message.id)}>x</p>

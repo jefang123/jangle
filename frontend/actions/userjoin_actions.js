@@ -1,16 +1,20 @@
-export const signup = user => {
-  return dispatch => {
-    return APISession.signup(user).then(
-      user => {
-        return dispatch(receiveCurrentUser(user));
-    });
+import * as APIServer from '../util/server_api_util';
+
+export const RECEIVE_ALL_SERVERS = 'RECEIVE_ALL_SERVERS';
+
+export const receiveAllServers = servers => {
+  return {
+    type: RECEIVE_ALL_SERVERS,
+    servers
   };
 };
 
-export const logout = () => {
+export const fetchAllServers = () => {
   return dispatch => {
-    return APISession.logout().then(()=>{
-      return dispatch(logoutCurrentUser());
-    });
+    return APIServer.fetchServers().then(
+      servers => {
+        return dispatch(receiveAllServers(servers));
+      }
+    );
   };
 };

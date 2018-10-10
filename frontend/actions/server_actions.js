@@ -5,6 +5,7 @@ export const RECEIVE_SERVERS = 'RECEIVE_SERVERS';
 export const RECEIVE_SERVER = 'RECEIVE_SERVER';
 export const REMOVE_SERVER = 'REMOVE_SERVER';
 export const RECEIVE_SERVER_ERRORS = 'RECEIVE_SERVER_ERRORS'
+export const RECEIVE_JOIN_ERRORS = 'RECEIVE_JOIN_ERRORS'
 
 export const receiveServers = servers => {
   return {
@@ -36,6 +37,12 @@ export const receiveErrors = errors => {
   };
 };
 
+export const receiveJoinErrors = errors => {
+  return {
+    type: RECEIVE_JOIN_ERRORS,
+    errors
+  };
+};
 
 export const fetchServers = () => {
   return dispatch => {
@@ -89,6 +96,9 @@ export const createJoin = join => {
     return APIJoins.createUserJoin(join).then(
       server => {
         return dispatch(fetchServer(join.server_id));
+      },
+      errors => {
+        return dispatch(receiveJoinErrors(errors.responseJSON));
       }
     );
   };

@@ -1,11 +1,13 @@
 import React from 'react';
-import { Link, Redirect } from 'react-router-dom'
+import { Link, Redirect, Switch, matchPath } from 'react-router-dom'
 import ChannelShowContainer from './channel_show_container';
 import ChannelCreateContainer from './channel_create_container';
 import PrivateCreate from './channel_create_private_form';
 import Modal from './modal';
 import { ProtectedRoute } from '../util/route_util';
 import { receiveChannel, receiveChannels } from '../actions/channel_actions';
+import WelcomeShow from './welcome_show';
+import { receiveMessage } from '../actions/message_actions';
 
 class ServerShow extends React.Component {
   constructor(props) {
@@ -31,21 +33,49 @@ class ServerShow extends React.Component {
     this.props.fetchServer(this.props.match.params.serverId);
     App.cable.subscriptions.create({
       channel: "MessageChannel",
-      room: 'MessageRoom'
+      room: 'ChannelRoom'
     },    {
 
       received: (data) => {
-        debugger
-        // this.props.fetchMessages();
-        // this.props.fetchServer
         if(data.channels) {
           dispatch(receiveChannels(data.channels))
-        } else {
+        } 
+        else if (data.channel_name) {
           dispatch(receiveChannel(data));
+        }
+        else if(data.body){
+          let date = new Date();
+          let ampm = " AM"
+          let hours = date.getHours();
+          if (hours === 0) {
+            hours = 12;
+          } else if ( hours > 12 ) {
+            hours -= 12;
+            ampm = " PM" 
+          }
+          let minutes = date.getMinutes();
+          if (hours < 10 ) {
+            hours = `0${hours}:`
+          } else {
+            hours = `${hours}:`
+          }
+  
+          if (minutes < 10 ) {
+            minutes = `0${minutes}`;
+          } else {
+            minutes = `${minutes}`
+          }
+          let time = hours + minutes + ampm
+          data.created_at = time 
+          dispatch(receiveMessage(data));
         }
       },
 
       speak: function(data) {
+        return this.perform("speak", data)
+      },
+
+      speak2: function(data) {
         return this.perform("speak2", data)
       }
     })
@@ -76,9 +106,31 @@ class ServerShow extends React.Component {
   }
 
   render() {
-  
+    let match = matchPath(this.props.history.location.pathname, {
+      path: '/server/:serverId/channel/:channelId',
+      exact: true,
+      strict: false 
+    });
+    let parameter;
+    if (!match) {
+      parameter = 0;
+    } else if (match.params.channelId) {
+      parameter = parseInt(match.params.channelId);
+    } else {
+      parameter = 0;
+    }
+
+    let klass;
+
     if (!this.props.server) return null;
     const channels= this.props.channels.map( channel => {
+
+      if (channel.id === parameter) {
+        klass = "ch-selected"
+      } else {
+        klass = ""
+      }
+
       let hash;
 
       if (this.props.server.private) {
@@ -104,7 +156,7 @@ class ServerShow extends React.Component {
       </Link>
       } 
       return (
-        <li key={channel.id}>
+        <li key={channel.id} className={klass}>
           <Link to={`/server/${this.props.server.id}/channel/${channel.id}`}>
             {hash} {channelName} </Link>
           {channelb}
@@ -174,7 +226,10 @@ class ServerShow extends React.Component {
       
           </section>
           <section className='home-show'>
-          <ProtectedRoute path='/server/:serverId/channel/:channelId' component={ChannelShowContainer} />
+          <Switch>
+            <ProtectedRoute path='/server/:serverId/welcome' component={WelcomeShow} />
+            <ProtectedRoute path='/server/:serverId/channel/:channelId' component={ChannelShowContainer} />
+          </Switch>
           </section>
         </div>
       )

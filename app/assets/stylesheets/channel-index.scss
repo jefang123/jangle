@@ -61,6 +61,13 @@
       }
     }
 
+    .ch-selected {
+      a {
+        color: #cdcdd0;
+      }
+      background-color: #5e5e5f;
+    }
+
     .delete-server{
       position: relative;
       display: none;
