@@ -1,0 +1,24 @@
+
+
+.hidden-contact {
+  display: none;
+  padding: 10px;
+  position: absolute;
+  background-color:#18191c;
+  text-decoration: none;
+  li {
+    padding: 10px 0;
+  }
+  a {
+    color: #acacae;
+  }
+  a:hover{
+    color: #EEE;
+  }
+}
+.contact {
+  position: relative;
+}
+.contact:hover .hidden-contact {
+  display: block;
+}

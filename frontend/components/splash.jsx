@@ -10,9 +10,17 @@ class Splash extends React.Component {
         <header className="login-header">
           <nav className="login-nav">
             <img src={window.logo_url}/>
-            <h2>Home</h2>
             <h2>Jangle</h2>
-            <h2>Test</h2>
+            <div className="contact">
+            <h2 >About Me</h2>
+              <div className="hidden-contact">
+                <li><a target="_blank" href="https://github.com/jefang123">Github</a></li>
+                <li><a target="_blank" href="https://www.linkedin.com/in/jeffrey-fang-bb11b5165/">LinkedIn</a></li>
+                <li><a target="_blank" href="https://jefang123.github.io/">Portfolio</a></li>
+              </div>
+            </div>
+
+            
             <button className="splash-demo" onClick={()=>{this.props.login({email:'demo', password:'123456'})}}>Demo User</button>
             <NavLink 
             to='/login'
