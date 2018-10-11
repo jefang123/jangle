@@ -140,9 +140,12 @@ class ServerShow extends React.Component {
       }
 
       let channelName;
-      if (channel.channel_name === this.props.currentUser.username) {
-        channelName = channel.channel_topic
-      } else {
+      if (this.props.server.private) {
+        if (channel.channel_name === this.props.currentUser.username) {
+          channelName = channel.channel_topic
+        } 
+      }
+      else {
         channelName = channel.channel_name
       }
 

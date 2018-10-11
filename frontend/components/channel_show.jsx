@@ -106,22 +106,25 @@ class ChannelShow extends React.Component {
     // let shownMessages = messages.slice()
     let messageheader;
     let header;
-    if (channel.channel_name === this.props.currentUser.username) {
-      header = <h3>@ {channel.creator}</h3>
-      messageheader =  <h3>This is the beginning of your conversation with {channel.channel_topic} </h3>
+    if (channel.server_id === window.homeId) {
+
+      if (channel.channel_name === this.props.currentUser.username) {
+        header = <h3>@ {channel.creator}</h3>
+        messageheader =  <h3>This is the beginning of your conversation with {channel.channel_topic} </h3>
+      }
+      else if (this.props.users2[channel.channel_name]) {
+        header = <h3>@ {channel.channel_name}</h3>
+        messageheader =  <h3>This is the beginning of your conversation with @{channel.channel_name} </h3>
+      } 
     }
-    else if (this.props.users2[channel.channel_name]) {
-      header = <h3>@ {channel.channel_name}</h3>
-      messageheader =  <h3>This is the beginning of your conversation with @{channel.channel_name} </h3>
-    } 
     else {
       header = <h3># {channel.channel_name}<span>{channel.channel_topic}</span></h3>
       messageheader =  <h3>This is the beginning of #{channel.channel_name} </h3>
     }
+
     return (
       <section>
         <section className='channel-show-heading'> 
-
           {header}
         </section>
         <div className="divider" />
