@@ -86,6 +86,7 @@ Message.create(body:"nature calls", user_id:rowdyguy.id, channel_id:diygeneral.i
 
 jeff_food = Server.create(creator_id: jeff.id, server_name:"Food")
 UserJoin.create(user_id: jeff.id, server_id: jeff_food.id)
+UserJoin.create(user_id: demo.id, server_id: jeff_food.id)
 
 foodgeneral = Channel.create(server_id: jeff_food.id, channel_name:"general", channel_topic:"Anything is fine here")
 Message.create(body:jeff_food.id, user_id:jeff.id, channel_id:foodgeneral.id)
