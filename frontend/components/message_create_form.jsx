@@ -31,7 +31,11 @@ class MessageCreateForm extends React.Component {
 
   keyDown(e) {
     if (e.keyCode === 13) {
-      this.handleSubmit();
+      if (this.state.body === "") {
+        e.preventDefault();
+      } else {
+        this.handleSubmit();
+      }
     }
   }
 
