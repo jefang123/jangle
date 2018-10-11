@@ -46,7 +46,7 @@ class MessageCreateForm extends React.Component {
   render () {
     let text;
     if (this.props.channel.channel_name === this.props.currentUser.username) {
-      text = `@${this.props.channel.creator}`
+      text = `@${this.props.channel.channel_topic}`
     }
     else if (this.props.channel.private) {
       text = `@${this.props.channel.channel_name}`

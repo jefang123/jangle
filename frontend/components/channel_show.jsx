@@ -63,7 +63,7 @@ class ChannelShow extends React.Component {
     
     if (!this.props.channel) return null;
     let users;
-    if (this.props.channel.private) {
+    if (this.props.match.params.serverId === homeId) {
       users = this.props.users2;
     } else {
       users = this.props.users;
@@ -87,7 +87,7 @@ class ChannelShow extends React.Component {
             <div>
               <img className="message-image" src={window.user_url}></img>
             <div className="message-box">
-            <p >{user.username} <span>{message.created_at}</span></p> 
+            <p >{user ? user.username : null} <span>{message.created_at}</span></p> 
               
 
                 <p className="message-body"> {message.body}</p>
@@ -107,9 +107,8 @@ class ChannelShow extends React.Component {
     let messageheader;
     let header;
     // if (channel.server_id === window.homeId) {
-
       if (channel.channel_name === this.props.currentUser.username) {
-        header = <h3>@ {channel.creator}</h3>
+        header = <h3>@ {channel.channel_topic}</h3>
         messageheader =  <h3>This is the beginning of your conversation with {channel.channel_topic} </h3>
       }
       else if (this.props.users2[channel.channel_name]) {
