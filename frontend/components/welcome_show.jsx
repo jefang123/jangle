@@ -3,7 +3,7 @@ import React from 'react';
 const WelcomeShow = () => {
   return (
     <section>
-      Welcome to Jangle
+      {/* Welcome to Jangle */}
     </section>
   );
 };
