@@ -1,5 +1,9 @@
 .channel-show, .home-show {
-  background: image-url("wumpus.jpg");
+  > .welcome {
+    width: 100%;
+    height: 100%;
+    background: image-url("wumpus.jpg");
+  }
   // background-size: 100%;
   form {
     overflow: hidden;

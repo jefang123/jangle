@@ -2,7 +2,7 @@ import React from 'react';
 
 const WelcomeShow = () => {
   return (
-    <section>
+    <section className="welcome">
       {/* Welcome to Jangle */}
     </section>
   );
