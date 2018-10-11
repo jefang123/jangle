@@ -98,3 +98,8 @@ foodfav = Channel.create(server_id: jeff_food.id, channel_name:"Recipes", channe
   Message.create(body:Faker::Food.dish, user_id:foodie.id, channel_id:foodfav.id)
   Message.create(body:Faker::Food.description, user_id:foodie.id, channel_id:foodfav.id)
 end 
+
+ActiveRecord::Base.connection.reset_pk_sequence!(Model.users)
+ActiveRecord::Base.connection.reset_pk_sequence!(Model.servers)
+ActiveRecord::Base.connection.reset_pk_sequence!(Model.channels)
+ActiveRecord::Base.connection.reset_pk_sequence!(Model.userjoins)
