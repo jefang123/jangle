@@ -132,7 +132,7 @@ class ServerShow extends React.Component {
       }
 
       let hash;
-
+      let privateS = this.props.server.private;
       if (this.props.server.private) {
         hash = "@"
       } else {
@@ -140,11 +140,11 @@ class ServerShow extends React.Component {
       }
 
       let channelName;
-      if (this.props.server.private) {
+      // if (privateS) {
         if (channel.channel_name === this.props.currentUser.username) {
           channelName = channel.channel_topic
         } 
-      }
+      // }
       else {
         channelName = channel.channel_name
       }
