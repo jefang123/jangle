@@ -69,7 +69,9 @@ class ChannelShow extends React.Component {
       users = this.props.users;
     }
     const messages = this.props.messages.map(message => {
-
+      if (!message.id) {
+        return null;
+      }
       // let body;
       // LinkPreview.getPreview(message.body).then(data =>{
       // })
