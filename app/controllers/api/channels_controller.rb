@@ -1,7 +1,7 @@
 class Api::ChannelsController < ApplicationController 
   def index 
-    servers = Server.includes(:channels)
-    @server = servers.find_by(params[:server_id])
+    Server.includes(:channels)
+    @server = Server.find_by(params[:server_id])
     @channels = @server.channels
   end
   
@@ -24,7 +24,7 @@ class Api::ChannelsController < ApplicationController
     channel.destroy
     if server.private
       channels = Channel.where(channel_name: current_user.username).or(Channel.where(server_id: server.id))
-    elsif 
+    else
       channels = server.channels
     end
     MessageChannel.broadcast_to('message_channel', {channels: channels})

@@ -38,7 +38,11 @@ class ServerShow extends React.Component {
 
       received: (data) => {
         if(data.channels) {
-          dispatch(receiveChannels(data.channels))
+          let parsedCh = {};
+          data.channels.forEach(channel => {
+            parsedCh[channel.id] = channel;
+          })
+          dispatch(receiveChannels(parsedCh))
         } 
         else if (data.channel_name) {
           dispatch(receiveChannel(data));
