@@ -14,7 +14,6 @@ class MessageCreateForm extends React.Component {
 
   handleSubmit(e) {
     // e.preventDefault();
-    // this.props.processForm(this.state);
     App.cable.subscriptions.subscriptions[0].speak(this.state);
     this.setState({
       body: "",
@@ -74,8 +73,5 @@ class MessageCreateForm extends React.Component {
     )
   }
 }
-
-// documentgetElement.onkeyup = enter;    
-// function enter(e) {if (e.which == 13) submitForm();}
 
 export default MessageCreateForm;

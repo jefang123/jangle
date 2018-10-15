@@ -12,7 +12,6 @@ class Home extends React.Component {
           <ServerIndexContainer 
           currentUser ={ this.props.currentUser }
           logout = { this.props.logout }/>
-          {/* <Redirect to={`/server/${window.homeId}`} /> */}
         </section>
       );} else {
         return (

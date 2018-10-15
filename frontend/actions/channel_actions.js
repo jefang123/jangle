@@ -39,9 +39,6 @@ export const fetchChannels = () => {
       channels => {
         return dispatch(receiveChannels(channels));
       }
-      // errors => {
-      //   return dispatch(receiveErrors(errors));
-      // }
     );
   };
 };

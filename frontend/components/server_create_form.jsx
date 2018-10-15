@@ -1,4 +1,5 @@
 import React from 'react';
+import { Redirect } from 'react-router-dom';
 
 class ServerCreateForm extends React.Component {
   constructor(props) {
@@ -14,6 +15,7 @@ class ServerCreateForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     this.props.processForm(this.state);
+    Redirec
     this.errors = [];
     this.setState({
       server_name: ""
