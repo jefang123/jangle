@@ -25,7 +25,6 @@ export const removeServer = (id) => {
 };
 
 export const receiveServer = payload => {
-  // debugger
   return {
     type: RECEIVE_SERVER,
     server: payload.server,

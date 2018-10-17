@@ -204,7 +204,7 @@ p {
 }
 
 .hidden {
-  display: none;
+  /* display: none; */
   position: absolute;
   left: 50px;
   background-color: #000;
