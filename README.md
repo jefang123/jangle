@@ -2,7 +2,7 @@
 
 Chat Application utilizing React.js for Frontend and Ruby on Rails for Backend. Inspired by Discord
 
-Live Link: https://disjangle.herokuapp.com
+Live Link: http://jangle.jefang.me
 
 ## Features:
 * Handles User Authentication
@@ -15,5 +15,4 @@ Live Link: https://disjangle.herokuapp.com
 ### Future ideas:
 * Multi-User Private Messaging
 * Add image_urls
-* Update error messages
 * Edit/Updating functions
