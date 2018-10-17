@@ -204,15 +204,26 @@ p {
 }
 
 .hidden {
-  /* display: none; */
+  display: none;
   position: absolute;
-  left: 50px;
+  left: 70px;
   background-color: #000;
   color: white;
-  top: 0;
+  top: 10px;
   min-width: 50px;
   z-index: 1;
-  padding-top:10px;
+  padding:5px;
+  border-radius: 5px;
+}
+
+.arrow-left {
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid black;
+  position: absolute;
+  left: -10px;
 }
 
 ul {

@@ -47,9 +47,10 @@ class ServerIndexItem extends React.Component {
         <li
           key={this.props.server.id}
           className={klass}
-        >
+        > 
           <div className="hidden">
-            <h3>{this.props.server.server_name}</h3><br></br>
+            <div className="arrow-left"></div>
+            <h3>{this.props.server.server_name}</h3>
           </div>
           <Link to={`/server/${this.props.server.id}/welcome`}>
           <img src={image}></img>
@@ -63,7 +64,8 @@ class ServerIndexItem extends React.Component {
             className={klass}
           >
             <div className="hidden">
-              <h3>{this.props.server.server_name}</h3><br></br>
+              <div className="arrow-left"></div>
+              <h3>{this.props.server.server_name}</h3>
             </div>
             <Link to={`/server/${this.props.server.id}`}>
             <img src={image}></img>
