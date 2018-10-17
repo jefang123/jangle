@@ -127,6 +127,11 @@ class ServerShow extends React.Component {
     let klass;
 
     if (!this.props.server) return null;
+    if (!this.props.server) {
+      return (
+        <Redirect to='/' />
+      );
+    }
     const channels= this.props.channels.map( channel => {
 
       if (channel.id === parameter) {

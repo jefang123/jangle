@@ -7,6 +7,11 @@ class Api::ChannelsController < ApplicationController
   
   def show 
     @channel = Channel.find_by(id: params[:id])
+    if @channel 
+      render :show 
+    else 
+      render json: "No such Channel", status: 422
+    end 
   end 
   
   def update

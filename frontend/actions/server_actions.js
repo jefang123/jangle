@@ -72,6 +72,9 @@ export const fetchServer = (id) => {
     return APIServer.fetchServer(id).then(
       payload => {
         return dispatch(receiveServer(payload));
+      },
+        errors => {
+        return dispatch(receiveErrors(errors.responseJSON));
       }
     );
   };

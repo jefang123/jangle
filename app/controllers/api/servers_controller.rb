@@ -8,12 +8,17 @@ class Api::ServersController < ApplicationController
   def show 
     Server.includes(:users, :channels)
     @server = Server.find_by(id: params[:id])
-    @users = @server.users
-    if @server.private
-      @channels = Channel.where(channel_name: current_user.username).or(Channel.where(server_id: @server.id))
-    elsif 
-      @channels = @server.channels
-    end
+  
+    if @server 
+      @users = @server.users 
+      if @server.private
+        @channels = Channel.where(channel_name: current_user.username).or(Channel.where(server_id: @server.id))
+      else
+        @channels = @server.channels 
+      end 
+    else 
+      render json: "No Such Server", status: 422
+    end 
   end 
 
   def update
