@@ -9,6 +9,7 @@ export const REMOVE_SERVER = 'REMOVE_SERVER';
 export const RECEIVE_SERVER_ERRORS = 'RECEIVE_SERVER_ERRORS'
 export const RECEIVE_JOIN_ERRORS = 'RECEIVE_JOIN_ERRORS'
 export const CREATE_SERVER = 'CREATE_SERVER'
+export const RECEIVE_404_ERRORS = 'RECEIVE_404_ERRORS'
 
 export const receiveServers = servers => {
   return {
@@ -36,6 +37,13 @@ export const receiveServer = payload => {
 export const receiveErrors = errors => {
   return {
     type: RECEIVE_SERVER_ERRORS,
+    errors
+  };
+};
+
+export const receive404Errors = errors => {
+  return {
+    type: RECEIVE_404_ERRORS,
     errors
   };
 };
@@ -73,8 +81,8 @@ export const fetchServer = (id) => {
       payload => {
         return dispatch(receiveServer(payload));
       },
-        errors => {
-        return dispatch(receiveErrors(errors.responseJSON));
+      errors => {
+      return dispatch(receive404Errors(errors.responseJSON));
       }
     );
   };

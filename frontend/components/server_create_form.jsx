@@ -15,7 +15,7 @@ class ServerCreateForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     this.props.processForm(this.state);
-    Redirec
+    // Redirec
     this.errors = [];
     this.setState({
       server_name: ""

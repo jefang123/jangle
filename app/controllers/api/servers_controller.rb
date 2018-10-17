@@ -17,7 +17,7 @@ class Api::ServersController < ApplicationController
         @channels = @server.channels 
       end 
     else 
-      render json: "No Such Server", status: 422
+      render json: ["No Such Server"], status: 422
     end 
   end 
 
