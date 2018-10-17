@@ -7,6 +7,7 @@ import { deleteServer, deleteJoin } from '../actions/server_actions';
 
 const mapStateToProps = (state, ownProps) => {
   return {
+    redirect: state.errors.redirect,
     server: state.entities.servers[ownProps.match.params.serverId],
     users: Object.values(state.entities.users),
     channels: Object.values(state.entities.channels),

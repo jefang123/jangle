@@ -110,6 +110,13 @@ class ServerShow extends React.Component {
   }
 
   render() {
+    if (this.props.redirect.includes("No Such Server")) {
+      // this.props.fetchServer(homeId);
+      return (
+        <Redirect to={`/server/${homeId}/welcome`} />
+      );
+  
+  }
     let match = matchPath(this.props.history.location.pathname, {
       path: '/server/:serverId/channel/:channelId',
       exact: true,
@@ -123,15 +130,11 @@ class ServerShow extends React.Component {
     } else {
       parameter = 0;
     }
-
+    
     let klass;
 
     if (!this.props.server) return null;
-    if (!this.props.server) {
-      return (
-        <Redirect to='/' />
-      );
-    }
+  
     const channels= this.props.channels.map( channel => {
 
       if (channel.id === parameter) {
