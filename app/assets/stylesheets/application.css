@@ -193,7 +193,6 @@ p {
 
 .home-page {
   width: 100%; 
-  /* height: 100vh; */
   display: flex; 
   position: relative;
 }
@@ -228,13 +227,11 @@ p {
 
 ul {
   padding: 10px;
-  /* overflow:auto; */
   height: calc(100vh - 20px);
 
 }
 li {
   position: relative;
-  /* display: inline-block; */
 }
 li:hover .hidden {
   display:block;
