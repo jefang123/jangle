@@ -14,5 +14,5 @@ Live Link: http://jangle.jefang.me
 * 1 on 1 Private Messaging in default HOME server
 ### Future ideas:
 * Multi-User Private Messaging
-* Add image_urls
+* Add image_urls with AWS
 * Edit/Updating functions
