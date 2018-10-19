@@ -8,7 +8,6 @@ class Api::MessagesController < ApplicationController
   end 
   
   def update
-    messages = Message.includes(:channel)
     @message = messages.find_by(id: params[:id])
     if @message.update(message_params)
       @channel = @message.channel
@@ -28,14 +27,11 @@ class Api::MessagesController < ApplicationController
     render json: {}
   end 
   
-  # 88 charas
-
   def create
     @message = Message.new(message_params)
     @message.user_id = current_user.id
     if @message.save
       @channel = @message.channel
-      # MessageChannel.broadcast_to('message_channel', {channel: @channel, messages:@channel.messages})
       MessageChannel.broadcast_to('message_channel', {channel: @channel, messages:@message})
       render :show
     else

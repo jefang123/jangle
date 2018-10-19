@@ -1,12 +1,10 @@
 class Api::ServersController < ApplicationController
 
   def index 
-    User.includes(:servers)
     @servers = current_user.servers
   end 
 
   def show 
-    Server.includes(:users, :channels)
     @server = Server.find_by(id: params[:id])
   
     if @server 
@@ -33,7 +31,6 @@ class Api::ServersController < ApplicationController
   def destroy 
     @server = Server.find_by(id: params[:id])
     if @server.server_name == "Home"
-      # return render json: @server.errors.full_messages, status: 422
       return render json: "Cannot Delete Home Server", status: 422
     end 
     @server.destroy
@@ -41,7 +38,6 @@ class Api::ServersController < ApplicationController
   end 
 
   def create
-    Server.includes(:users, :channels)
     @server = Server.new(server_params)
     @server.creator_id = current_user.id
     if @server.save
