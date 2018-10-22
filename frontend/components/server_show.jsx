@@ -164,10 +164,10 @@ class ServerShow extends React.Component {
       let channelb;
       if(this.props.server.creator_id === this.props.currentUser.id) {
         channelb = <Link to={`/server/${this.props.server.id}/channel/${channel.id}`}>
-        <p className="delete-server" onClick={()=>{this.props.deleteChannel(channel.id)}}>
+        <div className="delete-server" onClick={()=>{this.props.deleteChannel(channel.id)}}>
         X
-        <span className="delete-hidden">Delete Channel </span>
-        </p>
+        <div className="delete-hidden"><div className="arrow-left"></div>Delete Channel </div>
+        </div>
       </Link>
       } 
       return (
