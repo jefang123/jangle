@@ -1,5 +1,6 @@
 import { RECEIVE_MESSAGES, RECEIVE_MESSAGE, REMOVE_MESSAGE } from "../actions/message_actions";
 import { RECEIVE_CHANNEL } from "../actions/channel_actions";
+import { LOGOUT_CURRENT_USER } from '../actions/session_actions';
 import { merge } from 'lodash';
 
 export default (state={}, action) => {
@@ -14,6 +15,8 @@ export default (state={}, action) => {
       const newState = merge({}, state);
       delete newState[action.messageId];
       return newState;
+    case LOGOUT_CURRENT_USER:
+      return {};
     default:
       return state;
   }

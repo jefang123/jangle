@@ -1,4 +1,5 @@
 import { RECEIVE_CHANNELS, RECEIVE_CHANNEL, REMOVE_CHANNEL } from "../actions/channel_actions";
+import { LOGOUT_CURRENT_USER } from '../actions/session_actions';
 import { RECEIVE_SERVER } from "../actions/server_actions";
 import { merge } from 'lodash';
 
@@ -15,6 +16,8 @@ export default (state={}, action) => {
       const newState = merge({}, state);
       delete newState[action.channelId];
       return newState;
+    case LOGOUT_CURRENT_USER:
+      return {};
     default:
       return state;
   }
