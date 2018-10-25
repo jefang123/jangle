@@ -8,6 +8,7 @@ import { ProtectedRoute } from '../util/route_util';
 import { receiveChannel, receiveChannels } from '../actions/channel_actions';
 import WelcomeShow from './welcome_show';
 import { receiveMessage } from '../actions/message_actions';
+import { merge } from 'lodash';
 
 class ServerShow extends React.Component {
   constructor(props) {
@@ -37,13 +38,13 @@ class ServerShow extends React.Component {
     },    {
 
       received: (data) => {
-        // if(data.action === "typing") {
-        //   typing.push({[data.typing.id]:data.typing})
-        // }
+        if(data.action === "typing") {
+          merge(typing, ({[data.typing]:data.typing}))
+        }
 
-        // else if (data.action === "done") {
-        //   delete typing[data.done.id]
-        // }
+        else if (data.action === "done") {
+          delete typing[data.done]
+        }
         if(data.channels) {
           let parsedCh = {};
           data.channels.forEach(channel => {

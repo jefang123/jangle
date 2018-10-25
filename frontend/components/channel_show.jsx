@@ -8,17 +8,24 @@ class ChannelShow extends React.Component {
     super(props)
     this.state = {
       body: "",
-      channel_id: this.props.match.params.channelId
+      channel_id: this.props.match.params.channelId,
+      typingUsers: {}
     }
   }
 
   componentDidMount () {
     this.props.fetchMessages();
     this.scrollBottom();
+    
   }
 
 
   componentDidUpdate(prevProps) {
+    if (this.state.typingUsers !== typing) {
+      this.setState({
+        typingUsers: typing
+      })
+    }
     if (this.props.match.params.channelId !== prevProps.match.params.channelId) {
       this.props.fetchMessages();
       this.setState({
@@ -63,7 +70,6 @@ class ChannelShow extends React.Component {
     
     if (!this.props.channel) return null;
     let users;
-    debugger
     if (parseInt(this.props.match.params.serverId) === homeId) {
       users = this.props.users2;
     } else {
@@ -124,6 +130,21 @@ class ChannelShow extends React.Component {
       messageheader =  <h3>This is the beginning of #{channel.channel_name} </h3>
     }
 
+    let typingUsers= Object.values(typing).filter(id => {id === currentUser.id})
+    typingUsers = typingUsers.map(id => {return this.props.users[id]})
+
+    let typingLine =  <p></p>;
+
+    if (typingUsers.length > 2) {
+      typingLine = <p>{typingUsers[0].username} and {typingUsers.length-1} others are typing</p>
+    } 
+    else if (typingUsers.length === 2) {
+      typingLine = <p>{typingUsers[0].username} and {typingUsers[1].username} are typing</p>
+    } 
+    else if (typingUsers.length === 1) {
+      typingLine = <p>{typingUsers[0].username} is typing</p>
+    }
+
     return (
       <section>
         <section className='channel-show-heading'> 
@@ -136,7 +157,7 @@ class ChannelShow extends React.Component {
         <div ref={(el) => { this.bottom = el; }}></div>
         </section>
         <div className="divider"></div>
-        
+        {typingLine}
         <MessageForm channel={channel}/>
       </section>
     )
