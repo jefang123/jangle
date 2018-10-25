@@ -37,6 +37,10 @@ class ServerShow extends React.Component {
     },    {
 
       received: (data) => {
+        if(data.action === "typing") {
+          debugger
+        }
+        debugger
         if(data.channels) {
           let parsedCh = {};
           data.channels.forEach(channel => {
@@ -73,6 +77,10 @@ class ServerShow extends React.Component {
           data.created_at = time 
           dispatch(receiveMessage(data));
         }
+      },
+
+      typing: function(data) {
+        return this.perform("typing", data)
       },
 
       speak: function(data) {

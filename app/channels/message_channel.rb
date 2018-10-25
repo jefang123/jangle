@@ -2,13 +2,16 @@ class MessageChannel < ApplicationCable::Channel
   def subscribed 
     # @channel = Channel.find_by(id: params[:room])
     # stream_for @channel
-    # stream_for 'message_channel'
-    stream_from 'message_channel'
+    stream_for 'message_channel'
   end
 
   def received(data)
     # Messagechannel.broadcast_to({channel: @channel, messages:
     # @channel.messages})
+  end 
+
+  def typing(data)
+    MessageChannel.broadcast_to('message_channel', data)
   end 
 
   def speak(data)
