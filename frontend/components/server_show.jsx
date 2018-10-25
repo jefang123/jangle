@@ -37,10 +37,13 @@ class ServerShow extends React.Component {
     },    {
 
       received: (data) => {
-        if(data.action === "typing") {
-          debugger
-        }
-        debugger
+        // if(data.action === "typing") {
+        //   typing.push({[data.typing.id]:data.typing})
+        // }
+
+        // else if (data.action === "done") {
+        //   delete typing[data.done.id]
+        // }
         if(data.channels) {
           let parsedCh = {};
           data.channels.forEach(channel => {
@@ -81,6 +84,10 @@ class ServerShow extends React.Component {
 
       typing: function(data) {
         return this.perform("typing", data)
+      },
+
+      done: function(data) {
+        return this.perform("done", data)
       },
 
       speak: function(data) {

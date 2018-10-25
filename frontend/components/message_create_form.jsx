@@ -15,6 +15,7 @@ class MessageCreateForm extends React.Component {
   handleSubmit(e) {
     // e.preventDefault();
     App.cable.subscriptions.subscriptions[0].speak(this.state);
+    // App.cable.subscriptions.subscriptions[0].done({done: this.state.user_id});
     this.setState({
       body: "",
     });
@@ -39,10 +40,9 @@ class MessageCreateForm extends React.Component {
   }
 
   update(field) {
-    debugger
-    if (this.state.body.length > 0) {
-      App.cable.subscriptions.subscriptions[0].typing({typing: this.state.user_id});
-    }
+    // if (this.state.body.length > 0) {
+    //   App.cable.subscriptions.subscriptions[0].typing({typing: this.state.user_id});
+    // }
     return (e) => {
       this.setState({
         [field]: e.target.value

@@ -14,6 +14,10 @@ class MessageChannel < ApplicationCable::Channel
     MessageChannel.broadcast_to('message_channel', data)
   end 
 
+  def done(data)
+    MessageChannel.broadcast_to('message_channel', data)
+  end 
+
   def speak(data)
     new_message = Message.create(body: data['body'], user_id: data['user_id'], channel_id: data['channel_id'] )
     MessageChannel.broadcast_to('message_channel', new_message)

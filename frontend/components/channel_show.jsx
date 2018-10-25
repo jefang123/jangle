@@ -63,7 +63,8 @@ class ChannelShow extends React.Component {
     
     if (!this.props.channel) return null;
     let users;
-    if (this.props.match.params.serverId === homeId) {
+    debugger
+    if (parseInt(this.props.match.params.serverId) === homeId) {
       users = this.props.users2;
     } else {
       users = this.props.users;
