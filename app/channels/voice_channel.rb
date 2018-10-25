@@ -6,3 +6,5 @@ class VoiceChannel < ApplicationCable::Channel
   def unsubscribed
   end 
 end 
+
+# getusermedia API for microphone
