@@ -2,7 +2,8 @@ class MessageChannel < ApplicationCable::Channel
   def subscribed 
     # @channel = Channel.find_by(id: params[:room])
     # stream_for @channel
-    stream_for 'message_channel'
+    # stream_for 'message_channel'
+    stream_from 'message_channel'
   end
 
   def received(data)
