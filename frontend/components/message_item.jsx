@@ -5,76 +5,46 @@ class MessageItem extends React.PureComponent {
   constructor (props) {
     super(props)
   }
+
   contextMenu (e) {
     e.preventDefault();
   }
 
   handleClick (e) {
     e.preventDefault();
+    this.props.deleteMessage(id);
   }
 
   render () {
-    let match = matchPath(this.props.history.location.pathname, {
-      path: '/server/:serverId/',
-      exact: false,
-      strict: false 
-    });
-    let parameter;
-    if (!match) {
-      parameter = 0;
-    } else if (match.params.serverId) {
-      parameter = parseInt(match.params.serverId);
-    } else {
-      parameter = 0;
-    }
-
-    let klass;
-    
-    if (this.props.server.id === parameter) {
-      klass = "sv-selected"
-    } else {
-      klass = ""
-    }
-
-    let image;
-    if (!this.props.server.image_url) {
-      image = window.logo_url ;
-    } else {
-      image = this.props.server.image_url;
-    }
-    if (this.props.server.private) {
-      return (
-        <li
-          key={this.props.server.id}
-          className={klass}
-        > 
-          <div className="hidden">
-            <div className="arrow-left"></div>
-            <h3>{this.props.server.server_name}</h3>
-          </div>
-          <Link to={`/server/${this.props.server.id}/welcome`}>
-          <img src={image}></img>
-          </Link> 
-        </li>
-      );
-    } else {
-        return (
-          <li
-            key={this.props.server.id}
-            className={klass}
-          >
-            <div className="hidden">
-              <div className="arrow-left"></div>
-              <h3>{this.props.server.server_name}</h3>
-            </div>
-            <Link to={`/server/${this.props.server.id}`}>
-            <img src={image}></img>
-            </Link> 
-          </li>
-      );
-    }
-    
   }
 }
 
 export default withRouter(MessageItem);
+
+
+// let messageb;
+// if (message.user_id === this.props.currentUser.id) {
+//   messageb = <p className="delete-message" onClick={()=>this.handleClick(message.id)}>x</p>
+// }
+
+// if (message.channel_id === this.props.channel.id) {
+//   const user = users[message.user_id];
+//   return (
+     
+//     <div key={message.id} className="message">
+//       <div>
+//         <img className="message-image" src={window.user_url}></img>
+//       <div className="message-box">
+//       <p >{user ? user.username : null} <span>{message.created_at}</span></p> 
+        
+
+//           <p className="message-body"> {message.body}</p>
+        
+//           {messageb}
+//       </div>
+//       </div>
+      
+//     </div>
+//   );
+// }
+// });
