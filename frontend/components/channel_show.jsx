@@ -130,20 +130,6 @@ class ChannelShow extends React.PureComponent {
       messageheader =  <h3>This is the beginning of #{channel.channel_name} </h3>
     }
 
-    let typingUsers= Object.values(typing).filter(id => {id === currentUser.id})
-    typingUsers = typingUsers.map(id => {return this.props.users[id]})
-
-    let typingLine =  <p></p>;
-
-    if (typingUsers.length > 2) {
-      typingLine = <p>{typingUsers[0].username} and {typingUsers.length-1} others are typing</p>
-    } 
-    else if (typingUsers.length === 2) {
-      typingLine = <p>{typingUsers[0].username} and {typingUsers[1].username} are typing</p>
-    } 
-    else if (typingUsers.length === 1) {
-      typingLine = <p>{typingUsers[0].username} is typing</p>
-    }
     return (
       <section>
         <section className='channel-show-heading'> 
@@ -156,7 +142,7 @@ class ChannelShow extends React.PureComponent {
         <div ref={(el) => { this.bottom = el; }}></div>
         </section>
         <div className="divider"></div>
-        {typingLine}
+        {/* {typingLine} */}
         <MessageForm channel={channel}/>
       </section>
     )
