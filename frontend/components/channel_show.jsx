@@ -1,6 +1,7 @@
 import React from 'react';
 import MessageForm from './message_create_container';
 import { Redirect } from 'react-router-dom';
+import TypingUsers from './typing_users';
 import LinkPreview from 'react-native-link-preview';
 
 class ChannelShow extends React.PureComponent {
@@ -142,7 +143,7 @@ class ChannelShow extends React.PureComponent {
         <div ref={(el) => { this.bottom = el; }}></div>
         </section>
         <div className="divider"></div>
-        {/* {typingLine} */}
+          {/* <TypingUsers /> */}
         <MessageForm channel={channel}/>
       </section>
     )
