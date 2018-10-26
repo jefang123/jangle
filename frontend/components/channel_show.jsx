@@ -144,7 +144,6 @@ class ChannelShow extends React.PureComponent {
     else if (typingUsers.length === 1) {
       typingLine = <p>{typingUsers[0].username} is typing</p>
     }
-    debugger
     return (
       <section>
         <section className='channel-show-heading'> 
