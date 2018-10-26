@@ -1,6 +1,6 @@
 import React from 'react';
 
-class ChannelCreateForm extends React.Component {
+class ChannelCreateForm extends React.PureComponent {
   constructor(props) {
     super(props);
     this.state = {

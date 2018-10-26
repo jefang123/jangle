@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, Redirect } from 'react-router-dom';
 import { merge } from 'lodash';
 
-class SessionForm extends React.Component {
+class SessionForm extends React.PureComponent {
   constructor(props) {
     super(props);
     this.state = {

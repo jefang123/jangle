@@ -4,7 +4,7 @@ import ServerCreateForm from './server_create_container';
 import Modal from './modal';
 import JoinServerForm from './join_server_form';
 
-class ServerIndex extends React.Component {
+class ServerIndex extends React.PureComponent {
   constructor(props) {
     super(props)
     this.state = { show: false }

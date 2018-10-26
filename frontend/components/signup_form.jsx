@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, Redirect } from 'react-router-dom';
 
-class SignUpForm extends React.Component {
+class SignUpForm extends React.PureComponent {
   constructor(props) {
     super(props);
     this.state = {

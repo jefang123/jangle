@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, withRouter, matchPath } from 'react-router-dom';
 
-class ServerIndexItem extends React.Component {
+class ServerIndexItem extends React.PureComponent {
   constructor (props) {
     super(props)
   }

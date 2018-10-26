@@ -4,7 +4,7 @@ import { createJoin } from '../actions/server_actions';
 import { fetchAllServers } from '../actions/userjoin_actions'
 import * as APIJoins from '../util/userjoin_api_util';
 
-class JoinServerForm extends React.Component {
+class JoinServerForm extends React.PureComponent {
   constructor(props) {
     super(props);
     this.state = {

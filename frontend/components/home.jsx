@@ -3,7 +3,7 @@ import Splash from './splash';
 import ServerIndexContainer from './server_index_container';
 import { Redirect } from 'react-router-dom';
 
-class Home extends React.Component {
+class Home extends React.PureComponent {
   render () {
     if (this.props.currentUser) {
       return (

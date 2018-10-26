@@ -3,7 +3,7 @@ import MessageForm from './message_create_container';
 import { Redirect } from 'react-router-dom';
 import LinkPreview from 'react-native-link-preview';
 
-class ChannelShow extends React.Component {
+class ChannelShow extends React.PureComponent {
   constructor (props) {
     super(props)
     this.state = {
@@ -144,7 +144,7 @@ class ChannelShow extends React.Component {
     else if (typingUsers.length === 1) {
       typingLine = <p>{typingUsers[0].username} is typing</p>
     }
-
+    debugger
     return (
       <section>
         <section className='channel-show-heading'> 

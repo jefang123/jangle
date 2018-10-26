@@ -10,7 +10,7 @@ import WelcomeShow from './welcome_show';
 import { receiveMessage } from '../actions/message_actions';
 import { merge } from 'lodash';
 
-class ServerShow extends React.Component {
+class ServerShow extends React.PureComponent {
   constructor(props) {
     super(props)
     this.state = { 

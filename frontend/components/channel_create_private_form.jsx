@@ -4,7 +4,7 @@ import { createChannel } from '../actions/channel_actions';
 import { withRouter } from 'react-router-dom'
 import { fetchUsers } from '../actions/user_actions';
 
-class PrivateCreateForm extends React.Component {
+class PrivateCreateForm extends React.PureComponent {
   constructor(props) {
     super(props);
     this.state = {

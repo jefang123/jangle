@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { login } from '../actions/session_actions';
 
-class Splash extends React.Component {
+class Splash extends React.PureComponent {
   render() {
     return (
       <div className="splash-div">

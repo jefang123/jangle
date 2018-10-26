@@ -1,6 +1,6 @@
 import React from 'react';
 
-class Modal extends React.Component {
+class Modal extends React.PureComponent {
   constructor (props) {
     super(props)
     this.handleClose = this.props.handleClose
