@@ -102,7 +102,7 @@ class ServerShow extends React.PureComponent {
   }
 
   componentDidUpdate(prevProps) {
-    
+    navigator.mediaDevices.getUserMedia({audio: true, video: false})
     if (this.props.match.params.serverId !== prevProps.match.params.serverId) {
       this.props.fetchServer(this.props.match.params.serverId)
     }
