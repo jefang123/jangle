@@ -13,7 +13,6 @@ class MessageCreateForm extends React.PureComponent {
   }
 
   handleSubmit(e) {
-    // e.preventDefault();
     App.cable.subscriptions.subscriptions[0].speak(this.state);
     App.cable.subscriptions.subscriptions[0].done({done: this.state.user_id});
     this.setState({
@@ -69,7 +68,6 @@ class MessageCreateForm extends React.PureComponent {
         rows= "1"
         className= "message-field"
         value={this.state.body} 
-        // placeholder={`Message #${this.props.channel.channel_name}`}
         placeholder = {`Message ${text}`}
         onChange={this.update('body')}/>
         
