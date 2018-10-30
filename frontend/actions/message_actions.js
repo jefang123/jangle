@@ -62,16 +62,6 @@ export const updateMessage = message => {
 export const createMessage = message => {
     APIMessage.createMessage(message)
 };
-// export const createMessage = message => {
-//   return dispatch => {
-//     return APIMessage.createMessage(message).then(
-//       message => {
-//         return dispatch(receiveMessage(message));
-//       }
-//     );
-//   };
-// };
-
 
 export const deleteMessage = id => {
   return dispatch => {
