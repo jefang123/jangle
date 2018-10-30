@@ -1,5 +1,3 @@
-import { push } from 'react-router-dom';
-
 import * as APIServer from '../util/server_api_util';
 import * as APIJoins from '../util/userjoin_api_util';
 
@@ -68,9 +66,6 @@ export const fetchServers = () => {
       servers => {
         return dispatch(receiveServers(servers));
       }
-      // errors => {
-      //   return dispatch(receiveErrors(errors));
-      // }
     );
   };
 };
