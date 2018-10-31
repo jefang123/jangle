@@ -1,7 +1,6 @@
 import React from 'react';
 import Splash from './splash';
 import ServerIndexContainer from './server_index_container';
-import { Redirect } from 'react-router-dom';
 
 class Home extends React.PureComponent {
   render () {
