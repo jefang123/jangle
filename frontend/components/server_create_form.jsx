@@ -14,7 +14,6 @@ class ServerCreateForm extends React.PureComponent {
   handleSubmit(e) {
     e.preventDefault();
     this.props.processForm(this.state);
-    // Redirec
     this.errors = [];
     this.setState({
       server_name: ""
