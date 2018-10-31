@@ -26,30 +26,6 @@ class ServerIndex extends React.PureComponent {
     this.props.fetchServers();
   }
 
-  // componentDidUpdate(prevProps) {
-  //   if (this.props.errors !== prevProps.errors) {
-  //     this.props.clearError();
-  //   }
-  // }
-
-  // let homeId;
-  // const home = this.props.servers.map(server => {
-  //   if (server.server_name === 'Home') {
-  //     homeId = server.id
-  //     return <ServerIndexItem key={server.id} server={server} />
-  //   }
-  // })
-  // const servers = this.props.servers.map(server => {
-  //   if (server.id !== homeId) {
-  //     return <ServerIndexItem 
-  //     key={server.id} 
-  //     server={server} 
-  //     />
-  //   }
-  // });
-
-
-
   render(){ 
 
     const home = this.props.servers.map(server => {
