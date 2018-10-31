@@ -1,8 +1,11 @@
 import React from 'react';
 import MessageForm from './message_create_container';
 import { Redirect } from 'react-router-dom';
+
 import TypingUsers from './typing_users';
 import LinkPreview from 'react-native-link-preview';
+
+const Timestamp =  require('react-timestamp');
 
 class ChannelShow extends React.PureComponent {
   constructor (props) {
@@ -83,7 +86,7 @@ class ChannelShow extends React.PureComponent {
       // let body;
       // LinkPreview.getPreview(message.body).then(data =>{
       // })
-      let timestamp = message.created_at ? message.created_at : "null";
+      // let timestamp = message.created_at ? message.created_at : "null";
       let messageb;
       if (message.user_id === this.props.currentUser.id) {
         messageb = <p className="delete-message" onClick={()=>this.handleClick(message.id)}>x</p>
@@ -97,7 +100,7 @@ class ChannelShow extends React.PureComponent {
             <div>
               <img className="message-image" src={window.user_url}></img>
             <div className="message-box">
-            <p >{user ? user.username : null} <span>{timestamp}</span></p> 
+            <p >{user ? user.username : null} <span><Timestamp time={message.created_at} format='date'/></span></p> 
               
 
                 <p className="message-body"> {message.body}</p>
