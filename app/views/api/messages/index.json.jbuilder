@@ -17,6 +17,6 @@
     json.channel_id message.channel_id
     json.body message.body
     json.user_id message.user_id
-    json.created_at message.created_at.getlocal.strftime("%m/%d/%Y")
+    json.created_at created_at
   end
 end
