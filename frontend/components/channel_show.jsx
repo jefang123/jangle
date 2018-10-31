@@ -83,7 +83,7 @@ class ChannelShow extends React.PureComponent {
       // let body;
       // LinkPreview.getPreview(message.body).then(data =>{
       // })
-      let timestamp = message.created_at;
+      let timestamp = message.created_at ? message.created_at : "null";
       let messageb;
       if (message.user_id === this.props.currentUser.id) {
         messageb = <p className="delete-message" onClick={()=>this.handleClick(message.id)}>x</p>
