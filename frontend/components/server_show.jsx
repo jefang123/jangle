@@ -127,7 +127,6 @@ class ServerShow extends React.PureComponent {
 
   render() {
     if (this.props.redirect.includes("No Such Server")) {
-      // this.props.fetchServer(homeId);
       return (
         <Redirect to={`/server/${homeId}/welcome`} />
       );
