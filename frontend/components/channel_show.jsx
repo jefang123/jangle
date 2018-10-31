@@ -71,7 +71,7 @@ class ChannelShow extends React.PureComponent {
     
     if (!this.props.channel) return null;
     let users;
-    if (parseInt(this.props.match.params.serverId) === homeId) {
+    if (parseInt(this.props.match.params.serverId) === window.homeId) {
       users = this.props.users2;
     } else {
       users = this.props.users;
@@ -83,7 +83,7 @@ class ChannelShow extends React.PureComponent {
       // let body;
       // LinkPreview.getPreview(message.body).then(data =>{
       // })
-
+      let timestamp = message.created_at;
       let messageb;
       if (message.user_id === this.props.currentUser.id) {
         messageb = <p className="delete-message" onClick={()=>this.handleClick(message.id)}>x</p>
@@ -97,7 +97,7 @@ class ChannelShow extends React.PureComponent {
             <div>
               <img className="message-image" src={window.user_url}></img>
             <div className="message-box">
-            <p >{user ? user.username : null} <span>{message.created_at}</span></p> 
+            <p >{user ? user.username : null} <span>{timestamp}</span></p> 
               
 
                 <p className="message-body"> {message.body}</p>
