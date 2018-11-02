@@ -158,7 +158,7 @@ class ChannelShow extends React.PureComponent {
         <div ref={(el) => { this.bottom = el; }}></div>
         </section>
         <div className="divider"></div>
-          {/* <TypingUsers /> */}
+          <TypingUsers users={users} currentUser={this.props.currentUser}/>
         <MessageForm channel={channel}/>
       </section>
     )

@@ -4,7 +4,7 @@ import { createChannel } from '../actions/channel_actions';
 import { withRouter } from 'react-router-dom'
 import { fetchUsers } from '../actions/user_actions';
 
-class PrivateCreateForm extends React.PureComponent {
+class PrivateCreateForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -40,10 +40,10 @@ class PrivateCreateForm extends React.PureComponent {
   }
 
   setUser (e) {
+    this.names = [];
     this.setState({
       channel_name: e.target.innerText
     })
-    this.names = [];
   }
 
   update(field) {
@@ -52,8 +52,12 @@ class PrivateCreateForm extends React.PureComponent {
         [field]: e.target.value
       });
       let props = Object.keys(this.props.users2)
-      this.names = props.filter(prop=> prop.includes(`${this.state.channel_name}`))
+      // this.names = props.filter(prop=> prop.includes(`${this.state.channel_name}`))
+      this.names = props.filter(prop=> this.props.users2[prop].username.includes(`${this.state.channel_name}`))
       this.names = this.names.filter(name => this.props.users2[name].id !== this.props.currentUser.id)
+      if (e.target.innerText = "") {
+        this.names = [];
+      }
     };
   }
   render () {
