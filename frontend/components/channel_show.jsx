@@ -97,7 +97,7 @@ class ChannelShow extends React.PureComponent {
       if (new Date() - jstime <= 86400000 ) {
         timestamp = <span>Yesterday at <Timestamp time={message.created_at} format='time'/></span>
       }
-      else if ((new Date() - jstime > 86400000) && new Date() - jstime< (86400000*7)) {
+      else if ((new Date() - jstime > 86400000) && new Date() - jstime<= (86400000*7)) {
         timestamp = <span>Last {DAYS[jstime.getDay()]} at <Timestamp time={message.created_at} format='time'/></span>
       }
 
@@ -145,6 +145,7 @@ class ChannelShow extends React.PureComponent {
       messageheader =  <h3>This is the beginning of #{channel.channel_name} </h3>
     }
 
+    // <MessageItem key={message.id} channel={channel} />
     return (
       <section>
         <section className='channel-show-heading'> 
