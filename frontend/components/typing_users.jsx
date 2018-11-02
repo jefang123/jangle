@@ -1,9 +1,16 @@
 import React from 'react';
 
 class TypingUsers extends React.PureComponent {
+  constructor(props) {
+    super(props)
+  }
 
   render () {
-    return null
+    if (!this.props.users)
+      return null
+    return (
+    <></>
+    )
     // let typingUsers= Object.values(typing).filter(id => {id === currentUser.id})
     // typingUsers = typingUsers.map(id => {return this.props.users[id]})
 
