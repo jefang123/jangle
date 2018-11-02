@@ -92,6 +92,8 @@ class ChannelShow extends React.PureComponent {
         messageb = <p className="delete-message" onClick={()=>this.handleClick(message.id)}>x</p>
       }
 
+      let timestamp = <Timestamp time={message.created_at} format='date'/>
+
       if (message.channel_id === this.props.channel.id) {
         const user = users[message.user_id];
         return (
