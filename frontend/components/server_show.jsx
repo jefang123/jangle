@@ -19,7 +19,7 @@ class ServerShow extends React.PureComponent {
      }
     this.showModal = this.showModal.bind(this)
     this.hideModal = this.hideModal.bind(this)
-    this.handlePMClick = this.handlePMClick.bind(this)
+    // this.handlePMClick = this.handlePMClick.bind(this)
   }
 
   showModal () {
