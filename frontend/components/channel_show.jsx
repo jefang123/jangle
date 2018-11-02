@@ -92,13 +92,14 @@ class ChannelShow extends React.PureComponent {
         messageb = <p className="delete-message" onClick={()=>this.handleClick(message.id)}>x</p>
       }
 
-      let timestamp = <Timestamp time={message.created_at} format='date'/>
+      let timestamp = <span><Timestamp time={message.created_at} format='date'/></span>
       let jstime = new Date(message.created_at)
 
       if (new Date() - jstime <= 86400000 ) {
+        timestamp = <span>Yesterday at <Timestamp time={message.created_at} format='time'/></span>
       }
       else if (new Date() - jstime< (86400000*7)) {
-
+        timestamp = <span>Yesterday at <Timestamp time={message.created_at} format='time'/></span>
       }
 
 
