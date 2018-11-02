@@ -1,13 +1,13 @@
-import { RECEIVE_CURRENT_USER, LOGOUT_CURRENT_USER } from '../actions/session_actions';
+import { ADD_TYPER, REMOVE_TYPER } from '../actions/typing_actions';
 
 export default (state={}, action) => {
   Object.freeze(state);
   switch (action.type) {
-    case RECEIVE_CURRENT_USER:
+    case ADD_TYPER:
       return {
         currentUserId: action.currentUser.id
       };
-    case LOGOUT_CURRENT_USER:
+    case REMOVE_TYPER:
       return defaultState;
     default:
       return state;
