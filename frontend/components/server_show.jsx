@@ -113,12 +113,12 @@ class ServerShow extends React.PureComponent {
     this.props.deleteServer(this.props.server.id);   
   }
 
-  handlePMClick (e) {
-    const mesagee = this.props.users[e.target.getAttribute("value")];
+  // handlePMClick (e) {
+    // const mesagee = this.props.users[e.target.getAttribute("value")];
     // this.props.createChannel({server_id: window.homeId, channel_name: mesagee.username});
     // <Redirect to={`/server/${window.homeId}`}/>
 
-  }
+  // }
 
   handleRemoveClick (e) {
     e.preventDefault();
