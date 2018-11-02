@@ -1,18 +1,16 @@
-export const RECEIVE_ALL_SERVERS = 'RECEIVE_ALL_SERVERS';
+export const ADD_TYPER = 'ADD_TYPER';
+export const REMOVE_TYPER = 'REMOVE_TYPER'
 
-export const receiveAllServers = servers => {
+export const addTypingUser = typer => {
   return {
-    type: RECEIVE_ALL_SERVERS,
-    servers
+    type: ADD_TYPER,
+    typer
   };
 };
 
-export const fetchAllServers = () => {
-  return dispatch => {
-    return APIServer.fetchServers().then(
-      servers => {
-        return dispatch(receiveAllServers(servers));
-      }
-    );
+export const removeTypingUser = typer => {
+  return {
+    type: REMOVE_TYPER,
+    typer
   };
 };
