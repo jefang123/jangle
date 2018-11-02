@@ -52,7 +52,6 @@ class PrivateCreateForm extends React.Component {
         [field]: e.target.value
       });
       let props = Object.keys(this.props.users2)
-      // this.names = props.filter(prop=> prop.includes(`${this.state.channel_name}`))
       this.names = props.filter(prop=> this.props.users2[prop].username.includes(`${this.state.channel_name}`))
       this.names = this.names.filter(name => this.props.users2[name].id !== this.props.currentUser.id)
       if (e.target.innerText = "") {
