@@ -98,8 +98,8 @@ class ChannelShow extends React.PureComponent {
       if (new Date() - jstime <= 86400000 ) {
         timestamp = <span>Yesterday at <Timestamp time={message.created_at} format='time'/></span>
       }
-      else if (new Date() - jstime< (86400000*7)) {
-        timestamp = <span>Yesterday at <Timestamp time={message.created_at} format='time'/></span>
+      else if ((new Date() - jstime > 86400000) && new Date() - jstime< (86400000*7)) {
+        timestamp = <span>Last {jstime.getDay()} at <Timestamp time={message.created_at} format='time'/></span>
       }
 
 
@@ -112,7 +112,7 @@ class ChannelShow extends React.PureComponent {
             <div>
               <img className="message-image" src={window.user_url}></img>
             <div className="message-box">
-            <p >{user ? user.username : null} <span><Timestamp time={message.created_at} format='date'/></span></p> 
+            <p >{user ? user.username : null} {timestamp}</p> 
               
 
                 <p className="message-body"> {message.body}</p>
