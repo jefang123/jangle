@@ -95,6 +95,14 @@ class ChannelShow extends React.PureComponent {
       let timestamp = <Timestamp time={message.created_at} format='date'/>
       let jstime = new Date(message.created_at)
 
+      if (new Date() - jstime <= 86400000 ) {
+      }
+      else if (new Date() - jstime< (86400000*7)) {
+
+      }
+
+
+
       if (message.channel_id === this.props.channel.id) {
         const user = users[message.user_id];
         return (
