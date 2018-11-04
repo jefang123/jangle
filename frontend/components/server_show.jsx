@@ -8,7 +8,6 @@ import { ProtectedRoute } from '../util/route_util';
 import { receiveChannel, receiveChannels } from '../actions/channel_actions';
 import WelcomeShow from './welcome_show';
 import { receiveMessage } from '../actions/message_actions';
-import { merge } from 'lodash';
 
 class ServerShow extends React.PureComponent {
   constructor(props) {
