@@ -51,11 +51,9 @@ class ServerShow extends React.PureComponent {
           dispatch(receiveChannels(parsedCh))
         } 
         else if (data.channel_name) {
-        // else if (data.action ==="speak2") {
           dispatch(receiveChannel(data));
         }
         else if(data.body){
-        // else if (data.action === "speak") {
           dispatch(receiveMessage(data));
         }
       },
