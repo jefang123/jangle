@@ -88,10 +88,13 @@ class ChannelShow extends React.PureComponent {
       let jstime = new Date(message.created_at)
       const DAYS = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
-      if (new Date() - jstime <= 86400000 ) {
+      if (new Date() - jstime <= 86400000) {
+        timestamp = <span><Timestamp time={message.created_at} format='time'/></span>
+      }
+      else if ((new Date() - jstime > 86400000) && new Date() - jstime <= 86400000*2 ) {
         timestamp = <span>Yesterday at <Timestamp time={message.created_at} format='time'/></span>
       }
-      else if ((new Date() - jstime > 86400000) && new Date() - jstime<= (86400000*7)) {
+      else if ((new Date() - jstime > (86400000*2)) && new Date() - jstime<= (86400000*7)) {
         timestamp = <span>Last {DAYS[jstime.getDay()]} at <Timestamp time={message.created_at} format='time'/></span>
       }
 
