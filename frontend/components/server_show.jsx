@@ -19,7 +19,7 @@ class ServerShow extends React.PureComponent {
      }
     this.showModal = this.showModal.bind(this)
     this.hideModal = this.hideModal.bind(this)
-    // this.handlePMClick = this.handlePMClick.bind(this)
+    this.handlePMClick = this.handlePMClick.bind(this)
   }
 
   showModal () {
@@ -110,12 +110,12 @@ class ServerShow extends React.PureComponent {
     this.props.deleteServer(this.props.server.id);   
   }
 
-  // handlePMClick (e) {
-    // const mesagee = this.props.users[e.target.getAttribute("value")];
-    // this.props.createChannel({server_id: window.homeId, channel_name: mesagee.username});
-    // <Redirect to={`/server/${window.homeId}`}/>
+  handlePMClick (e) {
+    const mesagee = this.props.users[e.target.getAttribute("value")];
+    this.props.createChannel({server_id: window.homeId, channel_name: mesagee.username});
+    <Redirect to={`/server/${window.homeId}`}/>
 
-  // }
+  }
 
   handleRemoveClick (e) {
     e.preventDefault();
