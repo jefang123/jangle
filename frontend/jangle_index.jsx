@@ -18,7 +18,6 @@ document.addEventListener("DOMContentLoaded", () => {
   } else {
     store = configureStore();
   }
-  window.typing = {};
   window.store = store;
   window.dispatch = store.dispatch;
   const root = document.getElementById('root');

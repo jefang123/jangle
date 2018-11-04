@@ -12,8 +12,7 @@ class ChannelShow extends React.PureComponent {
     super(props)
     this.state = {
       body: "",
-      channel_id: this.props.match.params.channelId,
-      typingUsers: {}
+      channel_id: this.props.match.params.channelId
     }
   }
 
@@ -25,11 +24,6 @@ class ChannelShow extends React.PureComponent {
 
 
   componentDidUpdate(prevProps) {
-    if (this.state.typingUsers !== typing) {
-      this.setState({
-        typingUsers: typing
-      })
-    }
     if (this.props.match.params.channelId !== prevProps.match.params.channelId) {
       this.props.fetchMessages();
       this.setState({
