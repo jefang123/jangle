@@ -39,11 +39,9 @@ class ServerShow extends React.PureComponent {
 
       received: (data) => {
         if(data.action === "typing") {
-          merge(typing, ({[data.typing]:data.typing}))
         }
 
         else if (data.action === "done") {
-          delete typing[data.done]
         }
         if(data.channels) {
           let parsedCh = {};

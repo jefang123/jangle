@@ -14,7 +14,6 @@ class MessageCreateForm extends React.PureComponent {
 
   handleSubmit(e) {
     App.cable.subscriptions.subscriptions[0].speak(this.state);
-    App.cable.subscriptions.subscriptions[0].done({done: this.state.user_id});
     this.setState({
       body: "",
     });
@@ -40,7 +39,6 @@ class MessageCreateForm extends React.PureComponent {
 
   update(field) {
     if (this.state.body.length > 0) {
-      App.cable.subscriptions.subscriptions[0].typing({typing: this.state.user_id});
     }
     return (e) => {
       this.setState({
