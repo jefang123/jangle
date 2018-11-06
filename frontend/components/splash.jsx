@@ -10,9 +10,9 @@ class Splash extends React.PureComponent {
         <header className="login-header">
           <nav className="login-nav">
             <img src={window.logo_url}/>
-            <h2>Jangle</h2>
+            <h4>Jangle</h4>
             <div className="contact">
-            <h2 >About Me</h2>
+            <h4 >About Me</h4>
               <div className="hidden-contact">
                 <li><a target="_blank" href="https://github.com/jefang123">Github</a></li>
                 <li><a target="_blank" href="https://www.linkedin.com/in/jeffrey-fang-bb11b5165/">LinkedIn</a></li>
