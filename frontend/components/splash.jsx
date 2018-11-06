@@ -48,7 +48,7 @@ class Splash extends React.PureComponent {
           <img className="potion" src={window.potion_url}/>
           <img className="disc" src={window.disc_url}/>
         </section>
-      
+        <div className='divider'/>
         <footer className="login-footer">
           <div>
             <p>Ready to try Jangle? It's free!</p>
