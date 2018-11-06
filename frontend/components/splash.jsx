@@ -27,7 +27,9 @@ class Splash extends React.PureComponent {
             className="login-nav nav-button">Log In</NavLink>
           </nav>
         </header > 
-  
+        <br />
+        <br />
+        <br />
         <section className="login-section">
           <h1>It's time to ditch Skype and TeamSpeak.</h1>
           <p>All-in-one voice and text chat for gamers that's free, secure, and works on both your desktop and phone. Stop paying for TeamSpeak servers and hassling with Skype. Simplify your life.</p>
