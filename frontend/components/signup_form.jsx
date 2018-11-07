@@ -34,7 +34,7 @@ class SignUpForm extends React.PureComponent {
   render () {
     if (this.props.currentUser) {
       return (
-        <Redirect to='/' />
+        <Redirect to={`/server/${window.homeId}/welcome`}/>
       );
     }
     const errors = this.props.errors.map((error, idx) => {
