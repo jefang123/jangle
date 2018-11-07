@@ -1,10 +1,9 @@
 import React from 'react';
-import { matchPath } from 'react-router-dom';
+import { matchPath, Redirect } from 'react-router-dom';
 import ServerIndexItem from './server_index_item';
 import ServerCreateForm from './server_create_container';
 import Modal from './modal';
 import JoinServerForm from './join_server_form';
-import ServerShow from './server_show_container';
 
 class ServerIndex extends React.PureComponent {
   constructor(props) {
@@ -52,24 +51,7 @@ class ServerIndex extends React.PureComponent {
 
     if (!match) {
       return(
-        <>
-          <section className="server-index">
-            <ul>
-              { home }
-              <div className="divider"></div>
-              { servers }
-              <li>
-                <Modal show={this.state.show} handleClose={this.hideModal}>
-                  <div className="create-server-modal">
-                    <ServerCreateForm handleClose={this.hideModal} />
-                    <JoinServerForm handleClose={this.hideModal} />
-                  </div>
-                </Modal>
-                <button onClick={this.showModal} className="create-server" >+</button>
-              </li>
-            </ul>
-          </section>
-        </>
+        <Redirect to={`/server/${window.homeId}/welcome`}/>
       )
     } else {
       return(
