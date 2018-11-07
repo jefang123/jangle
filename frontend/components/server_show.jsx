@@ -158,8 +158,8 @@ class ServerShow extends React.PureComponent {
         </div>
       } 
       return (
-        <Link to={`/server/${this.props.server.id}/channel/${channel.id}`}>
-          <li key={channel.id} className={klass}>
+        <Link key={channel.id} to={`/server/${this.props.server.id}/channel/${channel.id}`}>
+          <li className={klass}>
             {hash} {channelName}
             {channelb}
           </li>
