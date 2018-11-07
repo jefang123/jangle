@@ -6,7 +6,6 @@ class Home extends React.PureComponent {
   render () {
     if (this.props.currentUser) {
       return (
-
           <ServerIndexContainer />
       );} else {
         return (
