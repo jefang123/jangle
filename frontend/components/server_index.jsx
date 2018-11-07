@@ -28,7 +28,6 @@ class ServerIndex extends React.PureComponent {
   }
 
   render(){ 
-
     const home = this.props.servers.map(server => {
       if (server.private) {
         window.homeId = server.id;

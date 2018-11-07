@@ -8,6 +8,7 @@ export const RECEIVE_SERVER_ERRORS = 'RECEIVE_SERVER_ERRORS'
 export const RECEIVE_JOIN_ERRORS = 'RECEIVE_JOIN_ERRORS'
 export const CREATE_SERVER = 'CREATE_SERVER'
 export const RECEIVE_404_ERRORS = 'RECEIVE_404_ERRORS'
+export const CLEAR_STATE = "CLEAR_STATE"
 
 export const receiveServers = servers => {
   return {
@@ -22,6 +23,12 @@ export const removeServer = (id) => {
     serverId:id
   };
 };
+
+export const wipeState = () => {
+  return {
+    type: CLEAR_STATE
+  }
+}
 
 export const receiveServer = payload => {
   return {
@@ -60,6 +67,13 @@ export const getServer = payload => {
   }
 }
 
+export const clearState = () => {
+  return dispatch => {
+    return dispatch(wipeState())
+  }
+}
+
+
 export const fetchServers = () => {
   return dispatch => {
     return APIServer.fetchServers().then(
@@ -72,6 +86,7 @@ export const fetchServers = () => {
 
 export const fetchServer = (id) => {
   return dispatch => {
+    // dispatch(clearState())
     return APIServer.fetchServer(id).then(
       payload => {
         return dispatch(receiveServer(payload));

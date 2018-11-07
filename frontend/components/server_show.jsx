@@ -235,7 +235,16 @@ class ServerShow extends React.PureComponent {
           </section>
         </div>
       )
-    } else {
+    } 
+    else if (parameter === 0 && this.props.channels.length > 0) {
+      if (this.props.channels[0].server_id === parseInt(this.props.match.params.serverId)) {
+       
+        return <Redirect to={`/server/${this.props.server.id}/channel/${this.props.channels[0].id}`}/> 
+      } else {
+        return null
+      }
+    }
+     else {
       return (
         <div className="server-show">
           <section className='channel-index'>

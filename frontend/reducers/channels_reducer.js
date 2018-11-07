@@ -1,6 +1,6 @@
 import { RECEIVE_CHANNELS, RECEIVE_CHANNEL, REMOVE_CHANNEL } from "../actions/channel_actions";
 import { LOGOUT_CURRENT_USER } from '../actions/session_actions';
-import { RECEIVE_SERVER } from "../actions/server_actions";
+import { RECEIVE_SERVER, CLEAR_STATE } from "../actions/server_actions";
 import { merge } from 'lodash';
 
 export default (state={}, action) => {
@@ -8,6 +8,8 @@ export default (state={}, action) => {
   switch (action.type) {
     case RECEIVE_SERVER: 
       return action.channels || {}
+    case CLEAR_STATE:
+      return {}
     case RECEIVE_CHANNELS:
       return action.channels
     case RECEIVE_CHANNEL: 
