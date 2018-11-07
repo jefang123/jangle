@@ -151,20 +151,19 @@ class ServerShow extends React.PureComponent {
 
       let channelb;
       if(this.props.server.creator_id === this.props.currentUser.id) {
-        channelb = <Link to={`/server/${this.props.server.id}/channel/${channel.id}`}>
+        channelb = 
         <div className="delete-server" onClick={()=>{this.props.deleteChannel(channel.id)}}>
         X
         <div className="delete-hidden"><div className="arrow-left"></div>Delete Channel </div>
         </div>
-      </Link>
       } 
       return (
-        <li key={channel.id} className={klass}>
-          <Link to={`/server/${this.props.server.id}/channel/${channel.id}`}>
-            {hash} {channelName} </Link>
-          {channelb}
-          
-        </li>
+        <Link to={`/server/${this.props.server.id}/channel/${channel.id}`}>
+          <li key={channel.id} className={klass}>
+            {hash} {channelName}
+            {channelb}
+          </li>
+        </Link>
       )
     });
     const users = this.props.users.map(user => {

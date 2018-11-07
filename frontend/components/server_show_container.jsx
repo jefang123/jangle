@@ -6,7 +6,6 @@ import { deleteChannel, fetchChannel } from '../actions/channel_actions';
 import { deleteServer, deleteJoin } from '../actions/server_actions';
 
 const mapStateToProps = (state, ownProps) => {
-  debugger
   return {
     redirect: state.errors.redirect,
     server: state.entities.servers[ownProps.match.params.serverId],

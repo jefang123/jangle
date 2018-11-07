@@ -52,8 +52,8 @@
       color: #acacae;
       padding: 10px;
     }
-    li:hover{
-      a{
+    a:hover{
+      li{
         color: #cdcdd0;
       }
       background-color: #5e5e5f;
@@ -63,9 +63,9 @@
     }
 
     .ch-selected {
-      a {
+      
         color: #cdcdd0;
-      }
+      
       background-color: #5e5e5f;
     }
 
