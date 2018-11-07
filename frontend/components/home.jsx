@@ -7,9 +7,7 @@ class Home extends React.PureComponent {
     if (this.props.currentUser) {
       return (
 
-          <ServerIndexContainer 
-          currentUser ={ this.props.currentUser }
-          logout = { this.props.logout }/>
+          <ServerIndexContainer />
       );} else {
         return (
           <Splash />
