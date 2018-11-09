@@ -76,6 +76,7 @@ class ChannelShow extends React.PureComponent {
     const messages = this.props.messages.map(message => {
       if (!message.id) {
         return null;
+        //return <Loading /> ?
       }
       // LinkPreview.getPreview(message.body).then(data =>{
       // })
