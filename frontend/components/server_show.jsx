@@ -8,6 +8,7 @@ import { ProtectedRoute } from '../util/route_util';
 import { receiveChannel, receiveChannels } from '../actions/channel_actions';
 import WelcomeShow from './welcome_show';
 import { receiveMessage } from '../actions/message_actions';
+import Loading from './loading';
 
 class ServerShow extends React.PureComponent {
   constructor(props) {
@@ -122,6 +123,7 @@ class ServerShow extends React.PureComponent {
     let klass;
 
     if (!this.props.server) return null;
+    //return <Loading />
   
     const channels= this.props.channels.map( channel => {
 
@@ -242,6 +244,7 @@ class ServerShow extends React.PureComponent {
         return <Redirect to={`/server/${this.props.server.id}/channel/${this.props.channels[0].id}`}/> 
       } else {
         return null
+         //return <Loading />
       }
     }
      else {
