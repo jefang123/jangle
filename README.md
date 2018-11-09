@@ -12,7 +12,9 @@ Live Link: http://jangle.jefang.me
 * Handles Channel Creation/Deletion 
 * Handles Real Time Messaging with Action Cable
 * 1 on 1 Private Messaging in default HOME server
+
 ### Future ideas:
+* Optimizing Joining Servers
 * Multi-User Private Messaging
 * Add image_urls with AWS
 * Edit/Updating functions
