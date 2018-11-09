@@ -1,6 +1,6 @@
 # README
 
-Chat Application utilizing React.js for Frontend and Ruby on Rails for Backend. Inspired by Discord
+Full Stack Chat Application utilizing React.js for Frontend and Ruby on Rails for Backend. Inspired by Discord
 
 Live Link: http://jangle.jefang.me
 
