@@ -26,15 +26,13 @@ class Loading extends React.PureComponent {
     
         </section>
         <section className='channel-show'>
-        <ProtectedRoute path='/server/:serverId/channel/:channelId' component={ChannelShowContainer} />
-        
+
         </section>
         <section className='user-index'>
           <h3> Users </h3>
           <div className="divider" />
           <ul>
 
-          {users}
           </ul>
         </section>
       </div>
