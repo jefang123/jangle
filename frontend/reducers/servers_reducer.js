@@ -15,8 +15,6 @@ export default (state={}, action) => {
       const newState = merge({}, state);
       delete newState[action.serverId];
       return newState;
-    // case CLEAR_STATE:
-    //   return {};
     case LOGOUT_CURRENT_USER:
       return {};
     default:

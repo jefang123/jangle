@@ -1,6 +1,5 @@
 import { RECEIVE_CURRENT_USER } from "../actions/session_actions";
 import { RECEIVE_SERVER , CLEAR_STATE} from "../actions/server_actions";
-import { RECEIVE_USERS } from "../actions/user_actions";
 import { LOGOUT_CURRENT_USER } from '../actions/session_actions';
 import { merge } from 'lodash';
 
