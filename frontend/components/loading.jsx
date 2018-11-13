@@ -5,6 +5,7 @@ class Loading extends React.PureComponent {
     return (
     <div className="server-show">
        <section className= "channel-index">
+
         <section className= "server-heading">
           <h3> </h3>
         </section>
@@ -24,8 +25,14 @@ class Loading extends React.PureComponent {
           </section>
         </div>
        </section>
-       <section className= "channel-show"></section>
-       <section className= "user-index"></section>
+
+       <section className= "channel-show">
+        
+       </section>
+
+       <section className= "user-index">
+       </section>
+
     </div>
     )
   }

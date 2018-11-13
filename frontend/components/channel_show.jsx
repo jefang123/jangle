@@ -145,7 +145,7 @@ class ChannelShow extends React.PureComponent {
 
     // <MessageItem key={message.id} channel={channel} />
     return (
-      <section>
+      <>
         <section className='channel-show-heading'> 
           {header}
         </section>
@@ -158,7 +158,7 @@ class ChannelShow extends React.PureComponent {
         <div className="divider"></div>
           <TypingUsers users={users} currentUser={this.props.currentUser}/>
         <MessageForm channel={channel}/>
-      </section>
+      </>
     )
   }
 
