@@ -36,6 +36,11 @@ class Loading extends React.PureComponent {
        </section>
 
        <section className= "user-index">
+        <h3> </h3>
+        <div className= "divider"></div>
+        <ul>
+          
+        </ul>
        </section>
 
     </div>
