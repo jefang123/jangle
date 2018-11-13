@@ -39,7 +39,10 @@ class Loading extends React.PureComponent {
         <h3> </h3>
         <div className= "divider"></div>
         <ul>
-          
+          <p> </p>
+          <p> </p>
+          <p> </p>
+          <p> </p>
         </ul>
        </section>
 
