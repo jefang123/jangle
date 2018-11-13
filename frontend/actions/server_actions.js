@@ -86,7 +86,6 @@ export const fetchServers = () => {
 
 export const fetchServer = (id) => {
   return dispatch => {
-    // dispatch(clearState())
     return APIServer.fetchServer(id).then(
       payload => {
         return dispatch(receiveServer(payload));
