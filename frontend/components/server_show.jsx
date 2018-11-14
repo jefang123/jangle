@@ -122,8 +122,8 @@ class ServerShow extends React.PureComponent {
     
     let klass;
 
-    if (!this.props.server) return null;
-    //return <Loading />
+    if (!this.props.server)
+    return <Loading />
   
     const channels= this.props.channels.map( channel => {
 
@@ -243,8 +243,7 @@ class ServerShow extends React.PureComponent {
        
         return <Redirect to={`/server/${this.props.server.id}/channel/${this.props.channels[0].id}`}/> 
       } else {
-        return null
-         //return <Loading />
+         return <Loading />
       }
     }
      else {
