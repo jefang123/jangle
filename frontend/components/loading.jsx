@@ -3,7 +3,7 @@ import React from 'react';
 class Loading extends React.PureComponent {
   render () {
     return (
-    <div className="server-show">
+    <div className="server-show loading">
        <section className= "channel-index">
 
         <section className= "server-heading">
@@ -17,7 +17,7 @@ class Loading extends React.PureComponent {
         </ul>
         <div className= "user-tab">
           <div>
-            <img src=""></img>
+            <img></img>
           </div>
           <section>
             <p></p>
