@@ -15,11 +15,12 @@ class ServerShow extends React.PureComponent {
     super(props)
     this.state = { 
       show: false,
-    
+      showServer: false,
      }
     this.showModal = this.showModal.bind(this)
     this.hideModal = this.hideModal.bind(this)
     this.handlePMClick = this.handlePMClick.bind(this)
+    this.handleDropdown = this.handleDropdown.bind(this)
   }
 
   showModal () {
@@ -92,6 +93,13 @@ class ServerShow extends React.PureComponent {
     // this.props.createChannel({server_id: window.homeId, channel_name: mesagee.username});
     // <Redirect to={`/server/${window.homeId}`}/>
 
+  }
+
+  handleDropdown() {
+    let boolean = this.state.showServer ? false : true
+    this.setState ({
+      showServer: boolean
+    })
   }
 
   handleRemoveClick (e) {
@@ -198,7 +206,13 @@ class ServerShow extends React.PureComponent {
     }
     // <i className="fas fa-bars"></i>
     const { server } = this.props;
+    let icon = <i className="fas fa-chevron-down" onClick={this.handleDropdown}></i>
 
+    if (this.state.showServer) {
+      icon = <i className="fas fa-times" onClick={this.handleDropdown}></i>
+    }
+
+    let showServerName = this.state.showServer ? "display-servershow" : "hidden-servershow";
     if (this.props.server.private) {
       return (
         <div className="server-show">
@@ -254,15 +268,17 @@ class ServerShow extends React.PureComponent {
         <div className="server-show">
           <section className='channel-index'>
             <section className='server-heading'>
-              <h3>{server.server_name}</h3>
-              {button}
+              <h3>{server.server_name} {icon}</h3>
+              <div className={showServerName}>
+                {button}
+                {modalbutton}
+              </div>
               <Modal show={this.state.show} handleClose={this.hideModal}>
                 <div className="channel-create-modal">
                   <ChannelCreateContainer handleClose={this.hideModal}/>
                 </div>
               </Modal>
               <br />
-              {modalbutton}
             </section>
             <ul>
               {channels}
