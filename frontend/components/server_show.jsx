@@ -205,6 +205,9 @@ class ServerShow extends React.PureComponent {
           <section className='channel-index'>
             <section className='server-heading'>
               <h3>{server.server_name}</h3>
+              {/* <i class="fas fa-chevron-down"></i> */}
+              {/* <i class="fas fa-times"></i> */}
+              {/* <i class="fas fa-ellipsis-v"></i> */}
               <Modal show={this.state.show} handleClose={this.hideModal}>
                 <div className="channel-create-modal">
                   <PrivateCreate handleClose={this.hideModal}/>
