@@ -145,6 +145,11 @@ p {
   margin: 20px;
 }
 
+.full-divider {
+  border-bottom: 1px solid #f6f6f7;
+  margin: 20px 0px;
+}
+
 .server-divider {
   width: 5px;
   background-color: grey;

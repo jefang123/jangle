@@ -30,7 +30,7 @@ class Loading extends React.PureComponent {
         <section className= "channel-show-heading">
           <h3></h3>
         </section>
-        <div className= "divider"></div>
+        <div className= "full-divider"></div>
         <section className= "message-index">
         </section>
        </section>

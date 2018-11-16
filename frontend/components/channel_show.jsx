@@ -149,7 +149,7 @@ class ChannelShow extends React.PureComponent {
         <section className='channel-show-heading'> 
           {header}
         </section>
-        <div className="divider" />
+        <div className="full-divider" />
         <section className='message-index'>
         {messageheader}
         {messages}

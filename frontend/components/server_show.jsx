@@ -282,7 +282,7 @@ class ServerShow extends React.PureComponent {
           </section>
           <section className='user-index'>
             <h3> Users </h3>
-            <div className="divider" />
+            <div className="full-divider" />
             <ul>
   
             {users}
