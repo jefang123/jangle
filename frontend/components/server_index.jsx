@@ -4,6 +4,7 @@ import ServerIndexItem from './server_index_item';
 import ServerCreateForm from './server_create_container';
 import Modal from './modal';
 import JoinServerForm from './join_server_form';
+import ServerLoad from './server_index_loading';
 
 class ServerIndex extends React.PureComponent {
   constructor(props) {
@@ -28,9 +29,13 @@ class ServerIndex extends React.PureComponent {
   }
 
   render(){ 
-    if (!this.props.servers) {
-      return null
-      //return ServerLoading
+    debugger
+    if (this.props.servers.length === 0) {
+      return (
+        <>
+          <ServerLoad />
+        </>
+      );
     }
     const home = this.props.servers.map(server => {
       if (server.private) {

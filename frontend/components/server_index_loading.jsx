@@ -3,7 +3,7 @@ import React from 'react';
 class ServerLoad extends React.PureComponent {
   render() {
     return(
-      <section className="server-index">
+      <section className="server-index server-load">
         <ul>
           <li>
             <img></img>
