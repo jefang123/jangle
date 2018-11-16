@@ -146,7 +146,6 @@ class ServerShow extends React.PureComponent {
     return <Loading />
   
     const channels= this.props.channels.map( channel => {
-
       if (channel.id === parameter) {
         klass = "ch-selected"
       } else {

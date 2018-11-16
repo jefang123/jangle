@@ -51,6 +51,9 @@ class ChannelShow extends React.PureComponent {
     })
   }
 
+  handleScroll (){
+  }
+
   update(field) {
     return (e) => {
       this.setState({
