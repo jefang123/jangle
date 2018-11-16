@@ -150,6 +150,7 @@ class ChannelShow extends React.PureComponent {
           {header}
         </section>
         <section className='message-index'>
+        <br />
         {messageheader}
         {messages}
         <div ref={(el) => { this.bottom = el; }}></div>
