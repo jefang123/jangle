@@ -21,6 +21,7 @@ class ServerShow extends React.PureComponent {
     this.hideModal = this.hideModal.bind(this)
     this.handlePMClick = this.handlePMClick.bind(this)
     this.handleDropdown = this.handleDropdown.bind(this)
+    this.handleClickOut = this.handleClickOut.bind(this)
   }
 
   showModal () {
@@ -80,6 +81,9 @@ class ServerShow extends React.PureComponent {
   componentDidUpdate(prevProps) {
     if (this.props.match.params.serverId !== prevProps.match.params.serverId) {
       this.props.fetchServer(this.props.match.params.serverId)
+      this.setState({
+        showServer: false
+      })
     }
   }
 
@@ -105,6 +109,14 @@ class ServerShow extends React.PureComponent {
   handleRemoveClick (e) {
     e.preventDefault();
     this.props.removeServer(this.props.server.id);  
+  }
+
+  handleClickOut () {
+    if (this.state.showServer) {
+      this.setState ({
+        showServer: false
+      })
+    }
   }
 
   render() {
@@ -265,8 +277,8 @@ class ServerShow extends React.PureComponent {
     }
      else {
       return (
-        <div className="server-show">
-          <section className='channel-index'>
+        <div className="server-show" onClick={this.handleClickOut}>
+          <section className='channel-index' >
             <section className='server-heading'>
               <h3>{server.server_name} {icon}</h3>
               <div className={showServerName}>
