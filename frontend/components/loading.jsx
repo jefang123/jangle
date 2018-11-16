@@ -10,10 +10,10 @@ class Loading extends React.PureComponent {
           <h3> </h3>
         </section>
         <ul>
-          <></>
-          <></>
-          <></>
-          <></>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
         </ul>
         <div className= "user-tab">
           <div>
@@ -37,7 +37,7 @@ class Loading extends React.PureComponent {
 
        <section className= "user-index">
         <h3> </h3>
-        <div className= "divider"></div>
+        <div className= "full-divider"></div>
         <ul>
           <p> </p>
           <p> </p>
