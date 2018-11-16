@@ -153,7 +153,7 @@ class ServerShow extends React.PureComponent {
       }
 
       let hash;
-      let privateS = this.props.server.private;
+      // let privateS = this.props.server.private;
       if (this.props.server.private) {
         hash = "@"
       } else {

@@ -12,7 +12,22 @@
     background-color: grey;
     border-radius: 3px;
   }
-  
+  .channel-show-heading {
+    span {
+      width: 180px;
+      height: 19px;
+      position: absolute;
+      margin-left: 10px;
+      padding-left: 10px;
+      font-size: 15px;
+      background-color: #a6a7a1;
+      font-weight: 400;
+      top: 1px;
+      left: 120px;
+      border-radius: 3px;
+    }
+  }
+
   ul {
     margin-bottom: 20px;
   

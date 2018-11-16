@@ -28,7 +28,8 @@ class Loading extends React.PureComponent {
 
        <section className= "channel-show">
         <section className= "channel-show-heading">
-          <h3></h3>
+          <h3> <span/> </h3>
+          
         </section>
         <section className= "message-index">
         </section>
