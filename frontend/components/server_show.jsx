@@ -94,9 +94,9 @@ class ServerShow extends React.PureComponent {
 
   handlePMClick (e) {
     // const mesagee = this.props.users[e.target.getAttribute("value")];
-    // this.props.createChannel({server_id: window.homeId, channel_name: mesagee.username});
-    // <Redirect to={`/server/${window.homeId}`}/>
-
+    // <Link to={`/server/${window.homeId}`}/>
+    // this.props.fetchServer(window.homeId);
+    // App.cable.subscriptions.subscriptions[0].speak2({server_id: window.homeId, channel_name: mesagee.username});
   }
 
   handleDropdown() {
@@ -188,7 +188,8 @@ class ServerShow extends React.PureComponent {
         </Link>
       )
     });
-    const users = this.props.users.map(user => {
+
+    const users = Object.values(this.props.users).map(user => {
       if (this.props.server.creator_id === user.id ) {
         return (
           <p onClick={this.handlePMClick} value={user.id} key={user.id}><i className="fas fa-crown"></i> {user.username}</p>
