@@ -241,7 +241,7 @@ DEPENDENCIES
   pg (>= 0.18, < 2.0)
   pry-rails
   puma (~> 3.11)
-  rack (~> 2.0.6)
+  rack (>= 2.0.6)
   rails (~> 5.2.1)
   rails_12factor
   redis (~> 4.0)
