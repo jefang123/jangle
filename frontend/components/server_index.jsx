@@ -29,7 +29,6 @@ class ServerIndex extends React.PureComponent {
   }
 
   render(){ 
-    debugger
     if (this.props.servers.length === 0) {
       return (
         <>
