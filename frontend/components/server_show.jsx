@@ -88,9 +88,9 @@ class ServerShow extends React.PureComponent {
   }
 
   handlePMClick (e) {
-    const mesagee = this.props.users[e.target.getAttribute("value")];
-    this.props.createChannel({server_id: window.homeId, channel_name: mesagee.username});
-    <Redirect to={`/server/${window.homeId}`}/>
+    // const mesagee = this.props.users[e.target.getAttribute("value")];
+    // this.props.createChannel({server_id: window.homeId, channel_name: mesagee.username});
+    // <Redirect to={`/server/${window.homeId}`}/>
 
   }
 

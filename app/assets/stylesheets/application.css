@@ -299,6 +299,7 @@ li img:hover {
 .user-index {
   width: 240px;
   background-color: #2f3136;
+  z-index: 5;
 }
 
 .errors > p, .joinerrors > p {
