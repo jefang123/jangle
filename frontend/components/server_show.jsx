@@ -226,10 +226,14 @@ class ServerShow extends React.PureComponent {
     let showServerName = this.state.showServer ? "display-servershow" : "hidden-servershow";
     if (this.props.server.private) {
       return (
-        <div className="server-show">
+        <div className="server-show" onClick={this.handleClickOut}>
           <section className='channel-index'>
             <section className='server-heading'>
-              <h3>{server.server_name}</h3>
+              <h3>{server.server_name} {icon}</h3>
+              <div className={showServerName}>
+                {button}
+                {modalbutton}
+              </div>
               {/* <i class="fas fa-ellipsis-v"></i> */}
               <Modal show={this.state.show} handleClose={this.hideModal}>
                 <div className="channel-create-modal">
@@ -237,7 +241,6 @@ class ServerShow extends React.PureComponent {
                 </div>
               </Modal>
               <br />
-              {modalbutton}
             </section>
             <ul>
               {channels}
