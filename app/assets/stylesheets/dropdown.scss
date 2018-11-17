@@ -10,14 +10,14 @@
   left: 140px;
   width: 150px;
   > button {
-    background-color: #2a2c31;
+    background-color: white;
     color: #acacae;
     font-size: 15px;
-    padding: 5px 0px;
+    padding: 5px;
   }
 
   button:hover{
-    color: white;
+    color: grey;
     text-decoration: underline;
   }
 }
