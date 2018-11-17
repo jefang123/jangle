@@ -14,19 +14,20 @@
     padding: 30.5px;
     border-bottom: 1px solid white;
     h3 {
-      position: fixed;
+      position: absolute;
       top: 21px;
       z-index: 3;
     }
     span {
-      position: fixed;
+      position: absolute;
+      white-space: nowrap;
       border-left: 1px solid grey;
       margin-left: 10px;
       padding-left: 10px;
       font-size: 15px;
       color: #a6a7a1;
       font-weight: 400;
-      top: 23px;
+      top: 2px;
     }
   }
 
