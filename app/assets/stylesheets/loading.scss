@@ -30,27 +30,15 @@
 
   ul {
     margin-bottom: 20px;
-  
+    li {
+      width: 100px;
+      background-color: grey;
+      margin: 0px 10px 20px;
+      border-radius: 3px;
+    }
   }
-
-  li {
-    width: 100px;
-    background-color: grey;
-    margin: 20px 0px;
-    border-radius: 3px;
-  }
-
-  p {
-    margin: auto;
-    width: 75px;
-    background-color: grey;
-    margin-bottom: 20px;
-    border-radius: 3px;
-  }
-
 
   .server-heading {
-    
     margin: 20px;
   }
 
@@ -63,6 +51,14 @@
   .user-index {
     h3{
       margin-top: 20px;
+    }
+
+    p {
+      margin: auto;
+      width: 75px;
+      background-color: grey;
+      margin-bottom: 20px;
+      border-radius: 3px;
     }
   }
 

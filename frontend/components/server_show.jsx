@@ -216,7 +216,6 @@ class ServerShow extends React.PureComponent {
     else if (this.props.currentUser.id === this.props.server.creator_id) {
       modalbutton = <button onClick={this.showModal} >Create Channel</button>
     }
-    // <i className="fas fa-bars"></i>
     const { server } = this.props;
     let icon = <i className="fas fa-chevron-down" onClick={this.handleDropdown}></i>
 
@@ -231,8 +230,6 @@ class ServerShow extends React.PureComponent {
           <section className='channel-index'>
             <section className='server-heading'>
               <h3>{server.server_name}</h3>
-              {/* <i class="fas fa-chevron-down"></i> */}
-              {/* <i class="fas fa-times"></i> */}
               {/* <i class="fas fa-ellipsis-v"></i> */}
               <Modal show={this.state.show} handleClose={this.hideModal}>
                 <div className="channel-create-modal">
@@ -313,6 +310,7 @@ class ServerShow extends React.PureComponent {
           </section>
           <section className='user-index'>
             <h3> Users </h3>
+            {/* <input placeholder="Search this server"/> */}
             <div className="full-divider" />
             <ul>
   

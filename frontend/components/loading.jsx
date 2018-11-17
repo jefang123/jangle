@@ -14,6 +14,10 @@ class Loading extends React.PureComponent {
           <li></li>
           <li></li>
           <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
         </ul>
         <div className= "user-tab">
           <div>
@@ -39,6 +43,10 @@ class Loading extends React.PureComponent {
         <h3> </h3>
         <div className= "full-divider"></div>
         <ul>
+          <p> </p>
+          <p> </p>
+          <p> </p>
+          <p> </p>
           <p> </p>
           <p> </p>
           <p> </p>
