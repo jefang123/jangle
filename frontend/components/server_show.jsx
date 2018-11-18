@@ -316,8 +316,9 @@ class ServerShow extends React.PureComponent {
             {/* <input placeholder="Search this server"/> */}
             <div className="full-divider" />
             <ul>
-  
+            <p>----ONLINE----</p>
             {users}
+            <p>----OFFLINE----</p>
             </ul>
           </section>
         </div>
