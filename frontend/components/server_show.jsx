@@ -223,6 +223,21 @@ class ServerShow extends React.PureComponent {
       icon = <i className="fas fa-times" onClick={this.handleDropdown}></i>
     }
 
+    let modalshow = <Modal show={this.state.show} handleClose={this.hideModal}>
+    <div className="channel-create-modal">
+
+      <ChannelCreateContainer handleClose={this.hideModal} />
+    </div>
+    </Modal >
+
+    if (this.props.server.private) {
+      modalshow = <Modal show={this.state.show} handleClose={this.hideModal} >
+      <div className="channel-create-modal">
+      <PrivateCreate handleClose={this.hideModal}/>
+    </div>
+      </Modal >
+    }   
+
     let showServerName = this.state.showServer ? "display-servershow" : "hidden-servershow";
     if (this.props.server.private) {
       return (
@@ -234,11 +249,12 @@ class ServerShow extends React.PureComponent {
                 {button}
                 {modalbutton}
               </div>
-              <Modal show={this.state.show} handleClose={this.hideModal}>
+              {/* <Modal show={this.state.show} handleClose={this.hideModal}>
                 <div className="channel-create-modal">
                   <PrivateCreate handleClose={this.hideModal}/>
                 </div>
-              </Modal>
+              </Modal> */}
+              {modalshow}
               <br />
             </section>
             <ul>
