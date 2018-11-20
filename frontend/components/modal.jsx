@@ -10,7 +10,7 @@ class Modal extends React.PureComponent {
   render () {
     const showHideClassName = this.props.show ? 'modal display-block' : 'modal display-none';
     return (
-      <div className={showHideClassName} onClick={this.handleClose}>
+      <div className={showHideClassName} >
         <section className='modal-main'>
           {this.children}
           <button

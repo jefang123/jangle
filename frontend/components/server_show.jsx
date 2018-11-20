@@ -234,7 +234,6 @@ class ServerShow extends React.PureComponent {
                 {button}
                 {modalbutton}
               </div>
-              {/* <i class="fas fa-ellipsis-v"></i> */}
               <Modal show={this.state.show} handleClose={this.hideModal}>
                 <div className="channel-create-modal">
                   <PrivateCreate handleClose={this.hideModal}/>
@@ -328,5 +327,8 @@ class ServerShow extends React.PureComponent {
   }
 
 }
+
+
+{/* <i class="fas fa-ellipsis-v"></i> */}
 
 export default ServerShow;
