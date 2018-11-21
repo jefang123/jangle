@@ -249,11 +249,6 @@ class ServerShow extends React.PureComponent {
                 {button}
                 {modalbutton}
               </div>
-              {/* <Modal show={this.state.show} handleClose={this.hideModal}>
-                <div className="channel-create-modal">
-                  <PrivateCreate handleClose={this.hideModal}/>
-                </div>
-              </Modal> */}
               {modalshow}
               <br />
             </section>
@@ -300,11 +295,7 @@ class ServerShow extends React.PureComponent {
                 {button}
                 {modalbutton}
               </div>
-              <Modal show={this.state.show} handleClose={this.hideModal}>
-                <div className="channel-create-modal">
-                  <ChannelCreateContainer handleClose={this.hideModal}/>
-                </div>
-              </Modal>
+              {modalshow}
               <br />
             </section>
             <ul>
