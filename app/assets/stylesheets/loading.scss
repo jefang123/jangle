@@ -66,12 +66,15 @@
   }
 
   .user-tab {
-    p {
-      margin: auto;
+    
+    section {
+      p {
         width: 75px;
+        height: 10px;
         background-color: grey;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
         border-radius: 3px;
+      }
     }
   }
 
