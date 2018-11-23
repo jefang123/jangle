@@ -1,4 +1,3 @@
-import React from 'react';
 import ChannelIndex from './channel_index';
 
 const mapStateToProps = state => {
