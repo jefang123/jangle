@@ -2,6 +2,7 @@ import ChannelCreateForm from "./channel_create_form";
 import { connect } from 'react-redux';
 import { createChannel } from '../actions/channel_actions';
 import { withRouter } from 'react-router-dom'
+import { fetchUsers } from '../actions/user_actions';
 
 const mapStateToProps = state => {
   return {

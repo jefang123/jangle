@@ -42,17 +42,25 @@ class ChannelCreateForm extends React.PureComponent {
     })
   }
 
-  update(field) {
-    let props = Object.keys(this.props.users2)
-    this.names = props.filter(prop=> this.props.users2[prop].username.includes(`${this.state.channel_name}`))
-    this.names = this.names.filter(name => this.props.users2[name].id !== this.props.currentUser.id)
-    if (e.target.innerText = "") {
-      this.names = [];
+  componentDidUpdate(prevProps) {
+    if (prevProps.match.params.serverId !== this.props.match.params.serverId) {
+      this.setState({
+        server_id: this.props.match.params.serverId
+      })
     }
+  }
+
+  update(field) {
     return (e) => {
       this.setState({
         [field]: e.target.value
       });
+      let props = Object.keys(this.props.users2)
+      this.names = props.filter(prop=> this.props.users2[prop].username.includes(`${this.state.channel_name}`))
+      this.names = this.names.filter(name => this.props.users2[name].id !== this.props.currentUser.id)
+      if (e.target.innerText = "") {
+        this.names = [];
+      }
     };
   }
 
@@ -80,8 +88,8 @@ class ChannelCreateForm extends React.PureComponent {
     } else {
       button = <button className="create-channel">Create Channel!</button>
     }
-
-    if (this.state.serverId === window.homeId) {
+    debugger
+    if (parseInt(this.state.server_id) === window.homeId) {
       return (
         <form onSubmit={this.handleSubmit}>
           <div className="errors" >
