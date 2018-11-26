@@ -83,10 +83,13 @@ class ChannelCreateForm extends React.PureComponent {
     })
 
     let button; 
+    let privateButton;
     if (this.state.channel_name === "") {
       button = <button disabled className="create-channel">Create Channel!</button>
+      privateButton = <button disabled className="create-channel">Start Messaging!</button>
     } else {
       button = <button className="create-channel">Create Channel!</button>
+      privateButton = <button className="create-channel">Start Messaging!</button>
     }
     if (parseInt(this.state.server_id) === window.homeId) {
       return (
@@ -104,7 +107,7 @@ class ChannelCreateForm extends React.PureComponent {
             <div className="user-search">
               {search}
             </div>
-          <button className="create-channel">Start Messaging</button>
+            {privateButton}
         </form>
       )
     } else {

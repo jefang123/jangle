@@ -75,6 +75,14 @@ class PrivateCreateForm extends React.Component {
         </p>
       )
     })
+
+    let privateButton;
+    if (this.state.channel_name === "") {
+      privateButton = <button disabled className="create-channel">Start Messaging!</button>
+    } else {
+      privateButton = <button className="create-channel">Start Messaging!</button>
+    }
+
     return (
       <form onSubmit={this.handleSubmit}>
         <div className="errors" >
@@ -90,7 +98,7 @@ class PrivateCreateForm extends React.Component {
           <div className="user-search">
             {search}
           </div>
-        <button className="create-channel">Start Messaging</button>
+          {privateButton}
       </form>
     )
   }
