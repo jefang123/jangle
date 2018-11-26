@@ -20,6 +20,10 @@ class ChannelCreateForm extends React.PureComponent {
       channel_topic: ""
     });
   }
+
+  componentDidMount() {
+    this.props.fetchUsers();
+  }
   
   componentWillReceiveProps(nextProps) {
     if (this.props.errors !== nextProps.errors) {
@@ -77,14 +81,6 @@ class ChannelCreateForm extends React.PureComponent {
 
 export default ChannelCreateForm;
 
-
-
-// import React from 'react';
-// import { connect } from 'react-redux';
-// import { createChannel } from '../actions/channel_actions';
-// import { withRouter } from 'react-router-dom'
-// import { fetchUsers } from '../actions/user_actions';
-
 // class PrivateCreateForm extends React.Component {
 //   constructor(props) {
 //     super(props);
@@ -105,11 +101,6 @@ export default ChannelCreateForm;
 //       channel_name: "",
 //       channel_topic: ""
 //     });
-//   }
-
-
-//   componentDidMount() {
-//     this.props.fetchUsers();
 //   }
 
 //   componentWillReceiveProps(nextProps) {
@@ -176,14 +167,6 @@ export default ChannelCreateForm;
 //     )
 //   }
 // }
-
-// const mapStateToProps = state => {
-//   return {
-//     errors: state.errors.channel,
-//     currentUser: state.entities.users[state.session.currentUserId],
-//     users2: state.entities.users2
-//   };
-// };
 
 // const mapDispatchToProps = dispatch => {
 //   return {

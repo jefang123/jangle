@@ -13,7 +13,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    processForm: channel => dispatch(createChannel(channel))
+    processForm: channel => dispatch(createChannel(channel)),
+    fetchUsers: () => dispatch(fetchUsers())
   };
 };
 
