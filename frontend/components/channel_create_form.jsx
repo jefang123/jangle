@@ -88,7 +88,6 @@ class ChannelCreateForm extends React.PureComponent {
     } else {
       button = <button className="create-channel">Create Channel!</button>
     }
-    debugger
     if (parseInt(this.state.server_id) === window.homeId) {
       return (
         <form onSubmit={this.handleSubmit}>
