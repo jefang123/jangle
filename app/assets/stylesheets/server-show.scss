@@ -16,3 +16,8 @@ body {
     color: #acacae;
   }
 }
+
+.fa-times {
+  transition: transform .5s;
+  transform: rotate(90deg);
+}
