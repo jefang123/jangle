@@ -1,6 +1,17 @@
 .user-index{
   text-align: center;
 
+  h5 {
+    border-bottom: 1px solid #fff; 
+    line-height: 0.1em;
+    margin: 10px 0;
+    span {
+      background-color: #2f3136;
+      padding:0 10px; 
+    }
+  }
+
+
   input {
     margin-top: 20px;
     font-size: 18px;

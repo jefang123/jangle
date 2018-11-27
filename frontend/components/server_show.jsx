@@ -321,9 +321,9 @@ class ServerShow extends React.PureComponent {
             <h3> Users </h3>
             <div className="full-divider" />
             <ul>
-            <p>----ONLINE----</p>
+            <h5><span>ONLINE</span></h5>
             {users}
-            <p>----OFFLINE----</p>
+            <h5><span>OFFLINE</span></h5>
             </ul>
           </section>
         </div>
