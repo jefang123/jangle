@@ -67,6 +67,7 @@
       margin: 10px 0;
       margin-right: 50px;
       color: white;
+      min-width: 200px;
     }
   }
   .message:hover .delete-message{
@@ -85,8 +86,8 @@
     overflow-y:auto;
   }
   form {
-    
-    text-align: center;
+    margin: 15px;
+    // text-align: center;
     height: 50px;
     width: 100%;
 
@@ -94,7 +95,7 @@
       ::placeholder {
         color: #444c55;
       }
-      
+      min-width: 200px;
       border-radius: 5px;
       font-size: 20px;
       padding : 10px;
