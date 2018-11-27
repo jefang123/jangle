@@ -29,6 +29,7 @@ class ServerIndex extends React.PureComponent {
   }
 
   render(){ 
+ 
     if (this.props.servers.length === 0) {
       return (
         <>
@@ -36,6 +37,13 @@ class ServerIndex extends React.PureComponent {
         </>
       );
     }
+
+    let filteredServers = this.props.servers.filter(server => {
+      return server.id !== window.homeId
+    })
+    let firstServer = filteredServers[0];
+
+  
     const home = this.props.servers.map(server => {
       if (server.private) {
         window.homeId = server.id;
@@ -58,7 +66,7 @@ class ServerIndex extends React.PureComponent {
 
     if (!match) {
       return(
-        <Redirect to={`/server/${window.homeId}/welcome`}/>
+        <Redirect to={`/server/${firstServer.id}`}/>
       )
     } else {
       return(
