@@ -87,10 +87,8 @@
   }
   form {
     margin: 15px;
-    // text-align: center;
     height: 50px;
     width: 100%;
-
     .message-field {
       ::placeholder {
         color: #444c55;
@@ -108,7 +106,6 @@
       word-break: break-all;
     }
   }
-
 }
 
 .home-h3 {
