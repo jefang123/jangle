@@ -1,7 +1,7 @@
 import React from 'react';
 import MessageForm from './message_create_container';
 import { Redirect } from 'react-router-dom';
-
+import MessageIndex from './message_index';
 import TypingUsers from './typing_users';
 import LinkPreview from 'react-native-link-preview';
 
@@ -76,6 +76,15 @@ class ChannelShow extends React.PureComponent {
     } else {
       users = this.props.users;
     }
+
+    const messages2 = 
+      <MessageIndex 
+        channel={this.props.channel} 
+        messages={this.props.messages}
+        currentUser={this.props.currentUser}
+        deleteMessage={this.props.deleteMessage}
+      />
+
     const messages = this.props.messages.map(message => {
       if (!message.id) {
         return null;
