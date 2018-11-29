@@ -35,4 +35,10 @@ class MessageItem extends React.PureComponent {
   }
 }
 
+{/* <MessageItem 
+  currentUser = {this.props.currentUser}
+  message = {message}
+  channel = {this.props.channel}
+/> */}
+
 export default MessageItem;
