@@ -35,20 +35,4 @@ class MessageItem extends React.PureComponent {
   }
 }
 
-{/* <MessageItem 
-  currentUser = {this.props.currentUser}
-  message = {message}
-  channel = {this.props.channel}
-/> */}
-
-{/* <MessageIndex
-  messages = {this.props.messages}
-/> */}
-
-// filter through users in messageindex, then send filtered results to MessageItem
-// messageitem then renders messages based on each user/time?
-
-
-
-
 export default MessageItem;

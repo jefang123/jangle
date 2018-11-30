@@ -49,16 +49,17 @@
       display: flex;
       flex-direction: column;
       position: relative;
+      min-width: 240px;
       span{
         font-size: 14px;
         opacity: 0.5;
       }
-
-      .delete-message{
-        display: none;
-        position: absolute;
-        top: 25px; 
-        right: 20px;
+      section{
+        display: flex;
+        .delete-message{
+          display: none;
+          align-self: center;
+        }
       }
 
     }
@@ -67,10 +68,10 @@
       margin: 10px 0;
       margin-right: 50px;
       color: white;
-      min-width: 200px;
+      // min-width: 200px;
     }
   }
-  .message:hover .delete-message{
+  .message:hover section .delete-message{
     display: block;
   }
   .message-index {

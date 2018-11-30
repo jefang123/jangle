@@ -35,11 +35,12 @@ class MessageIndex extends React.PureComponent {
       } else {
         sortedMessages.push({ message:[currentMessage] })
       }
-      
+
     }
 
     const messages = this.props.messages.map(message => {
       return <MessageItem 
+        users={this.props.users}
         message={message.message}
         channel={this.props.channel}
         deleteMessage={this.props.deleteMessage}

@@ -77,19 +77,30 @@ class ChannelShow extends React.PureComponent {
       users = this.props.users;
     }
 
-    const messages2 = 
+    let messages2 = 
       <MessageIndex 
+        users={this.props.users}
         channel={this.props.channel} 
         messages={this.props.messages}
         currentUser={this.props.currentUser}
         deleteMessage={this.props.deleteMessage}
       />
+    if (this.props.channel.server_id === window.homeId) {
+      messages2 = 
+      <MessageIndex
+        users={this.props.users2}
+        channel={this.props.channel}
+        messages={this.props.messages}
+        currentUser={this.props.currentUser}
+        deleteMessage={this.props.deleteMessage}
+      />
+    }
     const filteredMessages = this.props.messages.filter(message => {
       if (message.channel_id === this.props.channel.id) {
         return message
       }
     })
-    
+
     const sortedMessages = [{ message: [filteredMessages[0]] }];
 
     for (let index = 1; index < filteredMessages.length; index++) {
@@ -108,8 +119,6 @@ class ChannelShow extends React.PureComponent {
         sortedMessages.push({ message:[currentMessage] })
       }
     }
-
-    debugger
 
     const messages = this.props.messages.map(message => {
       if (!message.id) {
@@ -149,10 +158,11 @@ class ChannelShow extends React.PureComponent {
             <div className="message-box">
             <p >{user ? user.username : null} {timestamp}</p> 
               
-
-                <p className="message-body"> {message.body}</p>
-              
-                {messageb}
+                <section>
+                  <p className="message-body"> {message.body}</p>
+                
+                  {messageb}
+                </section>
             </div>
             </div>
             
