@@ -18,17 +18,23 @@
     padding: 0;
   }
 
-  i {
-    color: gold;
-  }
   h3 {
     margin-top:20px;
+    visibility: hidden;
   }
   ul {
      height: 79vh;
      overflow: auto;
     p {
-      padding: 10px
+      padding: 10px;
+      position: relative;
+      i {
+        color: gold;
+        font-size: .85rem;
+        position: absolute;
+        right: 45px;
+        top: 11px;
+      } 
     }
     // p:hover{
     //   color: #cdcdd0;

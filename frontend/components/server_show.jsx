@@ -191,7 +191,7 @@ class ServerShow extends React.PureComponent {
     const users = Object.values(this.props.users).map(user => {
       if (this.props.server.creator_id === user.id ) {
         return (
-          <p onClick={this.handlePMClick} value={user.id} key={user.id}><i className="fas fa-crown"></i> {user.username}</p>
+          <p onClick={this.handlePMClick} value={user.id} key={user.id}>{user.username} <i className="fas fa-crown"></i></p>
         );
       } else {
         return (
