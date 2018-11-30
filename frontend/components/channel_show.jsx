@@ -84,6 +84,11 @@ class ChannelShow extends React.PureComponent {
         currentUser={this.props.currentUser}
         deleteMessage={this.props.deleteMessage}
       />
+    // const filteredMessages = this.props.messages.filter(message => {
+    //   if (message.channel_id === this.props.channel.id) {
+    //     return message
+    //   }
+    // })
 
     const messages = this.props.messages.map(message => {
       if (!message.id) {
