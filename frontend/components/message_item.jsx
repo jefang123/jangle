@@ -53,6 +53,16 @@ class MessageItem extends React.PureComponent {
 
   render () {
    const message = this.props.message 
+
+   if (message.length > 1) {
+
+   } else {
+
+   }
+
+   return (
+    null
+   )
       
   }
 }
