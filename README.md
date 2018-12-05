@@ -12,6 +12,7 @@ Live Link: http://jangle.jefang.me
 * Handles Channel Creation/Deletion 
 * Handles Real Time Messaging with Action Cable
 * 1 on 1 Private Messaging in default HOME server
+  - Users can search for other existing users to start a 1 on 1 private chat
 
 ### Future ideas:
 * Optimizing Joining Servers
