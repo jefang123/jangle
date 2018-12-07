@@ -62,18 +62,17 @@ class MessageItem extends React.PureComponent {
 
    return (
     <div key={message.id} className="message">
-            <div>
-              <img className="message-image" src={window.user_url}></img>
-              <div className="message-box">
-                <p >{user ? user.username : null} {timestamp}</p> 
-                <section>
-                  <p className="message-body"> {message.body}</p>
-                  {messageb}
-                </section>
-              </div>
-            </div>
-            
-          </div>
+      <div>
+        <img className="message-image" src={window.user_url}></img>
+        <div className="message-box">
+          <p >{user ? user.username : null} {timestamp}</p> 
+          <section>
+            <p className="message-body"> {message.body}</p>
+            {messageb}
+          </section>
+        </div>
+      </div>
+    </div>
    )
       
   }
