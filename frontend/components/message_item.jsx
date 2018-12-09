@@ -29,17 +29,6 @@ class MessageItem extends React.PureComponent {
             
           // </div>
 
-  // message = <section>
-  //             <p className="message-body"> {this.message.body} </p>
-  //             {messageb}
-  //           </section>
-
-  // message = this.props.message.map(mess => {
-  //   <section>
-  //     <p className="message-body"> {this.mess.body} </p>
-  //     {messageb}
-  //   </section>
-  // })
 
   // <div key={message.id} className="message">
   //   <div>
@@ -55,9 +44,18 @@ class MessageItem extends React.PureComponent {
    const message = this.props.message 
 
    if (message.length > 1) {
-
+     message = <section>
+                <p className="message-body"> {this.message.body} </p>
+                {messageb}
+              </section>
+    
    } else {
-
+      message = this.props.message.map(mess => {
+        <section>
+          <p className="message-body"> {this.mess.body} </p>
+          {messageb}
+        </section>
+      })
    }
 
   let timestamp;
