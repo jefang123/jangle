@@ -37,7 +37,7 @@ class MessageItem extends React.PureComponent {
   
     if (message.length === 1) {
       let messageb;
-      if (message.user_id === this.props.currentUser.id) {
+      if (message[0].user_id === this.props.currentUser.id) {
         messageb = <p className="delete-message" onClick={()=>this.handleClick(message.id)}>x</p>
       }
       message2 = <section>
@@ -48,8 +48,8 @@ class MessageItem extends React.PureComponent {
     } else {
       message2 = this.props.message.map(mess => {
         let messagec;
-        if (message.user_id === this.props.currentUser.id) {
-          messageb = <p className="delete-message" onClick={()=>this.handleClick(message.id)}>x</p>
+        if (mess.user_id === this.props.currentUser.id) {
+          messagec = <p className="delete-message" onClick={()=>this.handleClick(message.id)}>x</p>
         }
         return (
           <section>

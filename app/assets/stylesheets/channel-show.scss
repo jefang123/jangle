@@ -45,6 +45,9 @@
       margin-right: 20px;
       display: block;
     }
+    .message-box>p{
+      margin-bottom: 10px;
+    }
     .message-box {
       display: flex;
       flex-direction: column;
@@ -58,14 +61,14 @@
         display: flex;
         .delete-message{
           display: none;
-          align-self: center;
+          align-self: flex-end;
         }
       }
 
     }
 
     .message-body {
-      margin: 10px 0;
+
       margin-right: 50px;
       color: white;
       // min-width: 200px;
