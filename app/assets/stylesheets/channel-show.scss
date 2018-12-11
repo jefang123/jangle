@@ -74,9 +74,13 @@
       // min-width: 200px;
     }
   }
-  .message:hover section .delete-message{
-    display: block;
+  
+  .message:hover {
+    #message-item:hover .delete-message{
+      display: block;
+    }
   }
+
   .message-index {
     margin:0px 20px;
     height: calc(100vh - 153px);
@@ -116,4 +120,3 @@
 .home-h3 {
   margin-bottom: 18px;
 }
-

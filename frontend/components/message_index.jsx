@@ -12,6 +12,7 @@ class MessageIndex extends React.PureComponent {
   }
 
   render () {
+    if (this.props.messages.length === 0) return null
     const filteredMessages = this.props.messages.filter(message => {
       if (message.channel_id === this.props.channel.id) {
         return message
@@ -44,6 +45,7 @@ class MessageIndex extends React.PureComponent {
         channel={this.props.channel}
         deleteMessage={this.props.deleteMessage}
         currentUser={this.props.currentUser} 
+        key={message.message[0].id}
         />
     })
 
