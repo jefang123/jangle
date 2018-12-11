@@ -37,8 +37,7 @@ class MessageIndex extends React.PureComponent {
       }
 
     }
-
-    const messages = this.props.messages.map(message => {
+    const messages = sortedMessages.map(message => {
       return <MessageItem 
         users={this.props.users}
         message={message.message}

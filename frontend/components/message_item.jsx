@@ -1,4 +1,5 @@
 import React from 'react';
+const Timestamp =  require('react-timestamp');
 
 class MessageItem extends React.PureComponent {
   constructor (props) {
@@ -16,24 +17,48 @@ class MessageItem extends React.PureComponent {
   }
 
   render () {
-   const message = this.props.message 
+    const message = this.props.message 
+    let message2;
+    if (!message[0]) return null
+    let timestamp = <span><Timestamp time={message[0].created_at} format='date'/></span>
+    let user = this.props.users[message[0].user_id]
+    let jstime = new Date(message.created_at)
+    const DAYS = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
-   if (message.length > 1) {
-     message = <section>
-                <p className="message-body"> {this.message.body} </p>
+    if (new Date() - jstime <= 86400000) {
+      timestamp = <span><Timestamp time={message.created_at} format='time'/></span>
+    }
+    else if ((new Date() - jstime > 86400000) && new Date() - jstime <= 86400000*2 ) {
+      timestamp = <span>Yesterday at <Timestamp time={message.created_at} format='time'/></span>
+    }
+    else if ((new Date() - jstime > (86400000*2)) && new Date() - jstime<= (86400000*7)) {
+      timestamp = <span>Last {DAYS[jstime.getDay()]} at <Timestamp time={message.created_at} format='time'/></span>
+    }
+  
+    if (message.length === 1) {
+      let messageb;
+      if (message.user_id === this.props.currentUser.id) {
+        messageb = <p className="delete-message" onClick={()=>this.handleClick(message.id)}>x</p>
+      }
+      message2 = <section>
+                <p className="message-body"> {message[0].body} </p>
                 {messageb}
               </section>
     
-   } else {
-      message = this.props.message.map(mess => {
-        <section>
-          <p className="message-body"> {this.mess.body} </p>
-          {messageb}
-        </section>
+    } else {
+      message2 = this.props.message.map(mess => {
+        let messagec;
+        if (message.user_id === this.props.currentUser.id) {
+          messageb = <p className="delete-message" onClick={()=>this.handleClick(message.id)}>x</p>
+        }
+        return (
+          <section>
+            <p className="message-body"> {mess.body} </p>
+            {messagec}
+          </section>
+        )
       })
    }
-
-  let timestamp;
 
    return (
     <div key={message.id} className="message">
@@ -41,7 +66,7 @@ class MessageItem extends React.PureComponent {
         <img className="message-image" src={window.user_url}></img>
         <div className="message-box">
           <p >{user ? user.username : null} {timestamp}</p> 
-          {message}
+          {message2}
         </div>
       </div>
     </div>

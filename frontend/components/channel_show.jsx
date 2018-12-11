@@ -3,7 +3,6 @@ import MessageForm from './message_create_container';
 import { Redirect } from 'react-router-dom';
 import MessageIndex from './message_index';
 import TypingUsers from './typing_users';
-import LinkPreview from 'react-native-link-preview';
 
 const Timestamp =  require('react-timestamp');
 
@@ -79,22 +78,13 @@ class ChannelShow extends React.PureComponent {
 
     let messages2 = 
       <MessageIndex 
-        users={this.props.users}
+        users={users}
         channel={this.props.channel} 
         messages={this.props.messages}
         currentUser={this.props.currentUser}
         deleteMessage={this.props.deleteMessage}
       />
-    if (this.props.channel.server_id === window.homeId) {
-      messages2 = 
-      <MessageIndex
-        users={this.props.users2}
-        channel={this.props.channel}
-        messages={this.props.messages}
-        currentUser={this.props.currentUser}
-        deleteMessage={this.props.deleteMessage}
-      />
-    }
+
     const filteredMessages = this.props.messages.filter(message => {
       if (message.channel_id === this.props.channel.id) {
         return message
@@ -200,7 +190,7 @@ class ChannelShow extends React.PureComponent {
         <section className='message-index'>
         <br />
         {messageheader}
-        {messages}
+        {messages2}
         <div ref={(el) => { this.bottom = el; }}></div>
         </section>
         <div className="full-white-divider"></div>
