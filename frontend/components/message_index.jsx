@@ -12,7 +12,6 @@ class MessageIndex extends React.PureComponent {
   }
 
   render () {
-    if (this.props.messages.length === 0) return null
     const filteredMessages = this.props.messages.filter(message => {
       if (message.channel_id === this.props.channel.id) {
         return message
@@ -38,6 +37,8 @@ class MessageIndex extends React.PureComponent {
       }
 
     }
+    
+    if (!sortedMessages[0].message[0]) return null
     const messages = sortedMessages.map(message => {
       return <MessageItem 
         users={this.props.users}
