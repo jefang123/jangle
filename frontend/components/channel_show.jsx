@@ -181,7 +181,6 @@ class ChannelShow extends React.PureComponent {
       messageheader =  <h3>This is the beginning of #{channel.channel_name} </h3>
     }
 
-    // <MessageItem key={message.id} channel={channel} />
     return (
       <>
         <section className='channel-show-heading'> 
