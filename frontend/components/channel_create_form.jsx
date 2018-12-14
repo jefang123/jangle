@@ -4,9 +4,9 @@ class ChannelCreateForm extends React.PureComponent {
   constructor(props) {
     super(props);
     this.state = {
-      channel_name: "",
+      channel_name: this.props.channelName || "",
       server_id: this.props.match.params.serverId,
-      channel_topic: ""
+      channel_topic: this.props.channelTopic || ""
     };
     this.errors = [];
     this.names = [];

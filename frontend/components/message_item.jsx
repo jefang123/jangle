@@ -5,6 +5,10 @@ class MessageItem extends React.PureComponent {
   constructor (props) {
     super(props)
     this.handleClick = this.handleClick.bind(this)
+    this.handleEdit = this.handleEdit.bind(this)
+    this.state = {
+      edit : false
+    }
   }
 
   contextMenu (e) {
@@ -14,6 +18,14 @@ class MessageItem extends React.PureComponent {
   handleClick (e) {
     e.preventDefault();
     this.props.deleteMessage(id);
+  }
+
+  handleEdit (e) {
+    e.preventDefault();
+    let boolean = this.state.edit ? false : true 
+    this.setState({
+      edit: boolean 
+    })
   }
 
   render () {
@@ -33,27 +45,33 @@ class MessageItem extends React.PureComponent {
     else if ((new Date() - jstime > (86400000*2)) && new Date() - jstime<= (86400000*7)) {
       timestamp = <span>Last {DAYS[jstime.getDay()]} at <Timestamp time={message[0].created_at} format='time'/></span>
     }
+
+    let showEdit = this.state.edit ? "show-edit-message" : "hidden-edit-message";
   
     if (message.length === 1) {
       let messageb;
       if (message[0].user_id === this.props.currentUser.id) {
-        messageb = <p className="delete-message" onClick={()=>this.handleClick(message.id)}>x</p>
+        messageb = <p className="delete-message" onClick={()=>this.handleClick(message.id)}>Delete Message</p>
       }
       message2 = <section id="message-item" key={message[0].id}>
-                <p className="message-body"> {message[0].body} </p>
-                {messageb}
+                <div className="message-body"> {message[0].body} </div>
+                  <div className="" onClick={()=>this.handleEdit()}> 
+                    {messageb}
+                  </div>
               </section>
     
     } else {
       message2 = this.props.message.map(mess => {
         let messagec;
         if (mess.user_id === this.props.currentUser.id) {
-          messagec = <p className="delete-message" onClick={()=>this.handleClick(message.id)}>x</p>
+          messagec = <div className="delete-message" onClick={()=>this.handleClick(message.id)}>Delete Message</div>
         }
         return (
           <section id="message-item" key={mess.id}>
-            <p className="message-body"> {mess.body} </p>
-            {messagec}
+            <div className="message-body"> {mess.body} </div>
+              <div className="" onClick={()=>this.handleEdit()}> 
+                {messagec}
+              </div>
           </section>
         )
       })
