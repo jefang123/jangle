@@ -59,10 +59,10 @@
       }
       section{
         display: flex;
-        .delete-message{
-          display: none;
-          align-self: flex-end;
-        }
+        // .delete-message{
+        //   display: none;
+        //   align-self: flex-end;
+        // }
       }
 
     }
@@ -71,15 +71,16 @@
 
       margin-right: 50px;
       color: white;
+      position: relative;
       // min-width: 200px;
     }
   }
   
-  .message:hover {
-    #message-item:hover .delete-message{
-      display: block;
-    }
-  }
+  // .message:hover {
+  //   #message-item:hover .delete-message{
+  //     display: block;
+  //   }
+  // }
 
   .message-index {
     margin:0px 20px;
@@ -92,9 +93,9 @@
       margin:5px 0;
       display:flex;
     }
-    .delete-message:hover {
-      color: red;
-    }
+    // .delete-message:hover {
+    //   color: red;
+    // }
     overflow-y:auto;
   }
   form {

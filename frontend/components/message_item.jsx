@@ -53,9 +53,19 @@ class MessageItem extends React.PureComponent {
       if (message[0].user_id === this.props.currentUser.id) {
         messageb = <p className="delete-message" onClick={()=>this.handleClick(message.id)}>Delete Message</p>
       }
+
+      // <i className="fas fa-ellipsis-v" onclick={ ()=>this.handleEdit() } />
+      // <div className={showEdit}>
+      //   <p>Update Message</p>
+      //   <p>Delete Message</p>
+      // </div>
+      // if (this.state.edit) {
+      //   edit = <input placeholder={message[0].body} />
+      // }
+
       message2 = <section id="message-item" key={message[0].id}>
                 <div className="message-body"> {message[0].body} </div>
-                  <div className="" onClick={()=>this.handleEdit()}> 
+                  <div className={showEdit} onClick={()=>this.handleEdit()}> 
                     {messageb}
                   </div>
               </section>
@@ -67,9 +77,9 @@ class MessageItem extends React.PureComponent {
           messagec = <div className="delete-message" onClick={()=>this.handleClick(message.id)}>Delete Message</div>
         }
         return (
-          <section id="message-item" key={mess.id}>
+          <section id="message-item" key={mess.id} onClick={(e)=>console.log(e.key)}>
             <div className="message-body"> {mess.body} </div>
-              <div className="" onClick={()=>this.handleEdit()}> 
+              <div className={showEdit} onClick={()=>this.handleEdit()}> 
                 {messagec}
               </div>
           </section>
