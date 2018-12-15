@@ -77,8 +77,8 @@ class MessageItem extends React.PureComponent {
 
                 <i className="fas fa-ellipsis-v" onClick={ ()=>this.handleMessageShow() } />
                   <section className={showEdit}>
-                    <p>Update Message</p>
-                    <p>Delete Message</p>
+                    <p>Edit</p>
+                    <p>Delete</p>
                   </section>
 
                   {/* <div className={showEdit} onClick={()=>this.handleEdit()}> 
@@ -113,13 +113,13 @@ class MessageItem extends React.PureComponent {
 
    return (
     <div className="message">
-      <div>
+
         <img className="message-image" src={window.user_url}></img>
         <div className="message-box">
           <p >{user ? user.username : null} {timestamp}</p> 
           {message2}
         </div>
-      </div>
+      
     </div>
    )
       
