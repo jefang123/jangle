@@ -21,3 +21,26 @@
     text-decoration: underline;
   }
 }
+
+.channel-show, .home-show {
+
+  .message-box {
+    
+    .message-item {
+
+      i {
+        align-self: center;
+      }
+
+      .hidden-message-options {
+        display: none;
+      }
+      
+      .show-message-options {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  
+  }
+}

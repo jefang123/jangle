@@ -206,7 +206,7 @@ class ServerShow extends React.PureComponent {
     else if (this.props.currentUser.id === this.props.server.creator_id) {
       button = <button onClick={this.handleClick.bind(this)}>Delete Server</button>
     } else {
-      button = <button onClick={this.handleRemoveClick.bind(this)}>Remove Server</button>
+      button = <button onClick={this.handleRemoveClick.bind(this)}>Leave Server</button>
     }
     
     let modalbutton;

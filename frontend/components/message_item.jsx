@@ -8,12 +8,20 @@ class MessageItem extends React.PureComponent {
     this.handleClick = this.handleClick.bind(this)
     this.handleEdit = this.handleEdit.bind(this)
     this.state = {
-      edit : true
+      showMessageOptions : false, 
+      edit : false
     }
   }
 
   contextMenu (e) {
     e.preventDefault();
+  }
+
+  handleMessageShow () {
+    let boolean = this.state.showMessageOptions ? false : true
+    this.setState({
+      showMessageOptions : boolean
+    })
   }
 
   handleClick (e) {
@@ -47,7 +55,7 @@ class MessageItem extends React.PureComponent {
       timestamp = <span>Last {DAYS[jstime.getDay()]} at <Timestamp time={message[0].created_at} format='time'/></span>
     }
 
-    let showEdit = this.state.edit ? "show-edit-message" : "hidden-edit-message";
+    let showEdit = this.state.showMessageOptions ? "show-message-options" : "hidden-message-options";
   
     if (message.length === 1) {
       let messageb;
@@ -66,18 +74,25 @@ class MessageItem extends React.PureComponent {
 
       message2 = <section className="message-item" key={message[0].id}  onClick={()=>this.handleEdit()}>
                 <div className="message-body"> {message[0].body} </div>
-                  <div className={showEdit} onClick={()=>this.handleEdit()}> 
+
+                <i className="fas fa-ellipsis-v" onClick={ ()=>this.handleMessageShow() } />
+                  <section className={showEdit}>
+                    <p>Update Message</p>
+                    <p>Delete Message</p>
+                  </section>
+
+                  {/* <div className={showEdit} onClick={()=>this.handleEdit()}> 
                     {messageb}
-                  </div>
+                  </div> */}
               </section>
       
-      const { edit } = this.state
+      // const { edit } = this.state
       
-      if (edit) {
-        message2 = <section className="message-item" key={message[0].id} onClick={()=>this.handleEdit()}>
-                    <MessageInput body={message[0].body} channel={this.props.channel} editId="edit"/>
-        </section>
-      }
+      // if (edit) {
+      //   message2 = <section className="message-item" key={message[0].id} onClick={()=>this.handleEdit()}>
+      //               <MessageInput body={message[0].body} channel={this.props.channel} editId="edit"/>
+      //   </section>
+      // }
     
     } else {
       message2 = this.props.message.map(mess => {
