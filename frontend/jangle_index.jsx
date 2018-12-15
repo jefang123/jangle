@@ -21,4 +21,22 @@ document.addEventListener("DOMContentLoaded", () => {
   window.dispatch = store.dispatch;
   const root = document.getElementById('root');
   ReactDOM.render(<Root store={store}/>, root);
+
+
+  // let message = document.getElementById("chat")
+  // let edit = document.getElementById("edit")
+  
+  // if (edit) {
+  //   if (edit.setSelectionRange) {
+  //     edit.focus();
+  //     edit.setSelectionRange(edit.value.length, edit.value.legnth);
+  //   }
+  // } else {
+  //   if (message.setSelectionRange) {
+  //     message.focus();
+  //     message.setSelectionRange(edit.value.length, edit.value.legnth);
+  //   }
+  // }
+
 });
+

@@ -4,12 +4,13 @@ class MessageCreateForm extends React.PureComponent {
   constructor(props) {
     super(props);
     this.state = {
-      body: "",
+      body: this.props.body || "",
       channel_id: this.props.match.params.channelId,
       user_id: this.props.currentUser.id
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.keyDown = this.keyDown.bind(this)
+    this.editId = this.props.editId || "chat"
   }
 
   handleSubmit(e) {
@@ -62,11 +63,11 @@ class MessageCreateForm extends React.PureComponent {
       <form>
         <textarea
         onKeyDown = {this.keyDown}
-        id = "chat"
+        id = {this.editId}
         rows= "1"
         className= "message-field"
         value={this.state.body} 
-        placeholder = {`Message ${text}`}
+        placeholder = {`Message ${text}`} 
         onChange={this.update('body')}/>
         
       </form>

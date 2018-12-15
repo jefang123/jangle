@@ -1,4 +1,5 @@
 import React from 'react';
+import MessageInput from './message_create_container';
 const Timestamp =  require('react-timestamp');
 
 class MessageItem extends React.PureComponent {
@@ -7,7 +8,7 @@ class MessageItem extends React.PureComponent {
     this.handleClick = this.handleClick.bind(this)
     this.handleEdit = this.handleEdit.bind(this)
     this.state = {
-      edit : false
+      edit : true
     }
   }
 
@@ -20,8 +21,8 @@ class MessageItem extends React.PureComponent {
     this.props.deleteMessage(id);
   }
 
-  handleEdit (e) {
-    e.preventDefault();
+  handleEdit () {
+    // e.preventDefault();
     let boolean = this.state.edit ? false : true 
     this.setState({
       edit: boolean 
@@ -63,12 +64,20 @@ class MessageItem extends React.PureComponent {
       //   edit = <input placeholder={message[0].body} />
       // }
 
-      message2 = <section id="message-item" key={message[0].id}>
+      message2 = <section className="message-item" key={message[0].id}  onClick={()=>this.handleEdit()}>
                 <div className="message-body"> {message[0].body} </div>
                   <div className={showEdit} onClick={()=>this.handleEdit()}> 
                     {messageb}
                   </div>
               </section>
+      
+      const { edit } = this.state
+      
+      if (edit) {
+        message2 = <section className="message-item" key={message[0].id} onClick={()=>this.handleEdit()}>
+                    <MessageInput body={message[0].body} channel={this.props.channel} editId="edit"/>
+        </section>
+      }
     
     } else {
       message2 = this.props.message.map(mess => {
@@ -77,7 +86,7 @@ class MessageItem extends React.PureComponent {
           messagec = <div className="delete-message" onClick={()=>this.handleClick(message.id)}>Delete Message</div>
         }
         return (
-          <section id="message-item" key={mess.id} onClick={(e)=>console.log(e.key)}>
+          <section className="message-item" key={mess.id} onClick={(e)=>console.log(e.key)}>
             <div className="message-body"> {mess.body} </div>
               <div className={showEdit} onClick={()=>this.handleEdit()}> 
                 {messagec}
