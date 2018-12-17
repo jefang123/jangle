@@ -88,11 +88,19 @@
     height: calc(100vh - 153px);
     // height: calc(100vh - 175px);
     h3 {
-      min-width: 350px;
+      min-width: 500px;
     }
     div {
       margin:5px 0;
       display:flex;
+    }
+
+    #message-top {
+      height: 20px;
+      width: 50px;
+      display: block;
+      color: red;
+      position: fixed;
     }
     // .delete-message:hover {
     //   color: red;
@@ -118,6 +126,19 @@
       resize: none;
       overflow-wrap: break-word;
       word-break: break-all;
+    }
+  }
+}
+
+.message-item {
+  .message-edit {
+    position:absolute;
+    right:0px;
+    bottom:0px;
+    strong {
+      color: #7289da;
+      opacity: 1;
+      // color: #00b0f4;
     }
   }
 }

@@ -28,6 +28,15 @@ class MessageChannel < ApplicationCable::Channel
     MessageChannel.broadcast_to('message_channel', new_channel)
   end
   
+  def update(data)
+    field = data["field"]
+    id = data["id"]
+    chunk = data["data"]
+    current_item = field.capitalize.constantize.find(id)
+    current_item.update(chunk)
+    MessageChannel.broadcast_to('message_channel', current_item)
+  end 
+
   def unsubscribed
   end 
 end 

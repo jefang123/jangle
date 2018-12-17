@@ -74,7 +74,12 @@ class ServerShow extends React.PureComponent {
 
       speak2: function(data) {
         return this.perform("speak2", data)
-      }
+      },
+
+      update: function(data) {
+        return this.perform("update", data)
+      } 
+
     })
   }
 

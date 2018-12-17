@@ -11,13 +11,21 @@ class MessageCreateForm extends React.PureComponent {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.keyDown = this.keyDown.bind(this)
     this.editId = this.props.editId || "chat"
+    this.id = this.props.messageId
   }
 
   handleSubmit(e) {
-    App.cable.subscriptions.subscriptions[0].speak(this.state);
-    this.setState({
-      body: "",
-    });
+    let handleEdit = this.props.handleEdit;
+    if (this.editId !== "chat") {
+      App.cable.subscriptions.subscriptions[0].update({field:"message", id:this.id, data:this.state})
+      handleEdit(0)
+    } else {
+      App.cable.subscriptions.subscriptions[0].speak(this.state);
+      this.setState({
+        body: "",
+      });
+    }
+
   }
   
   componentDidUpdate(prevProps) {
@@ -29,12 +37,20 @@ class MessageCreateForm extends React.PureComponent {
   }
 
   keyDown(e) {
+    let handleEdit = this.props.handleEdit;
     if (e.keyCode === 13) {
       if (this.state.body === "") {
         e.preventDefault();
       } else {
         this.handleSubmit();
       }
+    }
+
+    if (this.editId !== "chat" && e.keyCode === 27 ) {
+      handleEdit(0)
+      this.setState({
+        body: this.props.body
+      })
     }
   }
 
@@ -73,8 +89,7 @@ class MessageCreateForm extends React.PureComponent {
         className= "message-field"
         value={this.state.body} 
         placeholder = {`Message ${text}`} 
-        onChange={this.update('body')}/>
-        
+        onChange={this.update('body')}/>        
       </form>
     )
   }

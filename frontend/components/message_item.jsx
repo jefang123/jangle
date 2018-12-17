@@ -6,22 +6,15 @@ class MessageItem extends React.PureComponent {
   constructor (props) {
     super(props)
     this.handleClick = this.handleClick.bind(this)
-    this.handleEdit = this.handleEdit.bind(this)
+    this.handleClickOut = this.handleClickOut.bind(this)
     this.state = {
       showMessageOptions : false, 
-      edit : false
     }
+    
   }
 
   contextMenu (e) {
     e.preventDefault();
-  }
-
-  handleMessageShow () {
-    let boolean = this.state.showMessageOptions ? false : true
-    this.setState({
-      showMessageOptions : boolean
-    })
   }
 
   handleClick (e) {
@@ -29,12 +22,10 @@ class MessageItem extends React.PureComponent {
     this.props.deleteMessage(id);
   }
 
-  handleEdit () {
-    // e.preventDefault();
-    let boolean = this.state.edit ? false : true 
-    this.setState({
-      edit: boolean 
-    })
+  handleClickOut () {    
+    if (this.props.showMessageOptions) {
+      this.props.handleMessageShow(0)
+    }
   }
 
   render () {
@@ -54,8 +45,6 @@ class MessageItem extends React.PureComponent {
     else if ((new Date() - jstime > (86400000*2)) && new Date() - jstime<= (86400000*7)) {
       timestamp = <span>Last {DAYS[jstime.getDay()]} at <Timestamp time={message[0].created_at} format='time'/></span>
     }
-
-    let showEdit = this.state.showMessageOptions ? "show-message-options" : "hidden-message-options";
   
     if (message.length === 1) {
       let messageb;
@@ -72,13 +61,27 @@ class MessageItem extends React.PureComponent {
       //   edit = <input placeholder={message[0].body} />
       // }
 
-      message2 = <section className="message-item" key={message[0].id}  onClick={()=>this.handleEdit()}>
-                <div className="message-body"> {message[0].body} </div>
+      // <p>escape to <span>cancel</span> enter to <span>save</span></p>
+      
+      let editText;
+      if (message[0].created_at !== message[0].updated_at) {
+        editText = <span>&nbsp;(edited)</span>
+      }
+      let messageId = message[0].id;
 
-                <i className="fas fa-ellipsis-v" onClick={ ()=>this.handleMessageShow() } />
+      let handleEdit = this.props.handleEdit
+      let handleMessageShow = this.props.handleMessageShow
+
+      const { edit, showMessageOptions } = this.props
+      let showEdit = (messageId === showMessageOptions) ? "show-message-options" : "hidden-message-options"
+      
+      message2 = <section className="message-item" key={messageId} onClick={()=>this.handleClickOut()}>
+                <div className="message-body"> {message[0].body} {editText}</div>
+
+                <i className="fas fa-ellipsis-v" onClick={ ()=>handleMessageShow(messageId) } />
                   <section className={showEdit}>
-                    <p>Edit</p>
-                    <p>Delete</p>
+                    <p onClick={()=>handleEdit(messageId)}>Edit</p>
+                    <p onClick={()=>this.handleClick(e)}>Delete</p>
                   </section>
 
                   {/* <div className={showEdit} onClick={()=>this.handleEdit()}> 
@@ -86,22 +89,26 @@ class MessageItem extends React.PureComponent {
                   </div> */}
               </section>
       
-      // const { edit } = this.state
       
-      // if (edit) {
-      //   message2 = <section className="message-item" key={message[0].id} onClick={()=>this.handleEdit()}>
-      //               <MessageInput body={message[0].body} channel={this.props.channel} editId="edit"/>
-      //   </section>
-      // }
+      if (edit === messageId) {
+        message2 = <section className="message-item" key={message[0].id}>
+                    <MessageInput handleEdit={handleEdit} messageId={message[0].id} body={message[0].body} channel={this.props.channel} editId="edit"/>
+                    <p className="message-edit">escape to <strong>cancel</strong> • enter to <strong>save</strong></p>
+        </section>
+      }
     
     } else {
+      const { edit, showMessageOptions} = this.props
       message2 = this.props.message.map(mess => {
+
+        let showEdit = mess.id === showMessageOptions ? "show-message-options" : "hidden-message-options"
+
         let messagec;
         if (mess.user_id === this.props.currentUser.id) {
           messagec = <div className="delete-message" onClick={()=>this.handleClick(message.id)}>Delete Message</div>
         }
         return (
-          <section className="message-item" key={mess.id} onClick={(e)=>console.log(e.key)}>
+          <section className="message-item" key={mess.id} >
             <div className="message-body"> {mess.body} </div>
               <div className={showEdit} onClick={()=>this.handleEdit()}> 
                 {messagec}

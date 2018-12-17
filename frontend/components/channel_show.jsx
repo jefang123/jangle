@@ -17,8 +17,6 @@ class ChannelShow extends React.PureComponent {
 
   componentDidMount () {
     this.props.fetchMessages();
-    this.scrollBottom();
-    
   }
 
 
@@ -29,12 +27,31 @@ class ChannelShow extends React.PureComponent {
         channel_id: this.props.match.params.channelId
       })
     }
+
+    // const filteredMessages = this.props.messages.filter(message => {
+    //   if (message.channel_id === this.props.channel.id) {
+    //     return message
+    //   }
+    // })
+
+    // const prevMessages = this.props.messages.filter(message => {
+    //   if (message.channel_id === this.props.channel.id) {
+    //     return message
+    //   }
+    // })
+
+
+    // if (this.props.messages.length > prevProps.messages.length) {
     this.scrollBottom();
+    // }
   }
 
   scrollBottom(){
-    if(this.bottom) {
-    this.bottom.scrollIntoView();
+    if(this.bottom ) {
+      
+
+      this.bottom.scrollIntoView();
+    
     }
   }
 
@@ -180,6 +197,11 @@ class ChannelShow extends React.PureComponent {
       header = <h3># {channel.channel_name}<span>{channel.channel_topic}</span></h3>
       messageheader =  <h3>This is the beginning of #{channel.channel_name} </h3>
     }
+
+    // let bottomDiv;
+    // if (sortedMessages.length > 0 ) {
+    //   bottomDiv = <div ref={(el) => { this.bottom = el; }}></div>
+    // }
 
     return (
       <>
