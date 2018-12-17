@@ -14,7 +14,7 @@ Live Link: http://jangle.jefang.me
 * 1 on 1 Private Messaging in default HOME server
   - Users can search for other existing users to start a 1 on 1 private chat
 
-## Technologies:
+### Technologies:
 ReactJS\
 Redux\
 Ruby On Rails\
