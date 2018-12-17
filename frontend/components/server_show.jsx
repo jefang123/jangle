@@ -297,7 +297,7 @@ class ServerShow extends React.PureComponent {
             <section className='server-heading'>
               <h3>{server.server_name} {icon}</h3>
               <div className={showServerName}>
-                <button>Edit Server</button>
+                {/* <button>Edit Server</button> */}
                 {button}
                 {modalbutton}
               </div>
