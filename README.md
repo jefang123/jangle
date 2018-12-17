@@ -14,6 +14,14 @@ Live Link: http://jangle.jefang.me
 * 1 on 1 Private Messaging in default HOME server
   - Users can search for other existing users to start a 1 on 1 private chat
 
+## Technologies:
+ReactJS\
+Redux\
+Ruby On Rails\
+jQuery(ajax)\
+Websockets via ActionCable \
+HTML/CSS
+
 ### Future ideas:
 * Optimizing Joining Servers
 * Multi-User Private Messaging

@@ -335,13 +335,7 @@ class ServerShow extends React.PureComponent {
         </div>
       )
     }
-
-  
   }
-
 }
-
-
-{/* <i class="fas fa-ellipsis-v"></i> */}
 
 export default ServerShow;
