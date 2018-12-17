@@ -47,17 +47,7 @@ class MessageIndex extends React.PureComponent {
     this.props.deleteMessage(id);
   }
 
-  // componentDidUpdate() {
-  //   this.scrollBottom();
-  // }
-
-  // scrollBottom(){
-  //   let top = document.getElementById("message-top");
-  //   let bottom = document.getElementById("message-bottom");
-  //   if(this.bottom ) {
-  //     this.bottom.scrollIntoView();
-  //   }
-  // }
+ 
 
   render () {
     const filteredMessages = this.props.messages.filter(message => {
@@ -99,15 +89,12 @@ class MessageIndex extends React.PureComponent {
         handleMessageShow={this.handleMessageShow}
         edit = {this.state.edit}
         showMessageOptions = {this.state.showMessageOptions}
-        onClick = {this.handleClickOut}
         />
     })
 
     return (
       <>
-        {/* <div id="message-top" ref={(el) => {this.top = el; }}>THIS IS THE TOP</div> */}
         {messages}
-        {/* <div id="message-bottom" ref={(el) => { this.bottom = el; }}></div> */}
       </>
     );
   }

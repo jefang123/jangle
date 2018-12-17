@@ -4,8 +4,6 @@ import { Redirect } from 'react-router-dom';
 import MessageIndex from './message_index';
 import TypingUsers from './typing_users';
 
-const Timestamp =  require('react-timestamp');
-
 class ChannelShow extends React.PureComponent {
   constructor (props) {
     super(props)
@@ -28,30 +26,12 @@ class ChannelShow extends React.PureComponent {
       })
     }
 
-    // const filteredMessages = this.props.messages.filter(message => {
-    //   if (message.channel_id === this.props.channel.id) {
-    //     return message
-    //   }
-    // })
-
-    // const prevMessages = this.props.messages.filter(message => {
-    //   if (message.channel_id === this.props.channel.id) {
-    //     return message
-    //   }
-    // })
-
-
-    // if (this.props.messages.length > prevProps.messages.length) {
     this.scrollBottom();
-    // }
   }
 
   scrollBottom(){
     if(this.bottom ) {
-      
-
       this.bottom.scrollIntoView();
-    
     }
   }
 
@@ -102,82 +82,6 @@ class ChannelShow extends React.PureComponent {
         deleteMessage={this.props.deleteMessage}
       />
 
-    const filteredMessages = this.props.messages.filter(message => {
-      if (message.channel_id === this.props.channel.id) {
-        return message
-      }
-    })
-
-    const sortedMessages = [{ message: [filteredMessages[0]] }];
-
-    for (let index = 1; index < filteredMessages.length; index++) {
-      
-      let currentMessage = filteredMessages[index]
-      let oldMessage = sortedMessages[sortedMessages.length-1].message[0]
-
-      let newId = currentMessage.user_id
-      let oldId = oldMessage.user_id
-
-      let newDate = new Date(currentMessage.created_at)
-      let oldDate = new Date(oldMessage.created_at)
-      if (newId === oldId && newDate.toDateString() === oldDate.toDateString()) {
-        sortedMessages[sortedMessages.length-1].message.push(currentMessage)
-      } else {
-        sortedMessages.push({ message:[currentMessage] })
-      }
-    }
-
-    const messages = this.props.messages.map(message => {
-      if (!message.id) {
-        return null;
-        //return <Loading /> ?
-      }
-      // LinkPreview.getPreview(message.body).then(data =>{
-      // })
-      let messageb;
-      if (message.user_id === this.props.currentUser.id) {
-        messageb = <p className="delete-message" onClick={()=>this.handleClick(message.id)}>x</p>
-      }
-
-      let timestamp = <span><Timestamp time={message.created_at} format='date'/></span>
-      let jstime = new Date(message.created_at)
-      const DAYS = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-
-      if (new Date() - jstime <= 86400000) {
-        timestamp = <span><Timestamp time={message.created_at} format='time'/></span>
-      }
-      else if ((new Date() - jstime > 86400000) && new Date() - jstime <= 86400000*2 ) {
-        timestamp = <span>Yesterday at <Timestamp time={message.created_at} format='time'/></span>
-      }
-      else if ((new Date() - jstime > (86400000*2)) && new Date() - jstime<= (86400000*7)) {
-        timestamp = <span>Last {DAYS[jstime.getDay()]} at <Timestamp time={message.created_at} format='time'/></span>
-      }
-
-
-
-      if (message.channel_id === this.props.channel.id) {
-        const user = users[message.user_id];
-        return (
-           
-          <div key={message.id} className="message">
-            <div>
-              <img className="message-image" src={window.user_url}></img>
-            <div className="message-box">
-            <p >{user ? user.username : null} {timestamp}</p> 
-              
-                <section>
-                  <p className="message-body"> {message.body}</p>
-                
-                  {messageb}
-                </section>
-            </div>
-            </div>
-            
-          </div>
-        );
-      }
-    });
-
     const { channel } = this.props;
     // let messageLimit = 25
     // let shownMessages = messages.slice()
@@ -197,11 +101,6 @@ class ChannelShow extends React.PureComponent {
       header = <h3># {channel.channel_name}<span>{channel.channel_topic}</span></h3>
       messageheader =  <h3>This is the beginning of #{channel.channel_name} </h3>
     }
-
-    // let bottomDiv;
-    // if (sortedMessages.length > 0 ) {
-    //   bottomDiv = <div ref={(el) => { this.bottom = el; }}></div>
-    // }
 
     return (
       <>
