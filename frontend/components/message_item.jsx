@@ -84,7 +84,7 @@ class MessageItem extends React.PureComponent {
    
       message2 = this.props.message.map(mess => {
 
-        let showEdit = mess.id === showMessageOptions ? "show-message-options-item" : "hidden-message-options"
+        let showEdit = mess.id === showMessageOptions ? "show-message-options" : "hidden-message-options"
         let editText, editable;
         if (mess.created_at !== mess.updated_at) {
           editText = <span>&nbsp;(edited)</span>

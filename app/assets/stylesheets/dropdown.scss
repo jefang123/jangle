@@ -28,12 +28,11 @@
     width: 70%;
     
     .message-item {
-
+      position: relative;
       i {
         display: none;
         color: #acacae;
         align-self: center;
-        position: relative;
       }
 
       i:hover {
@@ -49,7 +48,7 @@
         flex-direction: column;
         position: absolute;
         z-index: 5;
-        top: 55px;
+        top: 25px;
         right: -28px;
         align-items: center;
         background-color: black;
@@ -65,23 +64,6 @@
         }
       }
 
-      .show-message-options-item {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        z-index: 5;
-        right: -28px;
-        align-items: center;
-        background-color: black;
-        padding: 5px;
-        border-radius: 5px;
-        p {
-          margin: 5px;
-        }
-        p:hover {
-          color: white;
-        }
-      }
     }
 
     .message-item:hover {

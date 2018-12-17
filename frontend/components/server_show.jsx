@@ -179,7 +179,7 @@ class ServerShow extends React.PureComponent {
       if(this.props.server.creator_id === this.props.currentUser.id) {
         channelb = 
         <div className="delete-server" onClick={()=>{this.props.deleteChannel(channel.id)}}>
-        X
+          <i className="fas fa-cog"></i>
         <div className="delete-hidden"><div className="arrow-left"></div>Delete Channel </div>
         </div>
       } 
@@ -297,6 +297,7 @@ class ServerShow extends React.PureComponent {
             <section className='server-heading'>
               <h3>{server.server_name} {icon}</h3>
               <div className={showServerName}>
+                <button>Edit Server</button>
                 {button}
                 {modalbutton}
               </div>
