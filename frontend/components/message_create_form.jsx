@@ -59,6 +59,11 @@ class MessageCreateForm extends React.PureComponent {
     else {
       text = `#${this.props.channel.channel_name}`
     }
+
+    if (this.editId !== "chat") {
+      
+    }
+
     return (
       <form>
         <textarea
