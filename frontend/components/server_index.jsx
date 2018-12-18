@@ -30,7 +30,7 @@ class ServerIndex extends React.PureComponent {
 
   render(){ 
  
-    if (this.props.servers.length === 0) {
+    if (!this.props.servers || this.props.servers.length === 0) {
       return (
         <>
           <ServerLoad />
@@ -38,19 +38,26 @@ class ServerIndex extends React.PureComponent {
       );
     }
 
-    let filteredServers = this.props.servers.filter(server => {
+    let currentServers = this.props.servers.filter(server => {
+      if (server.user_ids) {
+        return server.user_ids.includes(this.props.currentUser.id)
+      }
+    })
+
+
+    let filteredServers = currentServers.filter(server => {
       return server.id !== window.homeId
     })
     let firstServer = filteredServers[0];
 
   
-    const home = this.props.servers.map(server => {
+    const home = currentServers.map(server => {
       if (server.private) {
         window.homeId = server.id;
         return <ServerIndexItem key={server.id} server={server} />
       }
     })
-    const servers = this.props.servers.map(server => {
+    const servers = currentServers.map(server => {
       if (!server.private) {
         return <ServerIndexItem 
         key={server.id} 

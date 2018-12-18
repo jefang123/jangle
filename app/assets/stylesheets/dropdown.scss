@@ -2,6 +2,15 @@
   display:none;
 }
 
+@keyframes appear {
+  0% {
+    left: 180px;
+  }
+  100% {
+    left: 140px;
+  }
+}
+
 .display-servershow {
   z-index: 5;
   display: flex;
@@ -9,6 +18,7 @@
   position: absolute;
   left: 140px;
   width: 150px;
+  animation: appear .5s;
   > button {
     background-color: white;
     color: #acacae;
@@ -43,6 +53,15 @@
         display: none;
       }
       
+      @keyframes appear2 {
+        0% {
+          top: 0;
+        }
+        100% {
+          top: 25px;
+        }
+      }
+
       .show-message-options {
         display: flex;
         flex-direction: column;
@@ -54,8 +73,7 @@
         background-color: black;
         padding: 5px;
         border-radius: 5px;
-        // transition: transform .8s;
-        // transform: rotate(90deg);
+        animation: appear2 .2s;
         p {
           margin: 5px;
         }
