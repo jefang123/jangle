@@ -27,17 +27,26 @@ class JoinServerForm extends React.PureComponent {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.processForm(this.state);
+
+    let serverId;
+
+    for (let i=0; i<this.props.servers.length; i++) {
+      if (this.props.servers[i].server_name === this.state.server_name) {
+        serverId = this.props.servers[i].id
+      }
+    }
+
+    this.props.processForm({server_id: serverId});
     this.setState({
       server_name: ""
     });
   }
 
   setServer (e) {
+    this.servers = [];
     this.setState({
       server_name: e.target.innerText
     })
-    this.servers = [];
   }
 
   update(field) {
@@ -53,6 +62,7 @@ class JoinServerForm extends React.PureComponent {
       this.servers = filteredServers.filter(server => {
         return server.server_name.includes(this.state.server_name)
       })
+     
     };
   }
   render () {
@@ -86,7 +96,9 @@ class JoinServerForm extends React.PureComponent {
         </div>
         <h3> Join a Server!</h3>
         <input  
-        placeholder="Search Servers by Name"
+        type='text'
+        placeholder="Search Servers"
+        value={this.state.server_name}
         onChange={this.update('server_name')}/>
         <div className="server-search">
           {search}

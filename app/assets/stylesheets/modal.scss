@@ -179,3 +179,24 @@
   }
 }
 
+.server-search {
+  background-color: #3f4247;
+  z-index: 1;
+  position: absolute;
+  top: 96px;
+  right: 20px;
+  font-size: 20px;
+  color: #acacae;
+  li{
+    padding: 5px;
+    border-top: 1px solid #72767d;
+  }
+
+  >:first-child {
+    border-top: none;
+  }
+
+  li:hover {
+    color: #fff;
+  }
+}
