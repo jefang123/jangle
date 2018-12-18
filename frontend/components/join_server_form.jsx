@@ -1,21 +1,20 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { createJoin } from '../actions/server_actions';
-import { fetchAllServers } from '../actions/userjoin_actions'
+import { createJoin, fetchServers } from '../actions/server_actions';
 
 class JoinServerForm extends React.PureComponent {
   constructor(props) {
     super(props);
     this.state = {
-      server_id: ""
+      server_name: ""
     };
     this.servers = [];
     this.handleSubmit = this.handleSubmit.bind(this);
-    // this.setServer = this.setServer.bind(this)
+    this.setServer = this.setServer.bind(this)
   }
 
   componentDidMount() {
-    this.props.fetchAllServers();
+    this.props.fetchServers();
   }
 
   componentWillReceiveProps(nextProps) {
@@ -30,36 +29,41 @@ class JoinServerForm extends React.PureComponent {
     e.preventDefault();
     this.props.processForm(this.state);
     this.setState({
-      server_id: ""
+      server_name: ""
     });
   }
 
-  // setServer (e) {
-  //   this.setState({
-  //     server_id: e.target.innerText
-  //   })
-  //   this.servers = [];
-  // }
+  setServer (e) {
+    this.setState({
+      server_name: e.target.innerText
+    })
+    this.servers = [];
+  }
 
   update(field) {
+    let filteredServers = this.props.servers.filter(server =>{
+      if (server.user_ids) {
+        return !server.private && !server.user_ids.includes(this.props.currentUser.id)
+      }
+    });
     return (e) => {
       this.setState({
         [field]: e.target.value
       });
-      // let props = Object.keys(this.props.servers2)
-      // this.servers = props.filter(prop => prop.includes(`${this.state.server_id}`))
-      // this.servers = this.servers.filter(server => this.prop)
+      this.servers = filteredServers.filter(server => {
+        return server.server_name.includes(this.state.server_name)
+      })
     };
   }
   render () {
-    // let servers = this.servers.slice(0,5);
-    // const search = servers.map((server,idx)=> {
-    //   return (
-    //     <li key={idx} onClick={this.setServer}>
-    //       {this.props.servers2[server].server_name}
-    //     </li>
-    //   )
-    // })
+    let servers = this.servers.slice(0,5);
+    const search = servers.map((server,idx)=> {
+      return (
+        <li key={idx} onClick={this.setServer}>
+          {server.server_name}
+        </li>
+      )
+    })
     const errors = this.props.errors.map((error, idx) => {
       return (
         <p key={idx} >
@@ -69,7 +73,7 @@ class JoinServerForm extends React.PureComponent {
     })
 
     let button;
-    if (this.state.server_id === "") {
+    if (this.state.server_name === "") {
       button = <button disabled>Join Server</button>
     } else {
       button = <button>Join Server</button>
@@ -81,31 +85,29 @@ class JoinServerForm extends React.PureComponent {
           {errors}
         </div>
         <h3> Join a Server!</h3>
-        <input 
-        type='number' 
-        min = "1"
-        value={this.state.server_id} 
-        placeholder="Server ID number"
-        onChange={this.update('server_id')}/>
-        {/* <div className="server-search">
+        <input  
+        placeholder="Search Servers by Name"
+        onChange={this.update('server_name')}/>
+        <div className="server-search">
           {search}
-        </div> */}
+        </div>
        {button}
       </form>
     )
   }
 }
 
-const mapStateToProps = (state, ownProps) => {
+const mapStateToProps = (state) => {
   return {
+    servers: Object.values(state.entities.servers),
     errors: state.errors.join
   };
 }
 
 const mapDispatchToProps = dispatch => {
   return {
-    processForm: join => dispatch(createJoin(join)),
-    fetchAllServers: () => dispatch(fetchAllServers)
+    fetchServers: () => dispatch(fetchServers()),
+    processForm: join => dispatch(createJoin(join))
   }
 }
 

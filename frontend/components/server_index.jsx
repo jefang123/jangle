@@ -23,7 +23,6 @@ class ServerIndex extends React.PureComponent {
     this.setState({ show: false });
   }
     
-
   componentDidMount(){
     this.props.fetchServers();
   }
@@ -86,7 +85,11 @@ class ServerIndex extends React.PureComponent {
                 <Modal show={this.state.show} handleClose={this.hideModal}>
                   <div className="create-server-modal">
                     <ServerCreateForm handleClose={this.hideModal} />
-                    <JoinServerForm handleClose={this.hideModal} />
+                    <JoinServerForm 
+                      // servers={this.props.servers}
+                      handleClose={this.hideModal} 
+                      currentUser={this.props.currentUser}
+                    />
                   </div>
                 </Modal>
                 <button onClick={this.showModal} className="create-server" >+</button>

@@ -1,7 +1,7 @@
 class Api::ServersController < ApplicationController
 
   def index 
-    @servers = current_user.servers
+    @servers = Server.all
   end 
 
   def show 

@@ -149,7 +149,6 @@ class ServerShow extends React.PureComponent {
 
     if (!this.props.server)
     return <Loading />
-    debugger
     const channels= this.props.channels.map( channel => {
       if (channel.id === parameter) {
         klass = "ch-selected"
