@@ -46,22 +46,22 @@ class ServerShow extends React.PureComponent {
 
         // else if (data.action === "done") {
         // }
-        if (data.server) {
+        // if (data.server) {
 
-          const newData = {server: data.server, channels: {}, users: {}}
-          if (data.channels.length) {
-            for (let index = 0; index < data.channels.length; index++) {
-              newData.channels[data.channels[index].id] = data.channels[index]
-            }
-          }
-          if (data.users.length) {
-            for (let index = 0; index < data.users.length; index++) {
-              newData.users[data.users[index].id] = data.users[index]
-            }
-          }
-          dispatch(receiveServer(newData));
-        }
-        else if(data.channels) {
+        //   const newData = {server: data.server, channels: {}, users: {}}
+        //   if (data.channels.length) {
+        //     for (let index = 0; index < data.channels.length; index++) {
+        //       newData.channels[data.channels[index].id] = data.channels[index]
+        //     }
+        //   }
+        //   if (data.users.length) {
+        //     for (let index = 0; index < data.users.length; index++) {
+        //       newData.users[data.users[index].id] = data.users[index]
+        //     }
+        //   }
+        //   dispatch(receiveServer(newData));
+        // }
+        if(data.channels) {
           let parsedCh = {};
           data.channels.forEach(channel => {
             parsedCh[channel.id] = channel;

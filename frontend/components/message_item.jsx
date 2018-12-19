@@ -19,7 +19,6 @@ class MessageItem extends React.PureComponent {
 
   handleClick (id) {
     App.cable.subscriptions.subscriptions[0].delete({field:"message", id})
-    // this.props.deleteMessage(id);
   }
 
   handleClickOut () {    
