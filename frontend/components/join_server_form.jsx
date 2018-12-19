@@ -29,14 +29,14 @@ class JoinServerForm extends React.PureComponent {
     e.preventDefault();
 
     let serverId;
-
+    let userId = this.props.currentUser.id;
     for (let i=0; i<this.props.servers.length; i++) {
       if (this.props.servers[i].server_name === this.state.server_name) {
         serverId = this.props.servers[i].id
       }
     }
-
-    this.props.processForm({server_id: serverId});
+    App.cable.subscriptions.subscriptions[0].join({server_id: serverId, user_id: userId})
+    // this.props.processForm({server_id: serverId});
     this.setState({
       server_name: ""
     });
