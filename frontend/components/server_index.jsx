@@ -43,7 +43,6 @@ class ServerIndex extends React.PureComponent {
       }
     })
 
-
     let filteredServers = currentServers.filter(server => {
       return server.id !== window.homeId
     })

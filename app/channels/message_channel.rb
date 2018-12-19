@@ -47,11 +47,14 @@ class MessageChannel < ApplicationCable::Channel
   def join(data)
     UserJoin.create(server_id: data['server_id'], user_id: data['user_id'])
     joined_server = Server.find(data['server_id'])
-    # users_hash = {}
-    # joined_server.users.each |user| do
-    #   users_hash[user.id] = user
-    # end
-    new_data = { server: joined_server, channels: joined_server.channels, users: joined_server.users }
+    server_hash = {
+      id: joined_server.id, 
+      server_name: joined_server.server_name,
+      creator_id: joined_server.creator_id,
+      private: joined_server.private,
+      user_ids: joined_server.user_ids
+    }
+    new_data = { user_id: data['user_id'], server: server_hash, channels: joined_server.channels, users: joined_server.users }
     MessageChannel.broadcast_to('message_channel', new_data)
   end 
 
