@@ -5,10 +5,10 @@ import ChannelCreateContainer from './channel_create_container';
 import PrivateCreate from './channel_create_private_form';
 import Modal from './modal';
 import { ProtectedRoute } from '../util/route_util';
-import { receiveChannel, receiveChannels } from '../actions/channel_actions';
+import { receiveChannel, receiveChannels, removeChannel } from '../actions/channel_actions';
 import WelcomeShow from './welcome_show';
 import { receiveServer } from '../actions/server_actions';
-import { receiveMessage } from '../actions/message_actions';
+import { receiveMessage, removeMessage } from '../actions/message_actions';
 import Loading from './loading';
 
 class ServerShow extends React.PureComponent {
@@ -74,6 +74,14 @@ class ServerShow extends React.PureComponent {
         else if(data.body){
           dispatch(receiveMessage(data));
         }
+        else if(data.delete){
+          if (data.delete === "message") {
+            dispatch(removeMessage(data.id))
+          }
+          else if (data.delete === "channels") {
+            dispatch(removeChannel(data.id))
+          }
+        }
       },
 
       typing: function(data) {
@@ -98,6 +106,10 @@ class ServerShow extends React.PureComponent {
 
       join: function(data) {
         return this.perform("join", data)
+      },
+      
+      delete: function(data) {
+        return this.perform("delete", data)
       }
 
     })

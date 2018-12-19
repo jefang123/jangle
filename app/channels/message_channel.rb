@@ -37,6 +37,13 @@ class MessageChannel < ApplicationCable::Channel
     MessageChannel.broadcast_to('message_channel', current_item)
   end 
 
+  def delete(data)
+    field = data["field"]
+    id = data["id"]
+    field.capitalize.constantize.destroy(id)
+    MessageChannel.broadcast_to('message_channel', {delete: data["field"], id: id})
+  end
+
   def join(data)
     UserJoin.create(server_id: data['server_id'], user_id: data['user_id'])
     joined_server = Server.find(data['server_id'])
