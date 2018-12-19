@@ -60,7 +60,8 @@ class ServerShow extends React.PureComponent {
               }
             }
             dispatch(receiveServer(newData));
-            // return <Redirect to={`/server/${data.server.id}`}/>
+          } else {
+
           }
         }
         else if(data.channels) {
