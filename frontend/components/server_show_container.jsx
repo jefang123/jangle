@@ -9,7 +9,6 @@ const mapStateToProps = (state, ownProps) => {
   return {
     redirect: state.errors.redirect,
     server: state.entities.servers[ownProps.match.params.serverId],
-    // users: Object.values(state.entities.users),
     users: state.entities.users,
     channels: Object.values(state.entities.channels),
     currentUser: state.entities.users[state.session.currentUserId]

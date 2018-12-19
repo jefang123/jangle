@@ -41,26 +41,26 @@ class ServerShow extends React.PureComponent {
     },    {
 
       received: (data) => {
-        if(data.action === "typing") {
-        }
+        // if(data.action === "typing") {
+        // }
 
-        else if (data.action === "done") {
+        // else if (data.action === "done") {
+        // }
+        if (data.server) {
+          dispatch(receiveServer(data));
         }
-        if(data.channels) {
+        else if(data.channels) {
           let parsedCh = {};
           data.channels.forEach(channel => {
             parsedCh[channel.id] = channel;
           })
-          dispatch(receiveChannels(parsedCh))
+          dispatch(receiveChannels(parsedCh));
         } 
         else if (data.channel_name) {
           dispatch(receiveChannel(data));
         }
         else if(data.body){
           dispatch(receiveMessage(data));
-        }
-        else if(data.server_name) {
-          dispatch(receiveServer(data));
         }
       },
 
@@ -237,7 +237,6 @@ class ServerShow extends React.PureComponent {
 
     let modalshow = <Modal show={this.state.show} handleClose={this.hideModal}>
     <div className="channel-create-modal">
-
       <ChannelCreateContainer handleClose={this.hideModal} />
     </div>
     </Modal >

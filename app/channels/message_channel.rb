@@ -40,7 +40,8 @@ class MessageChannel < ApplicationCable::Channel
   def join(data)
     UserJoin.create(server_id: data['server_id'], user_id: data['user_id'])
     joined_server = Server.find(data['server_id'])
-    MessageChannel.broadcast_to('message_channel', joined_server)
+    new_data = { server: joined_server, channels: joined_server.channels, users: joined_server.users }
+    MessageChannel.broadcast_to('message_channel', new_data)
   end 
 
   def unsubscribed

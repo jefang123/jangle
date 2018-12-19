@@ -10,7 +10,8 @@ export default (state={}, action) => {
     case CREATE_SERVER:
       return merge({}, state, {[action.server.id]:action.server})
     case RECEIVE_SERVER: 
-      return merge({}, state, {[action.server.id]:action.server})
+      return _.merge({}, state, {[action.server.id]:action.server})
+      // recursively merge incase of updates
     case REMOVE_SERVER:
       const newState = merge({}, state);
       delete newState[action.serverId];
