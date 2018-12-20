@@ -184,6 +184,14 @@ class ServerShow extends React.PureComponent {
 
     if (!this.props.server)
     return <Loading />
+
+    const { server, currentUser } = this.props;
+
+    // const channels = <ChannelIndex 
+    //                   server={server}
+    //                   currentUser={currentUser}
+    //                   />
+
     const channels= this.props.channels.map( channel => {
       if (channel.id === parameter) {
         klass = "ch-selected"
@@ -191,26 +199,16 @@ class ServerShow extends React.PureComponent {
         klass = ""
       }
 
-      let hash;
-      // let privateS = this.props.server.private;
-      if (this.props.server.private) {
-        hash = "@"
+      let hash, channelName, channelb;
+      if (server.private) {
+        hash = "@";
+        channelName = channel.channel_topic;
       } else {
-        hash = "#"
+        hash = "#";
+        channelName = channel.channel_name;
       }
 
-      let channelName;
-      // if (privateS) {
-        if (channel.channel_name === this.props.currentUser.username) {
-          channelName = channel.channel_topic
-        } 
-      // }
-      else {
-        channelName = channel.channel_name
-      }
-
-      let channelb;
-      if(this.props.server.creator_id === this.props.currentUser.id) {
+      if(server.creator_id === currentUser.id) {
         channelb = 
         <div className="delete-server" onClick={()=>{this.props.deleteChannel(channel.id)}}>
           <i className="fas fa-cog"></i>
@@ -218,7 +216,7 @@ class ServerShow extends React.PureComponent {
         </div>
       } 
       return (
-        <Link key={channel.id} to={`/server/${this.props.server.id}/channel/${channel.id}`}>
+        <Link key={channel.id} to={`/server/${server.id}/channel/${channel.id}`}>
           <li className={klass}>
             {hash} {channelName}
             {channelb}
@@ -228,7 +226,7 @@ class ServerShow extends React.PureComponent {
     });
 
     const users = Object.values(this.props.users).map(user => {
-      if (this.props.server.creator_id === user.id ) {
+      if (server.creator_id === user.id ) {
         return (
           <p onClick={this.handlePMClick} value={user.id} key={user.id}>{user.username} <i className="fas fa-crown"></i></p>
         );
@@ -238,46 +236,41 @@ class ServerShow extends React.PureComponent {
         );
       }
     });
-    let button;
-    if (this.props.server.private) {
+
+    let button, modalbutton;
+    if (server.private) {
       button;
+      modalbutton = <button onClick={this.showModal} >New Private Message</button>
     }
-    else if (this.props.currentUser.id === this.props.server.creator_id) {
+    else if (currentUser.id === server.creator_id) {
       button = <button onClick={this.handleClick.bind(this)}>Delete Server</button>
+      modalbutton = <button onClick={this.showModal} >Create Channel</button>
     } else {
       button = <button onClick={this.handleRemoveClick.bind(this)}>Leave Server</button>
     }
-    
-    let modalbutton;
-    if (this.props.server.private) {
-      modalbutton = <button onClick={this.showModal} >New Private Message</button>
-    }
-    else if (this.props.currentUser.id === this.props.server.creator_id) {
-      modalbutton = <button onClick={this.showModal} >Create Channel</button>
-    }
-    const { server } = this.props;
+ 
     let icon = <i className="fas fa-chevron-down" onClick={this.handleDropdown}></i>
+
+    let modalshow = <Modal show={this.state.show} handleClose={this.hideModal}>
+                      <div className="channel-create-modal">
+                        <ChannelCreateContainer handleClose={this.hideModal} />
+                      </div>
+                    </Modal >
 
     if (this.state.showServer) {
       icon = <i className="fas fa-times" onClick={this.handleDropdown}></i>
     }
 
-    let modalshow = <Modal show={this.state.show} handleClose={this.hideModal}>
-    <div className="channel-create-modal">
-      <ChannelCreateContainer handleClose={this.hideModal} />
-    </div>
-    </Modal >
-
-    if (this.props.server.private) {
+    if (server.private) {
       modalshow = <Modal show={this.state.show} handleClose={this.hideModal} >
-      <div className="channel-create-modal">
-      <PrivateCreate handleClose={this.hideModal}/>
-    </div>
-      </Modal >
+                    <div className="channel-create-modal">
+                      <PrivateCreate handleClose={this.hideModal}/>
+                    </div>
+                  </Modal >
     }   
 
     let showServerName = this.state.showServer ? "display-servershow" : "hidden-servershow";
-    if (this.props.server.private) {
+    if (server.private) {
       return (
         <div className="server-show" onClick={this.handleClickOut}>
           <section className='channel-index'>
@@ -299,8 +292,8 @@ class ServerShow extends React.PureComponent {
                 <img src={window.logo_url}></img>
                 </div>
                 <section>
-                  <p>{this.props.currentUser.username}</p>
-                  <p># {this.props.currentUser.id}</p>
+                  <p>{currentUser.username}</p>
+                  <p># {currentUser.id}</p>
                 </section>
                 <button onClick={this.props.logout}>Log Out</button>
             </div>
@@ -318,7 +311,7 @@ class ServerShow extends React.PureComponent {
     else if (parameter === 0 && this.props.channels.length > 0) {
       if (this.props.channels[0].server_id === parseInt(this.props.match.params.serverId)) {
        
-        return <Redirect to={`/server/${this.props.server.id}/channel/${this.props.channels[0].id}`}/> 
+        return <Redirect to={`/server/${server.id}/channel/${this.props.channels[0].id}`}/> 
       } else {
          return <Loading />
       }
@@ -346,8 +339,8 @@ class ServerShow extends React.PureComponent {
                 <img src={window.logo_url}></img>
                 </div>
                 <section>
-                  <p>{this.props.currentUser.username}</p>
-                  <p># {this.props.currentUser.id}</p>
+                  <p>{currentUser.username}</p>
+                  <p># {currentUser.id}</p>
                 </section>
                 <button onClick={this.props.logout}>Log Out</button>
             </div>
