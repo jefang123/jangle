@@ -214,6 +214,7 @@ p {
 .hidden {
   display: none;
   position: absolute;
+  text-align: center;
   left: 70px;
   background-color: #000;
   color: white;
