@@ -213,7 +213,7 @@ class ServerShow extends React.PureComponent {
         deleteText = "Delete Channel";
       }
 
-      if(server.creator_id === currentUser.id) {
+      if(server.creator_id === currentUser.id && channel.channel_name !== "general") {
         channelb = 
         <div className="delete-server" onClick={()=>{this.props.deleteChannel(channel.id)}}>
           <i className="fas fa-cog"></i>
