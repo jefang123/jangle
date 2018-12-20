@@ -48,6 +48,7 @@ class ServerIndexItem extends React.PureComponent {
           key={this.props.server.id}
           className={klass}
         > 
+          <div className='selected-border'></div>
           <div className="hidden">
             <div className="arrow-left"></div>
             <h3>{this.props.server.server_name}</h3>
@@ -63,6 +64,7 @@ class ServerIndexItem extends React.PureComponent {
             key={this.props.server.id}
             className={klass}
           >
+            <div className='selected-border'></div>
             <div className="hidden">
               <div className="arrow-left"></div>
               <h3>{this.props.server.server_name}</h3>
