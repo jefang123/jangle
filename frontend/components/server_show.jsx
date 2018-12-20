@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, Redirect, Switch, matchPath } from 'react-router-dom'
+import { Link, Redirect, Switch, matchPath} from 'react-router-dom'
 import ChannelShowContainer from './channel_show_container';
 import ChannelCreateContainer from './channel_create_container';
 import PrivateCreate from './channel_create_private_form';
@@ -41,6 +41,7 @@ class ServerShow extends React.PureComponent {
     },    {
 
       received: (data) => {
+        const {history} = this.props;
         // if(data.action === "typing") {
         // }
 
@@ -60,6 +61,8 @@ class ServerShow extends React.PureComponent {
               }
             }
             dispatch(receiveServer(newData));
+            history.push(`/server/${data.server.id}`);
+            // history.push(`/server`)
           } else {
 
           }
@@ -199,20 +202,22 @@ class ServerShow extends React.PureComponent {
         klass = ""
       }
 
-      let hash, channelName, channelb;
+      let hash, channelName, deleteText, channelb;
       if (server.private) {
         hash = "@";
         channelName = channel.channel_topic;
+        deleteText = "Delete Conversation";
       } else {
         hash = "#";
         channelName = channel.channel_name;
+        deleteText = "Delete Channel";
       }
 
       if(server.creator_id === currentUser.id) {
         channelb = 
         <div className="delete-server" onClick={()=>{this.props.deleteChannel(channel.id)}}>
           <i className="fas fa-cog"></i>
-        <div className="delete-hidden"><div className="arrow-left"></div>Delete Channel </div>
+        <div className="delete-hidden"><div className="arrow-left"></div>{deleteText}</div>
         </div>
       } 
       return (
