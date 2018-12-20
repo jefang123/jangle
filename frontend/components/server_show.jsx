@@ -163,6 +163,9 @@ class ServerShow extends React.PureComponent {
   }
 
   render() {
+    if (!this.props.server || !this.props.currentUser)
+    return <Loading />
+
     if (this.props.redirect.includes("No Such Server")) {
       return (
         <Redirect to={`/server/${window.homeId}/welcome`} />
@@ -185,11 +188,8 @@ class ServerShow extends React.PureComponent {
     
     let klass;
 
-    if (!this.props.server)
-    return <Loading />
-
     const { server, currentUser } = this.props;
-
+    
     // const channels = <ChannelIndex 
     //                   server={server}
     //                   currentUser={currentUser}

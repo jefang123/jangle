@@ -37,17 +37,35 @@ class ServerIndex extends React.PureComponent {
       );
     }
 
+    let match = matchPath(this.props.history.location.pathname, {
+      path: '/server/:serverId/',
+      exact: false,
+      strict: false 
+    });
+
     let currentServers = this.props.servers.filter(server => {
       if (server.user_ids) {
         return server.user_ids.includes(this.props.currentUser.id)
       }
     })
 
+    let userServers = [];
+
+    for (let index = 0; index < currentServers.length; index++) {
+      userServers.push(currentServers[index].id)
+    }
+
     let filteredServers = currentServers.filter(server => {
       return server.id !== window.homeId
     })
+    
     let firstServer = filteredServers[0];
 
+    if (!match || !userServers.includes(parseInt(match.params.serverId))) {
+      return (
+        <Redirect to={`/server/${firstServer.id}`}/>
+      )
+    }
   
     const home = currentServers.map(server => {
       if (server.private) {
@@ -63,40 +81,30 @@ class ServerIndex extends React.PureComponent {
         />
       }
     });
-    let match = matchPath(this.props.history.location.pathname, {
-      path: '/server/:serverId/',
-      exact: false,
-      strict: false 
-    });
-
-    if (!match) {
-      return(
-        <Redirect to={`/server/${firstServer.id}`}/>
-      )
-    } else {
-      return(
-          <section className="server-index">
-            <ul>
-              { home }
-              <div className="divider"></div>
-              { servers }
-              <li>
-                <Modal show={this.state.show} handleClose={this.hideModal}>
-                  <div className="create-server-modal">
-                    <ServerCreateForm handleClose={this.hideModal} />
-                    <JoinServerForm 
-                      // servers={this.props.servers}
-                      handleClose={this.hideModal} 
-                      currentUser={this.props.currentUser}
-                    />
-                  </div>
-                </Modal>
-                <button onClick={this.showModal} className="create-server" >+</button>
-              </li>
-            </ul>
-          </section>
-      );
-    }
+    
+    return (
+        <section className="server-index">
+          <ul>
+            { home }
+            <div className="divider"></div>
+            { servers }
+            <li>
+              <Modal show={this.state.show} handleClose={this.hideModal}>
+                <div className="create-server-modal">
+                  <ServerCreateForm handleClose={this.hideModal} />
+                  <JoinServerForm 
+                    // servers={this.props.servers}
+                    handleClose={this.hideModal} 
+                    currentUser={this.props.currentUser}
+                  />
+                </div>
+              </Modal>
+              <button onClick={this.showModal} className="create-server" >+</button>
+            </li>
+          </ul>
+        </section>
+    );
+    
   }
 }
 
