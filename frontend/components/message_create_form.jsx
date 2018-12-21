@@ -76,9 +76,12 @@ class MessageCreateForm extends React.PureComponent {
       text = `#${this.props.channel.channel_name}`
     }
 
-    if (this.editId !== "chat") {
-      
+    let placeholderText = ""
+    if (this.editId === "chat") {
+      placeholderText = `Message ${text}`
     }
+
+    debugger
 
     return (
       <form>
@@ -88,7 +91,7 @@ class MessageCreateForm extends React.PureComponent {
         rows= "1"
         className= "message-field"
         value={this.state.body} 
-        placeholder = {`Message ${text}`} 
+        placeholder = {placeholderText} 
         onChange={this.update('body')}/>        
       </form>
     )
