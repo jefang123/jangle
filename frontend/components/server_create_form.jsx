@@ -4,7 +4,8 @@ class ServerCreateForm extends React.PureComponent {
   constructor(props) {
     super(props);
     this.state = {
-      server_name: ""
+      server_name: "",
+      // creator_id: this.props.currentUser.id 
     };
     this.errors = [];
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -14,6 +15,7 @@ class ServerCreateForm extends React.PureComponent {
   handleSubmit(e) {
     e.preventDefault();
     this.props.processForm(this.state);
+    // App.cable.subscriptions.subscriptions[0].speak3(this.state);
     this.errors = [];
     this.setState({
       server_name: ""

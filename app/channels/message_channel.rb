@@ -28,6 +28,18 @@ class MessageChannel < ApplicationCable::Channel
     MessageChannel.broadcast_to('message_channel', new_channel)
   end
   
+  def speak3(data)
+    new_server = Server.create(server_name: data['server_name'], creator_id: data['creator_id'])
+    server_hash = {
+      id: new_server.id, 
+      server_name: new_server.server_name,
+      creator_id: new_server.creator_id,
+      private: new_server.private,
+      user_ids: new_server.user_ids
+    }
+    MessageChannel.broadcast_to('message_channel', server_hash)
+  end
+
   def update(data)
     field = data["field"]
     id = data["id"]

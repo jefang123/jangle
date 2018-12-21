@@ -107,6 +107,10 @@ class ServerShow extends React.PureComponent {
         return this.perform("speak2", data)
       },
 
+      speak3: function(data) {
+        return this.perform("speak3", data)
+      },
+
       update: function(data) {
         return this.perform("update", data)
       },
@@ -235,7 +239,7 @@ class ServerShow extends React.PureComponent {
       return (
         <Link key={channel.id} to={`/server/${server.id}/channel/${channel.id}`}>
           <li className={klass}>
-            {hash} {channelName}
+            {hash}&nbsp;{channelName}
             {channelb}
           </li>
         </Link>
