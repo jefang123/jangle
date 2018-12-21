@@ -211,9 +211,14 @@ class ServerShow extends React.PureComponent {
 
       let hash, channelName, deleteText, channelb;
       if (server.private) {
-        hash = "@";
-        channelName = channel.channel_topic;
+        hash = "@"
         deleteText = "Delete Conversation";
+        if (channel.channel_name === currentUser.username) {
+          channelName = channel.channel_topic;
+        } else {
+          channelName = channel.channel_name;
+        }
+
       } else {
         hash = "#";
         channelName = channel.channel_name;
