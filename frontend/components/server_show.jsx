@@ -18,11 +18,12 @@ class ServerShow extends React.PureComponent {
       show: false,
       showServer: false,
      }
-    this.showModal = this.showModal.bind(this)
-    this.hideModal = this.hideModal.bind(this)
-    this.handlePMClick = this.handlePMClick.bind(this)
-    this.handleDropdown = this.handleDropdown.bind(this)
-    this.handleClickOut = this.handleClickOut.bind(this)
+    this.showModal = this.showModal.bind(this);
+    this.hideModal = this.hideModal.bind(this);
+    this.handlePMClick = this.handlePMClick.bind(this);
+    this.handleDropdown = this.handleDropdown.bind(this);
+    this.handleClickOut = this.handleClickOut.bind(this);
+    this.handleDeleteCh = this.handleDeleteCh.bind(this);
   }
 
   showModal () {
@@ -84,7 +85,7 @@ class ServerShow extends React.PureComponent {
           if (data.delete === "message") {
             dispatch(removeMessage(data.id))
           }
-          else if (data.delete === "channels") {
+          else if (data.delete === "channel") {
             dispatch(removeChannel(data.id))
           }
         }
@@ -135,6 +136,10 @@ class ServerShow extends React.PureComponent {
     this.props.deleteServer(this.props.server.id);   
   }
 
+  handleDeleteCh (id) {
+    App.cable.subscriptions.subscriptions[0].delete({field:"channel", id})
+  }
+
   handlePMClick (e) {
     // const mesagee = this.props.users[e.target.getAttribute("value")];
     // <Link to={`/server/${window.homeId}`}/>
@@ -161,6 +166,8 @@ class ServerShow extends React.PureComponent {
       })
     }
   }
+
+
 
   render() {
     if (!this.props.server || !this.props.currentUser)
@@ -213,9 +220,9 @@ class ServerShow extends React.PureComponent {
         deleteText = "Delete Channel";
       }
 
-      if(server.creator_id === currentUser.id && channel.channel_name !== "general") {
+      if(server.creator_id === currentUser.id && this.props.channels.length > 1) {
         channelb = 
-        <div className="delete-server" onClick={()=>{this.props.deleteChannel(channel.id)}}>
+        <div className="delete-server" onClick={()=>{this.handleDeleteCh(channel.id)}}>
           <i className="fas fa-cog"></i>
         <div className="delete-hidden"><div className="arrow-left"></div>{deleteText}</div>
         </div>

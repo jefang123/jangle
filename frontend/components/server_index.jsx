@@ -23,9 +23,9 @@ class ServerIndex extends React.PureComponent {
     this.setState({ show: false });
   }
     
-  // componentDidMount(){
-  //   this.props.fetchServers();
-  // }
+  componentDidMount(){
+    this.props.fetchServers();
+  }
 
   render(){ 
  

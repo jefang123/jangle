@@ -13,10 +13,6 @@ class JoinServerForm extends React.PureComponent {
     this.setServer = this.setServer.bind(this)
   }
 
-  componentDidMount() {
-    this.props.fetchServers();
-  }
-
   componentWillReceiveProps(nextProps) {
     if (this.props.errors !== nextProps.errors) {
       if (nextProps.errors.length < 1) {
