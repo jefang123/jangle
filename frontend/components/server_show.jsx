@@ -87,6 +87,7 @@ class ServerShow extends React.PureComponent {
           }
           else if (data.delete === "channel") {
             dispatch(removeChannel(data.id))
+            history.push(`/server/${this.props.server.id}`);
           }
         }
       },
