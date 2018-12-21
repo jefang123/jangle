@@ -1,6 +1,5 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { createJoin, fetchServers } from '../actions/server_actions';
 
 class JoinServerForm extends React.PureComponent {
   constructor(props) {
@@ -32,7 +31,6 @@ class JoinServerForm extends React.PureComponent {
       }
     }
     App.cable.subscriptions.subscriptions[0].join({server_id: serverId, user_id: userId})
-    // this.props.processForm({server_id: serverId});
     this.setState({
       server_name: ""
     });
@@ -112,12 +110,4 @@ const mapStateToProps = (state) => {
   };
 }
 
-const mapDispatchToProps = dispatch => {
-  return {
-    fetchServers: () => dispatch(fetchServers()),
-    processForm: join => dispatch(createJoin(join))
-  }
-}
-
-
-export default connect(mapStateToProps, mapDispatchToProps)(JoinServerForm);
+export default connect(mapStateToProps, null)(JoinServerForm);

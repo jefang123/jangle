@@ -41,7 +41,7 @@ const channels= this.props.channels.map( channel => {
   return (
     <Link key={channel.id} to={`/server/${server.id}/channel/${channel.id}`}>
       <li className={klass}>
-        {hash} {channelName}
+        {hash} <span>{channelName} </span>
         {channelb}
       </li>
     </Link>

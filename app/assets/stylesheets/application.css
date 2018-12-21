@@ -297,7 +297,7 @@ li img:hover {
 
 .channel-index {
   background-color:#2a2c31;
-  width: 240px;
+  min-width: 240px;
 }
 
 .channel-show {
@@ -311,7 +311,7 @@ li img:hover {
 }
 
 .user-index {
-  width: 240px;
+  min-width: 240px;
   background-color: #2f3136;
   z-index: 5;
 }
