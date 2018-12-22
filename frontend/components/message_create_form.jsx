@@ -81,8 +81,6 @@ class MessageCreateForm extends React.PureComponent {
       placeholderText = `Message ${text}`
     }
 
-    debugger
-
     return (
       <form>
         <textarea

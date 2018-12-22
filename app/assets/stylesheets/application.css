@@ -207,8 +207,15 @@ p {
 }
 
 .server-index {
-  width: 70px;
+  position: fixed;
+  width: 310px;
   background-color: #202225;
+  overflow-y: scroll;
+  background: transparent;
+}
+
+.server-index ul {
+  width: 50px;
 }
 
 .hidden {
@@ -220,7 +227,7 @@ p {
   color: white;
   top: 10px;
   min-width: 50px;
-  z-index: 1;
+  z-index: 2;
   padding:5px;
   border-radius: 5px;
 }
