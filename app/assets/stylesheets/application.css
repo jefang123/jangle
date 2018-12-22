@@ -209,13 +209,13 @@ p {
 .server-index {
   position: fixed;
   width: 310px;
-  background-color: #202225;
   overflow-y: scroll;
   background: transparent;
 }
 
 .server-index ul {
   width: 50px;
+  background-color: #202225;
 }
 
 .hidden {
