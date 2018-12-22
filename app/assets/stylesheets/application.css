@@ -211,6 +211,7 @@ p {
   width: 310px;
   overflow-y: scroll;
   background: transparent;
+  overflow-x: hidden;
 }
 
 .server-index ul {
