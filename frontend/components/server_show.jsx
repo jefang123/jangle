@@ -7,7 +7,7 @@ import Modal from './modal';
 import { ProtectedRoute } from '../util/route_util';
 import { receiveChannel, receiveChannels, removeChannel } from '../actions/channel_actions';
 import WelcomeShow from './welcome_show';
-import { receiveServer } from '../actions/server_actions';
+import { receiveServer, addServer } from '../actions/server_actions';
 import { receiveMessage, removeMessage } from '../actions/message_actions';
 import Loading from './loading';
 
@@ -65,7 +65,7 @@ class ServerShow extends React.PureComponent {
             history.push(`/server/${data.server.id}`);
             // history.push(`/server`)
           } else {
-
+            // dispatch(addServer(data.server))
           }
         }
         else if(data.channels) {

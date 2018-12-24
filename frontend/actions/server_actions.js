@@ -4,16 +4,24 @@ import * as APIJoins from '../util/userjoin_api_util';
 export const RECEIVE_SERVERS = 'RECEIVE_SERVERS';
 export const RECEIVE_SERVER = 'RECEIVE_SERVER';
 export const REMOVE_SERVER = 'REMOVE_SERVER';
-export const RECEIVE_SERVER_ERRORS = 'RECEIVE_SERVER_ERRORS'
-export const RECEIVE_JOIN_ERRORS = 'RECEIVE_JOIN_ERRORS'
-export const CREATE_SERVER = 'CREATE_SERVER'
-export const RECEIVE_404_ERRORS = 'RECEIVE_404_ERRORS'
-export const CLEAR_STATE = "CLEAR_STATE"
+export const RECEIVE_SERVER_ERRORS = 'RECEIVE_SERVER_ERRORS';
+export const RECEIVE_JOIN_ERRORS = 'RECEIVE_JOIN_ERRORS';
+export const CREATE_SERVER = 'CREATE_SERVER';
+export const RECEIVE_404_ERRORS = 'RECEIVE_404_ERRORS';
+export const CLEAR_STATE = "CLEAR_STATE";
+export const ADD_SERVER = 'ADD_SERVER';
 
 export const receiveServers = servers => {
   return {
     type: RECEIVE_SERVERS,
     servers
+  };
+};
+
+export const addServer = server => {
+  return {
+    type: ADD_SERVEr,
+    server
   };
 };
 
