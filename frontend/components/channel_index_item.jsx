@@ -6,6 +6,23 @@ class ChannelIndexItem extends React.PureComponent {
   }
 
   render () {
+    let { server, currentUser } = this.props;
+
+
+    let match = matchPath(this.props.history.location.pathname, {
+      path: '/server/:serverId/channel/:channelId',
+      exact: true,
+      strict: false 
+    });
+    let parameter;
+    if (!match) {
+      parameter = 0;
+    } else if (match.params.channelId) {
+      parameter = parseInt(match.params.channelId);
+    } else {
+      parameter = 0;
+    }
+
     let klass;
 
     if (channel.id === parameter) {

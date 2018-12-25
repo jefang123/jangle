@@ -8,7 +8,11 @@ class ChannelIndex extends React.PureComponent {
   render () {
     let channels = this.props.channels.map(channel =>{
       return (
-        <ChannelIndexItem channel={channel}/>
+        <ChannelIndexItem 
+        channel={channel}
+        server={this.props.server}
+        currentUser={this.props.currentUser}
+        />
       )
     })
     return (
