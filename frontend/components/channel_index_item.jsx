@@ -1,13 +1,18 @@
 import React from 'react';
+import { Link, matchPath, withRouter } from 'react-router-dom';
 
 class ChannelIndexItem extends React.PureComponent {
   constructor(props) {
-    super(props)
+    super(props);
+    this.handleDeleteCh = this.handleDeleteCh.bind(this);
+  }
+
+  handleDeleteCh(id) {
+    App.cable.subscriptions.subscriptions[0].delete({field:"channel", id})
   }
 
   render () {
-    let { server, currentUser } = this.props;
-
+    let { channel, server, currentUser, length } = this.props;
 
     let match = matchPath(this.props.history.location.pathname, {
       path: '/server/:serverId/channel/:channelId',
@@ -40,9 +45,9 @@ class ChannelIndexItem extends React.PureComponent {
       channelName = channel.channel_name;
     }
   
-    if(server.creator_id === currentUser.id) {
+    if(server.creator_id === currentUser.id && length > 1) {
       channelb = 
-      <div className="delete-server" onClick={()=>{this.props.deleteChannel(channel.id)}}>
+      <div className="delete-server" onClick={()=>{this.handleDeleteCh(channel.id)}}>
         <i className="fas fa-cog"></i>
       <div className="delete-hidden"><div className="arrow-left"></div>Delete Channel </div>
       </div>
@@ -50,7 +55,7 @@ class ChannelIndexItem extends React.PureComponent {
     return (
       <Link key={channel.id} to={`/server/${server.id}/channel/${channel.id}`}>
         <li className={klass}>
-          {hash} <span>{channelName} </span>
+          {hash} {channelName} 
           {channelb}
         </li>
       </Link>
@@ -58,4 +63,4 @@ class ChannelIndexItem extends React.PureComponent {
   }
 }
 
-export default ChannelIndexItem;
+export default withRouter(ChannelIndexItem);

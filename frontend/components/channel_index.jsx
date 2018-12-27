@@ -1,4 +1,5 @@
 import React from 'react';
+import ChannelIndexItem from './channel_index_item';
 
 class ChannelIndex extends React.PureComponent {
   constructor(props) {
@@ -8,15 +9,19 @@ class ChannelIndex extends React.PureComponent {
   render () {
     let channels = this.props.channels.map(channel =>{
       return (
-        <ChannelIndexItem 
+        <ChannelIndexItem
+        key={channel.id} 
         channel={channel}
         server={this.props.server}
         currentUser={this.props.currentUser}
+        length={this.props.channels.length}
         />
       )
     })
     return (
-      {channels}
+      <ul>
+        {channels}
+      </ul>
     )
   }
 }

@@ -212,11 +212,13 @@ p {
   overflow-y: scroll;
   background: transparent;
   overflow-x: hidden;
+  pointer-events: none;
 }
 
 .server-index ul {
   width: 50px;
   background-color: #202225;
+  pointer-events: initial;
 }
 
 .hidden {
@@ -228,9 +230,9 @@ p {
   color: white;
   top: 10px;
   min-width: 50px;
-  z-index: 2;
   padding:5px;
   border-radius: 5px;
+  opacity: 1.1;
 }
 
 .arrow-left {
