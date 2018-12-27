@@ -39,7 +39,11 @@ class ChannelIndexItem extends React.PureComponent {
     let hash, channelName, channelb;
     if (server.private) {
       hash = "@";
-      channelName = channel.channel_topic;
+      if (channel.channel_name === currentUser.username) {
+        channelName = channel.channel_topic;
+      } else {
+        channelName = channel.channel_name
+      }
     } else {
       hash = "#";
       channelName = channel.channel_name;
