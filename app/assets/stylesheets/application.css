@@ -226,7 +226,7 @@ p {
   position: absolute;
   text-align: center;
   left: 60px;
-  background-color: #000;
+  background: #000;
   color: white;
   top: 10px;
   min-width: 50px;
