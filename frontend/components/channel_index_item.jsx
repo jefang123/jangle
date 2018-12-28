@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, matchPath, withRouter } from 'react-router-dom';
+import EditChannel from './channel_create_container';
 
 class ChannelIndexItem extends React.PureComponent {
   constructor(props) {
@@ -8,7 +9,7 @@ class ChannelIndexItem extends React.PureComponent {
   }
 
   handleDeleteCh(id) {
-    App.cable.subscriptions.subscriptions[0].delete({field:"channel", id})
+    App.cable.subscriptions.subscriptions[0].delete({field:"channel", id});
   }
 
   render () {
@@ -49,21 +50,39 @@ class ChannelIndexItem extends React.PureComponent {
       channelName = channel.channel_name;
     }
   
-    if(server.creator_id === currentUser.id && length > 1) {
+    if((server.creator_id === currentUser.id && length > 1) || server.private ) {
       channelb = 
       <div className="delete-server" onClick={()=>{this.handleDeleteCh(channel.id)}}>
         <i className="fas fa-cog"></i>
-      <div className="delete-hidden"><div className="arrow-left"></div>Delete Channel </div>
+      <div className="delete-hidden"><div className="arrow-left"></div>Delete Conversation </div>
       </div>
     } 
-    return (
-      <Link key={channel.id} to={`/server/${server.id}/channel/${channel.id}`}>
-        <li className={klass}>
-          {hash} {channelName} 
-          {channelb}
-        </li>
-      </Link>
-    )
+    
+    let edit = 
+    <div className="ch-dropdown">
+      <p>Edit Channel</p>
+      <p onClick={()=>{this.handleDeleteCh(channel.id)}}>Delete Channel</p>
+    </div>
+
+    if (server.private) {
+      return (
+        <Link key={channel.id} to={`/server/${server.id}/channel/${channel.id}`}>
+          <li className={klass}>
+            {hash} {channelName} 
+            {channelb}
+          </li>
+        </Link>
+      )
+    } else {
+      return (
+        <Link key={channel.id} to={`/server/${server.id}/channel/${channel.id}`}>
+          <li className={klass}>
+            {hash} {channelName} 
+            {edit}
+          </li>
+        </Link>
+      )
+    }
   }
 }
 
