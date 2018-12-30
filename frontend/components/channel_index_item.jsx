@@ -57,11 +57,16 @@ class ChannelIndexItem extends React.PureComponent {
       <div className="delete-hidden"><div className="arrow-left"></div>Delete Conversation </div>
       </div>
     } 
+    let editD;
+
+    if (server.creator_id === currentUser.id && length > 1) {
+      editD = <p onClick={()=>{this.handleDeleteCh(channel.id)}}>Delete Channel</p>;
+    }
     
     let edit = 
     <div className="ch-dropdown">
       <p>Edit Channel</p>
-      <p onClick={()=>{this.handleDeleteCh(channel.id)}}>Delete Channel</p>
+      {editD}
     </div>
 
     if (server.private) {
