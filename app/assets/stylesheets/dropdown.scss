@@ -1,5 +1,14 @@
-.ch-dropdown {
-  
+.hidden-channelshow {
+  display: none;
+}
+
+.display-channelshow {
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 140px;
+  width: 150px;
 }
 
 .hidden-servershow {

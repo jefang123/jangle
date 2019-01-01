@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, matchPath, withRouter } from 'react-router-dom';
-import EditChannel from './channel_create_container';
+import EditChannel from './channel_edit';
 
 class ChannelIndexItem extends React.PureComponent {
   constructor(props) {
@@ -14,6 +14,8 @@ class ChannelIndexItem extends React.PureComponent {
 
   render () {
     let { channel, server, currentUser, length } = this.props;
+
+    let showOptions = this.props.showOptions === channel.id ? "display-channelshow" : "hidden-channelshow";
 
     let match = matchPath(this.props.history.location.pathname, {
       path: '/server/:serverId/channel/:channelId',
@@ -62,12 +64,21 @@ class ChannelIndexItem extends React.PureComponent {
     if (server.creator_id === currentUser.id && length > 1) {
       editD = <p onClick={()=>{this.handleDeleteCh(channel.id)}}>Delete Channel</p>;
     }
-    
+
     let edit = 
-    <div className="ch-dropdown">
+    <div className={showOptions}>
       <p>Edit Channel</p>
       {editD}
     </div>
+
+    if (showOptions === "display-channelshow") {
+      edit = <EditChannel channel = {channel} handleDeleteCh = {this.handleDeleteCh} />
+    }
+
+    // <ChannelEdit 
+    //   channel = {channel}
+    //   handleDeleteCh = {this.handleDeleteCh}
+    // />
 
     if (server.private) {
       return (
@@ -83,6 +94,7 @@ class ChannelIndexItem extends React.PureComponent {
         <Link key={channel.id} to={`/server/${server.id}/channel/${channel.id}`}>
           <li className={klass}>
             {hash} {channelName} 
+            <i className="fas fa-cog" onClick={()=>{this.props.handleOptions(channel.id)}}></i>
             {edit}
           </li>
         </Link>

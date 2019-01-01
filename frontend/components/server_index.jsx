@@ -9,7 +9,9 @@ import ServerLoad from './server_index_loading';
 class ServerIndex extends React.PureComponent {
   constructor(props) {
     super(props)
-    this.state = { show: false }
+    this.state = { 
+      show: false,
+    }
    
     this.showModal = this.showModal.bind(this)
     this.hideModal = this.hideModal.bind(this)
@@ -22,7 +24,7 @@ class ServerIndex extends React.PureComponent {
   hideModal () {
     this.setState({ show: false });
   }
-    
+
   componentDidMount(){
     this.props.fetchServers();
   }
@@ -81,6 +83,8 @@ class ServerIndex extends React.PureComponent {
         />
       }
     });
+
+    let index = this.state.edit ? '0' : '2';
     
     return (
         <section className="server-index">
