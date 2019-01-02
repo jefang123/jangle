@@ -11,7 +11,18 @@ class ChannelEdit extends React.PureComponent {
 
   render () {
     return (
-      <section className="channel-edit">TEST</section>
+      <section className="channel-edit">
+        <section className="channel-options">
+          <p></p>
+          <p>Overview</p>
+          <p>Delete Channel</p>
+        </section>
+        <section className="channel-details">
+          <input></input>
+          <input></input>
+          <button></button>
+        </section>
+      </section>
     )
   }
 }
