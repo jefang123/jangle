@@ -296,5 +296,35 @@
       height: 160px;
       align-self: center;
     }
+
+    .hidden-caution {
+      display: none;
+    }
+
+    .show-caution {
+      position: absolute;
+      bottom: 20px;
+      display: flex;
+      min-width: 450px;
+      width: 100%;
+      max-width: 700px;
+      justify-content: space-between;
+
+      div {
+        flex-direction: row;
+        display: flex;
+        align-items: center;
+
+        p:hover {
+          text-decoration: underline;
+        }
+
+        button {
+          background-color: green;
+          color: white;
+        }
+
+      }
+    }
   }
 }
