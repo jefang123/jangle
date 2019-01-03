@@ -246,7 +246,7 @@
     }
 
     .ch-edit-delete:hover {
-      background-color: rgb(235, 225, 225);
+      background-color: rgba(240, 71, 71, 0.1);
     }
   }
 
@@ -258,14 +258,34 @@
     .escape {
       position: fixed;
       top: 100px;
+      
+      p {
+        opacity: .5;
+        text-align: center;
+      }
+
+      button {
+        border-radius: 50%;
+        height: 40px;
+        width: 40px;
+        font-size: 16px;
+        background-color: #36393f;
+        color: #acacae;
+        border: 1px solid #acacae;
+        margin-bottom: 8px;
+      }
+
+      button:hover {
+        background-color:rgba(114,118,125, .3);
+      }
     }
 
-    button {
-      border-radius: 50%;
-      height: 30px;
-      width: 30px;
-      font-size: 14px;
-    }
+    // button {
+    //   border-radius: 50%;
+    //   height: 30px;
+    //   width: 30px;
+    //   font-size: 14px;
+    // }
   }
 
   .channel-details {
@@ -286,8 +306,8 @@
     }
 
     .divider {
-      margin: 20px 0;
       opacity: .2;
+      margin: 50px 0;
     }
 
     i {
@@ -295,6 +315,16 @@
       width: 270px;
       height: 160px;
       align-self: center;
+    }
+
+
+    @keyframes slideIn {
+      0% {
+        bottom: 0;
+      }
+      100% {
+        bottom: 20px;
+      }
     }
 
     .hidden-caution {
@@ -312,6 +342,7 @@
       background: black;
       border-radius: 5px;
       padding: 10px;
+      animation: slideIn .3s;
 
       p {
         align-self: center;
@@ -341,7 +372,7 @@
         }
 
         button:hover {
-          filter: brightness(95%);
+          background-color: rgba(60, 163, 116, 0.9);
         }
 
       }
