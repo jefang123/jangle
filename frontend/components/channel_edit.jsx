@@ -18,8 +18,12 @@ class ChannelEdit extends React.PureComponent {
           <p>Delete Channel</p>
         </section>
         <section className="channel-details">
-          <input></input>
-          <input></input>
+          <input 
+            placeholder={this.state.channel_name}
+          />
+          <input 
+            placeholder={this.state.channel_topic}
+          />
           <button></button>
         </section>
       </section>
