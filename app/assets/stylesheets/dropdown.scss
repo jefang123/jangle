@@ -1,3 +1,35 @@
+.fa-cog {
+  p {
+    display:none;
+  }
+}
+
+.fa-cog:hover {
+  p {
+    display: block;
+    position: absolute;
+    background: black;
+    top: -39px;
+    text-align: center;
+    right: -33px;
+    width: 90px;
+    font-weight: 400;
+    padding: 9px;
+    color: white;
+    border-radius: 5px;
+  }
+  .arrow-down {
+    width: 0;
+    height: 0;
+    border-top: 6px solid black;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    position: absolute;
+    right: 13px;
+    bottom: 37px;
+  }
+}
+
 .hidden-channelshow {
   display: none;
 }

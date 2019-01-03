@@ -94,7 +94,10 @@ class ChannelIndexItem extends React.PureComponent {
         <Link key={channel.id} to={`/server/${server.id}/channel/${channel.id}`}>
           <li className={klass}>
             {hash} {channelName} 
-            <i className="fas fa-cog" onClick={()=>{this.props.handleOptions(channel.id)}}></i>
+            <i className="fas fa-cog" onClick={()=>{this.props.handleOptions(channel.id)}}>
+              <p>Edit Channel</p> 
+              <div className="arrow-down"></div>
+            </i>
             {edit}
           </li>
         </Link>
