@@ -72,7 +72,7 @@ class ChannelIndexItem extends React.PureComponent {
     </div>
 
     if (showOptions === "display-channelshow") {
-      edit = <EditChannel channel = {channel} handleDeleteCh = {this.handleDeleteCh} />
+      edit = <EditChannel channel = {channel} handleDeleteCh = {this.handleDeleteCh} handleOptions={this.props.handleOptions}/>
     }
 
     // <ChannelEdit 

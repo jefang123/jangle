@@ -232,7 +232,7 @@
     .divider {
       margin: 10px 0;
       border: 1px solid #acacae;
-      opacity: .1;
+      opacity: .2;
     }
 
     p {
@@ -254,6 +254,11 @@
     display: flex;
     flex-direction: column;
 
+    .escape {
+      position: absolute;
+      right: 400px;
+    }
+
     button {
       border-radius: 50%;
       height: 30px;
@@ -261,8 +266,23 @@
       font-size: 14px;
     }
 
+    label {
+      margin-top: 20px;
+    }
+
     input {
       border-radius: 0px;
+    }
+
+    .divider {
+      margin: 20px 0;
+      opacity: .2;
+    }
+
+    i {
+      background: image_url("overview-img.svg");
+      width: 270px;
+      height: 160px;
     }
   }
 }
