@@ -4,8 +4,8 @@ class ChannelEdit extends React.PureComponent {
   constructor(props) {
     super(props)
     this.state = {
-      channel_name : this.props.channel_name,
-      channel_topic : this.props.channel_topic
+      channel_name : this.props.channel.channel_name,
+      channel_topic : this.props.channel.channel_topic
     }
     
   }
@@ -20,6 +20,10 @@ class ChannelEdit extends React.PureComponent {
 
   render () {
     const {channel, handleOptions} = this.props;
+    let text;
+    if (!channel.channel_topic) {
+      text = "No topic set."
+    }
 
     return (
       <section className="channel-edit" tabIndex="0" onKeyDown={(e)=>this.handleExit(e)}>
@@ -29,26 +33,32 @@ class ChannelEdit extends React.PureComponent {
           <div className="divider"></div>
           <p className="ch-edit-delete">Delete Channel</p>
         </section>
-        <section className="channel-details">
-          <div className="escape">
-            <button onClick={()=>{handleOptions(channel.id)}}>X</button>
-            <p>ESC</p>
-          </div>
-          <label>CHANNEL NAME</label>
-            <input 
-              placeholder={this.state.channel_name}
-            />
-          
-          <label>CHANNEL TOPIC</label>
-            <input 
-              placeholder={this.state.channel_topic}
-            />
+        <main>
+          <section className="channel-details">
+            <h3>OVERVIEW</h3>
+            <label>CHANNEL NAME</label>
+              <input 
+                value={this.state.channel_name}
+              />
+            
+            <label>CHANNEL TOPIC</label>
+              <input 
+                placeholder={text || this.state.channel_topic}
+                value={this.state.channel_topic}
+              />
 
 
-          <div className="divider"/>
+            <div className="divider"/>
 
-          <i  />
-        </section>
+            <i  />
+          </section>
+          <section>
+            <div className="escape">
+                <button onClick={()=>{handleOptions(channel.id)}}>X</button>
+                <p>ESC</p>
+            </div>
+          </section>
+        </main>
       </section>
     )
   }
