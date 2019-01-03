@@ -205,9 +205,64 @@
   position: fixed;
   height: 100vh;
   width: 100vw;
-  background-color: white;
+  background-color: #18191c;
   z-index: 10;
   top: 0;
   left: 0;
   display: flex;
+  cursor: auto;
+
+  .channel-options {
+    border-right: 2px solid white;
+    padding: 80px 20px 0px 200px;
+    display: flex;
+    flex-direction: column;
+    margin-right: 15px;
+
+    h6 {
+      opacity: 0.6;
+      margin: 8px;
+    }
+
+    .ch-edit-selected {
+      background-color: #7289da;
+      border-radius: 5px;
+    }
+
+    .divider {
+      margin: 10px 0;
+      border: 1px solid #acacae;
+      opacity: .1;
+    }
+
+    p {
+      color: white;
+      width: 180px;
+      padding: 10px;
+    }
+
+    .ch-edit-delete {
+      color: red;
+    }
+
+    .ch-edit-delete:hover {
+      background-color: rgb(235, 225, 225);
+    }
+  }
+
+  .channel-details {
+    display: flex;
+    flex-direction: column;
+
+    button {
+      border-radius: 50%;
+      height: 30px;
+      width: 30px;
+      font-size: 14px;
+    }
+
+    input {
+      border-radius: 0px;
+    }
+  }
 }
