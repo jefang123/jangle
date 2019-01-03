@@ -213,7 +213,7 @@ p {
   background: transparent;
   overflow-x: hidden;
   pointer-events: none;
-  /* z-index: 2; */
+  z-index: 6;
 }
 
 .server-index ul {
