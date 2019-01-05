@@ -22,8 +22,8 @@ jQuery(ajax)\
 Websockets via ActionCable \
 HTML/CSS
 
-### Future ideas:
+### Future implementations:
 * Optimizing Joining Servers
 * Multi-User Private Messaging
 * Add image_urls with AWS
-* Edit/Updating functions
+
