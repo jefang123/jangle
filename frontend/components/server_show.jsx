@@ -11,6 +11,7 @@ import { receiveServer, addServer } from '../actions/server_actions';
 import { receiveMessage, removeMessage } from '../actions/message_actions';
 import Loading from './loading';
 import ChannelIndex from './channel_index';
+import { addTyper, removeTyper } from '../actions/typing_actions';
 
 class ServerShow extends React.PureComponent {
   constructor(props) {
@@ -44,11 +45,6 @@ class ServerShow extends React.PureComponent {
 
       received: (data) => {
         const {history} = this.props;
-        // if(data.action === "typing") {
-        // }
-
-        // else if (data.action === "done") {
-        // }
         if (data.server) {
           if (data.user_id === this.props.currentUser.id) {
             const newData = {server: data.server, channels: {}, users: {}}
@@ -90,6 +86,13 @@ class ServerShow extends React.PureComponent {
             dispatch(removeChannel(data.id))
             history.push(`/server/${this.props.server.id}`);
           }
+        }
+        else if(data.action === "typing") {
+          dispatch(addTyper({typer: data.username}));
+        }
+
+        else if (data.action === "done") {
+          dispatch(removeTyper({typer: data.username}));
         }
       },
 

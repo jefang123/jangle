@@ -18,6 +18,7 @@ class MessageCreateForm extends React.PureComponent {
     let handleEdit = this.props.handleEdit;
     if (this.editId !== "chat") {
       App.cable.subscriptions.subscriptions[0].update({field:"message", id:this.id, data:this.state})
+      App.cable.subscriptions.subscriptions[0].done({ username:currentUser.username })
       handleEdit(0)
     } else {
       App.cable.subscriptions.subscriptions[0].speak(this.state);
@@ -55,9 +56,17 @@ class MessageCreateForm extends React.PureComponent {
   }
 
   update(field) {
-    if (this.state.body.length > 0) {
-    }
+    const { currentUser } = this.props;
+    // if (this.state.body.length > 0) {
+    // }
     return (e) => {
+      if (this.editId === "chat") {
+        if (e.target.value === "") {
+          App.cable.subscriptions.subscriptions[0].done({ username:currentUser.username });
+        } else {
+          App.cable.subscriptions.subscriptions[0].typing({ username:currentUser.username });
+        }
+      }
       this.setState({
         [field]: e.target.value
       });
