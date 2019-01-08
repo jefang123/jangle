@@ -75,17 +75,20 @@ class ChannelIndexItem extends React.PureComponent {
       edit = <EditChannel channel = {channel} handleDeleteCh = {this.handleDeleteCh} handleOptions={this.props.handleOptions}/>
     }
 
-    // <ChannelEdit 
-    //   channel = {channel}
-    //   handleDeleteCh = {this.handleDeleteCh}
-    // />
-
     if (server.private) {
       return (
         <Link key={channel.id} to={`/server/${server.id}/channel/${channel.id}`}>
           <li className={klass}>
             {hash} {channelName} 
             {channelb}
+          </li>
+        </Link>
+      )
+    } else if (server.creator_id !== currentUser.id) {
+      return (
+        <Link key={channel.id} to={`/server/${server.id}/channel/${channel.id}`}>
+          <li className={klass}>
+            {hash} {channelName}
           </li>
         </Link>
       )
