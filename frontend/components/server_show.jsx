@@ -88,11 +88,11 @@ class ServerShow extends React.PureComponent {
           }
         }
         else if(data.action === "typing") {
-          dispatch(addTyper({typer: data.username}));
+          dispatch(addTyper(data));
         }
 
         else if (data.action === "done") {
-          dispatch(removeTyper({typer: data.username}));
+          dispatch(removeTyper(data));
         }
       },
 
