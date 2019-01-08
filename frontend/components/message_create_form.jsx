@@ -16,15 +16,16 @@ class MessageCreateForm extends React.PureComponent {
   }
 
   handleSubmit(e) {
+    e.preventDefault();
     let handleEdit = this.props.handleEdit;
     if (this.editId !== "chat") {
-      App.cable.subscriptions.subscriptions[0].update({field:"message", id:this.id, data:this.state})
-      App.cable.subscriptions.subscriptions[0].done({ username:this.props.currentUser.username, channel_id: this.state.channel_id })
+      App.cable.subscriptions.subscriptions[0].update({field:"message", id:this.id, data:this.state});
       handleEdit(0)
     } else {
       App.cable.subscriptions.subscriptions[0].speak(this.state);
+      App.cable.subscriptions.subscriptions[0].done({ username:this.props.currentUser.username, channel_id: this.state.channel_id });
       this.setState({
-        body: "",
+        body: ""
       });
     }
 
@@ -41,10 +42,10 @@ class MessageCreateForm extends React.PureComponent {
   keyDown(e) {
     let handleEdit = this.props.handleEdit;
     if (e.keyCode === 13) {
-      if (this.state.body === "") {
+      if (this.state.body === "" || this.state.body === "\n") {
         e.preventDefault();
       } else {
-        this.handleSubmit();
+        this.handleSubmit(e);
       }
     }
 
@@ -58,8 +59,6 @@ class MessageCreateForm extends React.PureComponent {
 
   update(field) {
     const { currentUser } = this.props;
-    // if (this.state.body.length > 0) {
-    // }
     return (e) => {
       if (this.editId === "chat") {
         if (e.target.value === "") {
@@ -68,6 +67,7 @@ class MessageCreateForm extends React.PureComponent {
           App.cable.subscriptions.subscriptions[0].typing({ username:currentUser.username, channel_id: this.state.channel_id  });
         }
       }
+      
       this.setState({
         [field]: e.target.value
       });
