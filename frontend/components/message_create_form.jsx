@@ -101,7 +101,7 @@ class MessageCreateForm extends React.PureComponent {
         value={this.state.body} 
         placeholder = {placeholderText} 
         onChange={this.update('body')}/>   
-        <TypingUsers />     
+        <TypingUsers channelId = {this.state.channel_id}/>     
       </form>
     )
   }
