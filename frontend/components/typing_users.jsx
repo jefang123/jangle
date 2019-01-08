@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 class TypingUsers extends React.PureComponent {
   constructor(props) {
@@ -6,12 +7,19 @@ class TypingUsers extends React.PureComponent {
   }
 
   render () {
-    if (!this.props.users)
-      return null
+
+    
     return (
-    <></>
+      <p> {this.props.typing[6]} </p>
     )
   }
 }
 
-export default TypingUsers;
+const mapStateToProps = state => ({
+  typing: state.entities.typing,
+  currentUser: state.entities.users[state.session.currentUserId]
+});
+
+export default connect(
+  mapStateToProps
+)(TypingUsers);

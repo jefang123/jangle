@@ -1,4 +1,5 @@
 import React from 'react';
+import TypingUsers from './typing_users';
 
 class MessageCreateForm extends React.PureComponent {
   constructor(props) {
@@ -99,7 +100,8 @@ class MessageCreateForm extends React.PureComponent {
         className= "message-field"
         value={this.state.body} 
         placeholder = {placeholderText} 
-        onChange={this.update('body')}/>        
+        onChange={this.update('body')}/>   
+        <TypingUsers />     
       </form>
     )
   }
