@@ -47,19 +47,22 @@ class PrivateCreateForm extends React.Component {
   }
 
   update(field) {
+    let props = Object.keys(this.props.users2);
+    // let filteredNames = props.filter(prop => {
+    // });
     return (e) => {
       this.setState({
         [field]: e.target.value
       });
-      let props = Object.keys(this.props.users2)
-      this.names = props.filter(prop=> this.props.users2[prop].username.includes(`${this.state.channel_name}`))
-      this.names = this.names.filter(name => this.props.users2[name].id !== this.props.currentUser.id)
-      if (e.target.innerText = "") {
+      this.names = props.filter(prop=> this.props.users2[prop].username.includes(e.target.value));
+      this.names = this.names.filter(name => this.props.users2[name].id !== this.props.currentUser.id);
+      if (e.target.value = "") {
         this.names = [];
       }
     };
   }
   render () {
+  
     let names = this.names.slice(0,5);
     const search = names.map((name,idx) => {
       return (

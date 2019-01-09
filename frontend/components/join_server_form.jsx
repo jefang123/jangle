@@ -53,9 +53,14 @@ class JoinServerForm extends React.PureComponent {
       this.setState({
         [field]: e.target.value
       });
+
       this.servers = filteredServers.filter(server => {
-        return server.server_name.includes(this.state.server_name)
+        return server.server_name.includes(e.target.value)
       })
+      
+      if ( e.target.value === "" ) {
+        this.servers = [];
+      }
      
     };
   }

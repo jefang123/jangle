@@ -98,7 +98,7 @@ class ChannelShow extends React.PureComponent {
       } 
     // }
     else {
-      header = <h3># {channel.channel_name}<span>{channel.channel_topic}</span></h3>
+      header = <h3># {channel.channel_name}<span>{channel.channel_topic.slice(0, 100)}</span></h3>
       messageheader =  <h3>Welcome to the beginning of the #{channel.channel_name} channel </h3>
     }
 
