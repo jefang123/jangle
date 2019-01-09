@@ -30,6 +30,8 @@ class MessageChannel < ApplicationCable::Channel
   
   def speak3(data)
     new_server = Server.create(server_name: data['server_name'], creator_id: data['creator_id'])
+    UserJoin.create(server_id: new_server.id, user_id: new_server.creator_id)
+    Channel.create(server_id:new_server.id, channel_name:"general", channel_topic:"Anything is welcome here")
     server_hash = {
       id: new_server.id, 
       server_name: new_server.server_name,
@@ -37,7 +39,9 @@ class MessageChannel < ApplicationCable::Channel
       private: new_server.private,
       user_ids: new_server.user_ids
     }
-    MessageChannel.broadcast_to('message_channel', server_hash)
+
+    new_data = { server: server_hash }
+    MessageChannel.broadcast_to('message_channel', new_data)
   end
 
   def update(data)

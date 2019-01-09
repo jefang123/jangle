@@ -62,7 +62,7 @@ class ServerShow extends React.PureComponent {
             history.push(`/server/${data.server.id}`);
             // history.push(`/server`)
           } else {
-            // dispatch(addServer(data.server))
+            dispatch(addServer(data.server))
           }
         }
         else if(data.channels) {

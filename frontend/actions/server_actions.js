@@ -20,7 +20,7 @@ export const receiveServers = servers => {
 
 export const addServer = server => {
   return {
-    type: ADD_SERVEr,
+    type: ADD_SERVER,
     server
   };
 };
