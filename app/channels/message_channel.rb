@@ -40,7 +40,7 @@ class MessageChannel < ApplicationCable::Channel
       user_ids: new_server.user_ids
     }
 
-    new_data = { server: server_hash }
+    new_data = { server: server_hash, channels: new_server.channels, users: new_server.users  }
     MessageChannel.broadcast_to('message_channel', new_data)
   end
 

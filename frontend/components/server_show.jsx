@@ -61,6 +61,20 @@ class ServerShow extends React.PureComponent {
             dispatch(receiveServer(newData));
             history.push(`/server/${data.server.id}`);
             // history.push(`/server`)
+          } else if (data.server.creator_id === this.props.currentUser.id) {
+            const newData2 = {server: data.server, channels: {}, users: {}}
+            if (data.channels.length) {
+              for (let index = 0; index < data.channels.length; index++) {
+                newData2.channels[data.channels[index].id] = data.channels[index]
+              }
+            }
+            if (data.users.length) {
+              for (let index = 0; index < data.users.length; index++) {
+                newData2.users[data.users[index].id] = data.users[index]
+              }
+            }
+            dispatch(receiveServer(newData2));
+            history.push(`/server/${data.server.id}`);
           } else {
             dispatch(addServer(data.server))
           }
