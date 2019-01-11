@@ -41,7 +41,6 @@ class JoinServerForm extends React.PureComponent {
   }
 
   setServer (e) {
-    debugger
     this.servers = [];
     this.setState({
       server_name: e.target.innerText
