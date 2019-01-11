@@ -5,6 +5,7 @@ import channelsReducer from './channels_reducer';
 import messagesReducer from './messages_reducer';
 import privateUsersReducer from './private_users_reducer';
 import typingReducer from './typing_reducer';
+import searchReducer from './search_reducer';
 
 export default combineReducers({
   users2: privateUsersReducer,
@@ -12,5 +13,6 @@ export default combineReducers({
   servers: serversReducer,
   channels: channelsReducer,
   typing: typingReducer,
-  messages: messagesReducer
+  messages: messagesReducer, 
+  search: searchReducer
 });

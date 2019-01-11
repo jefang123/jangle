@@ -12,6 +12,7 @@ import { receiveMessage, removeMessage } from '../actions/message_actions';
 import Loading from './loading';
 import ChannelIndex from './channel_index';
 import { addTyper, removeTyper } from '../actions/typing_actions';
+import { search } from '../actions/search_actions';
 
 class ServerShow extends React.PureComponent {
   constructor(props) {
@@ -104,10 +105,17 @@ class ServerShow extends React.PureComponent {
         else if(data.action === "typing") {
           dispatch(addTyper(data));
         }
-
         else if (data.action === "done") {
           dispatch(removeTyper(data));
         }
+        else if (data.results) {
+          const {results} = data;
+          dispatch(search(results));
+        }
+      },
+
+      search: function(data) {
+        return this.perform("search", data)
       },
 
       typing: function(data) {

@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import SearchBar from './search-bar';
 
 class JoinServerForm extends React.PureComponent {
   constructor(props) {
@@ -7,7 +8,7 @@ class JoinServerForm extends React.PureComponent {
     this.state = {
       server_name: ""
     };
-    this.servers = [];
+    this.servers = this.props.servers || [] ;
     this.handleSubmit = this.handleSubmit.bind(this);
     this.setServer = this.setServer.bind(this)
   }
@@ -18,11 +19,14 @@ class JoinServerForm extends React.PureComponent {
         this.props.handleClose();
       }
     }
+
+    if (this.props.servers !== nextProps.servers) {
+      this.servers = nextProps.servers
+    }
   }
 
   handleSubmit(e) {
     e.preventDefault();
-
     let serverId;
     let userId = this.props.currentUser.id;
     for (let i=0; i<this.props.servers.length; i++) {
@@ -37,42 +41,14 @@ class JoinServerForm extends React.PureComponent {
   }
 
   setServer (e) {
+    debugger
     this.servers = [];
     this.setState({
       server_name: e.target.innerText
     })
   }
 
-  update(field) {
-    let filteredServers = this.props.servers.filter(server =>{
-      if (server.user_ids) {
-        return !server.private && !server.user_ids.includes(this.props.currentUser.id)
-      }
-    });
-    return (e) => {
-      this.setState({
-        [field]: e.target.value
-      });
-
-      this.servers = filteredServers.filter(server => {
-        return server.server_name.includes(e.target.value)
-      })
-      
-      if ( e.target.value === "" ) {
-        this.servers = [];
-      }
-     
-    };
-  }
   render () {
-    let servers = this.servers.slice(0,5);
-    const search = servers.map((server,idx)=> {
-      return (
-        <li key={idx} onClick={this.setServer}>
-          {server.server_name}
-        </li>
-      )
-    })
     const errors = this.props.errors.map((error, idx) => {
       return (
         <p key={idx} >
@@ -94,14 +70,12 @@ class JoinServerForm extends React.PureComponent {
           {errors}
         </div>
         <h3> Join a Server!</h3>
-        <input  
-        type='text'
-        placeholder="Search Servers"
-        value={this.state.server_name}
-        onChange={this.update('server_name')}/>
-        <div className="server-search">
-          {search}
-        </div>
+        <SearchBar 
+          field = {this.state.server_name}
+          type = "server"
+          servers = {this.servers}
+          setServer = {this.setServer}
+        />
        {button}
       </form>
     )
@@ -110,7 +84,7 @@ class JoinServerForm extends React.PureComponent {
 
 const mapStateToProps = (state) => {
   return {
-    servers: Object.values(state.entities.servers),
+    servers: state.entities.search.servers,
     errors: state.errors.join
   };
 }
