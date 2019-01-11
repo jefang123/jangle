@@ -31,6 +31,9 @@ class MessageChannel < ApplicationCable::Channel
 
   def speak2(data)
     new_channel = Channel.create(channel_name: data['channel_name'], channel_topic: data['channel_topic'], server_id: data['server_id'])
+    if new_channel.id == nil
+      new_channel = Channel.find_by(channel_name: data['channel_name'])
+    end
     MessageChannel.broadcast_to('message_channel', new_channel)
   end
   

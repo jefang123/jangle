@@ -12,7 +12,7 @@
 
 class Channel < ApplicationRecord
   belongs_to :server
-  validates :server, :channel_name, presence: true
+  validates :server, :channel_name, presence: true, uniqueness: { scope: :server, message: "channel already exists"}
   has_many :messages, dependent: :destroy
   has_one :creator, through: :server
 end
