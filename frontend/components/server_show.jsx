@@ -88,6 +88,7 @@ class ServerShow extends React.PureComponent {
           dispatch(receiveChannels(parsedCh));
         } 
         else if (data.channel_name) {
+          history.push(`/server/${data.server_id}/channel/${data.id}`)
           dispatch(receiveChannel(data));
         }
         else if(data.body){
@@ -172,10 +173,11 @@ class ServerShow extends React.PureComponent {
   }
 
   handlePMClick (e) {
-    // const mesagee = this.props.users[e.target.getAttribute("value")];
+    const mesagee = this.props.users[e.target.getAttribute("value")];
+    const {currentUser} = this.props
     // <Link to={`/server/${window.homeId}`}/>
     // this.props.fetchServer(window.homeId);
-    // App.cable.subscriptions.subscriptions[0].speak2({server_id: window.homeId, channel_name: mesagee.username});
+    App.cable.subscriptions.subscriptions[0].speak2({server_id: window.homeId, channel_name: mesagee.username, channel_topic: currentUser.username});
   }
 
   handleDropdown() {
