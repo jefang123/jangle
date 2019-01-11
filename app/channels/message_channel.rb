@@ -11,7 +11,7 @@ class MessageChannel < ApplicationCable::Channel
   end 
 
   def search(data)
-    newData = Server.where("server_name LIKE ?", "%#{data['server_name']}%" )
+    newData = Server.where("server_name LIKE ?", "%#{data['server_name']}%" ).where(private:nil)
     results = { results: newData }
     MessageChannel.broadcast_to('message_channel', results)
   end 
