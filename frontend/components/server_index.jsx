@@ -97,7 +97,6 @@ class ServerIndex extends React.PureComponent {
                 <div className="create-server-modal">
                   <ServerCreateForm handleClose={this.hideModal} />
                   <JoinServerForm 
-                    // servers={this.props.servers}
                     handleClose={this.hideModal} 
                     currentUser={this.props.currentUser}
                   />

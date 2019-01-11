@@ -7,7 +7,7 @@ class Search extends React.PureComponent {
       field : this.props.field || ""
     }
     this.handleChange = this.handleChange.bind(this);
-    this.results = this.props.servers || this.props.users || [];
+    this.results = this.props.results || [];
     this.type = this.props.type;
   }
   
@@ -18,9 +18,10 @@ class Search extends React.PureComponent {
       });
     }
 
-    if (this.props.servers !== nextProps.servers) {
-      this.results = nextProps.servers;
+    if (this.props.results !== nextProps.results) {
+      this.results = nextProps.results;
     }
+
   }
 
   handleChange(e) {
@@ -40,8 +41,8 @@ class Search extends React.PureComponent {
 
     const search = results.map((result,idx)=> {
       return (
-        <li key={idx} onClick={this.props.setServer}>
-          {result.server_name}
+        <li key={idx} onClick={this.props.set}>
+          {result.server_name || result.username}
         </li>
       )
     })

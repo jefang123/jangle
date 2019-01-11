@@ -66,6 +66,11 @@ class ChannelCreateForm extends React.PureComponent {
 
   render () {
     let names = this.names.slice(0,5);
+
+    if (this.state.channel_name === "") {
+      names = [];
+    }
+
     const search = names.map((name,idx) => {
       return (
         <li key={idx} onClick={this.setUser}>

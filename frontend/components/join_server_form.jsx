@@ -72,8 +72,8 @@ class JoinServerForm extends React.PureComponent {
         <SearchBar 
           field = {this.state.server_name}
           type = "server"
-          servers = {this.servers}
-          setServer = {this.setServer}
+          results = {this.servers}
+          set = {this.setServer}
         />
        {button}
       </form>

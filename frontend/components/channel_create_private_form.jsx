@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { createChannel } from '../actions/channel_actions';
 import { withRouter } from 'react-router-dom'
 import { fetchUsers } from '../actions/user_actions';
+import SearchBar from './search-bar';
 
 class PrivateCreateForm extends React.Component {
   constructor(props) {
@@ -61,8 +62,7 @@ class PrivateCreateForm extends React.Component {
       }
     };
   }
-  render () {
-  
+  render () {  
     let names = this.names.slice(0,5);
     if (this.state.channel_name === "") {
       names = []
@@ -96,6 +96,12 @@ class PrivateCreateForm extends React.Component {
         </div>
         
         <h3>New Private Message</h3>
+          {/* <SearchBar 
+            field = {this.state.channel_name}
+            type = "server"
+            results = {this.servers}
+            set = {this.users}
+          /> */}
           <input 
           type='text' 
           value={this.state.channel_name} 
