@@ -87,16 +87,16 @@ class ChannelShow extends React.PureComponent {
     // let shownMessages = messages.slice()
     let messageheader;
     let header;
-    // if (channel.server_id === window.homeId) {
+    if (channel.server_id === window.homeId) {
       if (channel.channel_name === this.props.currentUser.username) {
         header = <h3>@ {channel.channel_topic}</h3>
         messageheader =  <h3>This is the beginning of your direct message history with {channel.channel_topic} </h3>
       }
-      else if (this.props.users2[channel.channel_name]) {
+      else {
         header = <h3>@ {channel.channel_name}</h3>
         messageheader =  <h3>This is the beginning of your direct message history with @{channel.channel_name} </h3>
       } 
-    // }
+    }
     else {
       header = <h3># {channel.channel_name}<span>{channel.channel_topic.slice(0, 100)}</span></h3>
       messageheader =  <h3>Welcome to the beginning of the #{channel.channel_name} channel </h3>

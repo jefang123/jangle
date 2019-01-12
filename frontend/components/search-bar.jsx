@@ -25,7 +25,12 @@ class Search extends React.PureComponent {
   }
 
   handleChange(e) {
-    App.cable.subscriptions.subscriptions[0].search({server_name : e.target.value})
+    if (this.type === "server") {
+      App.cable.subscriptions.subscriptions[0].search({server_name : e.target.value})
+    } else if (this.type === "user") {
+      App.cable.subscriptions.subscriptions[0].search({username : e.target.value})
+    }
+
     this.setState({
       field: e.target.value
     })
@@ -33,6 +38,9 @@ class Search extends React.PureComponent {
 
   render () {
     let text = "Search Servers";
+    if (this.type === "user") {
+      text = "Find Username..."
+    }
 
     let results = this.results.slice(0,5);
     if (this.state.field === "") {

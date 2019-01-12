@@ -1,4 +1,5 @@
 import React from 'react';
+import SearchBar from './search-bar';
 
 class ChannelCreateForm extends React.PureComponent {
   constructor(props) {
@@ -9,7 +10,7 @@ class ChannelCreateForm extends React.PureComponent {
       channel_topic: this.props.channelTopic || ""
     };
     this.errors = [];
-    this.names = [];
+    this.names = this.props.names || [];
     this.handleSubmit = this.handleSubmit.bind(this);
     this.setUser = this.setUser.bind(this);
   }
@@ -104,6 +105,12 @@ class ChannelCreateForm extends React.PureComponent {
           </div>
           
           <h3>New Private Message</h3>
+            {/* <SearchBar 
+            field = {this.state.channel_name}
+            type = "user"
+            results = {this.names}
+            set = {this.setUser}
+            /> */}
             <input 
             type='text' 
             value={this.state.channel_name} 
