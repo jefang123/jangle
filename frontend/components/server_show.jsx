@@ -12,7 +12,7 @@ import { receiveMessage, removeMessage } from '../actions/message_actions';
 import Loading from './loading';
 import ChannelIndex from './channel_index';
 import { addTyper, removeTyper } from '../actions/typing_actions';
-import { search } from '../actions/search_actions';
+import { searchServers, searchUsers } from '../actions/search_actions';
 
 class ServerShow extends React.PureComponent {
   constructor(props) {
@@ -111,7 +111,11 @@ class ServerShow extends React.PureComponent {
         }
         else if (data.results) {
           const {results} = data;
-          dispatch(search(results));
+          if (data.type = "server") {
+            dispatch(searchServers(results));
+          } else if (data.type = "user") {
+            dispatch(searchUsers(results));
+          }
         }
       },
 

@@ -11,8 +11,13 @@ class MessageChannel < ApplicationCable::Channel
   end 
 
   def search(data)
-    newData = Server.where("server_name LIKE ?", "%#{data['server_name']}%" ).where(private:nil)
-    results = { results: newData }
+    if data['server_name']
+      newData = Server.where("server_name LIKE ?", "%#{data['server_name']}%" ).where(private:nil)
+      results = { results: newData, type: "server" }
+    elsif data['username']
+      newData= User.where("username LIKE ?", "%#{data['username']}%") 
+      results = { results: newData, type: "user" }
+    end 
     MessageChannel.broadcast_to('message_channel', results)
   end 
 

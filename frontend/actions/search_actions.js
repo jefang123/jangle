@@ -1,14 +1,28 @@
-export const SEARCH = "SEARCH";
+export const SEARCH_SERVERS = "SEARCH_SERVERS";
+export const SEARCH_USERS = "SEARCH_USERS";
 
-const receiveSearch = (results) => {
+const receiveServersSearch = (results) => {
   return {
-    type: SEARCH,
+    type: SEARCH_SERVERS,
     results
   };
 }
 
-export const search = (results) => {
+const receiveUsersSearch = (results) => {
+  return {
+    type: SEARCH_USERS,
+    results
+  };
+}
+
+export const searchServers = (results) => {
   return dispatch => {
-    return dispatch(receiveSearch(results))
+    return dispatch(receiveServersSearch(results))
+  }
+}
+
+export const searchUsers = (results) => {
+  return dispatch => {
+    return dispatch(receiveUsersSearch(results))
   }
 }
