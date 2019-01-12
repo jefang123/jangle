@@ -34,6 +34,10 @@ class ChannelCreateForm extends React.PureComponent {
         this.props.handleClose();
       }
     }
+
+    if (this.props.names !== nextProps.names) {
+      this.names = nextProps.names
+    }
   }
 
   setUser (e) {
@@ -66,19 +70,6 @@ class ChannelCreateForm extends React.PureComponent {
   }
 
   render () {
-    let names = this.names.slice(0,5);
-
-    if (this.state.channel_name === "") {
-      names = [];
-    }
-
-    const search = names.map((name,idx) => {
-      return (
-        <li key={idx} onClick={this.setUser}>
-          {this.props.users2[name].username}
-        </li>
-      )
-    })
 
     const errors = this.props.errors.map((error, idx) => {
       return (
@@ -110,15 +101,8 @@ class ChannelCreateForm extends React.PureComponent {
             type = "user"
             results = {this.names}
             set = {this.setUser}
+            currentUser = {this.props.currentUser}
             />
-            {/* <input 
-            type='text' 
-            value={this.state.channel_name} 
-            placeholder="Find Username..."
-            onChange={this.update('channel_name')}/>
-            <div className="user-search">
-              {search}
-            </div> */}
             {privateButton}
         </form>
       )

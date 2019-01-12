@@ -38,8 +38,10 @@ class Search extends React.PureComponent {
 
   render () {
     let text = "Search Servers";
+    let klass = "server-search";
     if (this.type === "user") {
-      text = "Find Username..."
+      text = "Find Username...";
+      klass = "user-search";
     }
 
     let results = this.results.slice(0,5);
@@ -48,6 +50,9 @@ class Search extends React.PureComponent {
     }
 
     const search = results.map((result,idx)=> {
+      if (result.username && result.id === this.props.currentUser.id) {
+        return null
+      }
       return (
         <li key={idx} onClick={this.props.set}>
           {result.server_name || result.username}
@@ -63,7 +68,7 @@ class Search extends React.PureComponent {
           onChange = {this.handleChange}
           value = {this.state.field}
         />
-        <div className="server-search">
+        <div className={klass}>
           {search}
         </div>
       </>

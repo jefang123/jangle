@@ -8,7 +8,8 @@ const mapStateToProps = state => {
   return {
     errors: state.errors.channel,
     currentUser: state.entities.users[state.session.currentUserId],
-    users2: state.entities.users2
+    users2: state.entities.users2,
+    names: state.entities.search.users
   };
 };
 
