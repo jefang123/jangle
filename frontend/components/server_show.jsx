@@ -111,9 +111,9 @@ class ServerShow extends React.PureComponent {
         }
         else if (data.results) {
           const {results} = data;
-          if (data.type = "server") {
+          if (data.type === "server") {
             dispatch(searchServers(results));
-          } else if (data.type = "user") {
+          } else if (data.type === "user") {
             dispatch(searchUsers(results));
           }
         }

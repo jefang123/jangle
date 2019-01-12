@@ -105,20 +105,20 @@ class ChannelCreateForm extends React.PureComponent {
           </div>
           
           <h3>New Private Message</h3>
-            {/* <SearchBar 
+            <SearchBar 
             field = {this.state.channel_name}
             type = "user"
             results = {this.names}
             set = {this.setUser}
-            /> */}
-            <input 
+            />
+            {/* <input 
             type='text' 
             value={this.state.channel_name} 
             placeholder="Find Username..."
             onChange={this.update('channel_name')}/>
             <div className="user-search">
               {search}
-            </div>
+            </div> */}
             {privateButton}
         </form>
       )
