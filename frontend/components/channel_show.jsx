@@ -35,29 +35,6 @@ class ChannelShow extends React.PureComponent {
     }
   }
 
-  handleClick (id) {
-    this.props.deleteMessage(id);
-  }
-
-  handleSubmit (e) {
-    e.preventDefault();
-    this.props.createMessage(this.state)
-    this.setState({
-      body: ""
-    })
-  }
-
-  handleScroll (){
-  }
-
-  update(field) {
-    return (e) => {
-      this.setState({
-        [field]: e.target.value
-      });
-    };
-  }
-
   render() {
     if (!this.props.currentUser) {
       return (
@@ -73,7 +50,7 @@ class ChannelShow extends React.PureComponent {
       users = this.props.users;
     }
 
-    let messages2 = 
+    let messages = 
       <MessageIndex 
         users={users}
         channel={this.props.channel} 
@@ -83,8 +60,7 @@ class ChannelShow extends React.PureComponent {
       />
 
     const { channel } = this.props;
-    // let messageLimit = 25
-    // let shownMessages = messages.slice()
+  
     let messageheader;
     let header;
     if (channel.server_id === window.homeId) {
@@ -111,7 +87,7 @@ class ChannelShow extends React.PureComponent {
         <br />
         {messageheader}
         <br />
-        {messages2}
+        {messages}
         <div ref={(el) => { this.bottom = el; }}></div>
         </section>
         <div className="full-white-divider"></div>
