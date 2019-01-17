@@ -9,10 +9,4 @@ const mapStateToProps = state => {
   };
 };
 
-const mapDispatchToProps = dispatch => {
-  return {
-    processForm: server => dispatch(createServer(server))
-  };
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(ServerCreateForm);
+export default connect(mapStateToProps, null)(ServerCreateForm);
