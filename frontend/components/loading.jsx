@@ -15,9 +15,6 @@ class Loading extends React.PureComponent {
           <li></li>
           <li></li>
           <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
         </ul>
         <div className= "user-tab">
           <div>
