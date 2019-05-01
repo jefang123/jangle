@@ -1,18 +1,18 @@
 import React from 'react';
 import { Redirect, Switch, matchPath} from 'react-router-dom'
-import ChannelShowContainer from './channel_show_container';
-import ChannelCreateContainer from './channel_create_container';
-import PrivateCreate from './channel_create_private_form';
-import Modal from './modal';
-import { ProtectedRoute } from '../util/route_util';
-import { receiveChannel, receiveChannels, removeChannel } from '../actions/channel_actions';
-import WelcomeShow from './welcome_show';
-import { receiveServer, addServer } from '../actions/server_actions';
-import { receiveMessage, removeMessage } from '../actions/message_actions';
-import Loading from './loading';
-import ChannelIndex from './channel_index';
-import { addTyper, removeTyper } from '../actions/typing_actions';
-import { searchServers, searchUsers } from '../actions/search_actions';
+import ChannelShowContainer from '../channels/channel_show_container';
+import ChannelCreateContainer from '../channels/channel_create_container';
+import PrivateCreate from '../channels/channel_create_private_form';
+import Modal from '../modal';
+import { ProtectedRoute } from '../../util/route_util';
+import { receiveChannel, receiveChannels, removeChannel } from '../../actions/channel_actions';
+import WelcomeShow from '../welcome_show';
+import { receiveServer, addServer } from '../../actions/server_actions';
+import { receiveMessage, removeMessage } from '../../actions/message_actions';
+import Loading from '../loading';
+import ChannelIndex from '../channels/channel_index';
+import { addTyper, removeTyper } from '../../actions/typing_actions';
+import { searchServers, searchUsers } from '../../actions/search_actions';
 
 class ServerShow extends React.PureComponent {
   constructor(props) {

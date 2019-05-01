@@ -1,9 +1,9 @@
 import { connect } from 'react-redux';
 import ServerShow from './server_show';
-import { fetchServer } from '../actions/server_actions';
-import { logout } from '../actions/session_actions';
-import { deleteChannel, fetchChannel } from '../actions/channel_actions';
-import { deleteServer, deleteJoin } from '../actions/server_actions';
+import { fetchServer } from '../../actions/server_actions';
+import { logout } from '../../actions/session_actions';
+import { deleteChannel, fetchChannel } from '../../actions/channel_actions';
+import { deleteServer, deleteJoin } from '../../actions/server_actions';
 
 const mapStateToProps = (state, ownProps) => {
   return {

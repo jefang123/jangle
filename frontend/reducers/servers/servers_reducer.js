@@ -1,5 +1,5 @@
-import { RECEIVE_SERVERS, RECEIVE_SERVER, REMOVE_SERVER, CREATE_SERVER, CLEAR_STATE, ADD_SERVER } from "../actions/server_actions";
-import { LOGOUT_CURRENT_USER } from '../actions/session_actions';
+import { RECEIVE_SERVERS, RECEIVE_SERVER, REMOVE_SERVER, CREATE_SERVER, CLEAR_STATE, ADD_SERVER } from "../../actions/server_actions";
+import { LOGOUT_CURRENT_USER } from '../../actions/session_actions';
 import { merge } from 'lodash';
 
 export default (state={}, action) => {

@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import ChannelShow from './channel_show';
-import { fetchChannel, deleteChannel } from '../actions/channel_actions';
-import { createMessage, fetchMessages, deleteMessage } from '../actions/message_actions';
+import { fetchChannel, deleteChannel } from '../../actions/channel_actions';
+import { createMessage, fetchMessages, deleteMessage } from '../../actions/message_actions';
 
 const mapStateToProps = (state, ownProps) => {
   return {

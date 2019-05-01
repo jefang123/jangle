@@ -2,8 +2,8 @@ import React from 'react';
 import { matchPath, Redirect } from 'react-router-dom';
 import ServerIndexItem from './server_index_item';
 import ServerCreateForm from './server_create_container';
-import Modal from './modal';
-import JoinServerForm from './join_server_form';
+import Modal from '../modal';
+import JoinServerForm from '../join_server_form';
 import ServerLoad from './server_index_loading';
 
 class ServerIndex extends React.PureComponent {

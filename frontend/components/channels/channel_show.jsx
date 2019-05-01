@@ -1,8 +1,8 @@
 import React from 'react';
-import MessageForm from './message_create_container';
+import MessageForm from '../messages/message_create_container';
 import { Redirect } from 'react-router-dom';
-import MessageIndex from './message_index';
-import TypingUsers from './typing_users';
+import MessageIndex from '../messages/message_index';
+import TypingUsers from '../typing_users';
 
 class ChannelShow extends React.PureComponent {
   constructor (props) {

@@ -1,9 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { createChannel } from '../actions/channel_actions';
+import { createChannel } from '../../actions/channel_actions';
 import { withRouter } from 'react-router-dom'
-import { fetchUsers } from '../actions/user_actions';
-import SearchBar from './search-bar';
+import { fetchUsers } from '../../actions/user_actions';
+import SearchBar from '../search-bar';
 
 class PrivateCreateForm extends React.Component {
   constructor(props) {

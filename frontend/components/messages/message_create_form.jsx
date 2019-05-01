@@ -1,5 +1,5 @@
 import React from 'react';
-import TypingUsers from './typing_users';
+import TypingUsers from '../typing_users';
 
 class MessageCreateForm extends React.PureComponent {
   constructor(props) {

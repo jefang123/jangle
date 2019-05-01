@@ -1,8 +1,8 @@
 import { connect } from 'react-redux';
-import { fetchServers, createServer} from '../actions/server_actions';
+import { fetchServers, createServer} from '../../actions/server_actions';
 import ServerIndex from './server_index';
 import { withRouter } from 'react-router-dom'
-import { logout } from '../actions/session_actions';
+import { logout } from '../../actions/session_actions';
 
 const mapStateToProps = state => ({
   servers: Object.values(state.entities.servers),
