@@ -6,14 +6,5 @@ test:
 
 production:
   adapter: redis
-  url: "redis://h:pd42e4f69b4d91342405fcba6bf0b2f1f17410d5918854c7965dc4da4a3586c24@ec2-18-215-99-173.compute-1.amazonaws.com:47279"
+  url:  <%= ENV["REDIS_URL"] %>
   channel_prefix: jangle_production
-
-# production: &production 
-#   :url:
-# "redis://h:pd42e4f69b4d91342405fcba6bf0b2f1f17410d5918854c7965dc4da4a3586c24@ec2-18-215-99-173.compute-1.amazonaws.com:47279"
-#   :host: "ec2-18-215-99-173.compute-1.amazonaws.com"
-#   :port: 47279
-#   :password: "pd42e4f69b4d91342405fcba6bf0b2f1f17410d5918854c7965dc4da4a3586c24"
-#   :inline: true 
-#   :timeout: 1
