@@ -4,7 +4,7 @@ import { Route, Switch } from 'react-router-dom';
 import LoginFormContainer from './login_form_container';
 import SignupFormContainer from './signup_form_container';
 import { ProtectedRoute } from '../util/route_util';
-import ServerShowContainer from './server_show_container';
+import ServerShowContainer from './servers/server_show_container';
 
 
 const App = () => {

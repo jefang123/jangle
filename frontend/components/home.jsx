@@ -1,6 +1,6 @@
 import React from 'react';
 import Splash from './splash';
-import ServerIndexContainer from './server_index_container';
+import ServerIndexContainer from './servers/server_index_container';
 
 class Home extends React.PureComponent {
   render () {
