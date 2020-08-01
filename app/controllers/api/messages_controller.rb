@@ -1,8 +1,15 @@
 class Api::MessagesController < ApplicationController 
   def index 
     @messages = Message.all
+    ## TODO: edit for pagination
+    # Fetch messages based on passed messageId/channelId? 
+    # if params[:id] && params[:cid]
+      # @messages = Message.where(channel_id: params[:cid]).where(id < params[:id]).limit(25)
+    # else
+      # @messages = Message.where(channel_id: params[:cid]).limit(25)
+    # end
   end
-  
+
   def show 
     @message = Message.find_by(id: params[:id])
   end 
