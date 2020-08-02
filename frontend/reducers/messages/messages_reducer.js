@@ -7,7 +7,7 @@ export default (state={}, action) => {
   switch (action.type) {
   
     case RECEIVE_MESSAGES:
-      return action.messages
+      return merge({},state, action.messages)
     case RECEIVE_MESSAGE: 
       return merge({},state,{[action.message.id]:action.message})
     case REMOVE_MESSAGE:

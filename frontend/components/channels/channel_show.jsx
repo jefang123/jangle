@@ -8,20 +8,40 @@ class ChannelShow extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-      body: "",
-      channel_id: this.props.match.params.channelId
+      channel_id: this.props.match.params.channelId,
+      prevMsgId: null,
+      currentMsgId: null,
+      observer: React.createRef(),
     }
   }
 
   componentDidMount () {
     const channel_id = this.props.match.params.channelId
-    if (channel_id) this.props.fetchMessages({channel_id});
+    if (channel_id) {
+      this.props.fetchMessages({channel_id})
+        .then(res => {
+          // console.log(this.props.messages[0].id)
+          this.setState({
+            ...this.state,
+            prevMsgId: this.state.currentMsgId,
+            currentMsgId: this.props.messages[0].id
+          })
+        })
+    };
   }
 
 
   componentDidUpdate(prevProps) {
     if (this.props.match.params.channelId !== prevProps.match.params.channelId) {
-      this.props.fetchMessages({channel_id: this.props.match.params.channelId});
+      this.props.fetchMessages({channel_id: this.props.match.params.channelId})
+        .then(res => {
+        // console.log(this.props.messages[0].id)
+          this.setState({
+            ...this.state,
+            prevMsgId: this.state.currentMsgId,
+            currentMsgId: this.props.messages[0].id
+        })
+      });
       this.setState({
         channel_id: this.props.match.params.channelId
       })
@@ -34,6 +54,30 @@ class ChannelShow extends React.Component {
     if(this.bottom ) {
       this.bottom.scrollIntoView();
     }
+  }
+
+  paginateNode(node) {
+    const that = this
+    const { observer } = this.state 
+    if (observer.current) observer.current.disconnect() 
+    observer.current = new IntersectionObserver(entries => {
+      if(entries[0].isIntersecting) {
+        that.props.fetchMessages({channel_id:that.state.channel_id, id:that.state.currentMsgId})      
+          .then(res => {
+            that.props.messages.length 
+              ? that.setState({
+                ...that.state, 
+                prevMsgId: that.state.currentMsgId,
+                currentMsgId: that.props.messages[0].id
+              })
+              : that.setState({
+                ...that.state,
+                prevMsgId: that.state.currentMsgId,
+              })
+          })
+      }
+    })
+    if (node) observer.current.observe(node) 
   }
 
   render() {
@@ -51,6 +95,7 @@ class ChannelShow extends React.Component {
       users = this.props.users;
     }
 
+
     let messages = 
       <MessageIndex 
         users={users}
@@ -60,8 +105,14 @@ class ChannelShow extends React.Component {
         deleteMessage={this.props.deleteMessage}
       />
 
+    let paginator;
+    const { prevMsgId, currentMsgId } = this.state;
     const { channel } = this.props;
-  
+    
+    if (prevMsgId !== currentMsgId) {
+      paginator = <div ref={this.paginateNode.bind(this)}> Loading more... </div>
+    }
+
     let messageheader;
     let header;
     if (channel.server_id === window.homeId) {
@@ -87,6 +138,7 @@ class ChannelShow extends React.Component {
         <br />
         {messageheader}
         <br />
+        {paginator}
         {messages}
         <div ref={(el) => { this.bottom = el; }}></div>
         </section>
