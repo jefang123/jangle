@@ -17,7 +17,7 @@ const mapDispatchToProps = dispatch => {
   return {
     fetchChannel: id => dispatch(fetchChannel(id)),
     deleteChannel: id => dispatch(deleteChannel(id)),
-    fetchMessages: () => dispatch(fetchMessages()),
+    fetchMessages: (data) => dispatch(fetchMessages(data)),
     deleteMessage: id => dispatch(deleteMessage(id)),
     createMessage: message => dispatch(createMessage(message))
   }

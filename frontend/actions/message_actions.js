@@ -26,9 +26,9 @@ export const receiveMessage = message => {
 };
 
 
-export const fetchMessages = () => {
+export const fetchMessages = (data) => {
   return dispatch => {
-    return APIMessage.fetchMessages().then(
+    return APIMessage.fetchMessages(data).then(
       messages => {
         return dispatch(receiveMessages(messages));
       }

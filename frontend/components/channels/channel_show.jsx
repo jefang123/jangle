@@ -4,7 +4,7 @@ import { Redirect } from 'react-router-dom';
 import MessageIndex from '../messages/message_index';
 import TypingUsers from '../typing_users';
 
-class ChannelShow extends React.PureComponent {
+class ChannelShow extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
@@ -14,13 +14,14 @@ class ChannelShow extends React.PureComponent {
   }
 
   componentDidMount () {
-    this.props.fetchMessages();
+    const channel_id = this.props.match.params.channelId
+    if (channel_id) this.props.fetchMessages({channel_id});
   }
 
 
   componentDidUpdate(prevProps) {
     if (this.props.match.params.channelId !== prevProps.match.params.channelId) {
-      this.props.fetchMessages();
+      this.props.fetchMessages({channel_id: this.props.match.params.channelId});
       this.setState({
         channel_id: this.props.match.params.channelId
       })
@@ -77,7 +78,6 @@ class ChannelShow extends React.PureComponent {
       header = <h3># {channel.channel_name}<span>{channel.channel_topic.slice(0, 100)}</span></h3>
       messageheader =  <h3>Welcome to the beginning of the #{channel.channel_name} channel </h3>
     }
-
     return (
       <>
         <section className='channel-show-heading'> 
