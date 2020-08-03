@@ -63,12 +63,13 @@ class ServerIndexItem extends React.PureComponent {
           <li
             key={this.props.server.id}
             className={klass}
+            serverName={this.props.server.server_name}
           >
             <div className='selected-border'></div>
-            <div className="hidden">
+            {/* <div className="hidden">
               <div className="arrow-left"></div>
               <h3>{this.props.server.server_name}</h3>
-            </div>
+            </div> */}
             <Link to={`/server/${this.props.server.id}`}>
             <img src={image}></img>
             </Link> 

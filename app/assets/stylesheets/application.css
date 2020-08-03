@@ -246,6 +246,28 @@ p {
   left: -10px;
 }
 
+.sv-selected:hover::before {
+  right: -10px;
+  content: '';
+  margin-top: 15px;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid black;
+  position: absolute;
+}
+
+.sv-selected:hover::after {
+  content: attr(serverName);
+  margin-top: 8px;
+  margin-left: 10px;
+  padding: 5px;
+  font-weight: 600;
+  font-size: 1.25em;
+  position: absolute;
+  background: #000000;
+  border-radius: 5px;
+}
+
 ul {
   padding: 10px;
   height: calc(100vh - 20px);
