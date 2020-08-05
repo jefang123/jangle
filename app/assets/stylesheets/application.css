@@ -246,7 +246,7 @@ p {
   left: -10px;
 }
 
-.sv-selected:hover::before {
+.sv:hover::before {
   right: -10px;
   content: '';
   margin-top: 15px;
@@ -256,8 +256,8 @@ p {
   position: absolute;
 }
 
-.sv-selected:hover::after {
-  content: attr(serverName);
+.sv:hover::after {
+  content: attr(servername);
   margin-top: 8px;
   margin-left: 10px;
   padding: 5px;

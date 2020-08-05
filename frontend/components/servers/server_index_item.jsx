@@ -19,64 +19,27 @@ class ServerIndexItem extends React.PureComponent {
       exact: false,
       strict: false 
     });
-    let parameter;
-    if (!match) {
-      parameter = 0;
-    } else if (match.params.serverId) {
-      parameter = parseInt(match.params.serverId);
-    } else {
-      parameter = 0;
-    }
 
-    let klass;
-    
-    if (this.props.server.id === parameter) {
-      klass = "sv-selected"
-    } else {
-      klass = ""
-    }
+    const currentServer = parseInt(match.params.serverId)
+    const { server } = this.props;
+    let klass, image, link;
+ 
+    klass = server.id === currentServer ? "sv sv-selected" : "sv"
+    image = server.image_url ? server.image_url : window.logo_url
+    link = server.private ? `/server/${server.id}/welcome` : `/server/${server.id}` 
 
-    let image;
-    if (!this.props.server.image_url) {
-      image = window.logo_url ;
-    } else {
-      image = this.props.server.image_url;
-    }
-    if (this.props.server.private) {
-      return (
-        <li
-          key={this.props.server.id}
+    return (
+      <li
+          key={server.id}
           className={klass}
+          servername={server.server_name}
         > 
           <div className='selected-border'></div>
-          <div className="hidden">
-            <div className="arrow-left"></div>
-            <h3>{this.props.server.server_name}</h3>
-          </div>
-          <Link to={`/server/${this.props.server.id}/welcome`}>
-          <img src={image}></img>
+          <Link to={link}>
+            <img src={image}></img>
           </Link> 
         </li>
-      );
-    } else {
-        return (
-          <li
-            key={this.props.server.id}
-            className={klass}
-            serverName={this.props.server.server_name}
-          >
-            <div className='selected-border'></div>
-            {/* <div className="hidden">
-              <div className="arrow-left"></div>
-              <h3>{this.props.server.server_name}</h3>
-            </div> */}
-            <Link to={`/server/${this.props.server.id}`}>
-            <img src={image}></img>
-            </Link> 
-          </li>
-      );
-    }
-    
+    )
   }
 }
 
