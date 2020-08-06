@@ -84,14 +84,6 @@ class ChannelIndexItem extends React.PureComponent {
           </li>
         </Link>
       )
-    } else if (server.creator_id !== currentUser.id) {
-      return (
-        <Link key={channel.id} to={`/server/${server.id}/channel/${channel.id}`}>
-          <li className={klass}>
-            {hash} {channelName}
-          </li>
-        </Link>
-      )
     } else {
       return (
         <Link key={channel.id} to={`/server/${server.id}/channel/${channel.id}`}>

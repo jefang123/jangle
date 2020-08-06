@@ -12,10 +12,10 @@ class MessageChannel < ApplicationCable::Channel
 
   def search(data)
     if data['server_name']
-      newData = Server.where("server_name LIKE ?", "%#{data['server_name']}%" ).where(private:nil)
+      newData = Server.where("server_name LIKE ?", "%#{data['server_name']}%" ).where(private:nil).limit(5)
       results = { results: newData, type: "server" }
     elsif data['username']
-      newData= User.where("username LIKE ?", "%#{data['username']}%") 
+      newData= User.where("username LIKE ?", "%#{data['username']}%").limit(5)
       results = { results: newData, type: "user" }
     end 
     MessageChannel.broadcast_to('message_channel', results)

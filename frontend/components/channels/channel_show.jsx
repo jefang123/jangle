@@ -20,11 +20,10 @@ class ChannelShow extends React.Component {
     if (channel_id) {
       this.props.fetchMessages({channel_id})
         .then(res => {
-          // console.log(this.props.messages[0].id)
           this.setState({
             ...this.state,
             prevMsgId: this.state.currentMsgId,
-            currentMsgId: this.props.messages[0].id
+            currentMsgId: this.props.messages[0] ? this.props.messages[0].id : null
           })
         })
     };
@@ -35,7 +34,6 @@ class ChannelShow extends React.Component {
     if (this.props.match.params.channelId !== prevProps.match.params.channelId) {
       this.props.fetchMessages({channel_id: this.props.match.params.channelId})
         .then(res => {
-        // console.log(this.props.messages[0].id)
           this.setState({
             ...this.state,
             prevMsgId: this.state.currentMsgId,
