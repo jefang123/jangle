@@ -25,7 +25,12 @@ class ServerIndexItem extends React.PureComponent {
     let klass, image, link;
  
     klass = server.id === currentServer ? "sv sv-selected" : "sv"
-    image = server.image_url ? server.image_url : window.logo_url
+    image = 
+      server.image_url 
+        ? <img src={server.image_image}></img>
+        : <div className="sv-default-img">{server.server_name[0]}</div>
+        // : <img src={window.logo_url}></img>
+        
     link = server.private ? `/server/${server.id}/welcome` : `/server/${server.id}` 
 
     return (
@@ -36,7 +41,7 @@ class ServerIndexItem extends React.PureComponent {
         > 
           <div className='selected-border'></div>
           <Link to={link}>
-            <img src={image}></img>
+            {image}
           </Link> 
         </li>
     )

@@ -116,10 +116,13 @@ class MessageItem extends React.PureComponent {
       })
    }
 
+   let image = user.image_url
+                ? <img className="message-image" src={window.user_url}></img> 
+                : <div className="user-default-img">{user.username[0]}</div>
+
    return (
     <div className="message" onClick={()=>this.handleClickOut()}>
-
-        <img className="message-image" src={window.user_url}></img>
+        {image}
         <div className="message-box">
           <p >{user ? user.username : null} {timestamp}</p> 
           {message2}
