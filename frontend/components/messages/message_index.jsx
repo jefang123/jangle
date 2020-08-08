@@ -50,14 +50,11 @@ class MessageIndex extends React.PureComponent {
  
 
   render () {
-    const filteredMessages = this.props.messages.filter(message => {
-      if (message.channel_id === this.props.channel.id) {
-        return message
-      }
-    })
+    const filteredMessages = this.props.messages;
 
     const sortedMessages = [{ message: [filteredMessages[0]] }];
-
+    
+    // group messages by userId and pass to message item
     for (let index = 1; index < filteredMessages.length; index++) {
       
       let currentMessage = filteredMessages[index]
